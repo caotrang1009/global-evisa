@@ -1,0 +1,16 @@
+{
+  "public/assets/svg/outline-arrow_right.svg": {
+    "file": "assets/outline-arrow_right.52a2694e.svg",
+    "src": "public/assets/svg/outline-arrow_right.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app.8e4d0bea.js",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app.aef18717.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  }
+}

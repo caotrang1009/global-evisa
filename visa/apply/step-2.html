@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="csrf-token" content="6FZqeYke31aK9KbB9mABUqsaPPOgBNsaQaNIzW3r">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="FlightCorp">
+	<title>Flights</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet" href="http://localhost:8000/assets/js/telinput/css/intlTelInput.min.css">
+	<script type="module" src="http://[::1]:5173/@vite/client"></script>
+	<link rel="stylesheet" href="http://[::1]:5173/resources/sass/app.scss">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1141.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+	<header class="bg-primary text-white text-title">
+		<div class="main-nav">
+			<nav class="navbar navbar-expand-lg navbar-mega navbar-light">
+				<div class="container position-relative px-5">
+					<a href="/" class="d-flex align-items-center navbar-brand me-5">
+						<img width="60" height="60" src="http://localhost:8000/assets\images\new_logo.png" alt="logo">
+						<span class="fs-6 fw-semibold text-white text-center mx-3">Global <br> eVISA</span>
+					</a>
+					<button class="navbar-toggler px-0 collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbar-content">
+						<ul class="navbar-nav navbar-nav-scroll mx-auto">
+							<li class="nav-item">
+								<a class="nav-link" title="" href="http://localhost:8000/visa">Visa Application</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="http://localhost:8000/flights">Flights</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Travel Insurance </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Airport Services</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Hotel</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Contact</a>
+							</li>
+						</ul>
+						<ul class="navbar-nav">
+							<li class="nav-item me-sm-3">
+								<div class="d-flex align-items-center">
+									<a class="nav-link">
+										<img class="avatar-img rounded-circle"
+											src="http://localhost:8000/assets/images/united-states.png" alt="flag"
+											width="32px" height="32px">
+									</a>
+									<div><span class="border-start border-white h-50"></span></div>
+									<a class="nav-link" title="" href="#"><i class="fal fa-usd-circle fs-2"></i></a>
+								</div>
+							</li>
+							<li class="nav-item ms-sm-3">
+								<a class="nav-link" title="" href="#"><i class="fal fa-user-circle fs-2"></i></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<section class="pb-0">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-6">
+					<span class="d-md-block d-none me-3 bg-orange" style="width: 80px; height:20px;"></span>
+				</div>
+				<div class="col-6 text-end pe-5">
+					<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-md-5 px-4 btn-save-exit">
+						<span class="btn-text">Save &amp; Exit</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pt-0 visa mt-lg-n5 mt-0">
+		<div class="container">
+			<div class="row">
+				<h1 class="page-title text-secondary text-uppercase text-title">GLOBAL EVISA <br> APPLICATION FORM</h1>
+				<div class="step-part mt-5">
+					<div class="d-flex justify-content-between text-title stepper-wrapper">
+						<a href="http://localhost:8000/visa/apply/step1"
+							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item 1 completed">
+							<div
+								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige border border-orange step-counter">
+								1</div>
+							<div class="h4 mt-4 mx-2 step-name text-center d-md-block d-none">Order Information</div>
+						</a>
+						<a href="http://localhost:8000/visa/apply/step2"
+							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item 1 completed">
+							<div
+								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige border border-orange step-counter">
+								2</div>
+							<div class="h4 mt-4 mx-2 step-name text-center d-md-block d-none">Payment</div>
+						</a>
+						<a href="http://localhost:8000/visa/apply/step3"
+							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item 0 ">
+							<div
+								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige border border-orange step-counter">
+								3</div>
+							<div class="h4 mt-4 mx-2 step-name text-center d-md-block d-none">Confirmation</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pt-0">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="step-2 px-lg-5">
+					<form action="" id="frm-order" novalidate="novalidate">
+						<h2 class="fw-800 text-uppercase text-black text-title ms-5 mb-0 pb-2">Customer’s order review
+						</h2>
+						<div class="order-information border border-primary px-5 py-3 rounded-collapse my-4">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary"
+								class="toggle-data-dropdown collapsed"
+								data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse"
+								data-bs-target="#order-information">
+								<div class="d-flex justify-content-between py-3">
+									<div class="d-flex align-items-center">
+										<span class="bg-primary d-block me-5" style="width: 72px; height: 12px;"></span>
+										<h4
+											class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">
+											YOUR ORDER INFORMATION</h4>
+									</div>
+									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary"
+										role="button">
+										<img src="http://localhost:8000/assets/svg/solid-arrow-down-blue.svg"
+											alt="arrow" width="14px" height="14px">
+									</div>
+								</div>
+							</div>
+							<div class="collapse py-3" id="order-information" style="">
+								<div class="row justify-content-center">
+									<div class="col-lg-7 col-12">
+										<div class="form-group mb-3">
+											<label class="h6 fw-semibold text-title text-black"
+												for="destination">Destination</label>
+											<div class="dropdown">
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-map.svg"
+														data-icon-name="outline-map" alt="people">
+													<input class="form-control border-0 px-0 cursor-pointer"
+														id="destination" name="destination" type="text"
+														placeholder="Please Select" autocomplete="off" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+												<div class="dropdown-menu rounded-4 p-3 w-100">
+													<div class="d-flex align-items-center border rounded-4 px-2">
+														<img src="http://localhost:8000/assets/svg/solid-search.svg"
+															alt="search">
+														<input class="form-control border-0 py-2 me-1" type="text"
+															name="search" placeholder="Enter Input" autocomplete="off"
+															required="">
+													</div>
+													<div class="list-nationality mt-4 text-title text-black">
+														<div class="list-popular mb-4">
+															<div class="label-title mb-3 fw-bold">Most Popular</div>
+															<div class="country-01 mb-2">
+																<a
+																	href="http://localhost:8000/visa/country/united-kingdom">
+																	<img src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																		alt="United Kingdom" width="20px" height="20px">
+																	<span class="ms-2">United Kingdom</span>
+																</a>
+															</div>
+															<div class="country-02 mb-2">
+																<a href="http://localhost:8000/visa/country/france">
+																	<img src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																		alt="France" width="20px" height="20px">
+																	<span class="ms-2">French</span>
+																</a>
+															</div>
+															<div class="country-03 mb-2">
+																<a href="http://localhost:8000/visa/country/singapore">
+																	<img src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																		alt="Singapore" width="20px" height="20px">
+																	<span class="ms-2">Singapore</span>
+																</a>
+															</div>
+														</div>
+														<div class="list-alphabetically">
+															<div class="label-title mb-3 fw-bold">Alphabetically </div>
+															<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
+																style="height: 142px">
+																<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
+																	data-parent=".slide-input-country" data-items="5"
+																	data-space-between="1" data-direction="vertical"
+																	data-prev=".swiper-custom-prev"
+																	data-next=".swiper-custom-next" style="width: 85%">
+																	<div class="swiper-wrapper align-items-center"
+																		id="swiper-wrapper-9edfccd625d93cf7"
+																		aria-live="polite"
+																		style="transition-duration: 0ms; transition-delay: 0ms;">
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/belarus"
+																			data-swiper-slide-index="0" role="group"
+																			aria-label="1 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/belarus.svg"
+																				alt="belarus"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">belarus</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/brunei"
+																			data-swiper-slide-index="1" role="group"
+																			aria-label="2 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/brunei.svg"
+																				alt="brunei"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">brunei</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/cambodia"
+																			data-swiper-slide-index="2" role="group"
+																			aria-label="3 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/cambodia.svg"
+																				alt="cambodia"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">cambodia</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/chile"
+																			data-swiper-slide-index="3" role="group"
+																			aria-label="4 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/chile.svg"
+																				alt="chile"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">chile</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/denmark"
+																			data-swiper-slide-index="4" role="group"
+																			aria-label="5 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/denmark.svg"
+																				alt="denmark"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">denmark</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/finland"
+																			data-swiper-slide-index="5" role="group"
+																			aria-label="6 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/finland.svg"
+																				alt="finland"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">finland</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/france"
+																			data-swiper-slide-index="6" role="group"
+																			aria-label="7 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																				alt="france"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">france</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/germany"
+																			data-swiper-slide-index="7" role="group"
+																			aria-label="8 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/germany.svg"
+																				alt="germany"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">germany</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/indonesia"
+																			data-swiper-slide-index="8" role="group"
+																			aria-label="9 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/indonesia.svg"
+																				alt="indonesia"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">indonesia</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/italy"
+																			data-swiper-slide-index="9" role="group"
+																			aria-label="10 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/italy.svg"
+																				alt="italy"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">italy</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/japan"
+																			data-swiper-slide-index="10" role="group"
+																			aria-label="11 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/japan.svg"
+																				alt="japan"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">japan</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/laos"
+																			data-swiper-slide-index="11" role="group"
+																			aria-label="12 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/laos.svg"
+																				alt="laos"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">laos</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/malaysia"
+																			data-swiper-slide-index="12" role="group"
+																			aria-label="13 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/malaysia.svg"
+																				alt="malaysia"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">malaysia</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/myanmar"
+																			data-swiper-slide-index="13" role="group"
+																			aria-label="14 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/myanmar.svg"
+																				alt="myanmar"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">myanmar</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/norway"
+																			data-swiper-slide-index="14" role="group"
+																			aria-label="15 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/norway.svg"
+																				alt="norway"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">norway</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/panama"
+																			data-swiper-slide-index="15" role="group"
+																			aria-label="16 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/panama.svg"
+																				alt="panama"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">panama</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/philippines"
+																			data-swiper-slide-index="16" role="group"
+																			aria-label="17 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/philippines.svg"
+																				alt="philippines"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">philippines</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/russia"
+																			data-swiper-slide-index="17" role="group"
+																			aria-label="18 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/russia.svg"
+																				alt="russia"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">russia</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/singapore"
+																			data-swiper-slide-index="18" role="group"
+																			aria-label="19 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																				alt="singapore"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">singapore</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/spain"
+																			data-swiper-slide-index="19" role="group"
+																			aria-label="20 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/spain.svg"
+																				alt="spain"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">spain</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/korea"
+																			data-swiper-slide-index="20" role="group"
+																			aria-label="21 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/korea.svg"
+																				alt="korea"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">korea</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/sweden"
+																			data-swiper-slide-index="21" role="group"
+																			aria-label="22 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/sweden.svg"
+																				alt="sweden"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">sweden</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/thailand"
+																			data-swiper-slide-index="22" role="group"
+																			aria-label="23 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/thailand.svg"
+																				alt="thailand"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">thailand</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/united-kingdom"
+																			data-swiper-slide-index="23" role="group"
+																			aria-label="24 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																				alt="united-kingdom"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">united-kingdom</span>
+																		</a>
+																		<a class="swiper-slide d-block text-start"
+																			href="http://localhost:8000/visa/country/vietnam"
+																			data-swiper-slide-index="24" role="group"
+																			aria-label="25 / 25">
+																			<img class="d-inline"
+																				src="http://localhost:8000/assets/svg/emojione-flag/vietnam.svg"
+																				alt="vietnam"
+																				style="width: 20px; height: 20px;">
+																			<span
+																				class="ms-2 text-capitalize fs-6">vietnam</span>
+																		</a>
+																	</div>
+																	<span class="swiper-notification"
+																		aria-live="assertive"
+																		aria-atomic="true"></span><span
+																		class="swiper-notification"
+																		aria-live="assertive"
+																		aria-atomic="true"></span><span
+																		class="swiper-notification"
+																		aria-live="assertive"
+																		aria-atomic="true"></span><span
+																		class="swiper-notification"
+																		aria-live="assertive" aria-atomic="true"></span>
+																</div>
+																<div class="position-relative swiper-control">
+																	<div class="position-absolute top-0 end-0 swiper-custom-prev"
+																		tabindex="0" role="button"
+																		aria-label="Previous slide"
+																		aria-controls="swiper-wrapper-f5facb327cb823da">
+																		<i
+																			class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+																	</div>
+																	<div class="position-absolute bottom-0 end-0 swiper-custom-next"
+																		tabindex="0" role="button"
+																		aria-label="Next slide"
+																		aria-controls="swiper-wrapper-f5facb327cb823da">
+																		<i
+																			class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group mb-3">
+											<label class="h6 fw-semibold text-title text-black" for="type_of_visa">Type
+												of Visa</label>
+											<div class="dropdown">
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-map-gps-navigation.svg"
+														data-icon-name="outline-map-gps-navigation" alt="people">
+													<input class="form-control border-0 px-0 cursor-pointer" type="text"
+														id="type_of_visa" name="type_of_visa"
+														placeholder="Please Select" autocomplete="off" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+												<div class="dropdown-menu rounded-4 p-3 w-100">
+													<div class="d-flex align-items-center border rounded-4 px-2">
+														<img src="http://localhost:8000/assets/svg/solid-search.svg"
+															alt="search">
+														<input class="form-control border-0 py-2 me-1" type="text"
+															name="search" placeholder="Enter Input" autocomplete="off"
+															required="">
+													</div>
+													<div class="list-purpose mt-4">
+														<div class="list-popular mb-4">
+															<div class="label-title mb-2 fw-bold">Most Popular</div>
+															<ul class="list-unstyled">
+																<li><a class="cursor-pointer">Tourist</a></li>
+																<li><a class="cursor-pointer">Business</a></li>
+																<li><a class="cursor-pointer">Study</a></li>
+															</ul>
+														</div>
+														<div class="list-alphabetically">
+															<div class="label-title mb-2 fw-bold">Alphabetically</div>
+															<ul class="list-unstyled">
+																<li><a class="cursor-pointer">Business</a></li>
+																<li><a class="cursor-pointer">Non-immigrant</a></li>
+																<li><a class="cursor-pointer">Tourist</a></li>
+																<li><a class="cursor-pointer">Transit</a></li>
+																<li><a class="cursor-pointer">Study</a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="day_of_arrival">Day of Arrival</label>
+												<div
+													class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search">
+													<img src="http://localhost:8000/assets/svg/outline-date.svg"
+														data-icon-name="outline-date" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer datepicker"
+														type="text" id="day_of_arrival" name="day_of_arrival"
+														placeholder="DD/MM/YY" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="day_of_return">Day of Return</label>
+												<div
+													class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search">
+													<img src="http://localhost:8000/assets/svg/outline-date.svg"
+														data-icon-name="outline-date" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer datepicker"
+														type="text" id="day_of_return" name="day_of_return"
+														placeholder="DD/MM/YY" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="applicant-information border border-primary px-5 py-3 rounded-collapse my-4">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary"
+								class="toggle-data-dropdown collapsed"
+								data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse"
+								data-bs-target="#applicant-information">
+								<div class="d-flex justify-content-between py-3">
+									<div class="d-flex align-items-center">
+										<span class="bg-primary d-block me-5" style="width: 72px; height: 12px;"></span>
+										<h4
+											class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">
+											APPLICANT(s)’s INFORMATION</h4>
+									</div>
+									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary"
+										role="button">
+										<img src="http://localhost:8000/assets/svg/solid-arrow-down-blue.svg"
+											alt="arrow" width="14px" height="14px">
+									</div>
+								</div>
+							</div>
+							<div class="collapse py-3" id="applicant-information" style="">
+								<div class="row justify-content-center">
+									<div class="col-lg-7 col-12">
+										<div class="form-group row gx-3 gx-lg-7 gx-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="family_name">Family Name<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div
+													class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search">
+													<img src="http://localhost:8000/assets/svg/outline-education.svg"
+														data-icon-name="outline-education" alt="education">
+													<input class="form-control border-0 px-0 cursor-pointer" type="text"
+														id="family_name" name="family_name[]" placeholder="Enter Value"
+														required="">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="given_name">Given Name<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div
+													class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search">
+													<img src="http://localhost:8000/assets/svg/outline-education.svg"
+														data-icon-name="outline-education" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer" type="text"
+														id="given_name" name="given_name[]" placeholder="Enter Value"
+														required="">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="gender">Gender</label>
+												<div class="dropdown">
+													<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+														data-bs-toggle="dropdown" data-bs-auto-close="outside">
+														<img src="http://localhost:8000/assets/svg/outline-gender.svg"
+															data-icon-name="outline-gender" alt="gender">
+														<input class="form-control border-0 px-0 cursor-pointer"
+															type="text" id="gender" name="gender[]"
+															placeholder="Please Select" required="">
+														<img class="cursor-pointer"
+															src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+															data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+													</div>
+													<span class="hide text-danger fw-semibold medium"
+														id="error-msg"></span>
+													<ul class="dropdown-menu dropdown-select border-secondary rounded-4 shadow w-100"
+														style="--bs-border-opacity: 0.5;">
+														<li><a
+																class="dropdown-item cursor-pointer direction-item selected">Mr</a>
+														</li>
+														<li><a
+																class="dropdown-item cursor-pointer direction-item">Ms</a>
+														</li>
+														<li><a
+																class="dropdown-item cursor-pointer direction-item">Master</a>
+														</li>
+														<li><a
+																class="dropdown-item cursor-pointer direction-item">Miss</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="date_of_birth">Day of Birth</label>
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-date.svg"
+														data-icon-name="outline-date" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer datepicker"
+														type="text" id="date_of_birth" name="date_of_birth[]"
+														placeholder="DD/MM/YY" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="phone_number">Your Phone Number</label>
+												<div class="d-flex gap-2">
+													<div style="width: 80px; height: 46px">
+														<div class="d-flex align-items-center justify-content-between border rounded-4 bg-white py-1 px-2 h-100 input-visa-search"
+															data-bs-toggle="dropdown" data-bs-auto-close="outside">
+															<input
+																class="form-control border-0 px-0 cursor-pointer medium"
+																type="text" id="nationality" name="nationality[]"
+																value="+84" required="">
+															<img class="cursor-pointer"
+																src="http://localhost:8000/assets/svg/icon-direction-up.svg"
+																alt="arrow_bottom">
+														</div>
+													</div>
+													<div class="w-100">
+														<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+															data-bs-toggle="dropdown" data-bs-auto-close="outside">
+															<img src="http://localhost:8000/assets/svg/outline-phone.svg"
+																data-icon-name="outline-phone" alt="phone">
+															<input class="form-control border-0 px-0 cursor-pointer"
+																type="text" id="phone_number" name="phone_number[]"
+																placeholder="Enter Value" required="">
+														</div>
+														<span class="hide text-danger fw-semibold medium"
+															id="error-msg"></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black" for="email">Email
+													Address<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-education.svg"
+														data-icon-name="outline-education" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer" type="text"
+														id="email" name="email[]" placeholder="Enter Value" required="">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="country_of_birth">Country of Birth</label>
+												<div class="dropdown">
+													<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+														data-bs-toggle="dropdown" data-bs-auto-close="outside">
+														<img src="http://localhost:8000/assets/svg/outline-map.svg"
+															data-icon-name="outline-map" alt="date">
+														<input class="form-control border-0 px-0 cursor-pointer"
+															type="text" id="country_of_birth" name="country_of_birth[]"
+															placeholder="Please Select" required="">
+														<img class="cursor-pointer"
+															src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+															data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+													</div>
+													<div class="dropdown-menu rounded-4 p-3 w-100">
+														<div class="d-flex align-items-center border rounded-4 px-2">
+															<img src="http://localhost:8000/assets/svg/solid-search.svg"
+																alt="search">
+															<input class="form-control border-0 py-2 me-1" type="text"
+																name="search" placeholder="Enter Input"
+																autocomplete="off" required="">
+														</div>
+														<div class="list-nationality mt-4 text-title text-black">
+															<div class="list-popular mb-4">
+																<div class="label-title mb-3 fw-bold">Most Popular</div>
+																<div class="country-01 mb-2">
+																	<a
+																		href="http://localhost:8000/visa/country/united-kingdom">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																			alt="United Kingdom" width="20px"
+																			height="20px">
+																		<span class="ms-2">United Kingdom</span>
+																	</a>
+																</div>
+																<div class="country-02 mb-2">
+																	<a href="http://localhost:8000/visa/country/france">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																			alt="France" width="20px" height="20px">
+																		<span class="ms-2">French</span>
+																	</a>
+																</div>
+																<div class="country-03 mb-2">
+																	<a
+																		href="http://localhost:8000/visa/country/singapore">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																			alt="Singapore" width="20px" height="20px">
+																		<span class="ms-2">Singapore</span>
+																	</a>
+																</div>
+															</div>
+															<div class="list-alphabetically">
+																<div class="label-title mb-3 fw-bold">Alphabetically
+																</div>
+																<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
+																	style="height: 142px">
+																	<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
+																		data-parent=".slide-input-country"
+																		data-items="5" data-space-between="1"
+																		data-direction="vertical"
+																		data-prev=".swiper-custom-prev"
+																		data-next=".swiper-custom-next"
+																		style="width: 85%">
+																		<div class="swiper-wrapper align-items-center"
+																			id="swiper-wrapper-f4a21070ddce91686"
+																			aria-live="polite"
+																			style="transition-duration: 0ms; transition-delay: 0ms;">
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/belarus"
+																				data-swiper-slide-index="0" role="group"
+																				aria-label="1 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/belarus.svg"
+																					alt="belarus"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">belarus</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/brunei"
+																				data-swiper-slide-index="1" role="group"
+																				aria-label="2 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/brunei.svg"
+																					alt="brunei"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">brunei</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/cambodia"
+																				data-swiper-slide-index="2" role="group"
+																				aria-label="3 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/cambodia.svg"
+																					alt="cambodia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">cambodia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/chile"
+																				data-swiper-slide-index="3" role="group"
+																				aria-label="4 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/chile.svg"
+																					alt="chile"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">chile</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/denmark"
+																				data-swiper-slide-index="4" role="group"
+																				aria-label="5 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/denmark.svg"
+																					alt="denmark"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">denmark</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/finland"
+																				data-swiper-slide-index="5" role="group"
+																				aria-label="6 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/finland.svg"
+																					alt="finland"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">finland</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/france"
+																				data-swiper-slide-index="6" role="group"
+																				aria-label="7 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																					alt="france"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">france</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/germany"
+																				data-swiper-slide-index="7" role="group"
+																				aria-label="8 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/germany.svg"
+																					alt="germany"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">germany</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/indonesia"
+																				data-swiper-slide-index="8" role="group"
+																				aria-label="9 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/indonesia.svg"
+																					alt="indonesia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">indonesia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/italy"
+																				data-swiper-slide-index="9" role="group"
+																				aria-label="10 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/italy.svg"
+																					alt="italy"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">italy</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/japan"
+																				data-swiper-slide-index="10"
+																				role="group" aria-label="11 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/japan.svg"
+																					alt="japan"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">japan</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/laos"
+																				data-swiper-slide-index="11"
+																				role="group" aria-label="12 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/laos.svg"
+																					alt="laos"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">laos</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/malaysia"
+																				data-swiper-slide-index="12"
+																				role="group" aria-label="13 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/malaysia.svg"
+																					alt="malaysia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">malaysia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/myanmar"
+																				data-swiper-slide-index="13"
+																				role="group" aria-label="14 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/myanmar.svg"
+																					alt="myanmar"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">myanmar</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/norway"
+																				data-swiper-slide-index="14"
+																				role="group" aria-label="15 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/norway.svg"
+																					alt="norway"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">norway</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/panama"
+																				data-swiper-slide-index="15"
+																				role="group" aria-label="16 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/panama.svg"
+																					alt="panama"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">panama</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/philippines"
+																				data-swiper-slide-index="16"
+																				role="group" aria-label="17 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/philippines.svg"
+																					alt="philippines"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">philippines</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/russia"
+																				data-swiper-slide-index="17"
+																				role="group" aria-label="18 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/russia.svg"
+																					alt="russia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">russia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/singapore"
+																				data-swiper-slide-index="18"
+																				role="group" aria-label="19 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																					alt="singapore"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">singapore</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/spain"
+																				data-swiper-slide-index="19"
+																				role="group" aria-label="20 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/spain.svg"
+																					alt="spain"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">spain</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/korea"
+																				data-swiper-slide-index="20"
+																				role="group" aria-label="21 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/korea.svg"
+																					alt="korea"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">korea</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/sweden"
+																				data-swiper-slide-index="21"
+																				role="group" aria-label="22 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/sweden.svg"
+																					alt="sweden"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">sweden</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/thailand"
+																				data-swiper-slide-index="22"
+																				role="group" aria-label="23 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/thailand.svg"
+																					alt="thailand"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">thailand</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/united-kingdom"
+																				data-swiper-slide-index="23"
+																				role="group" aria-label="24 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																					alt="united-kingdom"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">united-kingdom</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/vietnam"
+																				data-swiper-slide-index="24"
+																				role="group" aria-label="25 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/vietnam.svg"
+																					alt="vietnam"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">vietnam</span>
+																			</a>
+																		</div>
+																		<span class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span>
+																	</div>
+																	<div class="position-relative swiper-control">
+																		<div class="position-absolute top-0 end-0 swiper-custom-prev"
+																			tabindex="0" role="button"
+																			aria-label="Previous slide"
+																			aria-controls="swiper-wrapper-f5facb327cb823da">
+																			<i
+																				class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+																		</div>
+																		<div class="position-absolute bottom-0 end-0 swiper-custom-next"
+																			tabindex="0" role="button"
+																			aria-label="Next slide"
+																			aria-controls="swiper-wrapper-f5facb327cb823da">
+																			<i
+																				class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="country_of_residency">Country of Residency</label>
+												<div class="dropdown">
+													<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+														data-bs-toggle="dropdown" data-bs-auto-close="outside">
+														<img src="http://localhost:8000/assets/svg/outline-map.svg"
+															data-icon-name="outline-map" alt="date">
+														<input class="form-control border-0 px-0 cursor-pointer"
+															type="text" id="country_of_residency"
+															name="country_of_residency[]" placeholder="Please Select"
+															required="">
+														<img class="cursor-pointer"
+															src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+															data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+													</div>
+													<span class="hide text-danger fw-semibold medium"
+														id="error-msg"></span>
+													<div class="dropdown-menu rounded-4 p-3 w-100">
+														<div class="d-flex align-items-center border rounded-4 px-2">
+															<img src="http://localhost:8000/assets/svg/solid-search.svg"
+																alt="search">
+															<input class="form-control border-0 py-2 me-1" type="text"
+																name="search" placeholder="Enter Input"
+																autocomplete="off" required="">
+														</div>
+														<div class="list-nationality mt-4 text-title text-black">
+															<div class="list-popular mb-4">
+																<div class="label-title mb-3 fw-bold">Most Popular</div>
+																<div class="country-01 mb-2">
+																	<a
+																		href="http://localhost:8000/visa/country/united-kingdom">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																			alt="United Kingdom" width="20px"
+																			height="20px">
+																		<span class="ms-2">United Kingdom</span>
+																	</a>
+																</div>
+																<div class="country-02 mb-2">
+																	<a href="http://localhost:8000/visa/country/france">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																			alt="France" width="20px" height="20px">
+																		<span class="ms-2">French</span>
+																	</a>
+																</div>
+																<div class="country-03 mb-2">
+																	<a
+																		href="http://localhost:8000/visa/country/singapore">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																			alt="Singapore" width="20px" height="20px">
+																		<span class="ms-2">Singapore</span>
+																	</a>
+																</div>
+															</div>
+															<div class="list-alphabetically">
+																<div class="label-title mb-3 fw-bold">Alphabetically
+																</div>
+																<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
+																	style="height: 142px">
+																	<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
+																		data-parent=".slide-input-country"
+																		data-items="5" data-space-between="1"
+																		data-direction="vertical"
+																		data-prev=".swiper-custom-prev"
+																		data-next=".swiper-custom-next"
+																		style="width: 85%">
+																		<div class="swiper-wrapper align-items-center"
+																			id="swiper-wrapper-13bd3586887635a4"
+																			aria-live="polite"
+																			style="transition-duration: 0ms; transition-delay: 0ms;">
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/belarus"
+																				data-swiper-slide-index="0" role="group"
+																				aria-label="1 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/belarus.svg"
+																					alt="belarus"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">belarus</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/brunei"
+																				data-swiper-slide-index="1" role="group"
+																				aria-label="2 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/brunei.svg"
+																					alt="brunei"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">brunei</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/cambodia"
+																				data-swiper-slide-index="2" role="group"
+																				aria-label="3 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/cambodia.svg"
+																					alt="cambodia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">cambodia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/chile"
+																				data-swiper-slide-index="3" role="group"
+																				aria-label="4 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/chile.svg"
+																					alt="chile"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">chile</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/denmark"
+																				data-swiper-slide-index="4" role="group"
+																				aria-label="5 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/denmark.svg"
+																					alt="denmark"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">denmark</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/finland"
+																				data-swiper-slide-index="5" role="group"
+																				aria-label="6 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/finland.svg"
+																					alt="finland"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">finland</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/france"
+																				data-swiper-slide-index="6" role="group"
+																				aria-label="7 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																					alt="france"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">france</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/germany"
+																				data-swiper-slide-index="7" role="group"
+																				aria-label="8 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/germany.svg"
+																					alt="germany"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">germany</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/indonesia"
+																				data-swiper-slide-index="8" role="group"
+																				aria-label="9 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/indonesia.svg"
+																					alt="indonesia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">indonesia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/italy"
+																				data-swiper-slide-index="9" role="group"
+																				aria-label="10 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/italy.svg"
+																					alt="italy"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">italy</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/japan"
+																				data-swiper-slide-index="10"
+																				role="group" aria-label="11 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/japan.svg"
+																					alt="japan"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">japan</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/laos"
+																				data-swiper-slide-index="11"
+																				role="group" aria-label="12 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/laos.svg"
+																					alt="laos"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">laos</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/malaysia"
+																				data-swiper-slide-index="12"
+																				role="group" aria-label="13 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/malaysia.svg"
+																					alt="malaysia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">malaysia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/myanmar"
+																				data-swiper-slide-index="13"
+																				role="group" aria-label="14 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/myanmar.svg"
+																					alt="myanmar"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">myanmar</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/norway"
+																				data-swiper-slide-index="14"
+																				role="group" aria-label="15 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/norway.svg"
+																					alt="norway"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">norway</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/panama"
+																				data-swiper-slide-index="15"
+																				role="group" aria-label="16 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/panama.svg"
+																					alt="panama"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">panama</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/philippines"
+																				data-swiper-slide-index="16"
+																				role="group" aria-label="17 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/philippines.svg"
+																					alt="philippines"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">philippines</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/russia"
+																				data-swiper-slide-index="17"
+																				role="group" aria-label="18 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/russia.svg"
+																					alt="russia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">russia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/singapore"
+																				data-swiper-slide-index="18"
+																				role="group" aria-label="19 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																					alt="singapore"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">singapore</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/spain"
+																				data-swiper-slide-index="19"
+																				role="group" aria-label="20 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/spain.svg"
+																					alt="spain"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">spain</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/korea"
+																				data-swiper-slide-index="20"
+																				role="group" aria-label="21 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/korea.svg"
+																					alt="korea"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">korea</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/sweden"
+																				data-swiper-slide-index="21"
+																				role="group" aria-label="22 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/sweden.svg"
+																					alt="sweden"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">sweden</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/thailand"
+																				data-swiper-slide-index="22"
+																				role="group" aria-label="23 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/thailand.svg"
+																					alt="thailand"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">thailand</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/united-kingdom"
+																				data-swiper-slide-index="23"
+																				role="group" aria-label="24 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																					alt="united-kingdom"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">united-kingdom</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/vietnam"
+																				data-swiper-slide-index="24"
+																				role="group" aria-label="25 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/vietnam.svg"
+																					alt="vietnam"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">vietnam</span>
+																			</a>
+																		</div>
+																		<span class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span>
+																	</div>
+																	<div class="position-relative swiper-control">
+																		<div class="position-absolute top-0 end-0 swiper-custom-prev"
+																			tabindex="0" role="button"
+																			aria-label="Previous slide"
+																			aria-controls="swiper-wrapper-f5facb327cb823da">
+																			<i
+																				class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+																		</div>
+																		<div class="position-absolute bottom-0 end-0 swiper-custom-next"
+																			tabindex="0" role="button"
+																			aria-label="Next slide"
+																			aria-controls="swiper-wrapper-f5facb327cb823da">
+																			<i
+																				class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="passport_number">Passport Number<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-education.svg"
+														data-icon-name="outline-education" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer" type="text"
+														id="passport_number" name="passport_number[]"
+														placeholder="Enter Value" required="">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="appointment_location">Appointment Location<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="dropdown">
+													<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+														data-bs-toggle="dropdown" data-bs-auto-close="outside">
+														<img src="http://localhost:8000/assets/svg/outline-map-location.svg"
+															data-icon-name="outline-map-location" alt="date">
+														<input class="form-control border-0 px-0 cursor-pointer"
+															type="text" id="appointment_location"
+															name="appointment_location[]" placeholder="Please Select"
+															required="">
+														<img class="cursor-pointer"
+															src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+															data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+													</div>
+													<span class="hide text-danger fw-semibold medium"
+														id="error-msg"></span>
+													<div class="dropdown-menu rounded-4 p-3 w-100">
+														<div class="d-flex align-items-center border rounded-4 px-2">
+															<img src="http://localhost:8000/assets/svg/solid-search.svg"
+																alt="search">
+															<input class="form-control border-0 py-2 me-1" type="text"
+																name="search" placeholder="Enter Input"
+																autocomplete="off" required="">
+														</div>
+														<div class="list-nationality mt-4 text-title text-black">
+															<div class="list-popular mb-4">
+																<div class="label-title mb-3 fw-bold">Most Popular</div>
+																<div class="country-01 mb-2">
+																	<a
+																		href="http://localhost:8000/visa/country/united-kingdom">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																			alt="United Kingdom" width="20px"
+																			height="20px">
+																		<span class="ms-2">United Kingdom</span>
+																	</a>
+																</div>
+																<div class="country-02 mb-2">
+																	<a href="http://localhost:8000/visa/country/france">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																			alt="France" width="20px" height="20px">
+																		<span class="ms-2">French</span>
+																	</a>
+																</div>
+																<div class="country-03 mb-2">
+																	<a
+																		href="http://localhost:8000/visa/country/singapore">
+																		<img src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																			alt="Singapore" width="20px" height="20px">
+																		<span class="ms-2">Singapore</span>
+																	</a>
+																</div>
+															</div>
+															<div class="list-alphabetically">
+																<div class="label-title mb-3 fw-bold">Alphabetically
+																</div>
+																<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
+																	style="height: 142px">
+																	<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
+																		data-parent=".slide-input-country"
+																		data-items="5" data-space-between="1"
+																		data-direction="vertical"
+																		data-prev=".swiper-custom-prev"
+																		data-next=".swiper-custom-next"
+																		style="width: 85%">
+																		<div class="swiper-wrapper align-items-center"
+																			id="swiper-wrapper-f5facb327cb823da"
+																			aria-live="polite"
+																			style="transition-duration: 0ms; transition-delay: 0ms;">
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/belarus"
+																				data-swiper-slide-index="0" role="group"
+																				aria-label="1 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/belarus.svg"
+																					alt="belarus"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">belarus</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/brunei"
+																				data-swiper-slide-index="1" role="group"
+																				aria-label="2 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/brunei.svg"
+																					alt="brunei"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">brunei</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/cambodia"
+																				data-swiper-slide-index="2" role="group"
+																				aria-label="3 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/cambodia.svg"
+																					alt="cambodia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">cambodia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/chile"
+																				data-swiper-slide-index="3" role="group"
+																				aria-label="4 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/chile.svg"
+																					alt="chile"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">chile</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/denmark"
+																				data-swiper-slide-index="4" role="group"
+																				aria-label="5 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/denmark.svg"
+																					alt="denmark"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">denmark</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/finland"
+																				data-swiper-slide-index="5" role="group"
+																				aria-label="6 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/finland.svg"
+																					alt="finland"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">finland</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/france"
+																				data-swiper-slide-index="6" role="group"
+																				aria-label="7 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/france.svg"
+																					alt="france"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">france</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/germany"
+																				data-swiper-slide-index="7" role="group"
+																				aria-label="8 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/germany.svg"
+																					alt="germany"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">germany</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/indonesia"
+																				data-swiper-slide-index="8" role="group"
+																				aria-label="9 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/indonesia.svg"
+																					alt="indonesia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">indonesia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/italy"
+																				data-swiper-slide-index="9" role="group"
+																				aria-label="10 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/italy.svg"
+																					alt="italy"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">italy</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/japan"
+																				data-swiper-slide-index="10"
+																				role="group" aria-label="11 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/japan.svg"
+																					alt="japan"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">japan</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/laos"
+																				data-swiper-slide-index="11"
+																				role="group" aria-label="12 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/laos.svg"
+																					alt="laos"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">laos</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/malaysia"
+																				data-swiper-slide-index="12"
+																				role="group" aria-label="13 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/malaysia.svg"
+																					alt="malaysia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">malaysia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/myanmar"
+																				data-swiper-slide-index="13"
+																				role="group" aria-label="14 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/myanmar.svg"
+																					alt="myanmar"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">myanmar</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/norway"
+																				data-swiper-slide-index="14"
+																				role="group" aria-label="15 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/norway.svg"
+																					alt="norway"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">norway</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/panama"
+																				data-swiper-slide-index="15"
+																				role="group" aria-label="16 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/panama.svg"
+																					alt="panama"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">panama</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/philippines"
+																				data-swiper-slide-index="16"
+																				role="group" aria-label="17 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/philippines.svg"
+																					alt="philippines"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">philippines</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/russia"
+																				data-swiper-slide-index="17"
+																				role="group" aria-label="18 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/russia.svg"
+																					alt="russia"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">russia</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/singapore"
+																				data-swiper-slide-index="18"
+																				role="group" aria-label="19 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/singapore.svg"
+																					alt="singapore"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">singapore</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/spain"
+																				data-swiper-slide-index="19"
+																				role="group" aria-label="20 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/spain.svg"
+																					alt="spain"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">spain</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/korea"
+																				data-swiper-slide-index="20"
+																				role="group" aria-label="21 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/korea.svg"
+																					alt="korea"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">korea</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/sweden"
+																				data-swiper-slide-index="21"
+																				role="group" aria-label="22 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/sweden.svg"
+																					alt="sweden"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">sweden</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/thailand"
+																				data-swiper-slide-index="22"
+																				role="group" aria-label="23 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/thailand.svg"
+																					alt="thailand"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">thailand</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/united-kingdom"
+																				data-swiper-slide-index="23"
+																				role="group" aria-label="24 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/united-kingdom.svg"
+																					alt="united-kingdom"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">united-kingdom</span>
+																			</a>
+																			<a class="swiper-slide d-block text-start"
+																				href="http://localhost:8000/visa/country/vietnam"
+																				data-swiper-slide-index="24"
+																				role="group" aria-label="25 / 25">
+																				<img class="d-inline"
+																					src="http://localhost:8000/assets/svg/emojione-flag/vietnam.svg"
+																					alt="vietnam"
+																					style="width: 20px; height: 20px;">
+																				<span
+																					class="ms-2 text-capitalize fs-6">vietnam</span>
+																			</a>
+																		</div>
+																		<span class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span><span
+																			class="swiper-notification"
+																			aria-live="assertive"
+																			aria-atomic="true"></span>
+																	</div>
+																	<div class="position-relative swiper-control">
+																		<div class="position-absolute top-0 end-0 swiper-custom-prev"
+																			tabindex="0" role="button"
+																			aria-label="Previous slide"
+																			aria-controls="swiper-wrapper-f5facb327cb823da">
+																			<i
+																				class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+																		</div>
+																		<div class="position-absolute bottom-0 end-0 swiper-custom-next"
+																			tabindex="0" role="button"
+																			aria-label="Next slide"
+																			aria-controls="swiper-wrapper-f5facb327cb823da">
+																			<i
+																				class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="issue_date">Issue Date<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-date.svg"
+														data-icon-name="outline-date" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer datepicker"
+														type="text" id="issue_date" name="issue_date"
+														placeholder="DD/MM/YY" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="expired_date">Expired Date<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+													data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<img src="http://localhost:8000/assets/svg/outline-date.svg"
+														data-icon-name="outline-date" alt="date">
+													<input class="form-control border-0 px-0 cursor-pointer datepicker"
+														type="text" id="expired_date" name="expired_date[]"
+														placeholder="DD/MM/YY" required="">
+													<img class="cursor-pointer"
+														src="http://localhost:8000/assets/svg/outline-arrow_bottom.svg"
+														data-icon-name="outline-arrow_bottom" alt="arrow_bottom">
+												</div>
+												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											</div>
+										</div>
+										<div class="form-group row g-3 g-lg-7 g-md-5">
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="photo_of_passport">Photo of Passport Page<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="border rounded-4 bg-upload text-center align-middle cursor-pointer"
+													style="height: 160px; display: table-cell;">
+													<img src="http://localhost:8000/assets/svg/outline-multimedia.svg"
+														alt="date">
+													<input class="form-control" type="file" name="photo_of_passport[]"
+														id="photo_of_passport" style="visibility: hidden; height:0;">
+													<div class="text-decoration-underline medium mt-2">+ Upload File
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<label class="h6 fw-semibold text-title text-black"
+													for="portrait_photo">Portrait Photo<img class="ms-2"
+														src="http://localhost:8000/assets/svg/icon-info.svg"
+														alt="info"></label>
+												<div class="border rounded-4 bg-upload text-center align-middle cursor-pointer"
+													style="height: 160px; display: table-cell;">
+													<img src="http://localhost:8000/assets/svg/outline-multimedia.svg"
+														alt="date">
+													<input class="form-control" type="file" name="portrait_photo[]"
+														id="photo_of_passport" style="visibility: hidden; height:0;">
+													<div class="text-decoration-underline medium mt-2">+ Upload File
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="contact-information border border-primary px-5 py-3 rounded-collapse my-4">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary"
+								class="toggle-data-dropdown collapsed"
+								data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse"
+								data-bs-target="#contact-information">
+								<div class="d-flex justify-content-between py-3">
+									<div class="d-flex align-items-center">
+										<span class="bg-primary d-block me-5" style="width: 72px; height: 12px;"></span>
+										<h4
+											class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">
+											YOUR CONTACT INFORMATION</h4>
+									</div>
+									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary"
+										role="button">
+										<img src="http://localhost:8000/assets/svg/solid-arrow-down-blue.svg"
+											alt="arrow" width="14px" height="14px">
+									</div>
+								</div>
+							</div>
+							<div class="collapse py-3" id="contact-information" style="">
+								<div class="row justify-content-center">
+									<div class="col-lg-7 col-12">
+										<div class="form-group mb-3">
+											<label class="h6 fw-semibold text-title text-black" for="contact_name">Your
+												Full Name</label>
+											<div
+												class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search">
+												<img src="http://localhost:8000/assets/svg/outline-menu-user.svg"
+													data-icon-name="outline-menu-user" alt="outline-menu-user">
+												<input class="form-control border-0 px-0 cursor-pointer" type="text"
+													id="contact_name" name="contact_name" placeholder="Enter Value"
+													required="">
+											</div>
+											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+										</div>
+										<div class="form-group mb-3">
+											<label class="h6 fw-semibold text-title text-black" for="contact_email">Your
+												Email</label>
+											<div
+												class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search">
+												<img src="http://localhost:8000/assets/svg/outline-email.svg"
+													data-icon-name="outline-email" alt="outline-email">
+												<input class="form-control border-0 px-0 cursor-pointer" type="text"
+													id="contact_email" name="contact_email" placeholder="Enter Value"
+													required="">
+											</div>
+											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+										</div>
+										<div class="form-group">
+											<label class="h6 fw-semibold text-title text-black" for="contact_phone">Your
+												Phone Number</label>
+											<div class="d-flex gap-2">
+												<div style="width: 80px; height: 46px">
+													<div class="d-flex align-items-center justify-content-between border rounded-4 bg-white py-1 px-2 h-100 input-visa-search"
+														data-bs-toggle="dropdown" data-bs-auto-close="outside">
+														<input class="form-control border-0 px-0 cursor-pointer medium"
+															type="text" id="contact_nationality"
+															name="contact_nationality" value="+84" required="">
+														<img class="cursor-pointer"
+															src="http://localhost:8000/assets/svg/icon-direction-up.svg"
+															alt="arrow_bottom">
+													</div>
+												</div>
+												<div class="w-100">
+													<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 bg-white py-1 px-3 input-visa-search"
+														data-bs-toggle="dropdown" data-bs-auto-close="outside">
+														<img src="http://localhost:8000/assets/svg/outline-phone.svg"
+															data-icon-name="outline-phone" alt="phone">
+														<input class="form-control border-0 px-0 cursor-pointer"
+															type="text" id="contact_phone" name="contact_phone"
+															placeholder="Enter Value" required="">
+													</div>
+													<span class="hide text-danger fw-semibold medium"
+														id="error-msg"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="payment p-lg-5">
+					<div class="row g-5">
+						<div class="col-lg-8 col-12">
+							<div class="border-dashed bg-beige rounded-4 px-lg-6 px-md-5 p-4 mb-4">
+								<h2 class="fw-800 text-title text-black text-uppercase mb-4">payment methods</h2>
+								<div class="d-flex justify-content-between mb-5 flex-wrap">
+									<label class="payment-method-item mb-4 w-100" for="payment_method_1"
+										data-bs-target="#bank-transfer">
+										<div class="d-flex justify-content-center">
+											<div>
+												<input class="form-check-input fs-5 me-2 mt-0" type="radio"
+													name="payment_method" id="payment_method_1" value="option1">
+											</div>
+											<div class="rounded-4 p-4 bg-white payment-method-card cursor-pointer">
+												<h5 class="fw-bold ms-3 mb-3 text-black method-title">Bank Transfer:
+												</h5>
+												<div class="text-center method-icon">
+													<img src="http://localhost:8000/assets/images/payment-method/bank/icon-outline.png"
+														data-link-icon="http://localhost:8000/assets/images/payment-method/bank"
+														alt="Bank Transfer" width="80px" height="80px">
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="payment-method-item mb-4" for="payment_method_2">
+										<div class="d-flex">
+											<div>
+												<input class="form-check-input fs-5 me-2 mt-0" type="radio"
+													name="payment_method" id="payment_method_2" value="option1">
+											</div>
+											<div class="rounded-4 p-4 bg-white payment-method-card cursor-pointer">
+												<h5 class="fw-bold ms-3 mb-3 text-black method-title">OnePay:</h5>
+												<div class="text-center method-icon">
+													<img src="http://localhost:8000/assets/images/payment-method/onepay/icon-outline.png"
+														data-link-icon="http://localhost:8000/assets/images/payment-method/onepay"
+														alt="Bank Transfer" height="56px">
+													<div
+														class="d-flex gap-2 justify-content-center mt-3 sub-method-icon">
+														<img src="http://localhost:8000/assets/images/payment-method/visa/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/visa"
+															alt="Bank Transfer" width="28px" height="20px">
+														<img src="http://localhost:8000/assets/images/payment-method/american-express-card/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/american-express-card"
+															alt="Bank Transfer" width="28px" height="20px">
+														<img src="http://localhost:8000/assets/images/payment-method/master-card/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/master-card"
+															alt="Bank Transfer" width="28px" height="20px">
+														<img src="http://localhost:8000/assets/images/payment-method/jcb-card/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/jcb-card"
+															alt="Bank Transfer" width="28px" height="20px">
+													</div>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="payment-method-item mb-4" for="payment_method_3">
+										<div class="d-flex">
+											<div>
+												<input class="form-check-input fs-5 me-2 mt-0" type="radio"
+													name="payment_method" id="payment_method_3" value="option1">
+											</div>
+											<div class="rounded-4 p-4 bg-white payment-method-card cursor-pointer">
+												<h5 class="fw-bold ms-3 mb-3 text-black method-title">PayPal:</h5>
+												<div class="text-center method-icon">
+													<img src="http://localhost:8000/assets/images/payment-method/paypal/icon-outline.png"
+														data-link-icon="http://localhost:8000/assets/images/payment-method/paypal"
+														alt="Bank Transfer" height="56px">
+													<div
+														class="d-flex gap-2 justify-content-center mt-3 sub-method-icon">
+														<img src="http://localhost:8000/assets/images/payment-method/visa/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/visa"
+															alt="Bank Transfer" width="28px" height="20px">
+														<img src="http://localhost:8000/assets/images/payment-method/american-express-card/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/american-express-card"
+															alt="Bank Transfer" width="28px" height="20px">
+														<img src="http://localhost:8000/assets/images/payment-method/master-card/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/master-card"
+															alt="Bank Transfer" width="28px" height="20px">
+														<img src="http://localhost:8000/assets/images/payment-method/jcb-card/icon-outline.png"
+															data-link-icon="http://localhost:8000/assets/images/payment-method/jcb-card"
+															alt="Bank Transfer" width="28px" height="20px">
+													</div>
+												</div>
+											</div>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="border-dashed bg-beige rounded-4 px-lg-6 p-5 mb-4" id="bank-transfer"
+								style="display: none">
+								<h2 class="fw-800 text-title text-black text-uppercase mb-4">payment methods</h2>
+								<div class="row gx-7 bank-info">
+									<div class="col-sm-6 col-12 py-3 border-bank">
+										<div class="text-center">
+											<img src="http://localhost:8000/assets/svg/outline-money-bag-dollar.svg"
+												alt="Bank Transfer" width="80px" height="80px">
+											<div class="large fw-bold text-title mt-2">Bank (USD)</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Account Name</li>
+											</ul>
+											<div class="fw-bold mb-1">CONG TY TNHH THE ONE DIGI</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Account Number</li>
+											</ul>
+											<div class="fw-bold mb-1" style="color: #FF3B30">116002939886</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Bank Name</li>
+											</ul>
+											<div class="fw-bold mb-1">VietinBank</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Swift Code</li>
+											</ul>
+											<div class="fw-bold mb-1">ICBVVNVX900</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Content</li>
+											</ul>
+											<div class="fw-bold mb-1">Code - Order ID</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-12 py-3">
+										<div class="text-center">
+											<img src="http://localhost:8000/assets/svg/outline-money-bag-vnd.svg"
+												alt="Bank Transfer" width="80px" height="80px">
+											<div class="large fw-bold text-title mt-2">Bank (USD)</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Account Name</li>
+											</ul>
+											<div class="fw-bold mb-1">CONG TY TNHH THE ONE DIGI</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Account Number</li>
+											</ul>
+											<div class="fw-bold mb-1 text-primary">116856218888</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Bank Name</li>
+											</ul>
+											<div class="fw-bold mb-1">VietinBank</div>
+										</div>
+										<div class="border-bottom py-2">
+											<ul>
+												<li>Content</li>
+											</ul>
+											<div class="fw-bold mb-1">Code - Order ID</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="confirm">
+								<div class="form-check mb-3">
+									<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info"
+										name="correct_info" style="width:1.5rem; height:1.5rem" checked="" required="">
+									<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like
+										to confirm that the above information is correct.</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term"
+										style="width:1.5rem; height:1.5rem" checked="" required="">
+									<label class="form-check-label ms-3 cursor-pointer" for="term">
+										I have read and agree to the <a href="#"
+											class="fw-bold text-title text-primary text-decoration-underline">Terms and
+											Conditions</a> as well as the company's <a href="#"
+											class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-12">
+							<div class="border-dashed bg-beige rounded-4 text-title py-sm-5 p-4 mb-4">
+								<h2 class="fw-800 text-black text-center text-uppercase">ORDER SUMMARY</h2>
+								<div class="row g-3 my-4">
+									<div class="col-12">
+										<div class="d-flex gap-3 align-items-center">
+											<div class="me-auto fw-semibold">Order Number:</div>
+											<div class="medium w-50">ABC123</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 align-items-center">
+											<div class="me-auto fw-semibold">Number of Applicants:</div>
+											<div class="medium w-50">02</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 align-items-center">
+											<div class="me-auto fw-semibold">Type of Visa:</div>
+											<div class="medium w-50">Lorem Ipsum Dolor Sit Amet</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 align-items-center">
+											<div class="me-auto fw-semibold">Destination:</div>
+											<div class="medium w-50">Lorem Ipsum Dolor Sit Amet</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 align-items-center">
+											<div class="me-auto fw-semibold">Day of Arrival:</div>
+											<div class="medium w-50">DD/MM/YY</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 align-items-center">
+											<div class="me-auto fw-semibold">Day of Return:</div>
+											<div class="medium w-50">DD/MM/YY</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="fw-semibold">Additional Info:</div>
+										<div class="ms-4 mt-2">
+											<div class="row g-2 medium">
+												<div class="col-12">
+													<div class="d-flex gap-3">
+														<div class="me-auto fw-semibold">Service Fees:</div>
+														<div class="w-40">40 USD per person</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="d-flex gap-3">
+														<div class="me-auto fw-semibold">Admin &amp; Government Fees:
+														</div>
+														<div class="w-40">50 USD per person</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="d-flex gap-3">
+														<div class="me-auto fw-semibold">Processing Time Fees:</div>
+														<div class="w-40">Super Urgent - Within 1 day - 50 USD per
+															person</div>
+													</div>
+												</div>
+												<div class="col-12">
+													<div class="d-flex gap-3">
+														<div class="me-auto fw-semibold">Travel Insurance:</div>
+														<div class="w-40">50 USD per person</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex border border-secondary rounded-3 bg-white mb-4 input-promo"
+									style="--bs-border-opacity: 0.25;">
+									<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text"
+										name="promo" placeholder="Enter your promo code here!" style="height: 48px"
+										required="">
+									<button class="btn btn-primary rounded-end-3 px-4"><span
+											class="text-nowrap fw-semibold">Apply Now</span></button>
+								</div>
+								<table class="table table-borderless" style="--bs-table-bg: #FFFCF7">
+									<tbody>
+										<tr>
+											<td class="fw-semibold">Subtotal:</td>
+											<td class="text-end medium">$USD</td>
+										</tr>
+										<tr>
+											<td class="fw-semibold">Discount:</td>
+											<td class="text-end medium">$USD</td>
+										</tr>
+										<tr class="fw-semibold">
+											<td class="text-primary" style="font-size: 18px">Total Amount:</td>
+											<td class="text-primary text-end">$USD</td>
+										</tr>
+									</tbody>
+								</table>
+								<a href="http://localhost:8000/visa/apply/step3"
+									class="btn btn-orange btn-lg rounded-4 py-3 fw-bold w-100 btn-visa-search">Confirm
+									your Payment</a>
+							</div>
+							<div class="secured">
+								<div class="d-flex align-items-center gap-2 pb-3">
+									<img src="http://localhost:8000/assets/svg/outline-shield-check.svg"
+										alt="Bank Transfer" width="40px" height="40px">
+									<div>
+										<div class="medium fw-semibold text-title">Your data is secured by us!</div>
+										<div class="small">For more details please read <span
+												class="text-title text-primary fw-bold">Global eVISA Security
+												Policies</span></div>
+									</div>
+								</div>
+								<div class="d-flex align-items-center gap-3 pt-4">
+									<a href="http://localhost:8000/visa/apply/step1"
+										class="btn btn-primary btn-lg rounded px-5">
+										<img src="http://localhost:8000/assets/svg/icon-direction-left.svg"
+											alt="Bank Transfer">
+									</a>
+									<div class="medium fw-semibold text-title text-primary">Back to previous step</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<script>
+					$(document).ready(function () {
+						var iconDown = "http://localhost:8000/assets/svg/solid-arrow-down-blue.svg";
+						var iconUp = "http://localhost:8000/assets/svg/solid-arrow-up-blue.svg";
+
+						var validator = $("#frm-order").validate({
+							highlight: function (input) {
+								var parent = $(input).parent(".input-visa-search");
+								parent.addClass('error');
+								updateSvgColor(parent.find('img'), 'red');
+							},
+							errorPlacement: function (error, input) {
+								if (error.text() != '') {
+									$(input).parent(".input-visa-search").next("span").show();
+									$(input).parent(".input-visa-search").next("span").html(error.text())
+								}
+							},
+							invalidHandler: function (event, validator) {
+								$(".spinner").addClass("d-none");
+								$('.spinner .center-div').loader('spinner').hide();
+							}
+						});
+
+						$(".toggle-data-dropdown").click(function () {
+							$(this).find("img").attr('src', (_, attr) => attr == iconDown ? iconUp : iconDown);
+						});
+
+						$('input.form-control').on('blur', function () {
+							if ($(this).valid()) {
+								var parent = $(this).parent(".input-visa-search");
+								parent.removeClass('error');
+								parent.next("span").hide();
+								updateSvgColor(parent.find('img'), '');
+							}
+						});
+
+						$("input[name='payment_method']").change(function () {
+							var parent = $(this).closest("label");
+							var img = $(parent).find(".method-icon img");
+
+							if ($(this).is(':checked')) {
+								inputChecked(parent, img);
+								if ($(parent).data("bs-target") !== undefined) {
+									$($(parent).data("bs-target")).show();
+								}
+
+								$('input[name="payment_method"]').not(this).each(function (k, ele) {
+									var otherParent = $(ele).closest("label");
+									inputUnChecked(otherParent, otherParent.find(".method-icon img"));
+									if ($(otherParent).data("bs-target") !== undefined) {
+										$($(otherParent).data("bs-target")).hide();
+									}
+								});
+							} else {
+								inputUnChecked(parent, img);
+							}
+						});
+
+						function inputChecked(parent, img) {
+							$(parent).find(".method-title").removeClass("fw-bold").removeClass("text-black").addClass("text-primary text-decoration-underline fw-800");
+							$(parent).find(".payment-method-card").addClass("shadow-blue");
+							var icon = "/icon.png";
+							changeImage(img, icon);
+						}
+
+						function inputUnChecked(parent, img) {
+							$(parent).find(".method-title").removeClass("text-primary text-decoration-underline fw-800").addClass("text-black fw-bold");
+							$(parent).find(".payment-method-card").removeClass("shadow-blue");
+							var icon = "/icon-outline.png";
+							changeImage(img, icon);
+						}
+
+						function changeImage(img, icon) {
+							$(img).each(function (index, item) {
+								$(item).attr("src", $(item).data('link-icon') + icon);
+							});
+						}
+
+						function updateSvgColor(pathElement, fillColor) {
+							if (fillColor != '') {
+								fillColor = '-' + fillColor;
+							}
+
+							pathElement.each(function (index, item) {
+								var iconName = $(item).data('icon-name');
+								var src = `http://localhost:8000/assets/svg/${iconName + fillColor}.svg`;
+
+								if ($(item).attr('alt') == 'plus') {
+									iconPlus = src;
+								} else if ($(item).attr('alt') == 'minus') {
+									var src = `http://localhost:8000/assets/svg/outline-minus${fillColor}.svg`;
+									iconMinus = src;
+								}
+								$(item).attr('src', src);
+							});
+						}
+					});
+				</script>
+			</div>
+		</div>
+	</section>
+
+	<footer class="py-5 bg-primary text-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-6 col-md-2 mb-3">
+					<h5 class="text-white">Section</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+					</ul>
+				</div>
+
+				<div class="col-6 col-md-2 mb-3">
+					<h5 class="text-white">Section</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+					</ul>
+				</div>
+
+				<div class="col-6 col-md-2 mb-3">
+					<h5 class="text-white">Section</h5>
+					<ul class="nav flex-column">
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Pricing</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+						<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About</a></li>
+					</ul>
+				</div>
+
+				<div class="col-md-5 offset-md-1 mb-3">
+					<form>
+						<h5 class="text-white">Subscribe to our newsletter</h5>
+						<p>Monthly digest of what's new and exciting from us.</p>
+						<div class="d-flex flex-column flex-sm-row w-100 gap-2">
+							<label for="newsletter1" class="visually-hidden">Email address</label>
+							<input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+							<button class="btn btn-primary" type="button">Subscribe</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+				<p>© 2023 Company, Inc. All rights reserved.</p>
+				<ul class="list-unstyled d-flex">
+					<li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#twitter"></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#instagram"></use>
+							</svg></a></li>
+					<li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24">
+								<use xlink:href="#facebook"></use>
+							</svg></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+	<script src="http://localhost:8000/assets/js/telinput/js/intlTelInput.min.js"></script>
+	<script src="http://localhost:8000/assets/js/flight.js?id=1700735307"></script>
+	<script src="http://localhost:8000/assets/js/search.js?id=1699685344"></script>
+	<script type="module" src="http://[::1]:5173/@vite/client"></script>
+	<script type="module" src="http://[::1]:5173/resources/js/app.js"></script>
+	<!-- Initialize Swiper -->
+	<script>
+		// Tooltip
+		$($(document).ready(function () {
+			$('[data-toggle="tooltip"]').tooltip();
+		}));
+
+		// swiper js
+		var swiper = new Swiper(".mySwiper", {
+			slidesPerView: 3,
+			spaceBetween: 50,
+			loop: true,
+			navigation: {
+				nextEl: ".swiper-custom-next",
+				prevEl: ".swiper-custom-prev",
+			},
+		});
+	</script>
+	<div class="daterangepicker ltr auto-apply single opensright">
+		<div class="ranges"></div>
+		<div class="drp-calendar left single" style="display: block;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-calendar right" style="display: none;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default"
+				type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled"
+				type="button">Apply</button> </div>
+	</div>
+	<div class="daterangepicker ltr auto-apply single opensright">
+		<div class="ranges"></div>
+		<div class="drp-calendar left single" style="display: block;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-calendar right" style="display: none;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default"
+				type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled"
+				type="button">Apply</button> </div>
+	</div>
+	<div class="daterangepicker ltr auto-apply single opensright">
+		<div class="ranges"></div>
+		<div class="drp-calendar left single" style="display: block;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-calendar right" style="display: none;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default"
+				type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled"
+				type="button">Apply</button> </div>
+	</div>
+	<div class="daterangepicker ltr auto-apply single opensright">
+		<div class="ranges"></div>
+		<div class="drp-calendar left single" style="display: block;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-calendar right" style="display: none;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default"
+				type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled"
+				type="button">Apply</button> </div>
+	</div>
+	<div class="daterangepicker ltr auto-apply single opensright">
+		<div class="ranges"></div>
+		<div class="drp-calendar left single" style="display: block;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-calendar right" style="display: none;">
+			<div class="calendar-table"></div>
+			<div class="calendar-time" style="display: none;"></div>
+		</div>
+		<div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default"
+				type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled"
+				type="button">Apply</button> </div>
+	</div>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>

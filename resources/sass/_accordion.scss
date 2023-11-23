@@ -1,0 +1,76 @@
+.accordion-button {
+	box-shadow: none !important;
+}
+
+.accordion {
+	.card {
+		border: 0;
+		overflow: inherit;
+		.card-header {
+			padding: 1rem 1.25rem;
+			border: none;
+			background: none;
+			color: #545454;
+			cursor: pointer;
+			&:after {
+				font-family: "Font Awesome 5 Pro";
+				content: "\f077";
+				font-size: 1rem;
+				position: absolute;
+				top: 1rem;
+				right: 0px;
+			}
+			&.collapsed {
+				&:after {
+					content: "\f078";
+				}
+			}
+		}
+	}
+}
+
+.accordion .card .card-body {
+	padding: 20px 10px;
+}
+
+.view-details {
+	.card-header {
+		&:hover {
+			&:after {
+				font-weight: 700;
+			}
+		}
+		&:after {
+			content: "\f0dd" !important;
+			color: $primary;
+			top: 0.75rem !important;
+		}
+		&.collapsed {
+			&:after {
+				content: "\f0de" !important;
+			}
+		}
+	}
+}
+
+.flight-selected {
+	.card-header {
+		&:hover {
+			&:after {
+				font-weight: 800;
+			}
+		}
+		&:after {
+			content: "\f32d" !important;
+			color: $primary;
+			right: 20px !important;
+			font-size: 1.5rem !important;
+			top: 25px !important;
+		}
+		&.collapsed {
+			&:after {
+				content: "\f331" !important;
+			}
+		}
+	}
+}

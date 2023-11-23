@@ -1,0 +1,90 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.0.2",
+        "dompdf/dompdf": "^2.0",
+        "guzzlehttp/guzzle": "^7.2",
+        "laravel/framework": "^9.19",
+        "laravel/sanctum": "^3.0",
+        "laravel/tinker": "^2.7",
+        "laravel/ui": "^4.0",
+        "maatwebsite/excel": "^3.1",
+        "twbs/bootstrap": "4.3.1"
+    },
+    "require-dev": {
+        "fakerphp/faker": "^1.9.1",
+        "laravel/pint": "^1.0",
+        "laravel/sail": "^1.0.1",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "^6.1",
+        "phpunit/phpunit": "^9.5.10",
+        "spatie/laravel-ignition": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Amadeus\\": "vendor/amadeus/src/",
+            "Amadeus\\Airport\\": "vendor/amadeus/src/airport/",
+            "Amadeus\\Airport\\Predictions\\": "vendor/amadeus/src/airport/predictions/",
+            "Amadeus\\Booking\\": "vendor/amadeus/src/booking/",
+            "Amadeus\\Client\\": "vendor/amadeus/src/client/",
+            "Amadeus\\DutyOfCare\\": "vendor/amadeus/src/dutyOfCare/",
+            "Amadeus\\DutyOfCare\\Diseases\\": "vendor/amadeus/src/dutyOfCare/diseases/",
+            "Amadeus\\EReputation\\": "vendor/amadeus/src/eReputation/",
+            "Amadeus\\Exceptions\\": "vendor/amadeus/src/exceptions/",
+            "Amadeus\\ReferenceData\\": "vendor/amadeus/src/referenceData/",
+            "Amadeus\\ReferenceData\\Locations\\": "vendor/amadeus/src/referenceData/locations/",
+            "Amadeus\\ReferenceData\\Locations\\Hotels\\": "vendor/amadeus/src/referenceData/locations/hotels/",
+            "Amadeus\\Resources\\": "vendor/amadeus/src/resources/",
+            "Amadeus\\Schedule\\": "vendor/amadeus/src/schedule/",
+            "Amadeus\\Shopping\\": "vendor/amadeus/src/shopping/",
+            "Amadeus\\Shopping\\Activities\\": "vendor/amadeus/src/shopping/activities/",
+            "Amadeus\\Shopping\\Availability\\": "vendor/amadeus/src/shopping/availability/",
+            "Amadeus\\Shopping\\FlightOffers\\": "vendor/amadeus/src/shopping/flightOffers/",
+            "Amadeus\\Travel\\": "vendor/amadeus/src/travel/",
+            "Amadeus\\Travel\\Predictions\\": "vendor/amadeus/src/travel/predictions/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/",
+            "IP2Location\\": "vendor/ip2location/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

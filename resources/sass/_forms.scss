@@ -1,0 +1,75 @@
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-line {
+	.form-control {
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		padding-left: 0;
+		border-radius: 0;
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 2px;
+			width: 100%;
+			background: $primary;
+			display: block;
+		}
+		&:focus {
+			background-color: transparent;
+			border-color: $gray-800;
+		}
+		&.error {
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid $primary !important;
+		}
+	}
+	.input-group {
+		display: block;
+		position: relative;
+	}
+}
+
+.form-line .form-control ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background-color: $primary;
+	transition: all 0.6s cubic-bezier(0.42, 0, 0, 0.97);
+}
+
+.form-line input.form-control:focus ~ .focus-border,
+.form-line textarea.form-control:focus ~ .focus-border {
+	width: 100%;
+}
+
+input {
+	&::placeholder {
+		font-size: .875rem;
+	}
+}
+
+.input-promo {
+	&:focus-within {
+		border-color: $primary !important;
+	}
+}
+
+.daterangepicker {
+	border-radius: 1rem;
+	&.opensright:before {
+		left: 19px;
+	}
+	&.opensright:after {
+		left: 20px;
+	}
+}

@@ -1,0 +1,262 @@
+.input-curve {
+	position: relative;
+	.curve-control {
+		position: relative;
+		&:after {
+			content: "";
+			background: $orange;
+			border: 1px solid $orange;
+			border-radius: 20%;
+			box-sizing: border-box;
+			position: absolute;
+			top: 1.35rem;
+			width: 1.65rem;
+			height: 2.25rem;
+			line-height: 2rem;
+			text-align: center;
+		}
+		&.curve-right {
+			&:after {
+				right: -1.25rem;
+			}
+		}
+		&.curve-left {
+			&:after {
+				left: -1.25rem;
+			}
+		}
+	}
+	.curve-text {
+		position: absolute;
+		top: 1.35rem;
+		right: -1.875rem;
+		width: 2.25rem;
+		height: 2.25rem;
+		line-height: 2.25rem;
+		text-align: center;
+		z-index: 1;
+	}
+}
+
+.btn-white {
+	background: $white;
+	color: $gray-800;
+	&.active, &:active, &:focus, &:hover {
+		background: $white !important;
+		color: $gray-800 !important;
+	}
+}
+
+.btn-primary {
+	background-color: $primary !important;
+	border-color: $primary !important;
+	color: $white;
+	&.active, &:active, &:focus, &:hover {
+		background-color: $primary !important;
+		color: $white !important;
+	}
+}
+
+.btn-orange {
+	background-color: $orange !important;
+	border-color: $orange !important;
+	color: $white;
+	&.active, &:active, &:focus, &:hover {
+		background-color: $orange !important;
+		color: $white !important;
+	}
+	&.btn-search {
+		&.active, &:active, &:focus, &:hover {
+			color: $orange !important;
+			background-color: $white !important;
+			transition: all 0.75s;
+		}
+	}
+}
+
+.btn-beige {
+	background-color: $beige !important;
+	border-color: $primary !important;
+	color: $primary;
+	&.active, &:active, &:focus, &:hover {
+		background-color: $beige !important;
+		color: $primary !important;
+	}
+}
+
+.btn-outline-white {
+	background: transparent;
+	border-color: $white;
+	color: $white;
+	&.active, &:active, &:focus, &:hover {
+		color: $gray-800;
+		background: $white;
+	}
+}
+
+.btn-outline-light {
+	background: transparent;
+	border-color: $gray-400;
+	color: $gray-500;
+}
+
+.btn-outline-light:hover {
+	background: $gray-400;
+	border-color: $gray-400;
+	color: $gray-800;
+}
+
+.btn-outline-secondary {
+	border-color: $gray-400;
+	color: $gray-800;
+}
+
+.btn-line {
+	padding: 0.5rem 1rem 0.5rem 2.75rem;
+	&:before {
+		content: "";
+		width: 16px;
+		height: 2px;
+		display: block;
+		background: $white;
+		position: absolute;
+		left: 16px;
+		bottom: 15px; 
+		transition: $transition-base;
+	}
+	&:after {
+		content: "";
+		width: 16px;
+		height: 2px;
+		display: block;
+		background: $white;
+		position: absolute;
+		right: -16px;
+		bottom: 15px;
+		transition: $transition-base;
+	}
+	&:hover{
+		padding: 0.5rem 2.75rem 0.5rem 1rem;
+		&:before {
+			right: auto;
+			left: -16px;
+		}
+		&:after {
+			right: 16px;
+			left: auto;
+			transition: $transition-base;
+			animation: blink-animation 1s steps(5, start) infinite;
+		}
+	}
+}
+
+@each $name, $color in $theme-colors {
+	.btn-line {
+		&.btn-#{$name} {
+			&:before {
+				background: color($color);
+			}
+			&:after {
+				background: color($color);
+			}
+		}
+	}
+}
+
+@each $color, $value in $theme-colors {
+	.btn-line {
+		&.text-#{$color} {
+			padding: 0.5rem 0rem 0.5rem 1.5rem;
+			&:before {
+				background: $value;
+				left: 0;
+			}
+			&:after {
+				background: $value;
+				right: -16px
+			}
+			&:hover {
+				padding: 0.5rem 1.5rem 0.5rem 0rem;
+				&:before {
+					left: -16px;
+				}
+				&:after{
+					right: 0;
+				}
+			}
+		}
+	}
+}
+
+.btn-line.btn-white {
+	&:before, &:after {
+		background: $gray-800;
+	}
+}
+
+.btn-line.btn-sm {
+	&:before {
+		bottom: 12px;
+	}
+	&:after {
+		bottom: 12px;
+	}
+}
+
+.back-top {
+	cursor: pointer;
+	position: fixed !important;
+	bottom: 0;
+	right: 0;
+	display: block;
+	z-index: 99;
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(50%);
+	transition: $transition-base;
+	background: $primary;
+	color: $white;
+	padding: 20px 0 15px 0;
+	width: 40px;
+	position: absolute;
+	color: $white;
+	&.back-top-show {
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0%);
+		transition: all 1s ease-in-out;
+	}
+	.scoll-text {
+		writing-mode: vertical-rl;
+		padding-left: 8px;
+	}
+	.scroll-line {
+		width: 1px;
+		height: 60px;
+		overflow: hidden;
+		margin: 0 0 10px 20px;
+		&:after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			display: block;
+			background: linear-gradient(180deg, $white 50%, rgba(21, 175, 90, 0) 0);
+			background-position: 0 -60px;
+			background-size: 100% 200%;
+			-webkit-animation: backtop 5s cubic-bezier(0.76, 0, 0.3, 1) infinite forwards;
+			animation: backtop 5s cubic-bezier(0.76, 0, 0.3, 1) infinite forwards;
+		}
+	}
+}
+
+@keyframes backtop {
+	from {
+		background-position: 0 -60px
+	}
+	75% {
+		background-position: 0 0
+	}
+	0% {
+		background-position: 0 60px
+	}
+}

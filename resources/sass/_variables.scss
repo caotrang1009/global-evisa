@@ -1,0 +1,59 @@
+$primary: #3B7ACC;
+$orange: #EB9444;
+$beige: #FFFCF7;
+$danger: #C2332A;
+$form-check-input-checked-bg-color: #EB9444;
+$bg-btn-search: #EB9444;
+
+// Typography
+$font-family-base: "Public Sans";
+$font-family-title: "Montserrat";
+$font-size-base: 1rem;
+
+// Spacing
+$enable-negative-margins: true;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 4.5,
+  7: $spacer * 6,
+  8: $spacer * 8,
+  9: $spacer * 11,
+  10: $spacer * 14
+) !default;
+
+// Ratio
+$aspect-ratios: (
+  "1x1": 100%,
+  "3x4": calc(4 / 3 * 100%),
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "21x9": calc(9 / 21 * 100%)
+) !default;
+
+// Transition
+$transition-base: all 0.3s ease-in-out;
+
+// Button
+$input-btn-focus-width: 0 !default;
+$input-btn-focus-color-opacity: 0 !default;
+$input-btn-focus-blur: 0 !default;
+$input-btn-focus-box-shadow: none !default;
+
+$btn-box-shadow: none !default;
+$btn-active-box-shadow: none !default;
+
+// Custom
+$border-radius: 2px;
+$border-color: #7F7F7F;
+
+// Accordion
+$accordion-button-active-bg: none !default;
+$accordion-button-active-color: none !default;
+$accordion-icon-active-color: currentColor;

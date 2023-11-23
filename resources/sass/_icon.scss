@@ -1,0 +1,132 @@
+.icon-sm {
+	width: 1.5rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	text-align: center;
+	font-size: 75%;
+}
+
+.icon-md {
+	width: 2.6rem;
+	height: 2.6rem;
+	line-height: 2.6rem;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.icon-lg {
+	width: 3.5rem;
+	height: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+.icon-xl {
+	width: 5rem;
+	height: 5rem;
+	line-height: 5rem;
+	text-align: center;
+	font-size: 1.9rem;
+}
+
+.icon-xxl {
+	width: 7rem;
+	height: 7rem;
+	line-height: 7rem;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.icon-primary {
+	i {
+		&:before {
+			color: $primary;
+		}
+	}
+}
+
+.icon-black {
+	i {
+		&:before {
+			color: $black;
+		}
+	}
+}
+
+.icon-dark {
+	i {
+		&:before {
+			color: $gray-800;
+		}
+	}
+}
+
+.icon-light-gray {
+	i {
+		&:before {
+			color: $gray-600;
+		}
+	}
+}
+
+.feature-icon {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 0.5rem;
+	&.feature-icon-small {
+		width: 3rem;
+		height: 3rem;
+	}
+	.bi {
+		vertical-align: -0.125em;
+		fill: currentColor;
+	}
+}
+
+
+.fill-none {
+	fill: none;
+}
+
+.fill-primary {
+	fill: $primary;
+}
+
+.fill-primary-light {
+	fill: shift-color($primary, -20%);
+}
+
+.fill-primary-dark {
+	fill: shift-color($primary, 12%);
+}
+
+.fill-white {
+	fill: $white;
+}
+
+.fill-light {
+	fill: $gray-100;
+}
+
+.fill-dark {
+	fill: $gray-800;
+}
+
+.stroke-primary {
+	stroke: $primary;
+}
+
+.stroke-10 {
+	stroke-miterlimit: 10;
+}
+
+.filter-invert {
+	filter: invert(1);
+}
+
+.icon-hover {
+	&:hover {
+		background-color: $orange;
+	}
+}

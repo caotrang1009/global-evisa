@@ -1,8 +1,8 @@
 <h2 class="fw-800 text-title text-black text-uppercase mb-4">payment methods</h2>
-<div class="row gx-7 bank-info">
+<div class="row gx-5 gy-4 bank-info">
 	<div class="col-sm-6 col-12 py-3 border-bank">
 		<div class="text-center">
-			<img src="{{ asset('assets/svg/outline-money-bag-dollar.svg') }}" alt="Bank Transfer" width="80px" height="80px">
+			<img src="{{ asset('assets/svg/outline/money-bag-dollar.svg') }}" alt="Bank Transfer" width="80px" height="80px">
 			<div class="large fw-bold text-title mt-2">Bank (USD)</div>
 		</div>
 		<div class="border-bottom py-2">
@@ -38,7 +38,7 @@
 	</div>
 	<div class="col-sm-6 col-12 py-3">
 		<div class="text-center">
-			<img src="{{ asset('assets/svg/outline-money-bag-vnd.svg') }}" alt="Bank Transfer" width="80px" height="80px">
+			<img src="{{ asset('assets/svg/outline/money-bag-vnd.svg') }}" alt="Bank Transfer" width="80px" height="80px">
 			<div class="large fw-bold text-title mt-2">Bank (USD)</div>
 		</div>
 		<div class="border-bottom py-2">

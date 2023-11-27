@@ -260,3 +260,31 @@
 		background-position: 0 60px
 	}
 }
+
+.btn {
+	font-family: $font-family-base;
+	&.button1 {
+		font-weight: bold;
+		font-size: 16px;
+		text-transform: uppercase;
+		&.normal {
+			text-transform: none;
+		}
+	}
+	&.button2 {
+		font-weight: bold;
+		font-size: 14px;
+		text-transform: uppercase;
+		&.normal {
+			text-transform: none;
+		}
+	}
+}
+
+.btn-visa-search {
+	letter-spacing: 0.5px;
+}
+
+.rounded-3-5 {
+	border-radius: 12px;
+}

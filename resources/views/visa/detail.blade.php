@@ -187,18 +187,12 @@
 	}
 @endphp
 
-<section class="pb-0">
-	<div class="container">
-		<div class="row">
-			<span class="d-block me-3 bg-orange" style="width: 80px; height:20px;"></span>
-		</div>
-	</div>
-</section>
-<section class="pt-0 visa" style="margin-top: -1.25rem">
-	<div class="container">
+<section>
+	<div class="container position-relative">
+		<span class="d-block me-3 bg-orange position-absolute d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
 		<div class="row">
 			<nav aria-label="breadcrumb">
-				<ol class="breadcrumb visa-breadcrumb mb-4 text-title">
+				<ol class="breadcrumb visa-breadcrumb text-title mb-2">
 					<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="#">Home</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
 						<a class="btn btn-outline-primary px-5 d-flex align-items-center gap-2" href="{{ url()->current() }}">Country <img class="rounded-circle border border-white fit-cover" src="{{ asset('assets/svg/emojione-flag/'.$alias.'.svg') }}" alt="Belarusian" width="20px" height="20px"></a>
@@ -211,17 +205,19 @@
 					<div class="swiper-wrapper align-items-center">
 						@foreach ($country->images as $k => $image)								
 						<div class="swiper-slide" id="rewind-item-1">
-							<div class="card border-0 slide p-5" style="width: 100%; height: 780px; background: url({{ $image }}) no-repeat; background-position: center left;">
-								<div class="card-body">
-									<div class="d-flex justify-content-between">
-										<h1 class="text-uppercase fw-bold text-decoration-underline text-title text-white">Travel to {{ $country->name }}</h1>
+							<div class="card border-0 slide p-4" style="width: 100%; height: 780px; background: url({{ $image }}) no-repeat; background-position: center left;">
+								<div class="card-body p-4">
+									<div class="d-flex justify-content-between my-1 mx-2">
+										<h1 class="web-header1 text-uppercase fw-800 text-decoration-underline spacing-n1 text-white">Travel to {{ $country->name }}</h1>
 										<div class="flag">
 											<img src="{{ $country->flag }}" alt="{{ $country->name }}">
 										</div>
 									</div>
+								</div>
+								<div class="card-body p-3">
 									<div class="position-absolute text-start bottom-0 mb-6 me-6">
-										<h1 class="page-title text-uppercase text-title text-white">{{ $country->name }} <br> TRAVEL TIPS</h1>
-										<h5 class="my-4 text-white">Welcome to {{ $country->name }}, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat! </h5>
+										<h1 class="web-title text-uppercase text-white spacing-n064 pb-2">{{ $country->name }} <br> TRAVEL TIPS</h1>
+										<div class="mt-4 text-white lg-body spacing-1 fw-light">Welcome to {{ $country->name }}, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat! </div>
 									</div>
 								</div>
 							</div>

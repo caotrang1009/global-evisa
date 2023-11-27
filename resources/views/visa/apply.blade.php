@@ -12,24 +12,21 @@
 		$step_completed = array(1, 1, 1);
 	}
 @endphp
-<section class="pb-0">
-	<div class="container">
-		<div class="row justify-content-between">
-			<div class="col-6">
-				<span class="d-md-block d-none me-3 bg-orange" style="width: 80px; height:20px;"></span>
+
+<section>
+	<div class="container position-relative">
+		<span class="d-block me-3 bg-orange position-absolute d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
+		<div class="row">
+			<div class="col-sm-9">
+				<h1 class="web-title page-title text-black text-uppercase">GLOBAL EVISA <br> APPLICATION FORM</h1>
 			</div>
-			<div class="col-6 text-end pe-5">
-				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-md-5 px-4 btn-save-exit">
-					<span class="btn-text">Save & Exit</span>
+			<div class="col-sm-3 text-end">
+				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-md-5 px-4 py-3 btn-save-exit">
+					<span class="btn-text px-3">Save & Exit</span>
 				</a>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="pt-0 visa mt-lg-n5 mt-0">
-	<div class="container">
 		<div class="row">
-			<h1 class="page-title text-secondary text-uppercase text-title">GLOBAL EVISA <br> APPLICATION FORM</h1>
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
 					<a href="{{ url('visa/apply/step1') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item {{$step_completed[0]}} {{ ($step_completed[0]) ? 'completed' : '' }}">

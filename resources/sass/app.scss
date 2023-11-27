@@ -1,6 +1,6 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Geologica&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // Variables
 @import 'variables';
 
@@ -14,6 +14,8 @@
 @import 'text';
 @import 'icon';
 @import 'accordion';
+@import 'gutters';
+@import 'navbar';
 
 html {
 	font-size: 16px;
@@ -23,7 +25,9 @@ html {
 
 body {
 	font-family: $font-family-base;
-	line-height: 1.65;
+	line-height: 1.5;
+	font-weight: 400;
+	text-transform: none;
 	color: black;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -35,6 +39,7 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	color: #545454;
+	line-height: 24px;
 }
 
 a {
@@ -56,10 +61,6 @@ img {
 
 svg, .svg {
 	fill: currentColor;
-}
-
-b, strong, th {
-	font-weight: $font-weight-semibold !important;
 }
 
 input, select, textarea, span {
@@ -103,6 +104,12 @@ select:-webkit-autofill:focus {
 	}
 }
 
+.card {
+	.card-body {
+		color: #545454;
+	}
+}
+
 ul, ol, dl {
 	margin: 0;
 	padding: 0 0 0 1.25rem;
@@ -111,6 +118,40 @@ ul, ol, dl {
 section {
 	padding-top: 3.5rem;
 	padding-bottom: 3.5rem;
+}
+
+.lg-body {
+	font-size: 20px;
+	line-height: 24px;
+	font-family: $font-family-base;
+	text-transform: none;
+	font-weight: 400;
+	.med {
+		font-weight: 500;
+	}
+	.semi {
+		font-weight: 600;
+	}
+}
+
+.body-highlight {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	font-family: $font-family-base;
+	text-transform: none;
+}
+
+.body-2 {
+	font-size: 14px;
+	line-height: 20px;
+	font-family: $font-family-base;
+	text-transform: none;
+	font-weight: 400;
+	&.highlight {
+		font-weight: 500;
+		line-height: 22px;
+	}
 }
 
 header {
@@ -131,6 +172,8 @@ header {
 				}
 				.nav-link {
 					color: $white;
+					margin-left: 6px;
+					margin-right: 6px;
 				}
 			}
 		}
@@ -141,8 +184,6 @@ header {
 }
 
 footer {
-	padding-top: 3.5rem;
-	padding-bottom: 3.5rem;
 	.footer-heading {
 		font-size: 1rem;
 		text-transform: uppercase;
@@ -151,8 +192,10 @@ footer {
 	}
 	.footer-nav {
 		margin-bottom: 1rem;
+		line-height: 22px;
+		letter-spacing: 0.35px;
 		.nav-item {
-			margin-bottom: .5rem !important;
+			margin-bottom: 1rem !important;
 			a {
 				color: $gray-800;
 				text-decoration: none;
@@ -161,39 +204,9 @@ footer {
 	}
 }
 
-@media (min-width: 1200px) {
-	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-		max-width: 1140px;
-	}
-
-	.visa {
-		.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-			max-width: 960px;
-		}
-	}
-}
-
 @media (min-width: 1400px) {
 	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
 		max-width: 1200px;
-	}
-
-	.visa {
-		.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-			max-width: 1140px;
-		}
-	}
-}
-
-@media (min-width: 1600px) {
-	.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-		max-width: 1440px;
-	}
-
-	.visa {
-		.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-			max-width: 1200px;
-		}
 	}
 }
 
@@ -384,6 +397,9 @@ footer {
 }
 
 .slide-blog {
+	.swiper {
+		width: 92%;
+	}
 	.swiper-control {
 		div {
 			width: 56px;
@@ -399,10 +415,10 @@ footer {
 	}
 	
 	.swiper-control .swiper-custom-prev {
-		left: -80px;
+		left: -30px;
 	}
 	.swiper-control .swiper-custom-next {
-		right: -80px;
+		right: -30px;
 	}
 }
 
@@ -712,7 +728,10 @@ footer {
 	}
 }
 
-// Layout: 
+// Layout:
+.w-35 {
+	width: 35%;
+}
 .w-40 {
 	width: 40%;
 }
@@ -814,9 +833,11 @@ footer {
 	.breadcrumb-item {
 		display: flex;
 		align-items: center;
+		margin-bottom: 1rem;
 		a {
 			border-radius: 1rem;
-			padding: 0.4rem 1.15rem;
+			padding: 0.32rem 1.15rem;
+			line-height: 28px;
 		}
 		&.active, &:hover {
 			a {
@@ -830,7 +851,7 @@ footer {
 		padding-left: 1.35rem;
 		&::before {
 			content: '';
-			background: url("../../public/assets/svg/outline-arrow_right.svg") no-repeat;
+			background: url("../../public/assets/svg/outline/arrow-right.svg") no-repeat;
 			width: 20px;
 			height: 14px;
 			margin-right: 1rem;
@@ -934,6 +955,8 @@ footer {
 		.step-name {
 			font-weight: 500;
 			color: #000;
+			line-height: 36px;
+			letter-spacing: -0.5px;
 		}
 		&.completed {
 			.step-counter {
@@ -942,7 +965,7 @@ footer {
 			}
 			.step-name {
 				font-weight: 700;
-				color: #545454;
+				color: #272727;
 			}
 		}
 		&:first-child::before, &:last-child::after {
@@ -956,7 +979,7 @@ footer {
 }
 
 .border-dashed {
-	background-image: repeating-linear-gradient(0deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(90deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(180deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(270deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px);
+	background-image: repeating-linear-gradient(10deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(100deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(190deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(280deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px);
 	background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
 	background-position: 0 0, 0 0, 100% 0, 0 100%;
 	background-repeat: no-repeat;
@@ -979,14 +1002,6 @@ footer {
 	border-radius: .75rem;
 }
 
-.g-5-5, .gy-5-5 {
-	--bs-gutter-y: 3.8rem;
-}
-
-.g-5-5, .gx-5-5 {
-	--bs-gutter-x: 3.8rem;
-}
-
 .payment-method-item {
 	.form-check-input {
 		&:checked {
@@ -995,7 +1010,6 @@ footer {
 		}
 	}
 	.payment-method-card {
-		width: 316px;
 		border: 1px solid #A9A9A9;
 	}
 }
@@ -1010,8 +1024,66 @@ footer {
 @media (min-width: 480px) {
 	.border-bank {
 		background-image: repeating-linear-gradient(0deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(90deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(180deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px), repeating-linear-gradient(270deg, #E7ADAA, #E7ADAA 10px, transparent 10px, transparent 20px, #E7ADAA 20px);
-		background-size: 0px 100%, 100% 0px, 2px 100% , 100% 0px;
+		background-size: 0px 100%, 100% 0px, 1px 100% , 100% 0px;
 		background-position: 0 0, 0 0, 100% 0, 0 100%;
 		background-repeat: no-repeat;
 	}
+}
+
+#frm-subscribe {
+	.title-subscribe {
+		letter-spacing: -1px;
+	}
+	input {
+		&::placeholder {
+			color: #A9A9A9;
+			font-size: 14px;
+			line-height: 20px;
+		}
+	}
+	.btn-subscribe {
+		border-color: white !important;
+		letter-spacing: 1px;
+		&.active, &:active, &:focus, &:hover {
+			background-color: $white !important;
+			color: $orange !important;
+		}
+	}
+
+}
+
+.documents {
+	.card {
+		.card-header {
+			letter-spacing: -0.3px;
+			.introduce {
+				letter-spacing: 1px;
+			}
+		}
+		.card-body {
+			padding: 1.875rem 3.25rem;
+			.visa-type {
+				.card {
+					--bs-border-color: #545454;
+					.card-body {
+						padding: 1.875rem 2.5rem;
+					}
+					&.check {
+						.title {
+							border-color: $primary !important;
+							.subheading {
+								color: $primary-blue-600 !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+    .documents .card-body {
+        padding: 1.5rem !important;
+    }
 }

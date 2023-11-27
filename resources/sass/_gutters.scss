@@ -1,0 +1,62 @@
+.g-5-5, .gy-5-5 {
+	--bs-gutter-y: 3.375rem;
+}
+
+.g-5-5, .gx-5-5 {
+	--bs-gutter-x: 3.375rem;
+}
+
+.g-4-5, .gy-4-5 {
+	--bs-gutter-y: 2.875rem;
+}
+
+.g-4-5, .gx-4-5 {
+	--bs-gutter-x: 2.875rem;
+}
+@media (min-width: 1400px) {
+	.g-lg-5-6, .gy-lg-5-6 {
+		--bs-gutter-y: 4.25rem;
+	}
+	
+	.g-lg-5-6, .gx-lg-5-6 {
+		--bs-gutter-x: 4.25rem;
+	}
+}
+
+//spacing
+
+.spacing-05 {
+	letter-spacing: 0.5px;
+}
+
+.spacing-n05 {
+	letter-spacing: -0.5px;
+}
+
+.spacing-n064 {
+	letter-spacing: -0.64px;
+}
+
+.spacing-1 {
+	letter-spacing: 1px;
+}
+
+.spacing-n1 {
+	letter-spacing: -1px;
+}
+
+//padding
+
+.p-4-5 {
+	padding: 3.25rem;
+}
+
+//margin
+
+.mb-5-5 {
+	margin-bottom: 3.5rem;
+}
+
+.mt-4-5 {
+	margin-top: 2rem;
+}

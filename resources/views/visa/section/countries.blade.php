@@ -1,8 +1,8 @@
 @php
 	$countries = ['belarus', 'brunei', 'cambodia', 'chile', 'denmark', 'finland', 'france', 'germany', 'indonesia', 'italy', 'japan', 'laos', 'malaysia', 'myanmar', 'norway', 'panama', 'philippines', 'russia', 'singapore', 'spain', 'korea', 'sweden', 'thailand', 'united-kingdom', 'vietnam'];
 @endphp
-<div class="d-flex align-items-center border rounded-4 px-2">
-	<img src="{{ asset('assets/svg/solid-search.svg') }}" alt="search">
+<div class="d-flex align-items-center border rounded-3-5 px-2">
+	<img src="{{ asset('assets/svg/solid/search.svg') }}" alt="search">
 	<input class="form-control border-0 py-2 me-1" type="text" name="search" placeholder="Enter Input" autocomplete="off" required>
 </div>
 <div class="list-nationality mt-4 text-title text-black">
@@ -35,7 +35,7 @@
 					@foreach ($countries as $c)
 					<a class="swiper-slide d-block text-start" href="{{ url('/visa/country/'.$c) }}">
 						<img class="d-inline" src="{{ asset('assets/svg/emojione-flag/'.$c.'.svg') }}" alt="{{ $c }}" style="width: 20px; height: 20px;">
-						<span class="ms-2 text-capitalize fs-6">{{ $c }}</span>
+						<span class="ms-2 text-capitalize medium">{{ $c }}</span>
 					</a>
 					@endforeach
 				</div>

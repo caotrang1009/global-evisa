@@ -43,6 +43,20 @@
 	}
 }
 
+.text-black {
+	&.text-opacity-9 {
+		color: #272727 !important;
+	}
+	&.text-opacity-8 {
+		color: #545454 !important;
+	}
+	&.text-opacity-7 {
+		color: #7F7F7F !important;
+	}
+	&.text-opacity-6 {
+		color: #A9A9A9 !important;
+	}
+}
 .text-secondary {
 	color: #545454 !important;
 }
@@ -154,5 +168,87 @@ small, .small {
 }
 
 .fw-800 {
+	font-weight: 800 !important;
+}
+
+.web-title {
 	font-weight: 800;
+	font-size: 64px;
+	line-height: 72px;
+	font-family: $font-family-title;
+}
+
+.web-header1 {
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 56px;
+	font-family: $font-family-title;
+}
+
+.web-header2 {
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 52px;
+	font-family: $font-family-title;
+}
+
+.custom-h1 {
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 40px;
+	font-family: $font-family-title;
+	text-transform: uppercase;
+}
+
+.custom-h2 {
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 36px;
+	font-family: $font-family-title;
+	text-transform: uppercase;
+}
+
+.custom-h3 {
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 32px;
+	font-family: $font-family-title;
+	text-transform: uppercase;
+}
+
+.subheading {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 26px;
+	font-family: $font-family-title;
+	text-transform: uppercase;
+}
+
+
+.headline {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 24px;
+	font-family: $font-family-title;
+}
+
+.description {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 400;
+	text-transform: none;
+}
+
+.small-link-text {
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: bold;
+	text-transform: none;
+}
+
+.small-caption {
+	font-size: 10px;
+	line-height: 12px;
+	font-weight: bold;
+	text-transform: none;
 }

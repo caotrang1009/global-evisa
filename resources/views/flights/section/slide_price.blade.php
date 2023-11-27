@@ -11,7 +11,7 @@
 <section>
 	<div class="container">
 		<div class="slide-price position-relative">
-			<div class="swiper" data-parent=".slide-price" data-items="5" data-space-between="20" data-center-mode="true" data-rewind="false" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next">
+			<div class="swiper" data-parent=".slide-price" data-items="5" data-items-md="3" data-items-sm="1" data-space-between="20" data-center-mode="true" data-rewind="false" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next">
 				<div class="swiper-wrapper align-items-center pb-4">
 					<div class="swiper-slide" id="rewind-item-1">
 						<div class="card border-primary rounded-4 text-center px-3 slide">

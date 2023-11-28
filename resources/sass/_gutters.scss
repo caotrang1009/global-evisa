@@ -47,9 +47,14 @@
 
 //padding
 
-.p-4-5 {
-	padding: 3.25rem;
+.pt-4-5 {
+	padding-top: 2.5rem;
 }
+
+.pb-4-5 {
+	padding-bottom: 2.5rem;
+}
+
 
 //margin
 
@@ -59,4 +64,14 @@
 
 .mt-4-5 {
 	margin-top: 2rem;
+}
+
+.m-2-5 {
+	margin: .75rem;
+}
+
+//position
+
+.end-7 {
+	right: 7%;
 }

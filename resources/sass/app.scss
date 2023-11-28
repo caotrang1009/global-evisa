@@ -1,6 +1,7 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // Variables
 @import 'variables';
 
@@ -358,7 +359,7 @@ footer {
 	.swiper-control {
 		div {
 			width: 80px;
-    		height: 80px;
+			height: 80px;
 			top: 45%;
 			margin: -16px 15px 0;
 			cursor: pointer;
@@ -369,7 +370,7 @@ footer {
 			box-sizing: border-box;
 			&:hover {
 				backdrop-filter: blur(5px);
-    			background: rgba(255, 255, 255, 0.3) !important;
+				background: rgba(255, 255, 255, 0.3) !important;
 			}
 		}
 		i {
@@ -1015,7 +1016,7 @@ footer {
 }
 
 .shadow-blue {
-    box-shadow: 0 .5rem 1rem rgba($primary, .15);
+	box-shadow: 0 .5rem 1rem rgba($primary, .15);
 }
 
 .bank-info {
@@ -1083,7 +1084,19 @@ footer {
 }
 
 @media (max-width: 767px) {
-    .documents .card-body {
-        padding: 1.5rem !important;
-    }
+	.documents .card-body {
+		padding: 1.5rem !important;
+	}
+}
+
+.graphic-ellipse {
+	background-color: $orange;
+	border-radius: 50%;
+	width: 433.846px;
+	height: 433.257px;
+	flex-shrink: 0;
+}
+
+.review-applicant {
+	border: 1px solid #A9A9A9;
 }

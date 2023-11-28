@@ -1,62 +1,80 @@
 <div class="step-2">
 	<form action="" id="frm-order">
 		<h2 class="fw-800 text-uppercase text-black text-title ms-5 mb-0 pb-2">Customer’s order review</h2>
-		<div class="order-information border border-primary px-5 py-3 rounded-collapse my-4">
+		<div class="order-information border border-primary px-sm-5 p-3 rounded-collapse my-4">
 			<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#order-information">
-				<div class="d-flex justify-content-between py-3">
-					<div class="d-flex align-items-center">
-						<span class="bg-primary d-block me-5" style="width: 72px; height: 12px;"></span>
-						<h4 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">YOUR ORDER INFORMATION</h4>
+				<div class="row">
+					<div class="col-9">
+						<div class="d-flex align-items-center">
+							<span class="bg-primary d-block me-sm-5 me-3" style="width: 72px; height: 12px;"></span>
+							<h4 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">YOUR ORDER INFORMATION</h4>
+						</div>
 					</div>
-					<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-						<img src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+					<div class="col-3 text-end">
+						<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+							<div class="rounded-circle border border-primary" style="width: fit-content">
+								<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="collapse py-3" id="order-information" style="">
 				<div class="row justify-content-center">
 					<div class="col-lg-7 col-12">
-						@include('visa.section.order_info')
+						@include('visa.review.order_info')
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="applicant-information border border-primary px-5 py-3 rounded-collapse my-4">
+		<div class="applicant-information border border-primary px-sm-5 p-3 rounded-collapse my-4">
 			<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#applicant-information">
-				<div class="d-flex justify-content-between py-3">
-					<div class="d-flex align-items-center">
-						<span class="bg-primary d-block me-5" style="width: 72px; height: 12px;"></span>
-						<h4 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">APPLICANT(s)’s INFORMATION</h4>
+				<div class="row">
+					<div class="col-9">
+						<div class="d-flex align-items-center">
+							<span class="bg-primary d-block me-sm-5 me-3" style="width: 72px; height: 12px;"></span>
+							<h4 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">APPLICANT(s)’s INFORMATION</h4>
+						</div>
 					</div>
-					<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-						<img src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+					<div class="col-3 text-end">
+						<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+							<div class="rounded-circle border border-primary" style="width: fit-content">
+								<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="collapse py-3" id="applicant-information" style="">
 				<div class="row justify-content-center">
-					<div class="col-lg-7 col-12">
-						@include('visa.section.applicant')
+					<div class="col-lg-9 col-12">
+						@include('visa.review.applicant')
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="contact-information border border-primary px-5 py-3 rounded-collapse my-4">
+		<div class="contact-information border border-primary px-sm-5 p-3 rounded-collapse my-4">
 			<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#contact-information">
-				<div class="d-flex justify-content-between py-3">
-					<div class="d-flex align-items-center">
-						<span class="bg-primary d-block me-5" style="width: 72px; height: 12px;"></span>
-						<h4 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0"> YOUR CONTACT INFORMATION</h4>
+				<div class="row">
+					<div class="col-9">
+						<div class="d-flex align-items-center">
+							<span class="bg-primary d-block me-sm-5 me-3" style="width: 72px; height: 12px;"></span>
+							<h4 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">YOUR CONTACT INFORMATION</h4>
+						</div>
 					</div>
-					<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-						<img src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+					<div class="col-3 text-end">
+						<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+							<div class="rounded-circle border border-primary" style="width: fit-content">
+								<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="collapse py-3" id="contact-information" style="">
 				<div class="row justify-content-center">
 					<div class="col-lg-7 col-12">
-						@include('visa.section.contact_info')
+						@include('visa.review.contact_info')
 					</div>
 				</div>
 			</div>

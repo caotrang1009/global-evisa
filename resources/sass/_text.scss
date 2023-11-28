@@ -252,3 +252,11 @@ small, .small {
 	font-weight: bold;
 	text-transform: none;
 }
+
+.sub-title {
+	font-family: $font-family-sub-title;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 36px;
+}

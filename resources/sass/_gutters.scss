@@ -13,6 +13,15 @@
 .g-4-5, .gx-4-5 {
 	--bs-gutter-x: 2.875rem;
 }
+
+.g-4-3, .gy-4-3 {
+	--bs-gutter-y: 1.75rem;
+}
+
+.g-4-3, .gx-4-3 {
+	--bs-gutter-x: 1.75rem;
+}
+
 @media (min-width: 1400px) {
 	.g-lg-5-6, .gy-lg-5-6 {
 		--bs-gutter-y: 4.25rem;
@@ -55,6 +64,13 @@
 	padding-bottom: 2.5rem;
 }
 
+.py-4-5 {
+	padding: 2.5rem 0;
+}
+
+.px-4-2 {
+	padding: 0 1.875rem;
+}
 
 //margin
 
@@ -62,16 +78,96 @@
 	margin-bottom: 3.5rem;
 }
 
-.mt-4-5 {
-	margin-top: 2rem;
+.me-4-5 {
+	margin-right: 2.5rem;
 }
 
 .m-2-5 {
 	margin: .75rem;
 }
 
+.mt-n4-1 {
+	margin-top: -1.8rem !important;
+}
+
 //position
 
 .end-7 {
 	right: 7%;
+}
+
+//gap
+
+.gap-3-5 {
+	gap: 1.25rem;
+}
+
+.gap-3-6 {
+	gap: 1.75rem;
+}
+
+//gutters 
+
+.row {
+	.col-3-5 {
+		flex: 0 0 auto;
+		width: 30%;
+	}
+	.col-8-5 {
+		flex: 0 0 auto;
+		width: 70%;
+	}
+	.col-5-5 {
+		flex: 0 0 auto;
+		width: 45%;
+	}
+	.col-6-5 {
+		flex: 0 0 auto;
+		width: 55%;
+	}
+}
+
+@media (min-width: 992px) {
+	.col-lg-3-5 {
+		flex: 0 0 auto;
+		width: 30%;
+	}
+	.col-lg-8-5 {
+		flex: 0 0 auto;
+		width: 70%;
+	}
+	.col-lg-5-5 {
+		flex: 0 0 auto;
+		width: 45%;
+	}
+	.col-lg-6-5 {
+		flex: 0 0 auto;
+		width: 55%;
+	}
+}
+
+@media (min-width: 576px) {
+	.col-sm-3-5 {
+		flex: 0 0 auto;
+		width: 30%;
+	}
+	.col-sm-8-5 {
+		flex: 0 0 auto;
+		width: 70%;
+	}
+}
+
+@media (min-width: 768px) {
+	.col-md-3-5 {
+		flex: 0 0 auto;
+		width: 30%;
+	}
+	.col-md-8-5 {
+		flex: 0 0 auto;
+		width: 70%;
+	}
+}
+
+.rounded-top-start-0 {
+	border-top-left-radius: 0px !important;
 }

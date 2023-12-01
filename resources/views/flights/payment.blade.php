@@ -49,7 +49,7 @@
 		<div class="container">
 			<div class="row">
 				{{-- Left Element --}}
-				<div class="col-lg-7">
+				<div class="col-lg-6-5">
 					<div class="select-payment-method border border-primary px-5 py-3 rounded-3 mb-5" >
 						<h2 class="my-4 fw-bold text-secondary">PAYMENT METHOD</h2>
 						<div class="d-flex justify-content-between mb-5 flex-wrap">
@@ -93,7 +93,7 @@
 							<label for="exampleFormControlInput1" class="form-label fw-bold">Card Holder Name</label>
 							<input type="text" class="form-control rounded-3 time-input-height" id="exampleFormControlInput1" placeholder="some thing in here">
 						</div>
-						<div class="d-flex gap-3 flex-wrap flex-sm-nowrap">
+						<div class="d-flex gap-3 flex-sm-wrap flex-nowrap">
 							<div>
 								<label class="form-label fw-bold" for="input_card_number" style="width: 16rem">Card Number</label>
 								<div class="input-group time-input-height border rounded-3">
@@ -151,7 +151,7 @@
 								<label for="exampleFormControlInput1" class="form-label fw-bold">Card Holder Name</label>
 								<input type="text" class="form-control rounded-3 time-input-height" id="exampleFormControlInput1" placeholder="some thing in here">
 							</div>
-							<div class="d-flex gap-3 flex-wrap flex-sm-nowrap">
+							<div class="d-flex gap-3 flex-sm-wrap flex-nowrap">
 								<div>
 									<label class="form-label fw-bold" for="input_card_number" style="width: 16rem">Card Number</label>
 									<div class="input-group time-input-height border rounded-3">
@@ -197,201 +197,11 @@
 
 				</div>
 				{{-- Right Element --}}
-				<div class="col-lg-5">
-					<div class="border rounded-4 px-4 py-3 mb-5">
-						<div class="mt-3 mx-3">
-							<p class="fw-bold fs-4 text-secondary text-center">• Flight 1 - Saturday, 30th Sep 2023</p>
-							<div class="d-flex justify-content-between align-items-end flex-wrap">
-								<div>
-									<label for="" class="form-label fw-bold">From Country 1</label>
-									<div class="select-location-1 mt-2">
-										<div type="button">
-											<div class="input-group mb-3 input-search-flight" style="max-width: 190px">
-												<span class="input-group-text" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
-												<input type="text" id="originLocation" name="originLocation[]" class="form-control input-custom"
-													placeholder="Location 1" readonly>
-											</div>
-										</div>
-									</div>
-								</div>
-								<span
-									class="bg-btn-search mb-1 rounded-3 d-flex justify-content-center align-items-center btn-add-flight-small text-white mb-3"><i
-										class="fas fa-arrow-right"></i></span>
-								<div>
-									<label for="" class="form-label fw-bold">To Country 2 </label>
-									<div class="select-location-1 mt-2">
-										<div type="button" aria-expanded="false">
-											<div class="input-group mb-3 input-search-flight" style="max-width: 190px">
-												<span class="input-group-text" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
-												<input type="text" id="originLocation" name="originLocation[]" class="form-control input-custom"
-													placeholder="Location 2" readonly>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div style="font-size: 12px" class="my-3">
-								<img width="35" height="35" src="https://www.gstatic.com/flights/airline_logos/70px/dark/TG.png" alt="logo">
-								<span>Vietnam Airlines</span>
-							</div>
-							
-							<div class="collapse" id="detail_flight_1">
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Departure Time: </p>
-									<p>9:30</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Arrival Time: </p>
-									<p>10:30</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Estimate Time: </p>
-									<p>1 hours</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>1 stop at Country’s Name</p>
-									<p>1h30m</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Number of applicants: 2 adults</p>
-									<p>$12</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Seat selection fees:</p>
-									<p>$12</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Travel insurance: 2 adults</p>
-									<p>$12</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Flight delay insurance: 2 adults</p>
-									<p>$12</p>
-								</div>
-							</div>
-
-							<div class="d-flex justify-content-center mt-4">
-								<button 
-									type="button" 
-									class="btn btn-outline-primary d-flex justify-content-center align-items-center px-4 fw-semibold time-input-height mb-4 btn-show-detail rounded-3"
-									data-current-text="View Details" data-change-text="Close Details"
-									data-icon-current="fas fa-caret-down fs-4 ms-3" data-icon-change="fas fa-caret-up fs-4 ms-3"
-									data-bs-toggle="collapse" data-bs-target="#detail_flight_1" aria-expanded="false" aria-controls="detail_flight_1">
-									<span class="flight-detail-text">View Details</span> <i class="fas fa-caret-down fs-4 ms-3"></i>
-								</button>
-							</div>
-						</div>
-						
-						<div class="mt-3 mx-3">
-							<div class="dashed-line"></div>
-							<p class="fw-bold fs-4 text-secondary text-center mt-4">• Flight 2 - Saturday, 30th Sep 2023</p>
-							<div class="d-flex justify-content-between align-items-end flex-wrap">
-								<div>
-									<label for="" class="form-label fw-bold">From Country 1</label>
-									<div class="select-location-1 mt-2">
-										<div type="button">
-											<div class="input-group mb-3 input-search-flight" style="max-width: 190px">
-												<span class="input-group-text" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
-												<input type="text" id="originLocation1" name="originLocation[1]" class="form-control input-custom"
-													placeholder="Location 1" readonly>
-											</div>
-										</div>
-									</div>
-								</div>
-								<span
-									class="bg-btn-search mb-1 rounded-3 d-flex justify-content-center align-items-center btn-add-flight-small text-white mb-3"><i
-										class="fas fa-arrow-right"></i></span>
-								<div>
-									<label for="" class="form-label fw-bold">To Country 2 </label>
-									<div class="select-location-1 mt-2">
-										<div type="button" aria-expanded="false">
-											<div class="input-group mb-3 input-search-flight" style="max-width: 190px">
-												<span class="input-group-text" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
-												<input type="text" id="destinationLocation2" name="destinationLocation[]" class="form-control input-custom"
-													placeholder="Location 2" readonly>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div style="font-size: 12px" class="my-3">
-								<img width="35" height="35" src="https://www.gstatic.com/flights/airline_logos/70px/dark/TG.png" alt="logo">
-								<span>Vietnam Airlines</span>
-							</div>
-							
-							<div class="collapse" id="detail_flight_2">
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Departure Time: </p>
-									<p>9:30</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Arrival Time: </p>
-									<p>10:30</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Estimate Time: </p>
-									<p>1 hours</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>1 stop at Country’s Name</p>
-									<p>1h30m</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Number of applicants: 2 adults</p>
-									<p>$12</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Seat selection fees:</p>
-									<p>$12</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Travel insurance: 2 adults</p>
-									<p>$12</p>
-								</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<p>Flight delay insurance: 2 adults</p>
-									<p>$12</p>
-								</div>
-							</div>
-
-							<div class="d-flex justify-content-center mt-4">
-								<button 
-									type="button" 
-									class="btn btn-outline-primary d-flex justify-content-center align-items-center px-4 fw-semibold time-input-height mb-4 btn-show-detail rounded-3"
-									data-current-text="View Details" data-change-text="Close Details" 
-									data-icon-current="fas fa-caret-down fs-4 ms-3" data-icon-change="fas fa-caret-up fs-4 ms-3"
-									data-bs-toggle="collapse" data-bs-target="#detail_flight_2" aria-expanded="false" aria-controls="detail_flight_2">
-									<span class="flight-detail-text">View Details</span> <i class="fas fa-caret-down fs-4 ms-3"></i>
-								</button>
-							</div>
-						</div>
-
-						<div class="my-3 mx-3">
-							<div class="dashed-line"></div>
-							<div class="d-flex justify-content-center" >
-								<div class="mt-5" style="width: 25rem">
-									<div class="d-flex justify-content-between my-3">
-										<strong>Sub Total</strong> 
-										<p>$200</p>
-									</div>
-									<div class="d-flex justify-content-between my-3">
-										<strong>Discount</strong> 
-										<p>$10</p>
-									</div>
-									<div class="d-flex justify-content-between my-3">
-										<p class="text-primary fs-5 fw-semibold">Total Amount</p> 
-										<p class="text-primary fs-5 fw-semibold">$190</p>
-									</div>
-								</div>
-							
-							</div>
-						</div>
-
-						<div class="d-flex justify-content-center my-4">
-							<button type="submit" class="bg-btn-search btn-submit-custom rounded-4 fw-semibold">Back To Home</button>
-						</div>	
+				<div class="col-lg-5-5">
+					<div class="border border-primary rounded-4 mb-5 your-flight headline">
+						@include('flights.section.order_summary')
+						<a href="{{ url('/flights') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-payment mt-4">Back To Home</a>
 					</div>
-
 					<div class="mt-5">
 						<div class="d-flex">
 							<div class="me-3">

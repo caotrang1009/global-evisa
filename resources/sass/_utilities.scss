@@ -1,0 +1,15 @@
+$breakpoints: (sm, md, lg, xl, xxl);
+$vals: (10,25,35,40,44,50,60,75,80,85,100);
+
+@each $breakpoint in $breakpoints {
+	@include media-breakpoint-up(#{$breakpoint}) {
+		@each $val in $vals {
+			.w-#{$breakpoint}-#{$val} {
+				width: #{($val)+'% '} !important;
+			}
+		}
+		.w-#{$breakpoint}-auto {
+			width: auto !important;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 <div class="step-1">
 	<form action="" id="frm-order">
-		<div class="row g-5">
+		<div class="row g-sm-5 g-4">
 			<div class="col-lg-7 col-12">
 				<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4">
 					<h2 class="fw-800 custom-h1 text-black mb-4">ORDER INFORMATION</h2>

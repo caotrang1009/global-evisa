@@ -262,7 +262,7 @@
 }
 
 .btn {
-	font-family: $font-family-base;
+	font-family: $font-family-title;
 	&.button1 {
 		font-weight: bold;
 		font-size: 16px;
@@ -287,4 +287,26 @@
 
 .rounded-3-5 {
 	border-radius: 12px;
+}
+
+.btn-remove, .btn-add, .btn-exchange {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-exchange {
+	position: absolute;
+	top: 1.35rem;
+	right: -2rem;
+	line-height: 2.25rem;
+	text-align: center;
+	z-index: 1;
+}
+
+.btn-add-flight {
+	width: 300px;
+	height: 40px;
 }

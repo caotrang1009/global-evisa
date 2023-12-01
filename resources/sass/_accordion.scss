@@ -35,19 +35,12 @@
 
 .view-details {
 	.card-header {
-		&:hover {
-			&:after {
-				font-weight: 700;
-			}
-		}
 		&:after {
-			content: "\f0dd" !important;
-			color: $primary;
-			top: 0.75rem !important;
+			content: "" !important;
 		}
 		&.collapsed {
 			&:after {
-				content: "\f0de" !important;
+				content: "" !important;
 			}
 		}
 	}

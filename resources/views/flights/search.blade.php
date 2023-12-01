@@ -4,18 +4,33 @@
 	<section>
 		<div class="container">
 			<div class="d-flex align-items-baseline">
-				<span class="d-block me-4" style="width: 6.25rem; height: 1.25rem; background-color: #EB9444"></span>
-				<h1 class="mb-1 text-uppercase" style="font-size: 5rem; font-weight:800">SEARCH YOUR FLIGHT!</h1>
+				<span class="d-block me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
+				<h1 class="web-title page-title text-black text-uppercase mb-0">SEARCH YOUR FLIGHT!</h1>
 			</div>
 		</div>
 	</section>
-	@include('flights.section.quicksearch')
-	@include('flights.section.slide_price')
+	<section class="pt-0">
+		<div class="container bg-primary position-relative">
+			@include('flights.section.quicksearch')
+			<div class="position-absolute start-0 d-flex justify-content-center mt-n4-1 w-100">
+				<img src="{{ asset('assets/svg/outline/calendar.svg') }}" alt="calendar" width="56px" height="56px">
+			</div>
+		</div>
+	</section>
 	<section>
 		<div class="container">
-			<div class="row g-4">
-				@include('flights.section.filter')
-				@include('flights.section.offers')
+			@include('flights.section.slide_price')
+		</div>
+	</section>
+	<section>
+		<div class="container">
+			<div class="row g-4-3">
+				<div class="col-lg-3-5">
+					@include('flights.section.filter')
+				</div>
+				<div class="col-lg-8-5">					
+					@include('flights.section.offers')
+				</div>
 			</div>
 		</div>
 	</section>

@@ -88,7 +88,7 @@
 				<i class="fal fa-angle-right"></i>
 			</div>
 		</div>
-	</div>	
+	</div>
 	<div class="text-center mt-4">
 		<a href="#" class="btn btn-primary btn-lg button1 rounded-4 text-uppercase fw-bold btn-visa-search py-3 px-6">
 			<span class="btn-text">SEE MORE ARTICLES</span><i class="fal fa-long-arrow-up ms-3" style="transform: rotate(45deg);"></i>

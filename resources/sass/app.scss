@@ -17,6 +17,7 @@
 @import 'accordion';
 @import 'gutters';
 @import 'navbar';
+@import 'utilities';
 
 html {
 	font-size: 16px;
@@ -25,7 +26,7 @@ html {
 }
 
 body {
-	font-family: $font-family-base;
+	font-family: $font-family-title;
 	line-height: 1.5;
 	font-weight: 400;
 	text-transform: none;
@@ -70,12 +71,6 @@ input, select, textarea, span {
 	}
 }
 
-select, button, [type="button"], [type="submit"], [type="radio"], [type="checkbox"], [class="btn"] {
-	&:not(:disabled) {
-		cursor: pointer;
-	}
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -117,42 +112,8 @@ ul, ol, dl {
 }
 
 section {
-	padding-top: 3.5rem;
-	padding-bottom: 3.5rem;
-}
-
-.lg-body {
-	font-size: 20px;
-	line-height: 24px;
-	font-family: $font-family-base;
-	text-transform: none;
-	font-weight: 400;
-	.med {
-		font-weight: 500;
-	}
-	.semi {
-		font-weight: 600;
-	}
-}
-
-.body-highlight {
-	font-weight: 500;
-	font-size: 16px;
-	line-height: 24px;
-	font-family: $font-family-base;
-	text-transform: none;
-}
-
-.body-2 {
-	font-size: 14px;
-	line-height: 20px;
-	font-family: $font-family-base;
-	text-transform: none;
-	font-weight: 400;
-	&.highlight {
-		font-weight: 500;
-		line-height: 22px;
-	}
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
 }
 
 header {
@@ -325,9 +286,19 @@ footer {
 	.swiper {
 		width: 92%;
 	}
-	.swiper-slide-active .slide {
-		box-shadow: 0 .5rem 1rem rgba($primary, .15);
-		padding: 1rem;
+	.swiper-wrapper {
+		.swiper-slide-active .slide {
+			box-shadow: 0 .5rem 1rem rgba(0, 144, 235, 0.25);
+			padding: 0.5rem 0;
+		}
+		.swiper-slide {
+			.card {
+				width: 220px;
+				.card-body {
+					padding: 0.75rem 0.5rem;
+				}
+			}
+		}
 	}
 	.swiper-control {
 		div {
@@ -400,6 +371,9 @@ footer {
 .slide-blog {
 	.swiper {
 		width: 92%;
+		.slide-testimonials, .slide-packages {
+			border-color: #D3D3D3 !important;
+		}
 	}
 	.swiper-control {
 		div {
@@ -475,19 +449,36 @@ footer {
 }
 
 .content-detail {
+	background-image: repeating-linear-gradient(0deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(90deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(180deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(270deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px);
+	background-size: 0px 100%, 100% 1px, 0px 100% , 100% 0px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
 	.nav-tabs {
 		.nav-link {
-			font-weight: 700;
-			color: #7F7F7F;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 24px;
+			color: #545454;
 			&:hover {
 				background-color: rgba(black, .075);
 			}
 			&.active, &:focus {
-				border-top: 5px solid #545454;
-				font-size: 1.25rem;
-				color: #545454;
+				border-top: 5px solid #000;
+				border-right: 1px solid #000;
+				border-left: 1px solid #000;
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+				font-size: 20px;
+				color: #000;
 			}
 		}
+	}
+	.img-airline {
+		width: 96px;
+		height: 96px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 }
 
@@ -498,19 +489,13 @@ footer {
 
 // Input
 .input-search-flight {
-	width: 240px;
-	height: 48px;
+	height: 40px;
 }
-.input-select-location {
-	width: 240px;
-	height: 48px;
-}
-.time-input-height {
-	height: 48px;
-}
+
 .input-addon{
 	position: relative;
 }
+
 .input-addon i{
 	position: absolute;
 	left: 15px; 
@@ -518,10 +503,23 @@ footer {
 	transform: translateY(-100%);
 	color: #495057;
 }
-.input-select-type {
+
+.direction-item {
 	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
 	width: 300px;
+	border: 1.25px solid #7F7F7F !important;
+	color: #272727;
+	&.selected {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 32px;
+		border: 2px solid #FFFCF7 !important;
+		color: #FFFCF7;
+	}
 }
+
 .input-custom{
 	height: 48px;
 }
@@ -545,6 +543,8 @@ footer {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 36px;
+	letter-spacing: -0.5px;
+	color: #272727;
 }
 
 .page-title {
@@ -625,26 +625,6 @@ footer {
 .min-width-custom{
 	min-width: 300px;
 }
-.dashed-custom {
-	position: relative;
-  	margin: 20px 0;
-}
-.dashed-custom::after {
-	content: '';
-	position: absolute;
-	top: -3%;
-	left: 0;
-	width: 100%;
-	margin: 0 5px;
-	height: 1px; 
-	border: 1px dashed #000;
-	z-index: -1;
-}
-.dashed-line {
-	height: 1px;
-	/* dashed border */
-	background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
-}
 
 //Step
 .step-container {
@@ -702,45 +682,16 @@ footer {
 	transition: background-color 0.3s ease-in-out;
 	&:hover {
 		cursor: pointer;
-		background-color: rgba($primary, 0.25);
+		background-color: #B1CAEB;
+		.icon {
+			background-color: white;
+		}
 	}
-}
-
-
-// Responsive
-@include media-breakpoint-up(md) {	
-	.w-md-40 {
-		width: 40% !important;
+	.icon {
+		width: 64px;
+		height: 64px;
+		background-color: $primary;
 	}
-	.w-md-60 {
-		width: 60% !important;
-	}
-	.w-md-50 {
-		width: 50% !important;
-	}
-	.w-md-75 {
-		width: 75%;
-	}
-	.w-md-80 {
-		width: 80%;
-	}
-	.w-md-85 {
-		width: 85%;
-	}
-}
-
-// Layout:
-.w-35 {
-	width: 35%;
-}
-.w-40 {
-	width: 40%;
-}
-.w-60 {
-	width: 60%;
-}
-.w-44 {
-	width: 44%;
 }
 
 // swiper: 
@@ -784,8 +735,8 @@ footer {
 .top-85 {
 	top: 85% !important;
 }
-.start-5 {
-	left: 5%;
+.start-60 {
+	left: 60%;
 }
 #seat-upgrade-options, .travel-insurance, .luggage_insurance, .select-payment-method {
 	.form-check-input:checked {
@@ -990,6 +941,13 @@ footer {
 	border-right: 1px solid #D3D3D3;
 }
 
+.dashed-line {
+	background-image: repeating-linear-gradient(0deg, #7F7F7F, #7F7F7F 10px, transparent 10px, transparent 20px, #7F7F7F 20px), repeating-linear-gradient(90deg, #7F7F7F, #7F7F7F 10px, transparent 10px, transparent 20px, #7F7F7F 20px), repeating-linear-gradient(180deg, #7F7F7F, #7F7F7F 10px, transparent 10px, transparent 20px, #7F7F7F 20px), repeating-linear-gradient(270deg, #7F7F7F, #7F7F7F 10px, transparent 10px, transparent 20px, #7F7F7F 20px);
+	background-size: 0px 100%, 100% 0px, 0px 100% , 100% 1px;
+	background-position: 0 0, 0 0, 100% 0, 0 100%;
+	background-repeat: no-repeat;
+}
+
 .bg-upload {	
 	background: linear-gradient(0deg, #FBEADA, #FBEADA),
 	linear-gradient(0deg, #7F7F7F, #7F7F7F);
@@ -1099,4 +1057,109 @@ footer {
 
 .review-applicant {
 	border: 1px solid #A9A9A9;
+}
+
+.card-why-choose-us {
+	.card-body {
+		padding: 30px 40px;
+	}
+}
+
+.dropdown-travel-class {
+	.dropdown-item {
+		padding-top: 0.65rem;
+		padding-bottom: 0.65rem;
+	}
+}
+
+.number-flight {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background-color: $primary;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 40px;
+	letter-spacing: -1px;
+}
+
+.flight-selected-detail {
+	.img-airline {
+		width: 80px;
+		height: 24px;
+		object-fit: contain;
+	}
+	.airline-name {
+		line-height: 28px;
+		letter-spacing: -0.3px;
+	}
+	.icon {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.departure, .arrival {
+		.code {
+			color: #7F7F7F;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 31.5px;
+			border-radius: 15px;
+			background: #E5E5E5;
+			width: 36px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}
+
+.your-flight {
+	padding: 46px 49px 45px 45px;
+	.img-airline {
+		width: 99px;
+		height: 45px;
+		object-fit: contain;
+	}
+	.airline-name {
+		line-height: 28px;
+		letter-spacing: -0.3px;
+	}
+	.icon {
+		width: 24px;
+		height: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.departure, .arrival {
+		.code {
+			color: #7F7F7F;
+			text-align: center;
+			font-size: 12px;
+			font-weight: 600;
+			line-height: 31.5px;
+			border-radius: 15px;
+			background: #E5E5E5;
+			width: 36px;
+			height: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+	.flight-dashed {
+		background-image: repeating-linear-gradient(0deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(90deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(180deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(270deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px);
+		background-size: 0px 100%, 100% 1px, 0px 100% , 100% 0px;
+		background-position: 0 0, 0 0, 100% 0, 0 100%;
+		background-repeat: no-repeat;
+	}
 }

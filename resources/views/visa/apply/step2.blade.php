@@ -82,7 +82,7 @@
 	</form>
 </div>
 <div class="payment">
-	<div class="row g-5 mt-0">
+	<div class="row g-sm-5 g-4 mt-0">
 		<div class="col-lg-7 col-12">
 			<div class="border-dashed bg-beige rounded-4 px-5 p-4 mb-4">
 				<div class="row gx-3 gy-4">

@@ -4,12 +4,12 @@
     "src": "public/assets/svg/outline/arrow-right.svg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-4a1a0c12.js",
+    "file": "assets/app-39dcccdc.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-aa0478fd.css",
+    "file": "assets/app-61d59cce.css",
     "isEntry": true,
     "src": "resources/sass/app.scss"
   }

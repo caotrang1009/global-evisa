@@ -1,241 +1,238 @@
 @extends('layouts.app')
 
 @section('content')
-<form action="/flights/payment">
-	@csrf
-	<section class="py-5">
-		<div class="container">
-		<div class="d-flex align-items-center w-100" style="height: 220px">
-			<div class="d-flex align-items-center w-100">
-				<span class="d-block me-3" style="width: 70px; height: 15px; background-color: #FFA852"></span>
-				<div class="d-flex justify-content-center w-100">
-					<h1 class="page-title text-secondary text-center d-none d-md-block">REVIEW INFORMATION<br> & ADD-ONS</h1>
-					<h2 class="text-secondary text-center d-sm-none fs-1">REVIEW INFORMATION <br> & ADD-ONS</h2>
+<section>
+	<div class="container">
+		<div class="d-flex align-items-center">
+			<span class="position-absolute me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
+			<h1 class="web-title page-title text-black text-center text-uppercase w-100">REVIEW INFORMATION<br> & ADD-ONS</h1>
+		</div>
+		<div class="row">
+			<div class="step-part flight mt-5">
+				<div class="d-flex justify-content-between text-title stepper-wrapper">
+					<a href="{{ url('flights/information') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Information Details</div>
+					</a>
+					<a href="{{ url('flights/review-information') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
+					</a>
+					<a href="{{ url('flights/payment') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+					</a>
 				</div>
 			</div>
 		</div>
-		</div>
-	</section>
-
-	<section class="pb-6">
-		<div class="container">
-			<div class="row justify-content-center">
-					<div class="step-container w-md-75">
-						<a href="/flights/information">
-							<div role="button" class="border border-primary rounded-circle d-flex justify-content-center align-items-center step-button active" style="width: 5rem; height: 5rem">
-								<span class="fw-semibold text-primary fs-4 step-number">1</span>
-								<h4 class="step-name d-none d-sm-block">Order Information</h4>
-							</div>
-						</a>
-						<div class="step-line"></div>
-						<a href="/flights/review-information">
-							<div role="button" class="border border-primary rounded-circle d-flex justify-content-center align-items-center step-button active" style="width: 5rem; height: 5rem">
-								<span class="fw-semibold text-primary fs-4 step-number">2</span>
-								<h4 class="step-name d-none d-sm-block">Review Information</h4>
-							</div>
-						</a>
-						<div class="step-line"></div>
-						<a href="/flights/payment">
-							<div role="button" class="border border-primary rounded-circle d-flex justify-content-center align-items-center step-button" style="width: 5rem; height: 5rem">
-								<span class="fw-semibold text-primary fs-4 step-number">3</span>
-								<h4 class="step-name d-none d-sm-block">Payment</h4>
-							</div>
-						</a>
-					</div>
-			  </div>
-		</div>
-	</section>
-
-	<section class="py-5">
-		<div class="container">
-			<div class="row g-sm-5 g-4">
-				{{-- Left Element --}}
-				<div class="col-lg-6-5">
+	</div>
+</section>
+<section class="py-5">
+	<div class="container">
+		<form action="" id="frm-review">
+			@csrf
+			<div class="row gy-5">
+				<div class="col-lg-7 col-12">
 					<div id="review_infor">
-						<h2 class="title-section text-secondary border-2 border-bottom mb-5">REVIEW INFO</h2>
-						{{-- Form Contact information --}}
-						<div class="contact-information border border-primary px-5 py-3 rounded-3 mb-4" >
-							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#contact-information-review" aria-expanded="false" aria-controls="contact-information-review">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">CONTACT INFORMATION</h4>
+						<h2 class="fw-800 custom-h1 text-black mb-4">REVIEW INFO</h2>
+						<div class="contact-information border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#contact-information">
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">YOUR CONTACT INFORMATION</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-
-							<div class="collapse" id="contact-information-review">
-								<div class="form-group mb-4">
-									<label for="contact_fullname" class="form-label fw-semibold text-secondary">Your Full Name</label>
-									<div class="input-group flex-nowrap time-input-height border rounded-3">
-										<span class="input-group-text rounded-4 border-0 bg-white" id="addon-wrapping"><i class="fal fa-id-card"></i></span>
-										<input type="text" id="contact_fullname" name="contact_fullname" class="form-control rounded-4 border-0" placeholder="Enter your fullname" aria-label="Fullname" aria-describedby="addon-wrapping">
-									</div>										
-								</div>
-
-								<div class="form-group mb-4">
-									<label for="contact_fullname" class="form-label fw-semibold text-secondary">Your Email</label>
-									<div class="input-group flex-nowrap time-input-height border rounded-3">
-										<span class="input-group-text border-0 bg-white rounded-4" id="addon-wrapping"><i class="fal fa-envelope"></i></span>
-										<input type="email" id="contact_fullname" name="contact_fullname" class="form-control rounded-4 border-0" placeholder="Email Address" aria-label="Fullname" aria-describedby="addon-wrapping">
-									</div>										
-								</div>
-
-								<div class="form-group mb-4">
-									<label for="contact_email" class="form-label fw-semibold text-secondary">Your Phone Number</label>
-									<div class="input-group time-input-height border rounded-3">
-										<span class="input-group-text border-0 bg-white rounded-4" id="addon-wrapping"><i class="fal fa-phone-alt"></i></span>
-										<input type="text" id="contact_email" name="contact_email" class="form-control rounded-4 border-0" placeholder="Enter Phone Number" aria-label="Fullname" aria-describedby="addon-wrapping">
-									</div>		
-								</div>
-							</div>
-						</div>
-
-						{{-- Passenger Information --}}
-						<div class="passenger-information border border-primary px-5 py-3 rounded-3 mb-4">
-							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#passengers-review" aria-expanded="false" aria-controls="passengers-review">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">PASSENGER(S)' INFORMATION</h4>
+							<div class="collapse py-3" id="contact-information" style="">
+								<div class="form-group row gy-3 gx-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black d-flex" for="contact_first_name">First Name</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_first_name" name="contact_first_name" value="Lorem Ipsum" placeholder="Enter Value" required>
+										</div>
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black d-flex" for="contact_last_name">Last Name</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_last_name" name="contact_last_name" value="Lorem Ipsum" placeholder="Enter Value" required>
+										</div>
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
-							</div>
-
-							<div class="collapse" id="passengers-review">
-								<h5 class="text-center my-3">APPLICANT NO.</h5>
-								<div class="my-3">
-									<div class="d-flex justify-content-between">
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Family Name <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<input type="text" class="form-control input-custom ps-5 border rounded-3" id="" style="min-width: 300px" placeholder="Enter Value">
-											<span class="input-addon">
-												<i class="fal fa-money-check-edit"></i>
-											</span>
-										</div>
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Given Name <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<input type="text" class="form-control input-custom ps-5 border rounded-3" id="" style="min-width: 300px" placeholder="Enter Value">
-											<span class="input-addon">
-												<i class="fal fa-money-check-edit"></i>
-											</span>
+								<div class="form-group row gy-3 gx-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="contact_phone">Your Phone Number</label>
+										<div class="dropdown">
+											<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+												<img src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone">
+												<div class="d-flex align-items-center gap-2 cursor-pointer bg-white" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+													<span class="medium text-black text-opacity-7 nationality">+84</span>
+													<img class="cursor-pointer" src="{{ asset('assets/svg/icon/direction-up.svg') }}" data-icon-name="icon/direction-up" alt="direction-up" style="max-width: none">
+													<input class="form-control" type="hidden" id="nationality" name="nationality" value="" required>
+												</div>
+												<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
+													@include('visa.section.countries_telephone')
+												</div>
+												<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_phone" name="contact_phone" value="+84 1312312434" placeholder="Enter Value" required>
+											</div>
+											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 										</div>
 									</div>
-									<div class="d-flex justify-content-between">
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Gender <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<div class="select-location-1">
-												<div type="button" data-bs-toggle="dropdown" aria-expanded="false" class="">
-													<div class="input-group mb-3 input-search-flight border rounded-3" style="min-width: 300px">
-														<span class="input-group-text border-0 bg-white rounded-3" id="basic-addon1"><i class="fal fa-venus-mars"></i></span>
-														<input type="text" id="originLocation" name="originLocation[]" class="form-control border-0" placeholder="Please Select" readonly="">
-														<button class="btn btn-light dropdown-toggle bg-white border-0"></button>
-													</div>
-												</div>
-												
-												<div class="dropdown-menu mx-0 rounded-3 shadow data-dropdown-location" style="min-width: 300px;" data-bs-theme="light">
-													<div class="border-bottom">
-														<p class="ms-3 my-2">Femail</p>
-													</div>
-													<div class="border-bottom">
-														<p class="ms-3 my-2">Male</p>
-													</div>
-													<div>
-														<p class="ms-3 my-2">Other</p>
-													</div>
-
-												</div>
-											</div>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="contact_email">Your Email</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/email.svg') }}" data-icon-name="outline/email" alt="email">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_email" name="contact_email" value="loremipisum@gmail.com" placeholder="Enter Value" required>
 										</div>
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Date of birth<span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<input type="text" class="form-control input-custom ps-5 border rounded-3" id="" style="min-width: 300px" placeholder="DD/MM/YYYY">
-											<span class="input-addon"><i class="far fa-calendar"></i></span>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between">
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Phone Number <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<div class="d-flex">
-												<input type="text" class="form-control input-custom border rounded-3 me-1" style="max-width: 68px" id="" placeholder="+84">
-												<div>
-													<input type="text" class="form-control input-custom ps-5 border rounded-3" id="" placeholder="Enter Value" style="max-width: 230px" readonly>
-													<span class="input-addon"><i class="fas fa-phone-alt"></i></span>
-												</div>
-											</div>
-										</div>
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Email Address <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<input type="email" class="form-control input-custom ps-5 border rounded-3" id="" style="min-width: 300px" placeholder="example@gmail.com" readonly>
-											<span class="input-addon"><i class="far fa-envelope"></i></span>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between">
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Country of Birth <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<div class="select-location-1">
-												<div type="button" aria-expanded="false">
-													<div class="input-group mb-3 border rounded-3 input-search-flight min-width-custom">
-														<span class="input-group-text border-0 bg-white rounded-3" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
-														<input type="text" id="originLocation" name="originLocation[]" class="form-control border-0" placeholder="Vietnam" readonly="">
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Country of Residency <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<div class="select-location-1">
-												<div type="button" aria-expanded="false">
-													<div class="input-group mb-3 border rounded-3 input-search-flight min-width-custom">
-														<span class="input-group-text border-0 bg-white rounded-3" id="basic-addon1"><i class="far fa-map-marker-alt"></i></span>
-														<input type="text" id="originLocation" name="originLocation[]" class="form-control border-0" placeholder="Vietnam" readonly="">
-													</div>
-												</div>
-										
-											</div>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between">
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Passport Number <span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<input type="text" class="form-control input-custom ps-5 border rounded-3 min-width-custom" id="" placeholder="Enter Value">
-											<span class="input-addon">
-												<i class="fal fa-money-check-edit"></i>
-											</span>
-										</div>
-										<div class="mb-3">
-											<label for="" class="form-label fw-bold">Expired Date<span class="color-icon-form" role="button" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This bottom tooltip is themed via CSS variables"><i class="fas fa-question-circle"></i></span></label>
-											<input type="email" class="form-control input-custom ps-5 border rounded-3" id="" style="min-width: 300px" placeholder="DD/MM/YYYY">
-											<span class="input-addon"><i class="far fa-calendar"></i></span>
-										</div>
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						{{-- Flight AMENDITIES --}}
-						<h2 class="title-section text-secondary border-2 border-bottom my-5">FLIGHT AMENDITIES</h2>
-
-						{{-- LUGGAGE --}}
-						<div class="luggage-box border border-primary px-5 py-3 rounded-3 mb-4" >
+						<div class="applicant-information border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#applicant-information">
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">APPLICANT(s)’s INFORMATION</h5>
+										</div>
+									</div>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="collapse py-3" id="applicant-information" style="">
+								<div class="form-group row gx-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="first_name">First Name</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="first_name" name="first_name" value="Lorem Ipsum" placeholder="Enter Value" >
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="last_name">Last Name</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="last_name" name="last_name" value="Lorem Ipsum" placeholder="Enter Value" >
+										</div>
+									</div>
+								</div>
+								<div class="form-group row g-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="gender">Gender</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/gender-female.svg') }}" data-icon-name="outline/gender-female" alt="gender">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="gender" name="gender" value="Female" placeholder="Please Select" >
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="date_of_birth">Day of Birth</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="date_of_birth" name="date_of_birth" value="15/08/1985" placeholder="DD/MM/YY" >
+										</div>
+									</div>
+								</div>
+								<div class="form-group row g-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="phone_number">Phone Number</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone" width="24px" height="24px">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="phone_number" name="phone_number" value="+84 1312312434" placeholder="Enter Value">
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="email">Email Address</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="email" name="email" value="loremipisum@gmail.com" placeholder="Enter Value" >
+										</div>
+									</div>
+								</div>
+								<div class="form-group row g-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="country_of_birth">Country of Birth</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_birth" name="country_of_birth" value="Chile" placeholder="Please Select" >
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="country_of_residency">Country of Residency</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_residency" name="country_of_residency" value="Chile" placeholder="Please Select" >
+										</div>
+									</div>
+								</div>
+								<div class="form-group row g-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="passport_number">Passport Number</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="passport_number" name="passport_number" value="C15C08" placeholder="Enter Value" >
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="expired_date">Expired Date</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="expired_date" name="expired_date" value="15/09/2027" placeholder="DD/MM/YY" >
+										</div>
+									</div>
+								</div>
+								<div class="form-group row g-4">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black" for="issue_date">Issue Date</label>
+										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+											<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="issue_date" name="issue_date" value="15/09/2017" placeholder="DD/MM/YY" >
+										</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="flight_amedities" class="d-none">
+						<h2 class="fw-800 custom-h1 text-black mb-4">FLIGHT AMENDITIES</h2>
+						<div class="luggage-box border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5">
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#luggage-amendities" aria-expanded="false" aria-controls="luggage-amendities">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">LUGGAGE</h4>
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">LUGGAGE</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-
 							<div class="collapse" id="luggage-amendities">
 								<div class="luggage-passenger">
 									<h5 class="fw-bold text-secondary">Passenger Number.</h5>
@@ -311,17 +308,21 @@
 								</div>
 							</div>
 						</div>
-
-						{{-- Seat --}}
-						<div class="seat-select border border-primary px-5 py-3 rounded-3 mb-4" >
+						<div class="seat-select border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#select_seat" aria-expanded="false" aria-controls="select_seat">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">Seat</h4>
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">SEAT</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -342,17 +343,21 @@
 								</div>
 							</div>
 						</div>
-
-						{{-- Seat Upgrade Options --}}
-						<div class="seat-upgrade option border border-primary px-5 py-3 rounded-3 mb-4" >
+						<div class="seat-upgrade option border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#seat-upgrade-options" aria-expanded="false" aria-controls="seat-upgrade-options">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">Seat Upgrade Options</h4>
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">Seat Upgrade Options</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -437,22 +442,25 @@
 								</div>
 							</div>
 						</div>
-
-						{{-- Meal Options --}}
-						<div class="meal-option border border-primary px-5 py-3 rounded-3 mb-4" >
+						<div class="meal-option border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#select_meal_option" aria-expanded="false" aria-controls="select_meal_option">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">Meal Option</h4>
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">Meal Option</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="collapse" id="select_meal_option">
-								{{-- Food slider --}}
 								<div>
 									<h4 class="fw-semibold text-center text-secondary my-4"> FOOD MENU <br> PASSENGER 1</h4>
 									<div class="mb-5">
@@ -767,42 +775,39 @@
 								</div>
 							</div>
 						</div>
-						
-						{{-- TRIP CONVENIENCES --}}
-						<h2 class="title-section text-secondary border-2 border-bottom my-5 overflow-hidden">TRIP CONVENIENCES</h2>
-						
-						{{-- TRAVEL INSURANCE --}}
-						<div class="seat-select border border-primary px-5 py-3 rounded-3 mb-4" >
+					</div>
+					<div id="trip_convniences" class="my-5">
+						<h2 class="fw-800 custom-h1 text-black mb-4">TRIP CONVENIENCES</h2>
+						<div class="travel-insurance border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#travel-insurance" aria-expanded="false" aria-controls="travel-insurance">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">TRAVEL INSURANCE</h4>
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">TRAVEL INSURANCE</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="collapse travel-insurance" id="travel-insurance">
-								<div class="ms-3 py-4">
-									<div class="form-check">
-										<input class="form-check-input fs-4 p-2 me-3" type="checkbox" value="" name="flight_insurance" id="flight_insurance">
-										<label class="form-check-label fs-4 text-decoration-underline" for="flight_insurance">
-											Late flight insurance - 12 $ per person.
-										</label>
-									</div>
+								<div class="form-check my-4">
+									<input class="form-check-input mt-0" type="checkbox" value="" id="flight_insurance" name="flight_insurance" style="width:1.5rem; height:1.5rem">
+									<label class="form-check-label ms-3 cursor-pointer fs-5 text-decoration-underline fw-medium" for="flight_insurance">Late flight insurance - 12 $ per person</label>
 								</div>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
+								</p>
 								<div>
-									<p style="font-weight: 400; line-height: 1.5rem;">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
-									</p>
-								</div>
-
-								<div>
-									<p class="text-primary fw-semibold more-information-button" data-current-text="More Information" data-set-text="Less Information" role="button" data-bs-toggle="collapse" data-bs-target="#more_info_travel_insurance" aria-expanded="false" aria-controls="more_info_travel_insurance">
-										<i class="fas fa-plus text-primary"></i> <span class="more-information-text">More Information</span>
+									<p class="text-primary fw-semibold more-information-button" data-current-text="+ More Information" data-set-text="- Less Information" role="button" data-bs-toggle="collapse" data-bs-target="#more_info_travel_insurance" aria-expanded="false" aria-controls="more_info_travel_insurance">
+										+ More Information
 									</p>
 									<div class="collapse" id="more_info_travel_insurance">
 										<p>
@@ -815,39 +820,36 @@
 								</div>
 							</div>
 						</div>
-
-						{{-- LUGGAGE INSURANCE --}}
-						<div class="seat-select border border-primary px-5 py-3 rounded-3 mb-4" >
+						<div class="luggage-insurance border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#luggage_insurance" aria-expanded="false" aria-controls="luggage_insurance">
-								<div class="d-flex justify-content-between py-3">
-									<div class="d-flex align-items-center">
-										<span class="bg-primary d-block me-5 mb-2" style="width: 40px; height: 12px;"></span>
-										<h4 class="fw-semibold text-secondary">LUGGAGE INSURANCE</h4>
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">LUGGAGE INSURANCE</h5>
+										</div>
 									</div>
-									<div class="d-flex justify-content-center align-items-center button-control-collapse rounded-circle border border-primary" role="button">
-										<i class="fas fa-caret-down fs-4 text-primary"></i>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 							<div class="collapse luggage_insurance" id="luggage_insurance">
-								<div class="ms-3 py-4">
-									<div class="form-check">
-										<input class="form-check-input fs-4 p-2 me-3" type="checkbox" value="" name="luggage_insurance_input" id="luggage_insurance_input">
-										<label class="form-check-label fs-4 text-decoration-underline" for="luggage_insurance_input">
-											Baggage insurance policies - 12 $ per person.
-										</label>
-									</div>
+								<div class="form-check my-4">
+									<input class="form-check-input mt-0" type="checkbox" value="" id="luggage_insurance_input" name="luggage_insurance_input" style="width:1.5rem; height:1.5rem">
+									<label class="form-check-label ms-3 cursor-pointer fs-5 text-decoration-underline fw-medium" for="luggage_insurance_input">Baggage insurance policies - 12 $ per person.</label>
 								</div>
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
+								</p>
 								<div>
-									<p style="font-weight: 400; line-height: 1.5rem;">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
-										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum pariatur debitis provident magni omnis cupiditate molestiae alias quibusdam totam culpa voluptatum, nemo, iusto deleniti sunt ex cum accusantium officiis cumque.
-									</p>
-								</div>
-
-								<div>
-									<p class="text-primary fw-semibold more-information-button" data-current-text="More Information" data-set-text="Less Information" role="button" data-bs-toggle="collapse" data-bs-target="#more_info_luggage_insurance" aria-expanded="false" aria-controls="more_info_luggage_insurance">
-										<i class="fas fa-plus text-primary"></i> <span class="more-information-text">More Information</span>
+									<p class="text-primary fw-semibold more-information-button" data-current-text="+ More Information" data-set-text="- Less Information" role="button" data-bs-toggle="collapse" data-bs-target="#more_info_luggage_insurance" aria-expanded="false" aria-controls="more_info_luggage_insurance">
+										+ More Information
 									</p>
 									<div class="collapse" id="more_info_luggage_insurance">
 										<p>
@@ -860,37 +862,35 @@
 								</div>
 							</div>
 						</div>
-
-						<div class="confirm mt-5">
-							<div class="form-check">
-								<input class="form-check-input p-2 me-3" type="checkbox" value="" name="confirm-information" id="confirm-information">
-								<label class="form-check-label" for="confirm-information">
-									I would like to confirm that the above information is correct.
-								</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input p-2 me-3" type="checkbox" value="" name="confirm-terms" id="confirm-terms">
-								<label class="form-check-label" for="confirm-terms">
-									I have read and agree to the <a href="#" class="text-primary text-decoration-underline fw-semibold"> Terms and Conditions</a> as well as the company's <a href="#" class="text-primary text-decoration-underline fw-semibold">Policies</a> .
-								</label>
-							</div>
+					</div>
+					<div class="confirm">
+						<div class="form-check mb-3">
+							<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info" name="correct_info" style="width:1.5rem; height:1.5rem" checked required>
+							<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like to confirm that the above information is correct.</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term" style="width:1.5rem; height:1.5rem" checked required>
+							<label class="form-check-label ms-3 cursor-pointer" for="term">
+								I have read and agree to the <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Terms and Conditions</a> as well as the company's <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
+							</label>
 						</div>
 					</div>
 				</div>
-				{{-- Right Element --}}
-				<div class="col-lg-5-5">
-					<div class="border border-primary rounded-4 mb-5 your-flight headline">
+				<div class="col-lg-5 col-12">
+					<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 your-flight medium">
 						@include('flights.section.order_summary')
-						<a href="{{ url('/flights/payment') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-payment mt-4">Go To Next Page</a>
+						<a href="{{ url('/flights/payment') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-payment mt-4">Go To Payment Page</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-
-</form>
+		</form>
+	</div>
+</section>
 <script>
 	$(document).ready(function(){
+		var iconDown = "{{ asset('assets/svg/solid/arrow-down-blue.svg') }}";
+		var iconUp = "{{ asset('assets/svg/solid/arrow-up-blue.svg') }}";
+
 		$('.passenger-select-seat').on('click', function(){
 			if ($(this).hasClass('active') === false) {
 				$('.passenger-select-seat.active').removeClass('active');
@@ -911,7 +911,7 @@
 			let currentText = $(this).attr('data-current-text');
 			let showText = $(this).attr('data-set-text');
 			$(this).attr('data-current-text', showText);
-			$(this).find('.more-information-text').html(showText);
+			$(this).text(showText);
 			$(this).attr('data-set-text', currentText);
 		});
 
@@ -929,14 +929,8 @@
 			$(this).find('i').attr('class', changeIcon);
 		});
 
-		$('.toggle-data-dropdown').on('click', function(){
-			let currenIcon = $(this).attr('data-icon-current');
-			let changeIcon = $(this).attr('data-icon-change');
-
-			$(this).attr('data-icon-current', changeIcon);
-			$(this).attr('data-icon-change', currenIcon);
-
-			$(this).find('.button-control-collapse i').attr('class', changeIcon);
+		$(".toggle-data-dropdown").click(function(){
+			$(this).find("img").attr('src', (_, attr) => attr == iconDown ? iconUp : iconDown);
 		});
 
 		var swiper = new Swiper(".foodSwiper", {
@@ -958,9 +952,6 @@
 				prevEl: ".drink-swiper-custom-prev",
 			},
 		});
-
-
-
 	});
 </script>
 @endsection

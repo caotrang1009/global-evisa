@@ -82,12 +82,21 @@
 	margin-right: 2.5rem;
 }
 
+.mb-4-5 {
+	margin-bottom: 2.5rem;
+}
+
 .m-2-5 {
 	margin: .75rem;
 }
 
 .mt-n4-1 {
 	margin-top: -1.8rem !important;
+}
+
+.my-3-5 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
 }
 
 //position
@@ -154,6 +163,16 @@
 	.col-sm-8-5 {
 		flex: 0 0 auto;
 		width: 70%;
+	}
+	.px-sm-4-5 {
+		padding-left: 2.5rem !important;
+		padding-right: 2.5rem !important;
+	}
+	.me-sm-4-5 {
+		margin-right: 2.5rem !important;
+	}
+	.fs-sm-4 {
+		font-size: 24px !important;
 	}
 }
 

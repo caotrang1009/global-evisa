@@ -1,6 +1,6 @@
 <div class="review-applicant">
 	<div class="headline fw-semibold text-center text-black text-opacity-8 mb-4 pt-4-5 pb-3">APPLICANT  NO.</div>
-	<div class="row justify-content-center px-3 pb-4-5">
+	<div class="row justify-content-center pb-4-5">
 		<div class="col-lg-9 col-12">
 			<div class="form-group row gx-4">
 				<div class="col-sm-6">

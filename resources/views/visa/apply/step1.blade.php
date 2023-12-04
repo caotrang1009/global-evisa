@@ -1,114 +1,139 @@
-<div class="step-1">
-	<form action="" id="frm-order">
-		<div class="row g-sm-5 g-4">
-			<div class="col-lg-7 col-12">
-				<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4">
-					<h2 class="fw-800 custom-h1 text-black mb-4">ORDER INFORMATION</h2>
-					@include('visa.section.order_info')
-					<table class="table table-borderless" style="--bs-table-bg: #FFFCF7">
-						<tr>
-							<td width="55%"><span class="fw-bold text-title">Service Fees:</span><img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></td>
-							<td>40 USD per person</td>
-						</tr>
-						<tr>
-							<td><span class="fw-bold text-title">Admin and Government Fees:</span><img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></td>
-							<td>50 USD per person</td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<div class="fw-bold text-title mb-2">Processing Time and Fees:</div>
-								<div class="form-check align-items-stretch">
-									<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-									<label class="form-check-label" for="flexRadioDefault1">Normal - Within 3 days - 0 USD per person</label>
-								</div>
-								<div class="form-check align-items-stretch">
-									<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-									<label class="form-check-label" for="flexRadioDefault2">Urgent - Within 1 day - 25 USD per person</label>
-								</div>
-								<div class="form-check align-items-stretch">
-									<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
-									<label class="form-check-label" for="flexRadioDefault3">Super Urgent - Within 5 hours - 55 USD per person</label>
-								</div>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4 applicant">
-					<div class="row align-items-center justify-content-center">
-						<div class="col-10">
-							<h2 class="fw-800 custom-h1 text-black">APPLICANT NO.</h2>
-						</div>
-						<div class="col-2 text-end">
-							<div class="delete-person cursor-pointer d-inline-block" style="display: none">
-								<div class="rounded-circle border icon-hover" style="width: fit-content">
-									<img class="m-2" src="{{ asset('assets/svg/outline/trash.svg') }}" data-icon-name="outline/trash" alt="trash" width="16px" height="16px">
-								</div>
-							</div>
-						</div>
-					</div>
-					@include('visa.section.applicant')
-				</div>
-				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
-					<div class="row align-items-center justify-content-center">
-						<div class="col-10">
-							<h2 class="fw-800 custom-h1 text-black mb-0">ADD-ON SERVICES</h2>
-						</div>
-						<div class="col-2 text-end">
-							<div class="add-on-services cursor-pointer d-inline-block" data-bs-toggle="collapse" href="#add-on-services">
-								<div class="rounded-circle border icon-hover" style="width: fit-content">
-									<img class="m-2" src="{{ asset('assets/svg/outline/plus.svg') }}" data-icon-name="outline/plus" alt="plus" width="16px" height="16px">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="add-on-services" class="mt-4 collapse">
-						<div class="form-check align-items-stretch">
-							<input class="form-check-input me-2" type="checkbox" value="" id="travel_insurance" name="travel_insurance" required>
-							<label class="form-check-label" for="travel_insurance"><span class="fw-semibold me-2">Travel Insurance:</span>50 USD per person</label>
-						</div>
-					</div>				
-				</div>
-				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4 add-another-person">
-					<div class="row align-items-center justify-content-center">
-						<div class="col-10">
-							<h2 class="fw-800 custom-h1 text-black mb-0">ADD ANOTHER PERSON</h2>
-						</div>
-						<div class="col-2 text-end">
-							<div class="add-person cursor-pointer d-inline-block">
-								<div class="rounded-circle border icon-hover" style="width: fit-content">
-									<img class="m-2" src="{{ asset('assets/svg/outline/plus.svg') }}" data-icon-name="outline/plus" alt="plus" width="16px" height="16px">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
-					<h2 class="fw-800 custom-h1 text-black mb-4">CONTACT INFORMATION</h2>
-					@include('visa.section.contact_info')
-				</div>
-				<div class="confirm">
-					<div class="form-check mb-3">
-						<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info" name="correct_info" style="width:1.5rem; height:1.5rem" checked required>
-						<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like to confirm that the above information is correct.</label>
-					</div>
-					<div class="form-check">
-						<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term" style="width:1.5rem; height:1.5rem" checked required>
-						<label class="form-check-label ms-3 cursor-pointer" for="term">
-							I have read and agree to the <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Terms and Conditions</a> as well as the company's <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
-						</label>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-5 col-12">
-				<div class="border-dashed bg-beige rounded-3-5 text-title py-sm-5 p-4 mb-4">
-					@include('visa.section.order_summary')
-					<a href="{{ url('/visa/apply/step2') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-order-info">Go to Payment Page</a>
+<section class="pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="step-part visa mt-5">
+				<div class="d-flex justify-content-between text-title stepper-wrapper">
+					<a href="{{ url('visa/apply/step1') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+					</a>
+					<a href="{{ url('visa/apply/step2') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+					</a>
+					<a href="{{ url('visa/apply/step3') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Confirmation</div>
+					</a>
 				</div>
 			</div>
 		</div>
-	</form>
-</div>
-
+	</div>
+</section>
+<section>
+	<div class="container">
+		<div class="row justify-content-center">			
+			<form action="" id="frm-order">
+				<div class="row g-sm-5 g-4">
+					<div class="col-lg-7 col-12">
+						<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4">
+							<h2 class="fw-800 custom-h1 text-black mb-4">ORDER INFORMATION</h2>
+							@include('visa.section.order_info')
+							<table class="table table-borderless" style="--bs-table-bg: #FFFCF7">
+								<tr>
+									<td width="55%"><span class="fw-bold text-title">Service Fees:</span><img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></td>
+									<td>40 USD per person</td>
+								</tr>
+								<tr>
+									<td><span class="fw-bold text-title">Admin and Government Fees:</span><img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></td>
+									<td>50 USD per person</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<div class="fw-bold text-title mb-2">Processing Time and Fees:</div>
+										<div class="form-check align-items-stretch">
+											<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+											<label class="form-check-label" for="flexRadioDefault1">Normal - Within 3 days - 0 USD per person</label>
+										</div>
+										<div class="form-check align-items-stretch">
+											<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+											<label class="form-check-label" for="flexRadioDefault2">Urgent - Within 1 day - 25 USD per person</label>
+										</div>
+										<div class="form-check align-items-stretch">
+											<input class="form-check-input me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+											<label class="form-check-label" for="flexRadioDefault3">Super Urgent - Within 5 hours - 55 USD per person</label>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4 applicant">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-10">
+									<h2 class="fw-800 custom-h1 text-black">APPLICANT NO.</h2>
+								</div>
+								<div class="col-2 text-end">
+									<div class="delete-person cursor-pointer d-inline-block" style="display: none">
+										<div class="rounded-circle border icon-hover" style="width: fit-content">
+											<img class="m-2" src="{{ asset('assets/svg/outline/trash.svg') }}" data-icon-name="outline/trash" alt="trash" width="16px" height="16px">
+										</div>
+									</div>
+								</div>
+							</div>
+							@include('visa.section.applicant')
+						</div>
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-10">
+									<h2 class="fw-800 custom-h1 text-black mb-0">ADD-ON SERVICES</h2>
+								</div>
+								<div class="col-2 text-end">
+									<div class="add-on-services cursor-pointer d-inline-block" data-bs-toggle="collapse" href="#add-on-services">
+										<div class="rounded-circle border icon-hover" style="width: fit-content">
+											<img class="m-2" src="{{ asset('assets/svg/outline/plus.svg') }}" data-icon-name="outline/plus" alt="plus" width="16px" height="16px">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="add-on-services" class="mt-4 collapse">
+								<div class="form-check align-items-stretch">
+									<input class="form-check-input me-2" type="checkbox" value="" id="travel_insurance" name="travel_insurance" required>
+									<label class="form-check-label" for="travel_insurance"><span class="fw-semibold me-2">Travel Insurance:</span>50 USD per person</label>
+								</div>
+							</div>				
+						</div>
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4 add-another-person">
+							<div class="row align-items-center justify-content-center">
+								<div class="col-10">
+									<h2 class="fw-800 custom-h1 text-black mb-0">ADD ANOTHER PERSON</h2>
+								</div>
+								<div class="col-2 text-end">
+									<div class="add-person cursor-pointer d-inline-block">
+										<div class="rounded-circle border icon-hover" style="width: fit-content">
+											<img class="m-2" src="{{ asset('assets/svg/outline/plus.svg') }}" data-icon-name="outline/plus" alt="plus" width="16px" height="16px">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
+							<h2 class="fw-800 custom-h1 text-black mb-4">CONTACT INFORMATION</h2>
+							@include('visa.section.contact_info')
+						</div>
+						<div class="confirm">
+							<div class="form-check mb-3">
+								<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info" name="correct_info" style="width:1.5rem; height:1.5rem" checked required>
+								<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like to confirm that the above information is correct.</label>
+							</div>
+							<div class="form-check">
+								<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term" style="width:1.5rem; height:1.5rem" checked required>
+								<label class="form-check-label ms-3 cursor-pointer" for="term">
+									I have read and agree to the <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Terms and Conditions</a> as well as the company's <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5 col-12">
+						<div class="border-dashed bg-beige rounded-3-5 text-title py-sm-5 p-4 mb-4">
+							@include('visa.section.order_summary')
+							<a href="{{ url('/visa/apply/step2') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-order-info">Go to Payment Page</a>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
 <script src="{{ asset('assets/js/flight.js') }}?id={{ filemtime('assets/js/flight.js') }}"></script>
 <script>
 	$(document).ready(function () {		

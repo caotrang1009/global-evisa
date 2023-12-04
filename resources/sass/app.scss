@@ -146,6 +146,8 @@ header {
 }
 
 footer {
+	padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
 	.footer-heading {
 		font-size: 1rem;
 		text-transform: uppercase;
@@ -559,6 +561,11 @@ footer {
 		font-weight: 800;
 		line-height: 52px;
 	}
+	.confirmation {
+		h1 {
+			font-size: 2.625rem;
+		}
+	}
 }
 
 .sub-line-title {
@@ -879,15 +886,15 @@ footer {
 	}
 }
 
-.stepper-wrapper {
+.step-part {
 	.stepper-item {
 		flex: 1;
 		&::before, &::after {
 			position: absolute;
 			content: "";
-			border: 1px solid #D3D3D3;
+			border-top: 1px solid #D3D3D3;
 			width: 100%;
-			top: 30%;
+			top: 40px;
 			z-index: 2;
 		}
 		&::before {
@@ -902,7 +909,6 @@ footer {
 			height: 80px;
 			font-weight: 800;
 			font-size: 28px;
-			color: $orange;
 		}
 		.step-name {
 			font-weight: 500;
@@ -910,18 +916,49 @@ footer {
 			line-height: 36px;
 			letter-spacing: -0.5px;
 		}
-		&.completed {
-			.step-counter {
-				background-color: $orange;
-				color: white;
-			}
+		&.current {
 			.step-name {
 				font-weight: 700;
 				color: #272727;
 			}
 		}
+		&.completed {
+			.step-counter {
+				background-color: #D3D3D3 !important;
+				color: white !important;
+				border: 1px solid #D3D3D3 !important;
+			}
+		}
 		&:first-child::before, &:last-child::after {
 			content: none;
+		}
+	}
+	&.visa {
+		.stepper-item {
+			.step-counter {
+				color: $orange;
+				border: 1px solid $orange;
+			}
+			&.current {
+				.step-counter {
+					background-color: $orange;
+					color: white;
+				}
+			}
+		}
+	}
+	&.flight {
+		.stepper-item {
+			.step-counter {
+				color: $primary;
+				border: 1px solid $primary;
+			}
+			&.current {
+				.step-counter {
+					background-color: $primary;
+					color: white;
+				}
+			}
 		}
 	}
 }
@@ -961,15 +998,25 @@ footer {
 	border-radius: .75rem;
 }
 
-.payment-method-item {
-	.form-check-input {
-		&:checked {
-			background-color: $primary;
-			border-color: $primary;		
+.payment-method {
+	padding: 1.5rem 2.25rem !important;
+	.payment-method-item {
+		.form-check-input {
+			&:checked {
+				background-color: $primary;
+				border-color: $primary;		
+			}
+		}
+		.payment-method-card {
+			border: 1px solid #A9A9A9;
+			height: 115px;
 		}
 	}
+}
+
+.select-payment-method {
 	.payment-method-card {
-		border: 1px solid #A9A9A9;
+		height: 160px !important;
 	}
 }
 
@@ -1123,7 +1170,6 @@ footer {
 }
 
 .your-flight {
-	padding: 46px 49px 45px 45px;
 	.img-airline {
 		width: 99px;
 		height: 45px;
@@ -1156,9 +1202,9 @@ footer {
 			justify-content: center;
 		}
 	}
-	.flight-dashed {
+	.flight {
 		background-image: repeating-linear-gradient(0deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(90deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(180deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px), repeating-linear-gradient(270deg, #545454, #545454 10px, transparent 10px, transparent 20px, #545454 20px);
-		background-size: 0px 100%, 100% 1px, 0px 100% , 100% 0px;
+		background-size: 0px 100%, 100% 0px, 0px 100% , 100% 1px;
 		background-position: 0 0, 0 0, 100% 0, 0 100%;
 		background-repeat: no-repeat;
 	}

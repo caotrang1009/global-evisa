@@ -41,6 +41,10 @@ Route::get('/flights/payment', function () {
     return view('flights.payment');
 });
 
+Route::get('/flights/confirm-payment', function () {
+    return view('flights.confirm_payment');
+});
+
 Route::get('/visa', function() {
     return view('visa.index');
 });

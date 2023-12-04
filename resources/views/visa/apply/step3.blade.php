@@ -1,51 +1,40 @@
-<div class="step-3">
-	<div class="row gx-8">
-		<div class="col-lg-7 col-12">
-			<h1 class="web-header1 fw-800 text-uppercase text-black">YOUR ORDER HAS BEEN CONFIRMED!</h1>
-			<div class="text-black my-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-			<a href="#" class="btn btn-outline-primary btn-lg rounded-4 py-2 fw-bold text-title w-100 btn-get-email">
-				<img class="me-4 mb-1" src="{{ asset('assets/svg/solid/mail-arrow-down.svg') }}" data-icon-name="solid/mail-arrow-down" alt="arrow" width="32px" height="32px">
-				<span class="ps-1 fs-6">Get Email Confirmation</span>
-			</a>
-			<div class="mt-5">
-				<img class="img-fluid" src="{{ asset('assets/images/bg-send-mail.png') }}" alt="arrow">
-			</div>
-			<div class="text-title text-center mt-4"><span class="fw-semibold">Image Credit:</span> Thanh Tran</div>
-		</div>
-		<div class="col-lg-5 col-12">
-			<div class="border-dashed bg-beige rounded-3-5 text-title py-sm-5 p-4 mb-4">
-				@include('visa.section.order_summary')
-				<a href="{{ url('/visa') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-visa-search">Back to Home</a>
+<section class="pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="step-part visa mt-5">
+				<div class="d-flex justify-content-between text-title stepper-wrapper">
+					<a href="{{ url('visa/apply/step1') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+					</a>
+					<a href="{{ url('visa/apply/step2') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+					</a>
+					<a href="{{ url('visa/apply/step3') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Confirmation</div>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-<script>
-	$(document).ready(function () {	
-		$(document).on('mouseenter', '.btn-get-email', function () {
-			updateSvgColor($(this).find('img'), 'white');
-		}).on('mouseleave', '.btn-get-email', function () {
-			updateSvgColor($(this).find('img'), '');
-		});
-
-		function updateSvgColor(pathElement, fillColor) {
-			if (fillColor!='') {
-				fillColor = '-'+fillColor;
-			}
-
-			pathElement.each(function(index, item) {
-				var iconName = $(item).data('icon-name');
-        		var src = `{{ asset('assets/svg/${iconName + fillColor}.svg') }}`;
-				
-				if ($(item).attr('alt') == 'plus') {
-					iconPlus = src;
-				} else if($(item).attr('alt') == 'minus') {
-					var src = `{{ asset('assets/svg/outline/minus${fillColor}.svg') }}`;
-					iconMinus = src;
-				}
-				$(item).attr('src', src);
-			});
-		}
-	});
-</script>
+</section>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-12">
+				<h1 class="web-header2 fw-800 text-uppercase text-black">YOUR ORDER WAS DONE SUCCESSFULLY!</h1>
+				<div class="my-4 fw-bold">Order Code: ABCYYZ123654</div>
+				<p>We have received your payment and will notify you for refund if there are unexpected issues. Please check your email to confirm the receipt information, then contact us for further assistance.</p>
+				<a href="{{ url('/visa') }}" class="btn btn-orange btn-lg rounded-4 py-3 px-6 fw-bold text-title fs-6 btn-visa-search">Go to my order</a>
+			</div>
+			<div class="col-lg-6 col-12">
+				<div class="mb-4 text-center">
+					<img class="img-fluid" src="{{ asset('assets/images/bg-send-mail.png') }}" alt="arrow">
+				</div>
+				<div class="text-title text-center mt-4"><span class="fw-semibold">Image Credit:</span> Thanh Tran</div>
+			</div>
+		</div>
+	</div>
+</section>

@@ -103,19 +103,6 @@
 }
 
 @media(min-width:992px) {
-	.dropdown {
-		> .dropdown-menu {
-			display: block;
-			visibility: hidden;
-			opacity: 0;
-		}
-		&:hover {
-			> .dropdown-menu {
-				visibility: visible;
-				opacity: 1;
-			}
-		}
-	}
 	.navbar-mega {
 		.dropdown {
 			> .dropdown-menu {

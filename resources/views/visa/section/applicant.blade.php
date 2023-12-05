@@ -1,28 +1,28 @@
-<div class="form-group row gx-4">
+<div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="full_name">Full Name<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></label>
-		<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-			<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
+		<label class="h6 fw-semibold text-title text-black">Full Name<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></label>
+		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+			<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
 			<input class="form-control border-0 px-0 cursor-pointer" type="text" id="full_name" name="full_name[]" placeholder="Enter Value" required>
 		</div>
 		<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="date_of_birth">Day of Birth</label>
-		<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-			<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+		<label class="h6 fw-semibold text-title text-black">Day of Birth</label>
+		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+			<img class="form-icon" src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 			<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="date_of_birth" name="date_of_birth[]" placeholder="DD/MM/YY" required>
 			<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 		</div>
 		<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 	</div>
 </div>
-<div class="form-group row g-4">
+<div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="gender">Gender</label>
+		<label class="h6 fw-semibold text-title text-black">Gender</label>
 		<div class="dropdown">
-			<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-				<img src="{{ asset('assets/svg/outline/gender.svg') }}" data-icon-name="outline/gender" alt="gender">
+			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+				<img class="form-icon" src="{{ asset('assets/svg/outline/gender.svg') }}" data-icon-name="outline/gender" alt="gender">
 				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="gender" name="gender[]" placeholder="Please Select" required>
 				<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 			</div>
@@ -36,20 +36,20 @@
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="email">Email Address</label>
-		<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-			<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
+		<label class="h6 fw-semibold text-title text-black">Email Address</label>
+		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+			<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
 			<input class="form-control border-0 px-0 cursor-pointer" type="text" id="email" name="email[]" placeholder="Enter Value" required>
 		</div>
 		<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 	</div>
 </div>
-<div class="form-group row g-4">
+<div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="phone_number">Phone Number</label>
+		<label class="h6 fw-semibold text-title text-black">Phone Number</label>
 		<div class="dropdown">
-			<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-				<img src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone">
+			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+				<img class="form-icon" src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone">
 				<div class="d-flex align-items-center gap-2 cursor-pointer bg-white input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 					<span class="medium text-black text-opacity-7 nationality">+84</span>
 					<img class="cursor-pointer" src="{{ asset('assets/svg/icon/direction-up.svg') }}" data-icon-name="icon/direction-up" alt="direction-up" style="max-width: none">
@@ -64,10 +64,10 @@
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="country_of_residency">Country of Residency</label>
+		<label class="h6 fw-semibold text-title text-black">Country of Residency</label>
 		<div class="dropdown">
-			<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-				<img src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
+			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+				<img class="form-icon" src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
 				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_residency" name="country_of_residency[]" placeholder="Please Select" required>
 				<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 			</div>
@@ -78,12 +78,12 @@
 		</div>
 	</div>
 </div>
-<div class="form-group row g-4">
+<div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="country_of_birth">Country of Birth</label>
+		<label class="h6 fw-semibold text-title text-black">Country of Birth</label>
 		<div class="dropdown">
-			<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-				<img src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
+			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+				<img class="form-icon" src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
 				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_birth" name="country_of_birth[]" placeholder="Please Select" required>
 				<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 			</div>
@@ -94,10 +94,10 @@
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="appointment_location">Appointment Location</label>
+		<label class="h6 fw-semibold text-title text-black">Appointment Location</label>
 		<div class="dropdown">
-			<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-				<img src="{{ asset('assets/svg/outline/map-location.svg') }}" data-icon-name="outline/map-location" alt="date">
+			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+				<img class="form-icon" src="{{ asset('assets/svg/outline/map-location.svg') }}" data-icon-name="outline/map-location" alt="date">
 				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="appointment_location" name="appointment_location[]" placeholder="Please Select" required>
 				<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 			</div>
@@ -108,30 +108,30 @@
 		</div>
 	</div>
 </div>
-<div class="form-group row g-4">
+<div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="passport_number">Passport Number</label>
-		<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-			<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
+		<label class="h6 fw-semibold text-title text-black">Passport Number</label>
+		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+			<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
 			<input class="form-control border-0 px-0 cursor-pointer" type="text" id="passport_number" name="passport_number[]" placeholder="Enter Value" required>
 		</div>
 		<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="expired_date">Expired Date</label>
-		<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-			<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+		<label class="h6 fw-semibold text-title text-black">Expired Date</label>
+		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+			<img class="form-icon" src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 			<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="expired_date" name="expired_date[]" placeholder="DD/MM/YY" required>
 			<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 		</div>
 		<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 	</div>
 </div>
-<div class="form-group row g-4">
+<div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="issue_date">Issue Date</label>
-		<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
-			<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+		<label class="h6 fw-semibold text-title text-black">Issue Date</label>
+		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+			<img class="form-icon" src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 			<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="issue_date" name="issue_date" placeholder="DD/MM/YY" required>
 			<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 		</div>
@@ -140,7 +140,7 @@
 </div>
 <div class="form-group row g-4 mb-0">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="photo_of_passport">Photo of Passport Page<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></label>
+		<label class="h6 fw-semibold text-title text-black">Photo of Passport Page<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></label>
 		<div class="border rounded-3-5 bg-upload text-center align-middle cursor-pointer" style="height: 160px; display: table-cell;">
 			<img src="{{ asset('assets/svg/outline/multimedia.svg') }}" alt="date">
 			<input class="form-control" type="file" name="photo_of_passport[]" id="photo_of_passport" style="visibility: hidden; height:0;">
@@ -148,7 +148,7 @@
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black" for="portrait_photo">Portrait Photo<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></label>
+		<label class="h6 fw-semibold text-title text-black">Portrait Photo<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info"></label>
 		<div class="border rounded-3-5 bg-upload text-center align-middle cursor-pointer" style="height: 160px; display: table-cell;">
 			<img src="{{ asset('assets/svg/outline/multimedia.svg') }}" alt="date">
 			<input class="form-control" type="file" name="portrait_photo[]" id="photo_of_passport" style="visibility: hidden; height:0;">

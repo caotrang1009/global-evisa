@@ -4,7 +4,7 @@
 
 <section>
 	<div class="container">
-		<h1 class="web-title page-title text-black text-uppercase spacing-n1">BOOK YOUR FLIGHT!</h1>
+		<h1 class="web-title text-black text-uppercase spacing-n1">BOOK YOUR FLIGHT!</h1>
 		<div class="d-flex align-items-center">
 			<span class="d-block me-3 sub-line-title"></span>
 			<h4 class="page-sub-title">Where do you wanna go?</h4>

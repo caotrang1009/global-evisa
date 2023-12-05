@@ -1,7 +1,7 @@
 <section class="pt-0">
 	<div class="container">
 		<div class="row">
-			<div class="step-part visa mt-5">
+			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
 					<a href="{{ url('visa/apply/step1') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>

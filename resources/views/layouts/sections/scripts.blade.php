@@ -7,22 +7,3 @@
 <script src="{{ asset('assets/js/flight.js') }}?id={{ filemtime('assets/js/flight.js') }}"></script>
 <script src="{{ asset('assets/js/search.js') }}?id={{ filemtime('assets/js/search.js') }}"></script>
 @vite('resources/js/app.js')
-
-<!-- Initialize Swiper -->
-<script>
-	// Tooltip
-	$($(document).ready(function () {
-		$('[data-toggle="tooltip"]').tooltip();
-	}));
-
-	// swiper js
-	var swiper = new Swiper(".mySwiper", {
-			slidesPerView: 3,
-			spaceBetween: 50,
-			loop: true,
-			navigation: {
-			nextEl: ".swiper-custom-next",
-			prevEl: ".swiper-custom-prev",
-		},
-	});
-</script>

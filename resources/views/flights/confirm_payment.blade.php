@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="d-flex align-items-center">
 			<span class="position-absolute me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
-			<h1 class="web-title page-title text-black text-center text-uppercase w-100">CONFIRMATION</h1>
+			<h1 class="web-title text-black text-center text-uppercase w-100">CONFIRMATION</h1>
 		</div>
 	</div>
 </section>

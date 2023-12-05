@@ -18,7 +18,7 @@
 						<div class="row align-items-end gx-4">
 							<div class="col">
 								<div class="position-relative select-location-1">
-									<label class="fw-semibold headline text-white mb-2" for="originLocationCode">Location 1</label>
+									<label class="fw-semibold headline text-white mb-2">Location 1</label>
 									<div class="dropdown">
 										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
@@ -36,7 +36,7 @@
 							</div>
 							<div class="col">
 								<div class="select-location-2">
-									<label class="fw-semibold headline text-white mb-2" for="destinationLocationCode">Location 2</label>
+									<label class="fw-semibold headline text-white mb-2">Location 2</label>
 									<div class="dropdown">
 										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
@@ -55,7 +55,7 @@
 						<div class="row align-items-end gx-4">
 							<div class="col">
 								<div class="select-departure-date">
-									<label class="fw-semibold headline fs-6 text-white mb-2" for="departureDate">Departure Date</label>
+									<label class="fw-semibold headline fs-6 text-white mb-2">Departure Date</label>
 									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
 										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 										<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="departureDate" name="departureDate[]" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
@@ -67,7 +67,7 @@
 							<div class="col round-trip-control">
 								<div class="select-return-date">
 									<div class="d-flex align-items-center mb-2">
-										<label class="fw-semibold headline fs-6 text-white" for="returnDate">Round-trip</label>
+										<label class="fw-semibold headline fs-6 text-white">Round-trip</label>
 										<input class="form-check-input mt-0 ms-3" type="checkbox" id="round_trip_check" style="width:1.5rem; height:1.5rem" checked>
 									</div>
 									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
@@ -91,7 +91,7 @@
 								<div class="row align-items-end gx-4">
 									<div class="col">
 										<div class="position-relative select-location-1">
-											<label class="fw-semibold headline text-white mb-2" for="originLocationCodeMultiCity_2">Location 1</label>
+											<label class="fw-semibold headline text-white mb-2">Location 1</label>
 											<div class="dropdown">
 												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
@@ -109,7 +109,7 @@
 									</div>
 									<div class="col">
 										<div class="select-location-2">
-											<label class="fw-semibold headline text-white mb-2" for="destinationLocationCodeMultiCity_2">Location 2</label>
+											<label class="fw-semibold headline text-white mb-2">Location 2</label>
 											<div class="dropdown">
 												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
@@ -128,7 +128,7 @@
 								<div class="row align-items-end gx-4">
 									<div class="col">
 										<div class="select-departure-date">
-											<label class="fw-semibold headline fs-6 text-white mb-2" for="departureDateMultiCity_2">Departure Date</label>
+											<label class="fw-semibold headline fs-6 text-white mb-2">Departure Date</label>
 											<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
 												<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 												<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="departureDateMultiCity_2" name="departureDate[]" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
@@ -157,7 +157,7 @@
 				<div class="row align-items-end g-4 mt-0">
 					<div class="col">
 						<div class="form-group mb-0 select-location-2">
-							<label class="fw-semibold headline text-white mb-2" for="originLocation">Class of Passenger</label>
+							<label class="fw-semibold headline text-white mb-2">Class of Passenger</label>
 							<div class="dropdown">
 								<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 w-100 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 									<img src="{{ asset('assets/svg/outline/user-firends.svg') }}" alt="map">
@@ -176,7 +176,7 @@
 					</div>
 					<div class="col">
 						<div class="form-group mb-0 select-location-2">
-							<label class="fw-semibold headline text-white mb-2" for="originLocation">Number of Passenger</label>
+							<label class="fw-semibold headline text-white mb-2">Number of Passenger</label>
 							<div class="dropdown">
 								<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 w-100 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 									<img src="{{ asset('assets/svg/outline/users.svg') }}" alt="map">

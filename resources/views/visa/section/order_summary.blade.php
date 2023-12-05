@@ -1,4 +1,4 @@
-<h2 class="fw-800 text-black text-center text-uppercase">ORDER SUMMARY</h2>
+<h2 class="custom-h3 fw-800 text-black text-center mb-0">ORDER SUMMARY</h2>
 <div class="row g-3 my-4">
     <div class="col-12">
         <div class="d-flex gap-3 align-items-center">

@@ -15,7 +15,7 @@
 					</ol>
 				</nav>
 			</div>
-			<h1 class="web-title page-title text-black text-uppercase">Get your global evisa now!</h1>
+			<h1 class="web-title text-black text-uppercase">Get your global evisa now!</h1>
 			<h5 class="my-3 text-black text-opacity-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
 			
 			@include('visa.section.apply_form')

@@ -173,8 +173,9 @@ small, .small {
 
 .web-title {
 	font-weight: 800;
-	font-size: 64px;
-	line-height: 72px;
+	font-size: 56px;
+	line-height: 64px;
+	letter-spacing: -0.56px;
 }
 
 .web-header1 {
@@ -292,5 +293,18 @@ small, .small {
 .text-primary {
 	&.text-600 {
 		color: #2F62A3 !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.web-title {
+		font-size: 3rem;
+		font-weight: 800;
+		line-height: 52px;
+	}
+	.confirmation {
+		h1 {
+			font-size: 2.625rem;
+		}
 	}
 }

@@ -4,7 +4,7 @@
 			<div class="row gx-5-5 gy-4">
 				<div class="col-sm-4">
 					<div class="form-group mb-0">
-						<label for="nationality" class="mb-3 text-title">Your Nationality</label>
+						<label class="mb-3 text-title">Your Nationality</label>
 						<div class="dropdown">
 							<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 py-1 px-4 input-visa-search" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 								<img src="{{ asset('assets/svg/outline/people.svg') }}" alt="people">
@@ -19,7 +19,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group mb-0">
-						<label for="nationality_to" class="mb-3 text-title">Traveling to</label>
+						<label class="mb-3 text-title">Traveling to</label>
 						<div class="dropdown">
 							<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 py-1 px-4 input-visa-search" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 								<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="people">
@@ -34,7 +34,7 @@
 				</div>
 				<div class="col-sm-4">
 					<div class="form-group mb-0">
-						<label for="purpose" class="mb-3 text-title">Purpose</label>
+						<label class="mb-3 text-title">Purpose</label>
 						<div class="dropdown">
 							<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 py-1 px-4 input-visa-search" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 								<img src="{{ asset('assets/svg/outline/map-gps-navigation.svg') }}" alt="people">

@@ -5,10 +5,10 @@
 	<div class="container">
 		<div class="d-flex align-items-center">
 			<span class="position-absolute me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
-			<h1 class="web-title page-title text-black text-center text-uppercase w-100">PAYMENT</h1>
+			<h1 class="web-title text-black text-center text-uppercase w-100">PAYMENT</h1>
 		</div>
 		<div class="row">
-			<div class="step-part flight mt-5">
+			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
 					<a href="{{ url('flights/information') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
@@ -31,41 +31,68 @@
 	<div class="container">
 		<div class="row gy-5">
 			<div class="col-lg-7 col-12">
-				<div class="select-payment-method payment-method border border-primary rounded-3-5 mb-5">
+				<div class="border-dashed bg-beige rounded-3-5 mb-4-5 payment-method">
 					<div class="row gx-3 gy-4">
-						<div class="col-12">							
-							<h2 class="fw-800 custom-h1 text-black mb-4">PAYMENT METHOD</h2>
+						<div class="col-12">
+							<h2 class="fw-800 text-title text-black text-uppercase mb-4">payment methods</h2>
 						</div>
-						<div class="col-sm-6 col-12">
+						<div class="col-sm-4 col-12">
 							<label class="payment-method-item w-100" for="payment_method_1" data-bs-target="#bank-transfer">
 								<div class="row">
 									<div class="col-2">
 										<input class="form-check-input fs-5 me-2 mt-0" type="radio" name="payment_method" id="payment_method_1" value="option1">
 									</div>
 									<div class="col-10 ps-0">
-										<div class="p-4 rounded-4 bg-white payment-method-card cursor-pointer">
-											<h5 class="fw-semibold mb-3 text-black text-center method-title">Credit or Debit Card:</h5>											
-											<div class="d-flex justify-content-between flex-wrap method-icon">
-												<img src="{{ asset('assets/images/visa.png') }}" alt="Visa Card" height="52px">
-												<img src="{{ asset('assets/images/master.png') }}" alt="Master Card" height="52px">
+										<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
+											<div class="fw-semibold medium mb-2 text-black text-center method-title">Bank Transfer:</div>
+											<div class="text-center method-icon">
+												<img src="{{ asset('assets/images/payment-method/bank/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/bank') }}" alt="Bank Transfer" width="40px" height="40px">
 											</div>
 										</div>
 									</div>
 								</div>
 							</label>
 						</div>
-						<div class="col-sm-6 col-12">
+						<div class="col-sm-4 col-12">
 							<label class="payment-method-item w-100" for="payment_method_2">
 								<div class="row">
 									<div class="col-2">
 										<input class="form-check-input fs-5 me-2 mt-0" type="radio" name="payment_method" id="payment_method_2" value="option1">
 									</div>
 									<div class="col-10 ps-0">
-										<div class="p-4 rounded-4 bg-white payment-method-card cursor-pointer">
-											<h5 class="fw-semibold mb-3 text-black text-center method-title">Other Types of Payment:</h5>
-											<div class="d-flex justify-content-between flex-wrap method-icon">
-												<img src="{{ asset('assets/images/pp.png') }}" alt="Pay Pal" height="52px">
-												<img src="{{ asset('assets/images/ae.png') }}" alt="America Express" height="52px">
+										<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
+											<div class="fw-semibold medium mb-2 text-black text-center method-title">OnePay:</div>
+											<div class="text-center method-icon">
+												<img src="{{ asset('assets/images/payment-method/onepay/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/onepay') }}" alt="Bank Transfer" height="28px">
+												<div class="d-flex gap-2 justify-content-center mt-2 sub-method-icon">
+													<img src="{{ asset('assets/images/payment-method/visa/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/visa') }}" alt="Bank Transfer" width="22px" height="16px">
+													<img src="{{ asset('assets/images/payment-method/american-express-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/american-express-card') }}" alt="Bank Transfer" width="22px" height="16px">
+													<img src="{{ asset('assets/images/payment-method/master-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/master-card') }}" alt="Bank Transfer" width="22px" height="16px">
+													<img src="{{ asset('assets/images/payment-method/jcb-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/jcb-card') }}" alt="Bank Transfer" width="22px" height="16px">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</label>
+						</div>
+						<div class="col-sm-4 col-12">
+							<label class="payment-method-item w-100" for="payment_method_3">
+								<div class="row">
+									<div class="col-2">
+										<input class="form-check-input fs-5 me-2 mt-0" type="radio" name="payment_method" id="payment_method_3" value="option1">
+									</div>
+									<div class="col-10 ps-0">
+										<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
+											<div class="fw-semibold medium mb-1 text-black text-center method-title">PayPal:</div>
+											<div class="text-center method-icon">									
+												<img src="{{ asset('assets/images/payment-method/paypal/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/paypal') }}" alt="Bank Transfer" height="36px">
+												<div class="d-flex gap-2 justify-content-center mt-1 sub-method-icon">
+													<img src="{{ asset('assets/images/payment-method/visa/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/visa') }}" alt="Bank Transfer" width="22px" height="16px">
+													<img src="{{ asset('assets/images/payment-method/american-express-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/american-express-card') }}" alt="Bank Transfer" width="22px" height="16px">
+													<img src="{{ asset('assets/images/payment-method/master-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/master-card') }}" alt="Bank Transfer" width="22px" height="16px">
+													<img src="{{ asset('assets/images/payment-method/jcb-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/jcb-card') }}" alt="Bank Transfer" width="22px" height="16px">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -73,14 +100,11 @@
 							</label>
 						</div>
 						<div class="col-12">
-							<div class="medium text-black text-justify"><strong>Lorem ipsum dolor</strong> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
+							<div class="medium text-black text-justify"><b class="text-title">Lorem Ipsum:</b> dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</div>
 						</div>
 					</div>
 				</div>
-				<div class="text-center">
-					<a href="{{ url('/flights') }}" class="btn btn-primary btn-lg rounded-4 py-3 px-7 fw-bold text-title fs-6">Proceed To Payment</a>
-				</div>
-				<div class="confirm pt-5">
+				<div class="confirm">
 					<div class="form-check mb-3">
 						<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info" name="correct_info" style="width:1.5rem; height:1.5rem" checked required>
 						<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like to confirm that the above information is correct.</label>
@@ -92,9 +116,12 @@
 						</label>
 					</div>
 				</div>
+				<div class="text-center mt-4-5">
+					<a href="{{ url('/flights') }}" class="btn btn-primary btn-lg rounded-4 py-3 px-7 fw-bold text-title fs-6">Proceed To Payment</a>
+				</div>
 			</div>
 			<div class="col-lg-5 col-12">
-				<div class="border border-primary rounded-3-5 p-md-5 p-4 your-flight medium">
+				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 your-flight medium">
 					@include('flights.section.order_summary')
 				</div>
 				<div class="mt-5">

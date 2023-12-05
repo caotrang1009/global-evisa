@@ -84,22 +84,6 @@ select:-webkit-autofill:focus {
 	transition: background-color 5000s ease-in-out 0s;
 }
 
-.input-with-icon {
-	> i {
-		color: $gray-600;
-		display: block;
-		position: absolute;
-		margin: .75rem 1rem .25rem .75rem;
-		z-index: 3;
-		width: 1rem;
-		font-size: 1rem;
-		text-align: center;
-	}
-	> .form-control {
-		padding-left: 2.5rem;
-	}
-}
-
 .card {
 	.card-body {
 		color: #545454;
@@ -549,25 +533,6 @@ footer {
 	color: #272727;
 }
 
-.page-title {
-	font-size: 4rem;
-	font-weight: 800;
-	line-height: 72px;
-}
-
-@media (max-width: 480px) {
-	.page-title {
-		font-size: 3rem;
-		font-weight: 800;
-		line-height: 52px;
-	}
-	.confirmation {
-		h1 {
-			font-size: 2.625rem;
-		}
-	}
-}
-
 .sub-line-title {
 	width: 100px; 
 	height: 20px; 
@@ -657,14 +622,6 @@ footer {
 	.step-name {
 		position: absolute;
 		margin-top: 8rem;
-	}
-}
-
-.step-part {
-	.step-button {
-		&.active {
-			background-color: $orange;
-		}
 	}
 }
 
@@ -909,6 +866,8 @@ footer {
 			height: 80px;
 			font-weight: 800;
 			font-size: 28px;
+			color: $orange;
+			border: 1px solid $orange;
 		}
 		.step-name {
 			font-weight: 500;
@@ -921,6 +880,10 @@ footer {
 				font-weight: 700;
 				color: #272727;
 			}
+			.step-counter {
+				background-color: $orange;
+				color: white;
+			}
 		}
 		&.completed {
 			.step-counter {
@@ -931,34 +894,6 @@ footer {
 		}
 		&:first-child::before, &:last-child::after {
 			content: none;
-		}
-	}
-	&.visa {
-		.stepper-item {
-			.step-counter {
-				color: $orange;
-				border: 1px solid $orange;
-			}
-			&.current {
-				.step-counter {
-					background-color: $orange;
-					color: white;
-				}
-			}
-		}
-	}
-	&.flight {
-		.stepper-item {
-			.step-counter {
-				color: $primary;
-				border: 1px solid $primary;
-			}
-			&.current {
-				.step-counter {
-					background-color: $primary;
-					color: white;
-				}
-			}
 		}
 	}
 }

@@ -5,10 +5,10 @@
 	<div class="container">
 		<div class="d-flex align-items-center">
 			<span class="position-absolute me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
-			<h1 class="web-title page-title text-black text-center text-uppercase w-100">REVIEW INFORMATION<br> & ADD-ONS</h1>
+			<h1 class="web-title text-black text-center text-uppercase w-100">REVIEW INFORMATION<br> & ADD-ONS</h1>
 		</div>
 		<div class="row">
-			<div class="step-part flight mt-5">
+			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
 					<a href="{{ url('flights/information') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
@@ -34,7 +34,7 @@
 			<div class="row gy-5">
 				<div class="col-lg-7 col-12">
 					<div id="review_infor">
-						<h2 class="fw-800 custom-h1 text-black mb-4">REVIEW INFO</h2>
+						<h2 class="fw-800 custom-h3 text-black mb-4">REVIEW INFO</h2>
 						<div class="contact-information border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5">
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#contact-information">
 								<div class="row align-items-center">
@@ -54,29 +54,29 @@
 								</div>
 							</div>
 							<div class="collapse py-3" id="contact-information" style="">
-								<div class="form-group row gy-3 gx-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black d-flex" for="contact_first_name">First Name</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black d-flex">First Name</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_first_name" name="contact_first_name" value="Lorem Ipsum" placeholder="Enter Value" required>
 										</div>
 										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black d-flex" for="contact_last_name">Last Name</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black d-flex">Last Name</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_last_name" name="contact_last_name" value="Lorem Ipsum" placeholder="Enter Value" required>
 										</div>
 										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
-								<div class="form-group row gy-3 gx-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="contact_phone">Your Phone Number</label>
+										<label class="h6 fw-semibold text-title text-black">Your Phone Number</label>
 										<div class="dropdown">
-											<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+											<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 												<img src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone">
 												<div class="d-flex align-items-center gap-2 cursor-pointer bg-white" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 													<span class="medium text-black text-opacity-7 nationality">+84</span>
@@ -92,8 +92,8 @@
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="contact_email">Your Email</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Your Email</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/email.svg') }}" data-icon-name="outline/email" alt="email">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_email" name="contact_email" value="loremipisum@gmail.com" placeholder="Enter Value" required>
 										</div>
@@ -121,90 +121,90 @@
 								</div>
 							</div>
 							<div class="collapse py-3" id="applicant-information" style="">
-								<div class="form-group row gx-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="first_name">First Name</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">First Name</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="first_name" name="first_name" value="Lorem Ipsum" placeholder="Enter Value" >
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="last_name">Last Name</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Last Name</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="last_name" name="last_name" value="Lorem Ipsum" placeholder="Enter Value" >
 										</div>
 									</div>
 								</div>
-								<div class="form-group row g-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="gender">Gender</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Gender</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/gender-female.svg') }}" data-icon-name="outline/gender-female" alt="gender">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="gender" name="gender" value="Female" placeholder="Please Select" >
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="date_of_birth">Day of Birth</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Day of Birth</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="date_of_birth" name="date_of_birth" value="15/08/1985" placeholder="DD/MM/YY" >
 										</div>
 									</div>
 								</div>
-								<div class="form-group row g-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="phone_number">Phone Number</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Phone Number</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone" width="24px" height="24px">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="phone_number" name="phone_number" value="+84 1312312434" placeholder="Enter Value">
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="email">Email Address</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Email Address</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="email" name="email" value="loremipisum@gmail.com" placeholder="Enter Value" >
 										</div>
 									</div>
 								</div>
-								<div class="form-group row g-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="country_of_birth">Country of Birth</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Country of Birth</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_birth" name="country_of_birth" value="Chile" placeholder="Please Select" >
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="country_of_residency">Country of Residency</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Country of Residency</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_residency" name="country_of_residency" value="Chile" placeholder="Please Select" >
 										</div>
 									</div>
 								</div>
-								<div class="form-group row g-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="passport_number">Passport Number</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Passport Number</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer" type="text" id="passport_number" name="passport_number" value="C15C08" placeholder="Enter Value" >
 										</div>
 									</div>
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="expired_date">Expired Date</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Expired Date</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="expired_date" name="expired_date" value="15/09/2027" placeholder="DD/MM/YY" >
 										</div>
 									</div>
 								</div>
-								<div class="form-group row g-4">
+								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black" for="issue_date">Issue Date</label>
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-3 input-order-info">
+										<label class="h6 fw-semibold text-title text-black">Issue Date</label>
+										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 											<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
 											<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="issue_date" name="issue_date" value="15/09/2017" placeholder="DD/MM/YY" >
 										</div>
@@ -214,7 +214,7 @@
 						</div>
 					</div>
 					<div id="flight_amedities" class="d-none">
-						<h2 class="fw-800 custom-h1 text-black mb-4">FLIGHT AMENDITIES</h2>
+						<h2 class="fw-800 custom-h3 text-black mb-4">FLIGHT AMENDITIES</h2>
 						<div class="luggage-box border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5">
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#luggage-amendities" aria-expanded="false" aria-controls="luggage-amendities">
 								<div class="row align-items-center">
@@ -777,7 +777,7 @@
 						</div>
 					</div>
 					<div id="trip_convniences" class="my-5">
-						<h2 class="fw-800 custom-h1 text-black mb-4">TRIP CONVENIENCES</h2>
+						<h2 class="fw-800 custom-h3 text-black mb-4">TRIP CONVENIENCES</h2>
 						<div class="travel-insurance border border-primary px-sm-4-5 p-3 rounded-3-5 my-3-5" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#travel-insurance" aria-expanded="false" aria-controls="travel-insurance">
 								<div class="row align-items-center">
@@ -877,7 +877,7 @@
 					</div>
 				</div>
 				<div class="col-lg-5 col-12">
-					<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 your-flight medium">
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 your-flight medium">
 						@include('flights.section.order_summary')
 						<a href="{{ url('/flights/payment') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-payment mt-4">Go To Payment Page</a>
 					</div>

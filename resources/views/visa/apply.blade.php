@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="col-sm-9">
 				<span class="d-block mb-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
-				<h1 class="web-title page-title text-black text-uppercase">GLOBAL EVISA <br> APPLICATION FORM</h1>
+				<h1 class="web-title text-black text-uppercase">GLOBAL EVISA <br> APPLICATION FORM</h1>
 			</div>
 			<div class="col-sm-3 text-end">
 				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-md-5 px-4 py-3 btn-save-exit">

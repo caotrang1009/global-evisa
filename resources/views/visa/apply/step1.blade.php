@@ -1,7 +1,7 @@
 <section class="pt-0">
 	<div class="container">
 		<div class="row">
-			<div class="step-part visa mt-5">
+			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
 					<a href="{{ url('visa/apply/step1') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
@@ -26,8 +26,8 @@
 			<form action="" id="frm-order">
 				<div class="row g-sm-5 g-4">
 					<div class="col-lg-7 col-12">
-						<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4">
-							<h2 class="fw-800 custom-h1 text-black mb-4">ORDER INFORMATION</h2>
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5">
+							<h2 class="fw-800 custom-h3 text-black mb-4">ORDER INFORMATION</h2>
 							@include('visa.section.order_info')
 							<table class="table table-borderless" style="--bs-table-bg: #FFFCF7">
 								<tr>
@@ -57,7 +57,7 @@
 								</tr>
 							</table>
 						</div>
-						<div class="border-dashed bg-beige rounded-3-5 p-md-5 p-4 mb-4 applicant">
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5 applicant">
 							<div class="row align-items-center justify-content-center">
 								<div class="col-10">
 									<h2 class="fw-800 custom-h1 text-black">APPLICANT NO.</h2>
@@ -107,7 +107,7 @@
 							</div>
 						</div>
 						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
-							<h2 class="fw-800 custom-h1 text-black mb-4">CONTACT INFORMATION</h2>
+							<h2 class="fw-800 custom-h3 text-black mb-4">CONTACT INFORMATION</h2>
 							@include('visa.section.contact_info')
 						</div>
 						<div class="confirm">

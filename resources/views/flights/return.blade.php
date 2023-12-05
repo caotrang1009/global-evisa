@@ -5,7 +5,7 @@
 		<div class="container">
 			<div class="d-flex align-items-baseline">
 				<span class="d-block me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
-				<h1 class="web-title page-title text-black text-uppercase mb-0">SEARCH YOUR FLIGHT!</h1>
+				<h1 class="web-title text-black text-uppercase mb-0">SEARCH YOUR FLIGHT!</h1>
 			</div>
 		</div>
 	</section>

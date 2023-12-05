@@ -11,7 +11,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 mt-lg-n5">
-				<h1 class="web-title page-title text-black text-uppercase">FIND YOUR DESTINATION!</h1>
+				<h1 class="web-title text-black text-uppercase">FIND YOUR DESTINATION!</h1>
 				<div class="sub-title mt-4 mb-3">Let us apply the paperworks or eVISA for your trip.</div>
 			</div>
 			<div class="col-lg-7 pe-lg-5">
@@ -19,7 +19,7 @@
 					<div class="row gx-lg-5 gy-4 mt-0">
 						<div class="col-sm-6">
 							<div class="form-group mb-0">
-								<label for="nationality" class="mb-3 text-title">Your Nationality</label>
+								<label class="mb-3 text-title">Your Nationality</label>
 								<div class="dropdown">
 									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 py-1 px-4 input-visa-search" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 										<img src="{{ asset('assets/svg/outline/people.svg') }}" alt="people">
@@ -34,7 +34,7 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group mb-0">
-								<label for="nationality_to" class="mb-3 text-title">Traveling to</label>
+								<label class="mb-3 text-title">Traveling to</label>
 								<div class="dropdown">
 									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-4 py-1 px-4 input-visa-search" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 										<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="people">

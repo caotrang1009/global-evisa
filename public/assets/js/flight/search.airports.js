@@ -75,7 +75,6 @@ $(document).ready(function() {
 
 		$(".add-more-flight").hide();
 		$(".multi-city-control").hide();
-		$(".remove-flight").first().hide();
 		$("#multiCityQty").val(1);
 		$('.multi-city-control input').prop('disabled', true);
 		

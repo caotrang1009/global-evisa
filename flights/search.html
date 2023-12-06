@@ -3889,8 +3889,8 @@
 								var item = $(this).find('img');
 								var iconHover = $(item).data('icon-hover');
 								var iconName = $(item).data('icon-name');
-								var srcName = `/assets/svg/${iconName}.svg`;
-								var srcHover = `/assets/svg/${iconHover}.svg`;
+								var srcName = `https://caotrang1009.github.io/global-evisa/assets/svg/${iconName}.svg`;
+								var srcHover = `https://caotrang1009.github.io/global-evisa/assets/svg/${iconHover}.svg`;
 
 								$(this).find("img").attr('src', (_, attr) => attr == srcName ? srcHover : srcName);
 								if ($(this).hasClass("collapsed")) {

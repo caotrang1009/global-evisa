@@ -221,7 +221,7 @@ $(document).ready(function() {
 	$(".btn-add-flight, .btn-add").click(function() {
 		flights++;
 		$(".multi-city-control").append(multiFlightItem);		
-		$(".multi-city-item input").last().prop('disabled', false);
+		$('.multi-city-control input').prop('disabled', false);
 		updateMultiCityItem();
 		initLoadElement();
 	});

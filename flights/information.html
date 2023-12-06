@@ -1804,12 +1804,12 @@
 
 				pathElement.each(function (index, item) {
 					var iconName = $(item).data('icon-name');
-					var src = `/assets/svg/${iconName + fillColor}.svg`;
+					var src = `https://caotrang1009.github.io/global-evisa/assets/svg/${iconName + fillColor}.svg`;
 
 					if ($(item).attr('alt') == 'plus') {
 						iconPlus = src;
 					} else if ($(item).attr('alt') == 'minus') {
-						var src = `/assets/svg/outline/minus${fillColor}.svg`;
+						var src = `https://caotrang1009.github.io/global-evisa/assets/svg/outline/minus${fillColor}.svg`;
 						iconMinus = src;
 					}
 					$(item).attr('src', src);

@@ -223,7 +223,8 @@ $(document).ready(function() {
 		flights++;
 		$(".multi-city-control").append(multiFlightItem);		
 		$(".multi-city-item input").last().prop('disabled', false);
-		updateMultiCityItem();		
+		updateMultiCityItem();
+		initLoadElement();
 	});
 
 	$(".multi-city-control").on("click", ".btn-remove", function() {

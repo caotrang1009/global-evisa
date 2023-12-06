@@ -21,7 +21,7 @@
 									<label class="fw-semibold headline text-white mb-2">Location 1</label>
 									<div class="dropdown">
 										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
+											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
 											<input class="form-control border-0 p-0 cursor-pointer" type="text" id="originLocationCode" name="originLocationCode[]" placeholder="Please Select" autocomplete="off" required >
 											<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 										</div>
@@ -39,7 +39,7 @@
 									<label class="fw-semibold headline text-white mb-2">Location 2</label>
 									<div class="dropdown">
 										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
+											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
 											<input class="form-control border-0 p-0 cursor-pointer" type="text" id="destinationLocationCode" name="destinationLocationCode[]" placeholder="Please Select" autocomplete="off" required >
 											<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 										</div>
@@ -57,7 +57,7 @@
 								<div class="select-departure-date">
 									<label class="fw-semibold headline fs-6 text-white mb-2">Departure Date</label>
 									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
-										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date" width="20px" height="20px">
 										<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="departureDate" name="departureDate[]" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
 										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									</div>
@@ -71,7 +71,7 @@
 										<input class="form-check-input mt-0 ms-3" type="checkbox" id="round_trip_check" style="width:1.5rem; height:1.5rem" checked>
 									</div>
 									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
-										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date" width="20px" height="20px">
 										<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="returnDate" name="returnDate" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
 										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									</div>
@@ -94,7 +94,7 @@
 											<label class="fw-semibold headline text-white mb-2">Location 1</label>
 											<div class="dropdown">
 												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
+													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
 													<input class="form-control border-0 p-0 cursor-pointer" type="text" id="originLocationCodeMultiCity_2" name="originLocationCode[]" placeholder="Please Select" autocomplete="off" required >
 													<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 												</div>
@@ -112,7 +112,7 @@
 											<label class="fw-semibold headline text-white mb-2">Location 2</label>
 											<div class="dropdown">
 												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map">
+													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
 													<input class="form-control border-0 p-0 cursor-pointer" type="text" id="destinationLocationCodeMultiCity_2" name="destinationLocationCode[]" placeholder="Please Select" autocomplete="off" required >
 													<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 												</div>
@@ -130,7 +130,7 @@
 										<div class="select-departure-date">
 											<label class="fw-semibold headline fs-6 text-white mb-2">Departure Date</label>
 											<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
-												<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
+												<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date" width="20px" height="20px">
 												<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="departureDateMultiCity_2" name="departureDate[]" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
 												<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 											</div>
@@ -160,7 +160,7 @@
 							<label class="fw-semibold headline text-white mb-2">Class of Passenger</label>
 							<div class="dropdown">
 								<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 w-100 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-									<img src="{{ asset('assets/svg/outline/user-firends.svg') }}" alt="map">
+									<img src="{{ asset('assets/svg/outline/user-firends.svg') }}" alt="user-firends" width="20px" height="20px">
 									<input class="form-control border-0 p-0 cursor-pointer travel-class-value" type="text" id="origin-input" name="Location1" placeholder="Please Select" autocomplete="off" required >
 									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 								</div>
@@ -179,7 +179,7 @@
 							<label class="fw-semibold headline text-white mb-2">Number of Passenger</label>
 							<div class="dropdown">
 								<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 w-100 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-									<img src="{{ asset('assets/svg/outline/users.svg') }}" alt="map">
+									<img src="{{ asset('assets/svg/outline/users.svg') }}" alt="users" width="20px" height="20px">
 									<input class="form-control border-0 p-0 cursor-pointer" type="text" id="origin-input" name="Location1" placeholder="Please Select" autocomplete="off" required >
 									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 								</div>

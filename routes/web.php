@@ -25,8 +25,8 @@ Route::get('/flights/search', function () {
     return view('flights.search');
 });
 
-Route::get('/flights/return', function () {
-    return view('flights.return');
+Route::get('/flights/multi-city', function () {
+    return view('flights.multi_city');
 });
 
 Route::get('/flights/information', function () {

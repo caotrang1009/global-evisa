@@ -10,15 +10,15 @@
 		<div class="row">
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
-					<a href="{{ url('flights/information') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+					<a href="/flights/information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Information Details</div>
 					</a>
-					<a href="{{ url('flights/review-information') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+					<a href="/flights/review-information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
 					</a>
-					<a href="{{ url('flights/payment') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="/flights/payment" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
 					</a>
@@ -117,27 +117,12 @@
 					</div>
 				</div>
 				<div class="text-center mt-4-5">
-					<a href="{{ url('/flights') }}" class="btn btn-primary btn-lg rounded-4 py-3 px-7 fw-bold text-title fs-6">Proceed To Payment</a>
+					<a href="/flights" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Proceed To Payment</a>
 				</div>
 			</div>
 			<div class="col-lg-5 col-12">
-				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 your-flight medium">
+				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-3 your-flight medium">
 					@include('flights.section.order_summary')
-				</div>
-				<div class="mt-5">
-					<div class="d-flex">
-						<div class="me-3">
-							<i class="fal fa-shield-check fs-1"></i>
-						</div>
-						<div>
-							<p class="fw-bold mb-0">Your data is secured by us!</p>
-							<p class="small mb-0">For more details please read <a href="#" class="text-primary fw-bold text-decoration-underline">Global eVISA Security Policies</a></p>
-						</div>
-					</div>
-					<div class="d-flex align-items-center mt-4">
-						<a href="/flights/review-information" role="button" class="btn btn-primary time-input-height d-flex align-items-center px-5"><i class="fal fa-long-arrow-left fs-1 text-white"></i></a>
-						<span class="text-primary fw-semibold ms-4">Back to previous step</span>
-					</div>
 				</div>
 			</div>
 		</div>

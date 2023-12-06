@@ -105,7 +105,7 @@
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia" width="46px" height="20px"></span>
+						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia" width="46px" height="20px"></span>
 						<span class="h4 fw-bold ms-2">Bamboo Airlines</span>
 					</div>
 				</div>
@@ -170,7 +170,7 @@
 					<span class="text-primary fw-bold h4">1,899,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/information') }}" class="btn btn-orange btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/information" class="btn btn-orange btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -199,7 +199,7 @@
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -346,7 +346,7 @@
 			<div class="row mb-3">
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/Air_Asia.png') }}" alt="Air Asia" width="46px" height="20px"></span>
+						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/air_asia.png') }}" alt="Air Asia" width="46px" height="20px"></span>
 						<span class="h4 fw-bold ms-2">Air Asia</span>
 					</div>
 				</div>
@@ -411,7 +411,7 @@
 					<span class="text-orange fw-bold h4">1,899,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/information') }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/information" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -440,7 +440,7 @@
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -587,7 +587,7 @@
 			<div class="row mb-3">
 				<div class="col-sm-6">
 					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/VietJet_Air.png') }}" alt="Air Asia" width="46px" height="20px"></span>
+						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/vietjet_air.png') }}" alt="Air Asia" width="46px" height="20px"></span>
 						<span class="h4 fw-bold ms-2">Vietjet Air</span>
 					</div>
 				</div>
@@ -652,7 +652,7 @@
 					<span class="text-orange fw-bold h4">1,899,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/information') }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/information" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -681,7 +681,7 @@
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -893,7 +893,7 @@
 					<span class="text-orange fw-bold h4">1,899,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/information') }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/information" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -922,7 +922,7 @@
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">

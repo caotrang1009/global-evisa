@@ -73,7 +73,7 @@
 			</div>
 		</div>
 		<div class="col-lg-4 col-12">
-			<a href="{{ url('/visa/apply') }}" class="btn btn-orange btn-lg button1 rounded-4 py-3 w-100 btn-visa-search">
+			<a href="/visa/apply" class="btn btn-orange btn-lg button1 rounded-4 py-3 w-100 btn-visa-search">
 				<span class="btn-text">Apply now</span><i class="fal fa-long-arrow-up ms-4" style="transform: rotate(45deg);"></i>
 			</a>
 		</div>

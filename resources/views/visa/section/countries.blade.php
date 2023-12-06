@@ -9,19 +9,19 @@
 	<div class="list-popular mb-4">
 		<div class="label-title mb-3 fw-bold">Most Popular</div>
 		<div class="country-01 mb-2">
-			<a href="{{ url('/visa/country/united-kingdom') }}">
+			<a href="/visa/country/united-kingdom">
 				<img src="{{ asset('assets/svg/emojione-flag/united-kingdom.svg') }}" alt="United Kingdom" width="20px" height="20px">
 				<span class="ms-2">United Kingdom</span>
 			</a>
 		</div>
 		<div class="country-02 mb-2">
-			<a href="{{ url('/visa/country/france') }}">
+			<a href="/visa/country/france">
 				<img src="{{ asset('assets/svg/emojione-flag/france.svg') }}" alt="France" width="20px" height="20px">
 				<span class="ms-2">French</span>
 			</a>
 		</div>
 		<div class="country-03 mb-2">
-			<a href="{{ url('/visa/country/singapore') }}">
+			<a href="/visa/country/singapore">
 				<img src="{{ asset('assets/svg/emojione-flag/singapore.svg') }}" alt="Singapore" width="20px" height="20px">
 				<span class="ms-2">Singapore</span>
 			</a>
@@ -33,7 +33,7 @@
 			<div class="swiper m-0" data-parent=".slide-input-country" data-items="5" data-space-between="1" data-direction="vertical" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next" style="width: 85%">
 				<div class="swiper-wrapper align-items-center">
 					@foreach ($countries as $c)
-					<a class="swiper-slide d-block text-start" href="{{ url('/visa/country/'.$c) }}">
+					<a class="swiper-slide d-block text-start" href="/visa/country/{{$c}}">
 						<img class="d-inline" src="{{ asset('assets/svg/emojione-flag/'.$c.'.svg') }}" alt="{{ $c }}" style="width: 20px; height: 20px;">
 						<span class="ms-2 text-capitalize medium">{{ $c }}</span>
 					</a>

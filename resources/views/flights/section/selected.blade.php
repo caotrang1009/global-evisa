@@ -20,7 +20,7 @@
 					</div>
 					<div id="flightOne" class="collapse flight-selected-detail mt-3" data-bs-parent="#accordionFlightOne">
 						<div class="d-flex align-items-center justify-content-between mb-3">
-							<img class="img-airline" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia">
+							<img class="img-airline" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia">
 							<div class="text-black-text-opacity-8 fw-bold small airline-name">Bamboo Airlines</div>
 							<div class="cursor-pointer d-inline-block" style="display: none" role="button" data-bs-toggle="collapse" data-bs-target="#flightOne">
 								<div class="rounded-circle border border-primary icon">
@@ -73,7 +73,7 @@
 					</div>
 					<div id="flightTwo" class="collapse flight-selected-detail mt-3" data-bs-parent="#accordionFlightTwo">
 						<div class="d-flex align-items-center justify-content-between mb-3">
-							<img class="img-airline" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia">
+							<img class="img-airline" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia">
 							<div class="text-black-text-opacity-8 fw-bold small airline-name">Bamboo Airlines</div>
 							<div class="cursor-pointer d-inline-block" style="display: none" role="button" data-bs-toggle="collapse" data-bs-target="#flightTwo">
 								<div class="rounded-circle border border-primary icon">
@@ -119,7 +119,7 @@
 					<h4 class="text-orange px-0 fw-800">
 						1,999,000 VND <small class="text-black fw-normal">/ per customer</small>
 					</h4>
-					<a href="{{ url('flights/information') }}">
+					<a href="/flights/information">
 						<button type="button" class="btn bg-orange text-white border-2 border-white rounded-3-5 fw-bold w-100 fs-6">
 							GO TO NEXT PAGE <i class="fal fa-long-arrow-up rotate-45 ms-4"></i>
 						</button>

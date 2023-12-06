@@ -3,7 +3,7 @@
 	<h4 class="custom-h3 fw-800 text-black mb-0">Your flight</h4>
 </div>
 <div class="py-4 flight">
-	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-dropdown" data-bs-toggle="collapse" data-bs-target="#flightOne">
+	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight" data-bs-toggle="collapse" data-bs-target="#flightOne">
 		<div>
 			<div class="d-flex align-items-center gap-1 text-black fw-bold flex-wrap cursor-pointer">
 				<span>Tokyo</span> 
@@ -15,12 +15,12 @@
 			</div>
 		</div>
 		<div class="cursor-pointer text-end">
-			<img class="icon-direct" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow-bottom" data-icon-name="solid/arrow-down-blue" data-icon-hover="solid/arrow-up-blue" width="12px" height="12px">
+			<img class="icon-direct" src="{{ asset('assets/svg/solid/arrow-up-blue.svg') }}" alt="arrow-bottom" data-icon-name="solid/arrow-down-blue" data-icon-hover="solid/arrow-up-blue" width="12px" height="12px">
 		</div>
 	</div>
-	<div id="flightOne" class="collapse">
+	<div id="flightOne" class="collapse show">
 		<div class="d-flex align-items-center gap-3 mb-3">
-			<img class="img-airline" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia">
+			<img class="img-airline" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia">
 			<div class="text-black text-opacity-9 fw-bold airline-name">Bamboo Airlines</div>
 		</div>
 		<div class="d-flex align-items-center justify-content-between mb-3">
@@ -54,7 +54,7 @@
 	</div>
 </div>
 <div class="py-4 flight">
-	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-dropdown" data-bs-toggle="collapse" data-bs-target="#flightTwo">
+	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight" data-bs-toggle="collapse" data-bs-target="#flightTwo">
 		<div>
 			<div class="d-flex align-items-center gap-1 text-black fw-bold flex-wrap cursor-pointer">
 				<span>Singapore</span> 
@@ -71,7 +71,7 @@
 	</div>
 	<div id="flightTwo" class="collapse">
 		<div class="d-flex align-items-center gap-3 mb-3">
-			<img class="img-airline" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia">
+			<img class="img-airline" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia">
 			<div class="text-black text-opacity-9 fw-bold airline-name">Bamboo Airlines</div>
 		</div>
 		<div class="d-flex align-items-center justify-content-between">
@@ -101,7 +101,7 @@
 	</div>
 </div>
 <div class="py-4 flight">
-	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-dropdown" data-bs-toggle="collapse" data-bs-target="#flightThree">
+	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight" data-bs-toggle="collapse" data-bs-target="#flightThree">
 		<div>
 			<div class="d-flex align-items-center gap-1 text-black fw-bold flex-wrap">
 				<span>Tokyo</span> 
@@ -118,7 +118,7 @@
 	</div>
 	<div id="flightThree" class="collapse">
 		<div class="d-flex align-items-center gap-3 mb-3">
-			<img class="img-airline" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia">
+			<img class="img-airline" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia">
 			<div class="text-black text-opacity-9 fw-bold airline-name">Bamboo Airlines</div>
 		</div>
 		<div class="d-flex align-items-center justify-content-between">
@@ -199,10 +199,8 @@
 		var iconDown = "{{ asset('assets/svg/solid/arrow-down-blue.svg') }}";
 		var iconUp = "{{ asset('assets/svg/solid/arrow-up-blue.svg') }}";
 
-		$(".toggle-data-dropdown").click(function(){
+		$(".toggle-data-flight").click(function(){
 			$(this).find("img.icon-direct").attr('src', (_, attr) => attr == iconDown ? iconUp : iconDown);
 		});
-
-		$(".toggle-data-dropdown:first").trigger("click");
 	});
 </script>

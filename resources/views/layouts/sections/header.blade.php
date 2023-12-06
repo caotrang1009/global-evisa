@@ -15,10 +15,10 @@
 				<div class="collapse navbar-collapse my-lg-0 my-3" id="navbar-content">
 					<ul class="navbar-nav navbar-nav-scroll mx-auto">
 						<li class="nav-item">
-							<a class="nav-link" title="" href="{{ url('/visa') }}">Visa Application</a>
+							<a class="nav-link" title="" href="/visa">Visa Application</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" title="" href="{{ url('/flights') }}">Flights</a>
+							<a class="nav-link" title="" href="/flights">Flights</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" title="" href="#">Travel Insurance </a>

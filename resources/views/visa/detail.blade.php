@@ -195,9 +195,9 @@
 				<ol class="breadcrumb visa-breadcrumb text-title mb-2">
 					<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="#">Home</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
-						<a class="btn btn-outline-primary px-5 d-flex align-items-center gap-2" href="{{ url()->current() }}">Country <img class="rounded-circle border border-white fit-cover" src="{{ asset('assets/svg/emojione-flag/'.$alias.'.svg') }}" alt="Belarusian" width="20px" height="20px"></a>
+						<a class="btn btn-outline-primary px-5 d-flex align-items-center gap-2" href="/visa/country/{{$alias}}">Country <img class="rounded-circle border border-white fit-cover" src="{{ asset('assets/svg/emojione-flag/'.$alias.'.svg') }}" alt="Belarusian" width="20px" height="20px"></a>
 					</li>
-					<li class="breadcrumb-item"><a class="btn btn-outline-primary px-5" href="{{ url('visa') }}">Get your global evisa now!</a></li>
+					<li class="breadcrumb-item"><a class="btn btn-outline-primary px-5" href="/visa">Get your global evisa now!</a></li>
 				</ol>
 			</nav>
 			<div class="slide-country position-relative mb-4">
@@ -207,8 +207,8 @@
 						<div class="swiper-slide" id="rewind-item-1">
 							<div class="card border-0 slide p-4" style="width: 100%; height: 780px; background: url({{ $image }}) no-repeat; background-position: center left;">
 								<div class="card-body p-4">
-									<div class="d-flex justify-content-between my-1 mx-2">
-										<h1 class="web-header1 text-uppercase fw-800 text-decoration-underline spacing-n1 text-white">Travel to {{ $country->name }}</h1>
+									<div class="d-flex gap-3 justify-content-between my-1 mx-2">
+										<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline spacing-n1 text-white text-start">Travel to {{ $country->name }}</h2>
 										<div class="flag">
 											<img src="{{ $country->flag }}" alt="{{ $country->name }}">
 										</div>

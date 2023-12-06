@@ -85,6 +85,17 @@ input {
 	}
 }
 
+.input-package {
+	border-color: $primary;
+}
+
+.filter-options {
+	input[type="checkbox"] {
+		width: 16px;
+		height: 16px;
+	}
+}
+
 .input-disabled {
 	background-color: var(--bs-secondary-bg);
 	opacity: 1;

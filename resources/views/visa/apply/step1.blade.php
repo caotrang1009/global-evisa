@@ -3,15 +3,15 @@
 		<div class="row">
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
-					<a href="{{ url('visa/apply/step1') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="/visa/apply/step1" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
 					</a>
-					<a href="{{ url('visa/apply/step2') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="/visa/apply/step2" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
 					</a>
-					<a href="{{ url('visa/apply/step3') }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="/visa/apply/step3" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Confirmation</div>
 					</a>
@@ -126,7 +126,7 @@
 					<div class="col-lg-5 col-12">
 						<div class="border-dashed bg-beige rounded-3-5 text-title py-sm-5 p-4 mb-4">
 							@include('visa.section.order_summary')
-							<a href="{{ url('/visa/apply/step2') }}" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-order-info">Go to Payment Page</a>
+							<a href="/visa/apply/step2" class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-order-info">Go to Payment Page</a>
 						</div>
 					</div>
 				</div>

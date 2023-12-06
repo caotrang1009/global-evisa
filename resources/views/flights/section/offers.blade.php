@@ -1,10 +1,10 @@
 <div class="row">
 	<div class="col-lg-6">
-		<h1 class="web-header2 fw-800 text-uppercase text-black spacing-n1">Select results</h1>
+		<h1 class="web-header2 fw-800 text-uppercase text-decoration-underline text-black spacing-n1">Select results</h1>
 	</div>
 	<div class="col-lg-6">
 		<div class="d-flex gap-3 align-items-center justify-content-end">
-			<div class="d-flex gap-3 align-items-center">
+			<div class="d-flex gap-2 align-items-center">
 				<img src="{{ asset('assets/svg/outline/sort-arrow-down.svg') }}" alt="sort-arrow-down" width="24px" height="24px">
 				<span class="subheading fw-bold text-black text-opacity-9 mb-0">Sort by:</span>
 			</div>
@@ -102,19 +102,15 @@
 			<span class="fw-bold text-white h5">Most suitable with the filtered results</span>
 		</div>
 		<div class="card-body bg-white rounded-bottom-3 p-4">
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia" width="46px" height="20px"></span>
-						<span class="h4 fw-bold ms-2">Bamboo Airlines</span>
-					</div>
+			<div class="d-flex gap-3 justify-content-between flex-wrap">
+				<div class="d-flex align-items-center">
+					<span class="rounded-3-5 p-2 me-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia" width="46px" height="20px"></span>
+					<span class="h4 fw-bold mb-0">Bamboo Airlines</span>
 				</div>
-				<div class="col-sm-6">
-					<div class="d-flex gap-3 justify-content-end fw-semibold">
-						<span class="rounded-3-5 p-2 border">VJ303</span>
-						<span class="rounded-3-5 p-2 border">BB01230</span>
-						<span class="rounded-3-5 p-2 border">Economy Class</span>
-					</div>
+				<div class="d-flex gap-3 justify-content-end flex-wrap fw-semibold">
+					<span class="rounded-3-5 p-2 border">BB303</span>
+					<span class="rounded-3-5 p-2 border">BOEING 777</span>
+					<span class="rounded-3-5 p-2 border">Economy Class</span>
 				</div>
 			</div>
 			<div class="row g-4 mt-0">
@@ -136,14 +132,12 @@
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="card h-100 border-0 justify-content-center">
-					<div class="d-flex">
+					<div class="card h-100 border-0 flex-sm-column flex-row justify-content-center">
 						<div class="stop text-center mx-2">
 							<div class="path"></div>
 							<div class="medium mb-0 mt-2 fw-semibold">2 Hours</div>
 							<span class="small-caption fw-normal">Direct (no stop)</span>
 						</div>
-					</div>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -166,11 +160,11 @@
 			</div>
 			<div class="row justify-content-between mt-4">
 				<div class="col-sm-7">
-					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,599,000 VND</span>
-					<span class="text-primary fw-bold h4">1,899,000 VND</span>
+					<span class="text-black text-opacity-7 text-decoration-line-through fw-semibold me-4">2,599,000 VND</span>
+					<span class="text-primary fw-bold h4">2,399,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/return') }}" class="btn btn-orange btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/multi-city" class="btn btn-orange btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -199,7 +193,7 @@
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -313,20 +307,16 @@
 													<tr>
 														<td width="30%" rowspan="2">Cancellation Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td rowspan="2">Change Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 												</tbody>
 											</table>
@@ -343,19 +333,15 @@
 	</div>
 	<div class="card rounded-3-5 mb-4">
 		<div class="card-body rounded-bottom-3 p-4">
-			<div class="row mb-3">
-				<div class="col-sm-6">
-					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/Air_Asia.png') }}" alt="Air Asia" width="46px" height="20px"></span>
-						<span class="h4 fw-bold ms-2">Air Asia</span>
-					</div>
+			<div class="d-flex gap-3 justify-content-between flex-wrap">
+				<div class="d-flex align-items-center">
+					<span class="rounded-3-5 p-2 me-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/air_asia.png') }}" alt="Air Asia" width="46px" height="20px"></span>
+					<span class="h4 fw-bold mb-0">Air Asia</span>
 				</div>
-				<div class="col-sm-6">
-					<div class="d-flex gap-3 justify-content-end fw-semibold">
-						<span class="rounded-3-5 p-2 border"><img src="{{ asset('assets/svg/outline/luaggage.svg') }}" alt="luaggage" width="25px" height="23px"></span>
-						<span class="rounded-3-5 p-2 border">BB01230</span>
-						<span class="rounded-3-5 p-2 border">Economy Class</span>
-					</div>
+				<div class="d-flex gap-3 justify-content-end flex-wrap fw-medium text-black">
+					<span class="rounded-3-5 p-2 border"><img src="{{ asset('assets/svg/outline/luaggage.svg') }}" alt="luaggage" width="25px" height="23px"></span>
+					<span class="rounded-3-5 p-2 border">AA0012</span>
+					<span class="rounded-3-5 p-2 border">Economy Class</span>
 				</div>
 			</div>
 			<div class="row g-4 mt-0">
@@ -377,14 +363,12 @@
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="card h-100 border-0 justify-content-center">
-					<div class="d-flex">
+					<div class="card h-100 border-0 flex-sm-column flex-row justify-content-center">
 						<div class="stop text-center mx-2">
 							<div class="path"></div>
 							<div class="medium mb-0 mt-2 fw-semibold">2 Hours</div>
 							<span class="small-caption fw-normal">Direct (no stop)</span>
 						</div>
-					</div>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -407,11 +391,11 @@
 			</div>
 			<div class="row justify-content-between mt-4">
 				<div class="col-sm-7">
-					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,599,000 VND</span>
-					<span class="text-orange fw-bold h4">1,899,000 VND</span>
+					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,479,000 VND</span>
+					<span class="text-orange fw-bold h4">2,599,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/return') }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/multi-city" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -429,18 +413,18 @@
 					<div class="accordion-body pt-4">
 						<nav>
 							<div class="nav nav-tabs border-bottom-0" id="nav-tab" role="tablist">
-								<button class="nav-link active" id="nav-departing-flight-detail-1-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-flight-detail-1" type="button" role="tab" aria-controls="nav-departing-flight-detail-1" aria-selected="true">Flight Detail</button>
-								<button class="nav-link" id="nav-fare-detail-1-tab" data-bs-toggle="tab" data-bs-target="#nav-fare-detail-1" type="button" role="tab" aria-controls="nav-fare-detail-1" aria-selected="false">Fare Summary</button>
-								<button class="nav-link" id="nav-departing-fare-rule-1-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-fare-rule-1" type="button" role="tab" aria-controls="nav-departing-fare-rule-1" aria-selected="false">Fare Rules</button>
+								<button class="nav-link active" id="nav-departing-flight-detail-2-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-flight-detail-2" type="button" role="tab" aria-controls="nav-departing-flight-detail-2" aria-selected="true">Flight Detail</button>
+								<button class="nav-link" id="nav-fare-detail-2-tab" data-bs-toggle="tab" data-bs-target="#nav-fare-detail-2" type="button" role="tab" aria-controls="nav-fare-detail-2" aria-selected="false">Fare Summary</button>
+								<button class="nav-link" id="nav-departing-fare-rule-2-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-fare-rule-2" type="button" role="tab" aria-controls="nav-departing-fare-rule-2" aria-selected="false">Fare Rules</button>
 							</div>
 						</nav>
 						<div class="tab-content">
-							<div class="tab-pane fade show active" id="nav-departing-flight-detail-1" role="tabpanel" aria-labelledby="nav-departing-flight-detail-1-tab" tabindex="0">
+							<div class="tab-pane fade show active" id="nav-departing-flight-detail-2" role="tabpanel" aria-labelledby="nav-departing-flight-detail-2-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black small">
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/air_asia.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -464,7 +448,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="nav-fare-detail-1" role="tabpanel" aria-labelledby="nav-fare-detail-1-tab" tabindex="0">
+							<div class="tab-pane fade" id="nav-fare-detail-2" role="tabpanel" aria-labelledby="nav-fare-detail-2-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black">
 									<table class="table table-bordered text-center mb-0">
 										<tr>
@@ -490,7 +474,7 @@
 									</table>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="nav-departing-fare-rule-1" role="tabpanel" aria-labelledby="nav-departing-fare-rule-1-tab" tabindex="0">
+							<div class="tab-pane fade" id="nav-departing-fare-rule-2" role="tabpanel" aria-labelledby="nav-departing-fare-rule-2-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black small">
 									<div class="d-flex mt-2">
 										<div class="flex-shrink-0 me-3"><img src="{{ asset('assets/svg/outline/ticket.svg') }}" alt="ticket" width="24px" height="24px"></div>
@@ -554,20 +538,16 @@
 													<tr>
 														<td width="30%" rowspan="2">Cancellation Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td rowspan="2">Change Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 												</tbody>
 											</table>
@@ -584,19 +564,15 @@
 	</div>
 	<div class="card rounded-3-5 mb-4">
 		<div class="card-body rounded-bottom-3 p-4">
-			<div class="row mb-3">
-				<div class="col-sm-6">
-					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/VietJet_Air.png') }}" alt="Air Asia" width="46px" height="20px"></span>
-						<span class="h4 fw-bold ms-2">Vietjet Air</span>
-					</div>
+			<div class="d-flex gap-3 justify-content-between flex-wrap">
+				<div class="d-flex align-items-center">
+					<span class="rounded-3-5 p-2 me-2 border bg-beige"><img class="fit-contain" src="{{ asset('assets/images/airline/vietjet_air.png') }}" alt="Air Asia" width="46px" height="20px"></span>
+					<span class="h4 fw-bold mb-0">Vietjet Air</span>
 				</div>
-				<div class="col-sm-6">
-					<div class="d-flex gap-3 justify-content-end">
-						<span class="rounded-3-5 p-2 border"><img src="{{ asset('assets/svg/outline/luaggage.svg') }}" alt="luaggage" width="25px" height="23px"></span>
-						<span class="rounded-3-5 p-2 border">VJA0034</span>
-						<span class="rounded-3-5 p-2 border">Economy Class</span>
-					</div>
+				<div class="d-flex gap-3 justify-content-end flex-wrap fw-medium text-black">
+					<span class="rounded-3-5 p-2 border"><img src="{{ asset('assets/svg/outline/luaggage.svg') }}" alt="luaggage" width="25px" height="23px"></span>
+					<span class="rounded-3-5 p-2 border">VJA0034</span>
+					<span class="rounded-3-5 p-2 border">Economy Class</span>
 				</div>
 			</div>
 			<div class="row g-4 mt-0">
@@ -618,14 +594,12 @@
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="card h-100 border-0 justify-content-center">
-					<div class="d-flex">
+					<div class="card h-100 border-0 flex-sm-column flex-row justify-content-center">
 						<div class="stop text-center mx-2">
 							<div class="path"></div>
-							<div class="medium mb-0 mt-2 fw-semibold">2 Hours</div>
-							<span class="small-caption fw-normal">Direct (no stop)</span>
+							<div class="medium mb-0 mt-2 fw-semibold">2.5 Hours</div>
+							<span class="small-caption fw-normal">1 stop</span>
 						</div>
-					</div>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -648,11 +622,11 @@
 			</div>
 			<div class="row justify-content-between mt-4">
 				<div class="col-sm-7">
-					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,599,000 VND</span>
-					<span class="text-orange fw-bold h4">1,899,000 VND</span>
+					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,479,000 VND</span>
+					<span class="text-orange fw-bold h4">2,679,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/return') }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/multi-city" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -670,18 +644,46 @@
 					<div class="accordion-body pt-4">
 						<nav>
 							<div class="nav nav-tabs border-bottom-0" id="nav-tab" role="tablist">
-								<button class="nav-link active" id="nav-departing-flight-detail-1-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-flight-detail-1" type="button" role="tab" aria-controls="nav-departing-flight-detail-1" aria-selected="true">Flight Detail</button>
-								<button class="nav-link" id="nav-fare-detail-1-tab" data-bs-toggle="tab" data-bs-target="#nav-fare-detail-1" type="button" role="tab" aria-controls="nav-fare-detail-1" aria-selected="false">Fare Summary</button>
-								<button class="nav-link" id="nav-departing-fare-rule-1-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-fare-rule-1" type="button" role="tab" aria-controls="nav-departing-fare-rule-1" aria-selected="false">Fare Rules</button>
+								<button class="nav-link active" id="nav-departing-flight-detail-3-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-flight-detail-3" type="button" role="tab" aria-controls="nav-departing-flight-detail-3" aria-selected="true">Flight Detail</button>
+								<button class="nav-link" id="nav-fare-detail-3-tab" data-bs-toggle="tab" data-bs-target="#nav-fare-detail-3" type="button" role="tab" aria-controls="nav-fare-detail-3" aria-selected="false">Fare Summary</button>
+								<button class="nav-link" id="nav-departing-fare-rule-3-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-fare-rule-3" type="button" role="tab" aria-controls="nav-departing-fare-rule-3" aria-selected="false">Fare Rules</button>
 							</div>
 						</nav>
 						<div class="tab-content">
-							<div class="tab-pane fade show active" id="nav-departing-flight-detail-1" role="tabpanel" aria-labelledby="nav-departing-flight-detail-1-tab" tabindex="0">
+							<div class="tab-pane fade show active" id="nav-departing-flight-detail-3" role="tabpanel" aria-labelledby="nav-departing-flight-detail-3-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black small">
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
+											</div>
+										</div>
+										<div class="col-10">
+											<div class="row">
+												<div class="col-sm-7">
+													<div class="departure mb-1"><b>Departure time:</b> 09:00 AM - Fri 08, Dec 23 - Tan Son Nhat Intl</div>
+													<div class="arrival mb-1"><b>Travel time:</b> 2 hr 30 min</div>
+													<div class="landing-time mb-1"><b>Landing time:</b> 11:30 AM - Fri 08, Dec 23 - Changi Intl</div>
+													<div class="mt-3">
+														<div class="fw-semibold">Operated by Bamboo Airways - BB 382 - Airbus A321</div>
+													</div>
+												</div>
+												<div class="col-sm-5">
+													<ul class="list-unstyled lh-lg">
+														<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/bag-check.svg') }}" alt="bag-check" width="20px" height="20px">Checked baggage: 2 piece(s) per person</li>
+														<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/cabin.svg') }}" alt="bag-check" width="20px" height="20px">Cabin: ECONOMY</li>
+													</ul>
+												</div>
+											</div>
+											<div class="mt-3 mb-4">
+												<div class="bg-primary text-white p-2 rounded-3"><img class="me-3" src="{{ asset('assets/svg/solid/information-circle-white.svg') }}" alt="information" width="24px" height="24px"> Stop to change planes in Taoyuan Intl</div>
+											</div>
+										</div>
+									</div>
+									<div class="row g-3">
+										<div class="col-2 pt-1 text-center">
+											<div class="border rounded-4 img-airline">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -705,7 +707,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="nav-fare-detail-1" role="tabpanel" aria-labelledby="nav-fare-detail-1-tab" tabindex="0">
+							<div class="tab-pane fade" id="nav-fare-detail-3" role="tabpanel" aria-labelledby="nav-fare-detail-3-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black">
 									<table class="table table-bordered text-center mb-0">
 										<tr>
@@ -731,7 +733,7 @@
 									</table>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="nav-departing-fare-rule-1" role="tabpanel" aria-labelledby="nav-departing-fare-rule-1-tab" tabindex="0">
+							<div class="tab-pane fade" id="nav-departing-fare-rule-3" role="tabpanel" aria-labelledby="nav-departing-fare-rule-3-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black small">
 									<div class="d-flex mt-2">
 										<div class="flex-shrink-0 me-3"><img src="{{ asset('assets/svg/outline/ticket.svg') }}" alt="ticket" width="24px" height="24px"></div>
@@ -795,20 +797,16 @@
 													<tr>
 														<td width="30%" rowspan="2">Cancellation Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td rowspan="2">Change Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 												</tbody>
 											</table>
@@ -825,19 +823,18 @@
 	</div>
 	<div class="card rounded-3-5 mb-4">
 		<div class="card-body rounded-bottom-3 p-4">
-			<div class="row mb-3">
-				<div class="col-sm-6">
-					<div class="d-flex align-items-center">
-						<span class="rounded-3-5 p-2 border"><img class="fit-contain" src="{{ asset('assets/svg/outline/airplane-plus.svg') }}" alt="Air Asia" width="24px" height="24px"></span>
-						<span class="h4 d-inline fw-bold ms-2">MULTIPLE AIRLINES <i class="fal fa-info-circle small align-middle"></i></span>
-					</div>
+			<div class="d-flex gap-3 justify-content-between flex-wrap">
+				<div class="d-flex align-items-center">
+					<span class="rounded-3-5 p-2 me-2 border"><img class="fit-contain" src="{{ asset('assets/svg/outline/airplane-plus.svg') }}" alt="Air Asia" width="24px" height="24px"></span>
+					<span class="h4 d-inline fw-bold mb-0">MULTIPLE AIRLINES <i class="fal fa-info-circle small align-middle"></i></span>
 				</div>
-				<div class="col-sm-6">
-					<div class="d-flex gap-3 justify-content-end">
-						<span class="rounded-3-5 p-2 border"><img src="{{ asset('assets/svg/outline/luaggage.svg') }}" alt="luaggage" width="25px" height="23px"></span>
-						<span class="rounded-3-5 p-2 border">BB01230</span>
-						<span class="rounded-3-5 p-2 border">Economy Class</span>
-					</div>
+				<div class="d-flex gap-3 justify-content-end flex-wrap fw-medium text-black">
+					<span class="d-flex align-items-center gap-3 rounded-3-5 p-2 border">
+						<img src="{{ asset('assets/svg/outline/luaggage.svg') }}" alt="luaggage" width="25px" height="23px">
+						<img src="{{ asset('assets/svg/outline/usb.svg') }}" alt="usb" width="20px" height="20px">
+					</span>
+					<span class="rounded-3-5 p-2 border">VJA0034</span>
+					<span class="rounded-3-5 p-2 border">Economy Class</span>
 				</div>
 			</div>
 			<div class="row g-4 mt-0">
@@ -859,14 +856,12 @@
 					</div>
 				</div>
 				<div class="col-md-2">
-					<div class="card h-100 border-0 justify-content-center">
-					<div class="d-flex">
+					<div class="card h-100 border-0 flex-sm-column flex-row justify-content-center">
 						<div class="stop text-center mx-2">
 							<div class="path"></div>
 							<div class="medium mb-0 mt-2 fw-semibold">2 Hours</div>
 							<span class="small-caption fw-normal">Direct (no stop)</span>
 						</div>
-					</div>
 					</div>
 				</div>
 				<div class="col-md-5">
@@ -889,11 +884,11 @@
 			</div>
 			<div class="row justify-content-between mt-4">
 				<div class="col-sm-7">
-					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,599,000 VND</span>
-					<span class="text-orange fw-bold h4">1,899,000 VND</span>
+					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,689,000 VND</span>
+					<span class="text-orange fw-bold h4">2,799,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="{{ url('flights/return') }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="/flights/multi-city" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -911,18 +906,46 @@
 					<div class="accordion-body pt-4">
 						<nav>
 							<div class="nav nav-tabs border-bottom-0" id="nav-tab" role="tablist">
-								<button class="nav-link active" id="nav-departing-flight-detail-1-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-flight-detail-1" type="button" role="tab" aria-controls="nav-departing-flight-detail-1" aria-selected="true">Flight Detail</button>
-								<button class="nav-link" id="nav-fare-detail-1-tab" data-bs-toggle="tab" data-bs-target="#nav-fare-detail-1" type="button" role="tab" aria-controls="nav-fare-detail-1" aria-selected="false">Fare Summary</button>
-								<button class="nav-link" id="nav-departing-fare-rule-1-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-fare-rule-1" type="button" role="tab" aria-controls="nav-departing-fare-rule-1" aria-selected="false">Fare Rules</button>
+								<button class="nav-link active" id="nav-departing-flight-detail-4-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-flight-detail-4" type="button" role="tab" aria-controls="nav-departing-flight-detail-4" aria-selected="true">Flight Detail</button>
+								<button class="nav-link" id="nav-fare-detail-4-tab" data-bs-toggle="tab" data-bs-target="#nav-fare-detail-4" type="button" role="tab" aria-controls="nav-fare-detail-4" aria-selected="false">Fare Summary</button>
+								<button class="nav-link" id="nav-departing-fare-rule-4-tab" data-bs-toggle="tab" data-bs-target="#nav-departing-fare-rule-4" type="button" role="tab" aria-controls="nav-departing-fare-rule-4" aria-selected="false">Fare Rules</button>
 							</div>
 						</nav>
 						<div class="tab-content">
-							<div class="tab-pane fade show active" id="nav-departing-flight-detail-1" role="tabpanel" aria-labelledby="nav-departing-flight-detail-1-tab" tabindex="0">
+							<div class="tab-pane fade show active" id="nav-departing-flight-detail-4" role="tabpanel" aria-labelledby="nav-departing-flight-detail-4-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black small">
 									<div class="row g-3">
 										<div class="col-2 pt-1 text-center">
 											<div class="border rounded-4 img-airline">
-												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" width="70px" height="52px">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
+											</div>
+										</div>
+										<div class="col-10">
+											<div class="row">
+												<div class="col-sm-7">
+													<div class="departure mb-1"><b>Departure time:</b> 09:00 AM - Fri 08, Dec 23 - Tan Son Nhat Intl</div>
+													<div class="arrival mb-1"><b>Travel time:</b> 2 hr 30 min</div>
+													<div class="landing-time mb-1"><b>Landing time:</b> 11:30 AM - Fri 08, Dec 23 - Changi Intl</div>
+													<div class="mt-3">
+														<div class="fw-semibold">Operated by Bamboo Airways - BB 382 - Airbus A321</div>
+													</div>
+												</div>
+												<div class="col-sm-5">
+													<ul class="list-unstyled lh-lg">
+														<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/bag-check.svg') }}" alt="bag-check" width="20px" height="20px">Checked baggage: 2 piece(s) per person</li>
+														<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/cabin.svg') }}" alt="bag-check" width="20px" height="20px">Cabin: ECONOMY</li>
+													</ul>
+												</div>
+											</div>
+											<div class="mt-3 mb-4">
+												<div class="bg-primary text-white p-2 rounded-3"><img class="me-3" src="{{ asset('assets/svg/solid/information-circle-white.svg') }}" alt="information" width="24px" height="24px"> Stop to change planes in Taoyuan Intl</div>
+											</div>
+										</div>
+									</div>
+									<div class="row g-3">
+										<div class="col-2 pt-1 text-center">
+											<div class="border rounded-4 img-airline">
+												<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/singapore_airlines.png') }}" width="70px" height="52px">
 											</div>
 										</div>
 										<div class="col-10">
@@ -946,7 +969,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="nav-fare-detail-1" role="tabpanel" aria-labelledby="nav-fare-detail-1-tab" tabindex="0">
+							<div class="tab-pane fade" id="nav-fare-detail-4" role="tabpanel" aria-labelledby="nav-fare-detail-4-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black">
 									<table class="table table-bordered text-center mb-0">
 										<tr>
@@ -972,7 +995,7 @@
 									</table>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="nav-departing-fare-rule-1" role="tabpanel" aria-labelledby="nav-departing-fare-rule-1-tab" tabindex="0">
+							<div class="tab-pane fade" id="nav-departing-fare-rule-4" role="tabpanel" aria-labelledby="nav-departing-fare-rule-4-tab" tabindex="0">
 								<div class="p-4 rounded-3-5 rounded-top-start-0 border text-black small">
 									<div class="d-flex mt-2">
 										<div class="flex-shrink-0 me-3"><img src="{{ asset('assets/svg/outline/ticket.svg') }}" alt="ticket" width="24px" height="24px"></div>
@@ -1036,20 +1059,16 @@
 													<tr>
 														<td width="30%" rowspan="2">Cancellation Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td rowspan="2">Change Fee</td>
 														<td>More than 24 hours prior to departure</td>
-														<td></td>
 													</tr>
 													<tr>
 														<td>Within 24 hours of departure</td>
-														<td></td>
 													</tr>
 												</tbody>
 											</table>

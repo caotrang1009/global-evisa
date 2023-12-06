@@ -31,56 +31,56 @@
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-1">
 								<label class="form-check-label" for="airlines-1">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/Air_Asia.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/air_asia.png') }}" alt="Air Asia" height="18px">
 									<span class="small">Air Asia</span>
 								</label>
 							</div>
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-2">
 								<label class="form-check-label" for="airlines-2">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/Air_Canada.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/air_canada.png') }}" alt="Air Asia" height="10px">
 									<span class="small">Air Canada</span>
 								</label>
 							</div>
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-3">
 								<label class="form-check-label" for="airlines-3">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/Bamboo_Airways.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/bamboo_airways.png') }}" alt="Air Asia" height="15px">
 									<span class="small">Bamboo Airlines</span>
 								</label>
 							</div>
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-4">
 								<label class="form-check-label" for="airlines-4">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/Japan_Airlines.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/japan_airlines.png') }}" alt="Air Asia" height="8px">
 									<span class="small">Japan Airlines</span>
 								</label>
 							</div>
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-5">
 								<label class="form-check-label" for="airlines-5">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/Singapore_Airlines.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/singapore_airlines.png') }}" alt="Air Asia" height="22px">
 									<span class="small">Singapore Airlines</span>
 								</label>
 							</div>
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-6">
 								<label class="form-check-label" for="airlines-6">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/United_Airlines.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/united_airlines.png') }}" alt="Air Asia" height="16px">
 									<span class="small">United Airlines</span>
 								</label>
 							</div>										
 							<div class="form-check mb-3">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-7">
 								<label class="form-check-label" for="airlines-7">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/VietJet_Air.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/vietjet_air.png') }}" alt="Air Asia" height="11px">
 									<span class="small">Vietjet Air</span>
 								</label>
 							</div>
 							<div class="form-check mb-0">
 								<input class="form-check-input mt-0 me-2" type="checkbox" name="arlines[]" value="" id="airlines-8">
 								<label class="form-check-label" for="airlines-8">
-									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/Vietnam_Airlines.png') }}" alt="Air Asia" height="12px">
+									<img class="me-2 fit-contain" src="{{ asset('assets/images/airline/vietnam_airlines.png') }}" alt="Air Asia" height="11px">
 									<span class="small">Vietnam Airlines</span>
 								</label>
 							</div>

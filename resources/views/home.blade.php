@@ -48,7 +48,7 @@
 							</div>
 						</div>
 						<div class="col-12">
-							<a href="{{ url('/visa') }}" class="btn btn-primary btn-lg button1 rounded-4 w-100 btn-visa-search">
+							<a href="/visa" class="btn btn-primary btn-lg button1 rounded-4 w-100 btn-visa-search">
 								<span class="btn-text">Get Started</span><i class="fal fa-long-arrow-up ms-4 my-2" style="transform: rotate(45deg);"></i>
 							</a>
 						</div>
@@ -167,7 +167,7 @@
 		</div>
 		<div class="row justify-content-center mt-4">
 			<div class="col-12 text-center">
-				<a href="{{ url('/visa') }}" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
+				<a href="/visa" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
 					<span class="btn-text">Get Started</span><i class="fal fa-long-arrow-up ms-4" style="transform: rotate(45deg);"></i>
 				</a>
 			</div>
@@ -221,7 +221,7 @@
 		</div>
 		<div class="row justify-content-center mt-4">
 			<div class="col-12 text-center">
-				<a href="{{ url('/visa') }}" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
+				<a href="/visa" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
 					<span class="btn-text">Get Started</span><i class="fal fa-long-arrow-up ms-4" style="transform: rotate(45deg);"></i>
 				</a>
 			</div>

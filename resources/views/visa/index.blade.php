@@ -10,8 +10,8 @@
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb visa-breadcrumb text-title mb-2">
 						<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="/">Home</a></li>
-						<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="{{ url('/visa/country/belarus') }}">Country</a></li>
-						<li class="breadcrumb-item active" aria-current="page"><a class="btn btn-outline-primary px-5" href="{{ url('visa') }}">Get your global evisa now!</a></li>
+						<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="/visa/country/belarus">Country</a></li>
+						<li class="breadcrumb-item active" aria-current="page"><a class="btn btn-outline-primary px-5" href="/visa">Get your global evisa now!</a></li>
 					</ol>
 				</nav>
 			</div>

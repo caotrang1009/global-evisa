@@ -56,16 +56,16 @@
 
 //padding
 
-.pt-4-5 {
+.p-4-3 {
+	padding: 2.25rem;
+}
+
+.pt-4-5, .py-4-5 {
 	padding-top: 2.5rem;
 }
 
-.pb-4-5 {
+.pb-4-5, .py-4-5 {
 	padding-bottom: 2.5rem;
-}
-
-.py-4-5 {
-	padding: 2.5rem 0;
 }
 
 .px-4-2 {
@@ -82,11 +82,11 @@
 	margin-right: 2.5rem;
 }
 
-.mb-4-5 {
+.mb-4-5, .my-4-5 {
 	margin-bottom: 2.5rem;
 }
 
-.mt-4-5 {
+.mt-4-5, .my-4-5 {
 	margin-top: 2.5rem;
 }
 
@@ -101,12 +101,6 @@
 .my-3-5 {
 	margin-top: 1.25rem;
 	margin-bottom: 1.25rem;
-}
-
-//position
-
-.end-7 {
-	right: 7%;
 }
 
 //gap

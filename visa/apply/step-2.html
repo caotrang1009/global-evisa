@@ -932,14 +932,14 @@
 			function inputChecked(parent, img) {
 				$(parent).find(".method-title").removeClass("fw-bold").removeClass("text-black").addClass("text-primary text-decoration-underline fw-800");
 				$(parent).find(".payment-method-card").addClass("shadow-blue");
-				var icon = "https://caotrang1009.github.io/global-evisa/icon.png";
+				var icon = "/icon.png";
 				changeImage(img, icon);
 			}
 
 			function inputUnChecked(parent, img) {
 				$(parent).find(".method-title").removeClass("text-primary text-decoration-underline fw-800").addClass("text-black fw-bold");
 				$(parent).find(".payment-method-card").removeClass("shadow-blue");
-				var icon = "https://caotrang1009.github.io/global-evisa/icon-outline.png";
+				var icon = "/icon-outline.png";
 				changeImage(img, icon);
 			}
 
@@ -956,12 +956,12 @@
 
 				pathElement.each(function (index, item) {
 					var iconName = $(item).data('icon-name');
-					var src = `/assets/svg/${iconName + fillColor}.svg`;
+					var src = `https://caotrang1009.github.io/global-evisa/assets/svg/${iconName + fillColor}.svg`;
 
 					if ($(item).attr('alt') == 'plus') {
 						iconPlus = src;
 					} else if ($(item).attr('alt') == 'minus') {
-						var src = `/assets/svg/outline/minus${fillColor}.svg`;
+						var src = `https://caotrang1009.github.io/global-evisa/assets/svg/outline/minus${fillColor}.svg`;
 						iconMinus = src;
 					}
 					$(item).attr('src', src);

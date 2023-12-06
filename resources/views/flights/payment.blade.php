@@ -104,6 +104,9 @@
 						</div>
 					</div>
 				</div>
+				<div class="border-dashed bg-beige rounded-4 p-5 mb-4" id="bank-transfer" style="display: none">
+					@include('visa.section.bank_transfer')
+				</div>
 				<div class="confirm">
 					<div class="form-check mb-3">
 						<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info" name="correct_info" style="width:1.5rem; height:1.5rem" checked required>
@@ -128,4 +131,69 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	$(document).ready(function () {
+		$("input[name='payment_method']").change(function() {
+			var parent = $(this).closest("label");
+			var img = $(parent).find(".method-icon img");
+			
+			if ($(this).is(':checked')) {
+				inputChecked(parent, img);
+				if ($(parent).data("bs-target") !== undefined) {
+					$($(parent).data("bs-target")).show(); 
+				}
+
+				$('input[name="payment_method"]').not(this).each(function (k, ele) {
+					var otherParent = $(ele).closest("label");
+					inputUnChecked(otherParent, otherParent.find(".method-icon img"));
+					if ($(otherParent).data("bs-target") !== undefined) {
+						$($(otherParent).data("bs-target")).hide();
+					}
+				});
+			} else {
+				inputUnChecked(parent, img);
+			}
+		});
+
+		function inputChecked(parent, img) {
+			$(parent).find(".method-title").removeClass("fw-bold").removeClass("text-black").addClass("text-primary text-decoration-underline fw-800");
+			$(parent).find(".payment-method-card").addClass("shadow-blue");
+			var icon = "/icon.png";
+			changeImage(img, icon);
+		}
+
+		function inputUnChecked(parent, img) {
+			$(parent).find(".method-title").removeClass("text-primary text-decoration-underline fw-800").addClass("text-black fw-bold");
+			$(parent).find(".payment-method-card").removeClass("shadow-blue");
+			var icon = "/icon-outline.png";
+			changeImage(img, icon);
+		}
+
+		function changeImage(img, icon) {
+			$(img).each(function(index, item) {
+				$(item).attr("src", $(item).data('link-icon')+icon);
+			});
+		}
+
+		function updateSvgColor(pathElement, fillColor) {
+			if (fillColor!='') {
+				fillColor = '-'+fillColor;
+			}
+
+			pathElement.each(function(index, item) {
+				var iconName = $(item).data('icon-name');
+        		var src = `{{ asset('assets/svg/${iconName + fillColor}.svg') }}`;
+				
+				if ($(item).attr('alt') == 'plus') {
+					iconPlus = src;
+				} else if($(item).attr('alt') == 'minus') {
+					var src = `{{ asset('assets/svg/outline/minus${fillColor}.svg') }}`;
+					iconMinus = src;
+				}
+				$(item).attr('src', src);
+			});
+		}
+	});
+</script>
 @endsection

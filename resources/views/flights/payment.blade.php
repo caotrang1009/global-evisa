@@ -104,7 +104,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="border-dashed bg-beige rounded-4 p-5 mb-4" id="bank-transfer" style="display: none">
+				<div class="border-dashed bg-beige rounded-3-5 p-5 mb-4-5" id="bank-transfer" style="display: none">
 					@include('visa.section.bank_transfer')
 				</div>
 				<div class="confirm">

@@ -4,12 +4,7 @@
 <section class="pb-0">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
-				<span class="d-block mb-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
-				<h1 class="web-title text-black text-uppercase">GLOBAL EVISA <br> APPLICATION FORM</h1>
-			</div>
-		</div>
-		<div class="row">
+			<h1 class="web-title text-black text-center text-uppercase mb-0">Confirmation</h1>
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
 					<a href="{{ url("/visa/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">

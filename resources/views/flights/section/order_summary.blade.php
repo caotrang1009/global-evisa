@@ -1,6 +1,6 @@
 <div class="d-flex align-items-start gap-3">
 	<img class="fit-contain" src="{{ asset('assets/svg/outline/plane-takeoff.svg') }}" alt="Air Asia" width="24px" height="24px">
-	<h4 class="custom-h3 fw-800 text-black mb-0">Your flight</h4>
+	<h3 class="custom-h3 fw-800 text-black spacing-n1 mb-0">Your flight</h3>
 </div>
 <div class="py-4 flight">
 	<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight" data-bs-toggle="collapse" data-bs-target="#flightOne">

@@ -3,7 +3,7 @@
 	<div class="main-nav">
 		<nav class="navbar navbar-expand-lg navbar-mega navbar-light">
 			<div class="container position-relative">
-				<a href="/" class="d-flex align-items-center navbar-brand me-5">
+				<a href="{{ url("/") }}" class="d-flex align-items-center navbar-brand me-5">
 					<img width="60" height="60" src="{{ asset('assets\images\new_logo.svg') }}" alt="logo">
 					<span class="fs-6 fw-semibold text-white text-center text-title mx-3">Global <br> eVISA</span>
 				</a>
@@ -15,10 +15,10 @@
 				<div class="collapse navbar-collapse my-lg-0 my-3" id="navbar-content">
 					<ul class="navbar-nav navbar-nav-scroll mx-auto">
 						<li class="nav-item">
-							<a class="nav-link" title="" href="/visa">Visa Application</a>
+							<a class="nav-link" title="" href="{{ url("/visa") }}">Visa Application</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" title="" href="/flights">Flights</a>
+							<a class="nav-link" title="" href="{{ url("/flights") }}">Flights</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" title="" href="#">Travel Insurance </a>

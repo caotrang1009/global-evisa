@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row gy-4">
 			<div class="col-lg-1 col-md-2">
-				<a href="/" class="d-flex align-items-center navbar-brand">
+				<a href="{{ url("/") }}" class="d-flex align-items-center navbar-brand">
 					<img width="60" height="60" src="{{ asset('assets\images\new_logo.svg') }}" alt="logo">
 				</a>
 			</div>

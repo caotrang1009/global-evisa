@@ -10,15 +10,15 @@
 		<div class="row">
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
-					<a href="/flights/information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Information Details</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
 					</a>
-					<a href="/flights/review-information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
 					</a>
-					<a href="/flights/payment" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
 					</a>
@@ -31,10 +31,10 @@
 	<div class="container">
 		<div class="row gy-5">
 			<div class="col-lg-7 col-12">
-				<div class="border-dashed bg-beige rounded-3-5 mb-4-5 payment-method">
+				<div class="border-dashed bg-beige rounded-4 p-4-5 mb-4-5 payment-method">
 					<div class="row gx-3 gy-4">
 						<div class="col-12">
-							<h2 class="fw-800 text-title text-black text-uppercase mb-4">payment methods</h2>
+							<h3 class="custom-h3 fw-800 text-black spacing-n1 mb-0">payment methods</h3>
 						</div>
 						<div class="col-sm-4 col-12">
 							<label class="payment-method-item w-100" for="payment_method_1" data-bs-target="#bank-transfer">
@@ -104,8 +104,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="border-dashed bg-beige rounded-3-5 p-5 mb-4-5" id="bank-transfer" style="display: none">
-					@include('visa.section.bank_transfer')
+				<div class="border-dashed bg-beige rounded-4 p-4-5 mb-4-5" id="bank-transfer" style="display: none">
+					@include('layouts.sections.bank_transfer')
 				</div>
 				<div class="confirm">
 					<div class="form-check mb-3">
@@ -120,11 +120,11 @@
 					</div>
 				</div>
 				<div class="text-center mt-4-5">
-					<a href="/flights" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Proceed To Payment</a>
+					<a href="{{ url("/flights/payment-success/online") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Proceed To Payment</a>
 				</div>
 			</div>
 			<div class="col-lg-5 col-12">
-				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-3 your-flight medium">
+				<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 your-flight medium">
 					@include('flights.section.order_summary')
 				</div>
 			</div>

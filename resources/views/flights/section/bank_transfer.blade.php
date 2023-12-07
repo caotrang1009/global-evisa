@@ -1,6 +1,6 @@
-<h2 class="fw-800 text-title text-black text-uppercase mb-4">payment methods</h2>
+<h3 class="custom-h3 fw-800 text-black mb-4 spacing-n1">PAYMENT METHOD - bank transfer</h2>
 <div class="row gx-5 gy-4 bank-info">
-	<div class="col-sm-6 col-12 py-3 border-bank">
+	<div class="col-sm-6 col-12 border-bank">
 		<div class="text-center">
 			<img src="{{ asset('assets/svg/outline/money-bag-dollar.svg') }}" alt="Bank Transfer" width="80px" height="80px">
 			<div class="large fw-bold text-title mt-2">Bank (USD)</div>
@@ -29,14 +29,14 @@
 			</ul>
 			<div class="fw-bold mb-1">ICBVVNVX900</div>
 		</div>
-		<div class="border-bottom py-2">
+		<div class="py-2">
 			<ul>
 				<li>Content</li>
 			</ul>
 			<div class="fw-bold mb-1">Code - Order ID</div>
 		</div>
 	</div>
-	<div class="col-sm-6 col-12 py-3">
+	<div class="col-sm-6 col-12">
 		<div class="text-center">
 			<img src="{{ asset('assets/svg/outline/money-bag-vnd.svg') }}" alt="Bank Transfer" width="80px" height="80px">
 			<div class="large fw-bold text-title mt-2">Bank (USD)</div>
@@ -59,7 +59,7 @@
 			</ul>
 			<div class="fw-bold mb-1">VietinBank</div>
 		</div>
-		<div class="border-bottom py-2">
+		<div class="py-2">
 			<ul>
 				<li>Content</li>
 			</ul>

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="csrf-token" content="rZcJ20Sce1GvUEsrJ6GZcT4KDyms9rVy498t2Ezg">
+	<meta name="csrf-token" content="pizB3QKff8HK5KPPaqnmq0iRNzJ0zNLYgS3koyIn">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Laravel">
 	<title>Flights</title>
@@ -18,18 +17,18 @@
 		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://caotrang1009.github.io/global-evisa/assets/js/telinput/css/intlTelInput.min.css">
-	<link rel="preload" as="style" href="https://caotrang1009.github.io/global-evisa/assets/app-8ba809ce.css">
-	<link rel="stylesheet" href="https://caotrang1009.github.io/global-evisa/assets/app-8ba809ce.css">
+	<link rel="preload" as="style" href="https://caotrang1009.github.io/global-evisa/assets/app-5a4068a4.css">
+	<link rel="stylesheet" href="https://caotrang1009.github.io/global-evisa/assets/app-5a4068a4.css">
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1143.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<body data-new-gr-c-s-check-loaded="14.1144.0" data-gr-ext-installed="" cz-shortcut-listen="true">
 	<header class="bg-primary text-white text-title">
 		<div class="main-nav">
 			<nav class="navbar navbar-expand-lg navbar-mega navbar-light">
 				<div class="container position-relative">
-					<a href="https://caotrang1009.github.io/global-evisa/" class="d-flex align-items-center navbar-brand me-5">
-						<img width="60" height="60" src="https://caotrang1009.github.io/global-evisa/assets/images/new_logo.svg" alt="logo">
+					<a href="https://caotrang1009.github.io/global-evisa" class="d-flex align-items-center navbar-brand me-5">
+						<img width="60" height="60" src="https://caotrang1009.github.io/global-evisa/assets\images\new_logo.svg" alt="logo">
 						<span class="fs-6 fw-semibold text-white text-center text-title mx-3">Global <br> eVISA</span>
 					</a>
 					<button class="navbar-toggler px-0 collapsed" type="button" data-bs-toggle="collapse"
@@ -101,7 +100,6 @@
 			</nav>
 		</div>
 	</header>
-
 	<section class="pb-0">
 		<div class="container">
 			<div class="row">
@@ -124,21 +122,21 @@
 			<div class="row">
 				<div class="step-part mt-5">
 					<div class="d-flex justify-content-between text-title stepper-wrapper">
-						<a href="https://caotrang1009.github.io/global-evisa/visa/apply/step-1"
+						<a href="https://caotrang1009.github.io/global-evisa/visa/information"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								1</div>
 							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
 						</a>
-						<a href="https://caotrang1009.github.io/global-evisa/visa/apply/step-2"
+						<a href="https://caotrang1009.github.io/global-evisa/visa/payment"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								2</div>
 							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
 						</a>
-						<a href="https://caotrang1009.github.io/global-evisa/visa/apply/step-3"
+						<a href="https://caotrang1009.github.io/global-evisa/visa/payment-success/online"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
@@ -156,368 +154,382 @@
 				<form action="" id="frm-order" novalidate="novalidate">
 					<div class="row g-sm-5 g-4">
 						<div class="col-lg-7 col-12">
-							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5">
-								<h2 class="fw-800 custom-h3 text-black mb-4">ORDER INFORMATION</h2>
-								<div class="form-group mb-3">
-									<label class="h6 fw-semibold text-title text-black">Destination</label>
-									<div class="dropdown">
-										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info"
-											data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<img class="form-icon"
-												src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map.svg"
-												data-icon-name="outline/map" alt="people">
-											<input class="form-control border-0 px-0 cursor-pointer" id="destination"
-												name="destination" type="text" placeholder="Please Select"
-												autocomplete="off" required="">
-											<img class="cursor-pointer"
-												src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-bottom.svg"
-												data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-										</div>
-										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-											<div class="d-flex align-items-center border rounded-3-5 px-2">
-												<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
-													alt="search">
-												<input class="form-control border-0 py-2 me-1" type="text" name="search"
-													placeholder="Enter Input" autocomplete="off" required="">
+							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 mb-4-5">
+								<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-4">ORDER INFORMATION</h2>
+								<div class="form-group row gx-4 gy-3">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black">Destination</label>
+										<div class="dropdown">
+											<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info"
+												data-bs-toggle="dropdown" data-bs-auto-close="outside">
+												<img class="form-icon"
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map.svg"
+													data-icon-name="outline/map" alt="people">
+												<input class="form-control border-0 px-0 cursor-pointer"
+													id="destination" name="destination" type="text"
+													placeholder="Please Select" autocomplete="off" required="">
+												<img class="cursor-pointer"
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-bottom.svg"
+													data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 											</div>
-											<div class="list-nationality mt-4 text-title text-black">
-												<div class="list-popular mb-4">
-													<div class="label-title mb-3 fw-bold">Most Popular</div>
-													<div class="country-01 mb-2">
-														<a href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom">
-															<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																alt="United Kingdom" width="20px" height="20px">
-															<span class="ms-2">United Kingdom</span>
-														</a>
-													</div>
-													<div class="country-02 mb-2">
-														<a href="https://caotrang1009.github.io/global-evisa/visa/country/france">
-															<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																alt="France" width="20px" height="20px">
-															<span class="ms-2">French</span>
-														</a>
-													</div>
-													<div class="country-03 mb-2">
-														<a href="https://caotrang1009.github.io/global-evisa/visa/country/singapore">
-															<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																alt="Singapore" width="20px" height="20px">
-															<span class="ms-2">Singapore</span>
-														</a>
-													</div>
+											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
+												<div class="d-flex align-items-center border rounded-3-5 px-2">
+													<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
+														alt="search">
+													<input class="form-control border-0 py-2 me-1" type="text"
+														name="search" placeholder="Enter Input" autocomplete="off"
+														required="">
 												</div>
-												<div class="list-alphabetically">
-													<div class="label-title mb-3 fw-bold">Alphabetically </div>
-													<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
-														style="height: 142px">
-														<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
-															data-parent=".slide-input-country" data-items="5"
-															data-space-between="1" data-direction="vertical"
-															data-prev=".swiper-custom-prev"
-															data-next=".swiper-custom-next" style="width: 85%">
-															<div class="swiper-wrapper align-items-center"
-																id="swiper-wrapper-6729a06d913a44f9" aria-live="polite"
-																style="transition-duration: 0ms; transition-delay: 0ms;">
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
-																	data-swiper-slide-index="0" role="group"
-																	aria-label="1 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/belarus.svg"
-																		alt="belarus"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">belarus</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/brunei"
-																	data-swiper-slide-index="1" role="group"
-																	aria-label="2 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/brunei.svg"
-																		alt="brunei" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">brunei</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/cambodia"
-																	data-swiper-slide-index="2" role="group"
-																	aria-label="3 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/cambodia.svg"
-																		alt="cambodia"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">cambodia</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/chile"
-																	data-swiper-slide-index="3" role="group"
-																	aria-label="4 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/chile.svg"
-																		alt="chile" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">chile</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/denmark"
-																	data-swiper-slide-index="4" role="group"
-																	aria-label="5 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/denmark.svg"
-																		alt="denmark"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">denmark</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/finland"
-																	data-swiper-slide-index="5" role="group"
-																	aria-label="6 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/finland.svg"
-																		alt="finland"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">finland</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/france"
-																	data-swiper-slide-index="6" role="group"
-																	aria-label="7 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																		alt="france" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">france</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/germany"
-																	data-swiper-slide-index="7" role="group"
-																	aria-label="8 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/germany.svg"
-																		alt="germany"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">germany</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/indonesia"
-																	data-swiper-slide-index="8" role="group"
-																	aria-label="9 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/indonesia.svg"
-																		alt="indonesia"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">indonesia</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/italy"
-																	data-swiper-slide-index="9" role="group"
-																	aria-label="10 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/italy.svg"
-																		alt="italy" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">italy</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/japan"
-																	data-swiper-slide-index="10" role="group"
-																	aria-label="11 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/japan.svg"
-																		alt="japan" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">japan</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/laos"
-																	data-swiper-slide-index="11" role="group"
-																	aria-label="12 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/laos.svg"
-																		alt="laos" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">laos</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/malaysia"
-																	data-swiper-slide-index="12" role="group"
-																	aria-label="13 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/malaysia.svg"
-																		alt="malaysia"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">malaysia</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/myanmar"
-																	data-swiper-slide-index="13" role="group"
-																	aria-label="14 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/myanmar.svg"
-																		alt="myanmar"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">myanmar</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/norway"
-																	data-swiper-slide-index="14" role="group"
-																	aria-label="15 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/norway.svg"
-																		alt="norway" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">norway</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/panama"
-																	data-swiper-slide-index="15" role="group"
-																	aria-label="16 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/panama.svg"
-																		alt="panama" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">panama</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/philippines"
-																	data-swiper-slide-index="16" role="group"
-																	aria-label="17 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/philippines.svg"
-																		alt="philippines"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">philippines</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/russia"
-																	data-swiper-slide-index="17" role="group"
-																	aria-label="18 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/russia.svg"
-																		alt="russia" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">russia</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/singapore"
-																	data-swiper-slide-index="18" role="group"
-																	aria-label="19 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																		alt="singapore"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">singapore</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/spain"
-																	data-swiper-slide-index="19" role="group"
-																	aria-label="20 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/spain.svg"
-																		alt="spain" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">spain</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/korea"
-																	data-swiper-slide-index="20" role="group"
-																	aria-label="21 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/korea.svg"
-																		alt="korea" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">korea</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/sweden"
-																	data-swiper-slide-index="21" role="group"
-																	aria-label="22 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/sweden.svg"
-																		alt="sweden" style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">sweden</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/thailand"
-																	data-swiper-slide-index="22" role="group"
-																	aria-label="23 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/thailand.svg"
-																		alt="thailand"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">thailand</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom"
-																	data-swiper-slide-index="23" role="group"
-																	aria-label="24 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																		alt="united-kingdom"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">united-kingdom</span>
-																</a>
-																<a class="swiper-slide d-block text-start"
-																	href="https://caotrang1009.github.io/global-evisa/visa/country/vietnam"
-																	data-swiper-slide-index="24" role="group"
-																	aria-label="25 / 25">
-																	<img class="d-inline"
-																		src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/vietnam.svg"
-																		alt="vietnam"
-																		style="width: 20px; height: 20px;">
-																	<span
-																		class="ms-2 text-capitalize medium">vietnam</span>
-																</a>
-															</div>
-															<span class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span><span
-																class="swiper-notification" aria-live="assertive"
-																aria-atomic="true"></span>
+												<div class="list-nationality mt-4 text-title text-black">
+													<div class="list-popular mb-4">
+														<div class="label-title mb-3 fw-bold">Most Popular</div>
+														<div class="country-01 mb-2">
+															<a href="/visa/country/united-kingdom">
+																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
+																	alt="United Kingdom" width="20px" height="20px">
+																<span class="ms-2">United Kingdom</span>
+															</a>
 														</div>
-														<div class="position-relative swiper-control">
-															<div class="position-absolute top-0 end-0 swiper-custom-prev"
-																tabindex="0" role="button" aria-label="Previous slide"
-																aria-controls="swiper-wrapper-82f213ba36fa67c4">
-																<i class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+														<div class="country-02 mb-2">
+															<a href="/visa/country/france">
+																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
+																	alt="France" width="20px" height="20px">
+																<span class="ms-2">French</span>
+															</a>
+														</div>
+														<div class="country-03 mb-2">
+															<a href="/visa/country/singapore">
+																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
+																	alt="Singapore" width="20px" height="20px">
+																<span class="ms-2">Singapore</span>
+															</a>
+														</div>
+													</div>
+													<div class="list-alphabetically">
+														<div class="label-title mb-3 fw-bold">Alphabetically </div>
+														<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
+															style="height: 142px">
+															<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
+																data-parent=".slide-input-country" data-items="5"
+																data-space-between="1" data-direction="vertical"
+																data-prev=".swiper-custom-prev"
+																data-next=".swiper-custom-next" style="width: 85%">
+																<div class="swiper-wrapper align-items-center"
+																	id="swiper-wrapper-66552e101facf1d53"
+																	aria-live="polite"
+																	style="transition-duration: 0ms; transition-delay: 0ms;">
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/belarus"
+																		data-swiper-slide-index="0" role="group"
+																		aria-label="1 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/belarus.svg"
+																			alt="belarus"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">belarus</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/brunei"
+																		data-swiper-slide-index="1" role="group"
+																		aria-label="2 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/brunei.svg"
+																			alt="brunei"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">brunei</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/cambodia"
+																		data-swiper-slide-index="2" role="group"
+																		aria-label="3 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/cambodia.svg"
+																			alt="cambodia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">cambodia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/chile"
+																		data-swiper-slide-index="3" role="group"
+																		aria-label="4 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/chile.svg"
+																			alt="chile"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">chile</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/denmark"
+																		data-swiper-slide-index="4" role="group"
+																		aria-label="5 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/denmark.svg"
+																			alt="denmark"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">denmark</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/finland"
+																		data-swiper-slide-index="5" role="group"
+																		aria-label="6 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/finland.svg"
+																			alt="finland"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">finland</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/france"
+																		data-swiper-slide-index="6" role="group"
+																		aria-label="7 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
+																			alt="france"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">france</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/germany"
+																		data-swiper-slide-index="7" role="group"
+																		aria-label="8 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/germany.svg"
+																			alt="germany"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">germany</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/indonesia"
+																		data-swiper-slide-index="8" role="group"
+																		aria-label="9 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/indonesia.svg"
+																			alt="indonesia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">indonesia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/italy"
+																		data-swiper-slide-index="9" role="group"
+																		aria-label="10 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/italy.svg"
+																			alt="italy"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">italy</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/japan"
+																		data-swiper-slide-index="10" role="group"
+																		aria-label="11 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/japan.svg"
+																			alt="japan"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">japan</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/laos"
+																		data-swiper-slide-index="11" role="group"
+																		aria-label="12 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/laos.svg"
+																			alt="laos"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">laos</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/malaysia"
+																		data-swiper-slide-index="12" role="group"
+																		aria-label="13 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/malaysia.svg"
+																			alt="malaysia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">malaysia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/myanmar"
+																		data-swiper-slide-index="13" role="group"
+																		aria-label="14 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/myanmar.svg"
+																			alt="myanmar"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">myanmar</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/norway"
+																		data-swiper-slide-index="14" role="group"
+																		aria-label="15 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/norway.svg"
+																			alt="norway"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">norway</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/panama"
+																		data-swiper-slide-index="15" role="group"
+																		aria-label="16 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/panama.svg"
+																			alt="panama"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">panama</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/philippines"
+																		data-swiper-slide-index="16" role="group"
+																		aria-label="17 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/philippines.svg"
+																			alt="philippines"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">philippines</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/russia"
+																		data-swiper-slide-index="17" role="group"
+																		aria-label="18 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/russia.svg"
+																			alt="russia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">russia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/singapore"
+																		data-swiper-slide-index="18" role="group"
+																		aria-label="19 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
+																			alt="singapore"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">singapore</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/spain"
+																		data-swiper-slide-index="19" role="group"
+																		aria-label="20 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/spain.svg"
+																			alt="spain"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">spain</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/korea"
+																		data-swiper-slide-index="20" role="group"
+																		aria-label="21 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/korea.svg"
+																			alt="korea"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">korea</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/sweden"
+																		data-swiper-slide-index="21" role="group"
+																		aria-label="22 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/sweden.svg"
+																			alt="sweden"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">sweden</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/thailand"
+																		data-swiper-slide-index="22" role="group"
+																		aria-label="23 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/thailand.svg"
+																			alt="thailand"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">thailand</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/united-kingdom"
+																		data-swiper-slide-index="23" role="group"
+																		aria-label="24 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
+																			alt="united-kingdom"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">united-kingdom</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/vietnam"
+																		data-swiper-slide-index="24" role="group"
+																		aria-label="25 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/vietnam.svg"
+																			alt="vietnam"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">vietnam</span>
+																	</a>
+																</div>
+																<span class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span>
 															</div>
-															<div class="position-absolute bottom-0 end-0 swiper-custom-next"
-																tabindex="0" role="button" aria-label="Next slide"
-																aria-controls="swiper-wrapper-82f213ba36fa67c4">
-																<i
-																	class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+															<div class="position-relative swiper-control">
+																<div class="position-absolute top-0 end-0 swiper-custom-prev"
+																	tabindex="0" role="button"
+																	aria-label="Previous slide"
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
+																	<i
+																		class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+																</div>
+																<div class="position-absolute bottom-0 end-0 swiper-custom-next"
+																	tabindex="0" role="button" aria-label="Next slide"
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
+																	<i
+																		class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+																</div>
 															</div>
 														</div>
 													</div>
@@ -525,48 +537,49 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="form-group mb-3">
-									<label class="h6 fw-semibold text-title text-black">Type of Visa</label>
-									<div class="dropdown">
-										<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info"
-											data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<img class="form-icon"
-												src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map-gps-navigation.svg"
-												data-icon-name="outline/map-gps-navigation" alt="people">
-											<input class="form-control border-0 px-0 cursor-pointer" type="text"
-												id="type_of_visa" name="type_of_visa" placeholder="Please Select"
-												autocomplete="off" required="">
-											<img class="cursor-pointer"
-												src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-bottom.svg"
-												data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-										</div>
-										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-										<div class="dropdown-menu rounded-3-5 p-3 w-100">
-											<div class="d-flex align-items-center border rounded-3-5 px-2">
-												<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
-													alt="search">
-												<input class="form-control border-0 py-2 me-1" type="text" name="search"
-													placeholder="Enter Input" autocomplete="off" required="">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black">Type of Visa</label>
+										<div class="dropdown">
+											<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info"
+												data-bs-toggle="dropdown" data-bs-auto-close="outside">
+												<img class="form-icon"
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map-gps-navigation.svg"
+													data-icon-name="outline/map-gps-navigation" alt="people">
+												<input class="form-control border-0 px-0 cursor-pointer" type="text"
+													id="type_of_visa" name="type_of_visa" placeholder="Please Select"
+													autocomplete="off" required="">
+												<img class="cursor-pointer"
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-bottom.svg"
+													data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 											</div>
-											<div class="list-purpose mt-4">
-												<div class="list-popular mb-4">
-													<div class="label-title mb-2 fw-bold">Most Popular</div>
-													<ul class="list-unstyled">
-														<li><a class="cursor-pointer">Tourist</a></li>
-														<li><a class="cursor-pointer">Business</a></li>
-														<li><a class="cursor-pointer">Study</a></li>
-													</ul>
+											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											<div class="dropdown-menu rounded-3-5 p-3 w-100">
+												<div class="d-flex align-items-center border rounded-3-5 px-2">
+													<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
+														alt="search">
+													<input class="form-control border-0 py-2 me-1" type="text"
+														name="search" placeholder="Enter Input" autocomplete="off"
+														required="">
 												</div>
-												<div class="list-alphabetically">
-													<div class="label-title mb-2 fw-bold">Alphabetically</div>
-													<ul class="list-unstyled">
-														<li><a class="cursor-pointer">Business</a></li>
-														<li><a class="cursor-pointer">Non-immigrant</a></li>
-														<li><a class="cursor-pointer">Tourist</a></li>
-														<li><a class="cursor-pointer">Transit</a></li>
-														<li><a class="cursor-pointer">Study</a></li>
-													</ul>
+												<div class="list-purpose mt-4">
+													<div class="list-popular mb-4">
+														<div class="label-title mb-2 fw-bold">Most Popular</div>
+														<ul class="list-unstyled">
+															<li><a class="cursor-pointer">Tourist</a></li>
+															<li><a class="cursor-pointer">Business</a></li>
+															<li><a class="cursor-pointer">Study</a></li>
+														</ul>
+													</div>
+													<div class="list-alphabetically">
+														<div class="label-title mb-2 fw-bold">Alphabetically</div>
+														<ul class="list-unstyled">
+															<li><a class="cursor-pointer">Business</a></li>
+															<li><a class="cursor-pointer">Non-immigrant</a></li>
+															<li><a class="cursor-pointer">Tourist</a></li>
+															<li><a class="cursor-pointer">Transit</a></li>
+															<li><a class="cursor-pointer">Study</a></li>
+														</ul>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -606,58 +619,65 @@
 										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
-								<table class="table table-borderless" style="--bs-table-bg: #FFFCF7">
-									<tbody>
-										<tr>
-											<td width="55%"><span class="fw-bold text-title">Service Fees:</span><img
-													class="ms-2" src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/info.svg"
-													alt="info"></td>
-											<td>40 USD per person</td>
-										</tr>
-										<tr>
-											<td><span class="fw-bold text-title">Admin and Government Fees:</span><img
-													class="ms-2" src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/info.svg"
-													alt="info"></td>
-											<td>50 USD per person</td>
-										</tr>
-										<tr>
-											<td colspan="2">
-												<div class="fw-bold text-title mb-2">Processing Time and Fees:</div>
-												<div class="form-check align-items-stretch">
-													<input class="form-check-input me-3" type="radio"
-														name="flexRadioDefault" id="flexRadioDefault1">
-													<label class="form-check-label" for="flexRadioDefault1">Normal -
-														Within 3 days - 0 USD per person</label>
-												</div>
-												<div class="form-check align-items-stretch">
-													<input class="form-check-input me-3" type="radio"
-														name="flexRadioDefault" id="flexRadioDefault2" checked="">
-													<label class="form-check-label" for="flexRadioDefault2">Urgent -
-														Within 1 day - 25 USD per person</label>
-												</div>
-												<div class="form-check align-items-stretch">
-													<input class="form-check-input me-3" type="radio"
-														name="flexRadioDefault" id="flexRadioDefault3">
-													<label class="form-check-label" for="flexRadioDefault3">Super Urgent
-														- Within 5 hours - 55 USD per person</label>
-												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5 applicant">
-								<div class="row align-items-center justify-content-center">
-									<div class="col-10">
-										<h2 class="fw-800 custom-h1 text-black">APPLICANT NO.</h2>
+								<div class="form-group row">
+									<div class="col-7">
+										<label class="fw-bold text-title">Service Fees:<img class="ms-2"
+												src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/info.svg" alt="info"
+												width="24px" height="24px"></label>
 									</div>
-									<div class="col-2 text-end">
-										<div class="delete-person cursor-pointer d-inline-block" style="display: none">
-											<div class="rounded-circle border icon-hover" style="width: fit-content">
-												<img class="m-2"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/trash.svg"
-													data-icon-name="outline/trash" alt="trash" width="16px"
-													height="16px">
+									<div class="col-5">
+										40 USD per person
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-7">
+										<label class="fw-bold text-title">Admin and Government Fees:<img class="ms-2"
+												src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/info.svg" alt="info"
+												width="24px" height="24px"></label>
+									</div>
+									<div class="col-5">
+										50 USD per person
+									</div>
+								</div>
+								<div class="form-group row mb-0">
+									<div class="col-12">
+										<div class="fw-bold text-title mb-2">Processing Time and Fees:</div>
+										<div class="form-check align-items-stretch">
+											<input class="form-check-input me-3" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault1">
+											<label class="form-check-label" for="flexRadioDefault1">Normal - Within 3
+												days - 0 USD per person</label>
+										</div>
+										<div class="form-check align-items-stretch">
+											<input class="form-check-input me-3" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault2" checked="">
+											<label class="form-check-label" for="flexRadioDefault2">Urgent - Within 1
+												day - 25 USD per person</label>
+										</div>
+										<div class="form-check align-items-stretch">
+											<input class="form-check-input me-3" type="radio" name="flexRadioDefault"
+												id="flexRadioDefault3">
+											<label class="form-check-label" for="flexRadioDefault3">Super Urgent -
+												Within 5 hours - 55 USD per person</label>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 mb-4-5 applicant">
+								<div class="row align-items-center justify-content-center mb-4">
+									<div class="col-9">
+										<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-0">APPLICANT NO.</h2>
+									</div>
+									<div class="col-3 text-end">
+										<div class="d-inline-block">
+											<div class="delete-person cursor-pointer" style="display: none">
+												<div class="rounded-circle border icon-hover"
+													style="width: fit-content">
+													<img class="m-2"
+														src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/trash.svg"
+														data-icon-name="outline/trash" alt="trash" width="16px"
+														height="16px">
+												</div>
 											</div>
 										</div>
 									</div>
@@ -711,845 +731,13 @@
 											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 											<ul class="dropdown-menu dropdown-select border-secondary rounded-3-5 shadow w-100"
 												style="--bs-border-opacity: 0.5;">
-												<li><a
-														class="dropdown-item cursor-pointer direction-item selected">Mr</a>
-												</li>
-												<li><a class="dropdown-item cursor-pointer direction-item">Ms</a></li>
-												<li><a class="dropdown-item cursor-pointer direction-item">Master</a>
-												</li>
-												<li><a class="dropdown-item cursor-pointer direction-item">Miss</a></li>
+												<li><a class="dropdown-item cursor-pointer selected">Mr</a></li>
+												<li><a class="dropdown-item cursor-pointer">Ms</a></li>
+												<li><a class="dropdown-item cursor-pointer">Master</a></li>
+												<li><a class="dropdown-item cursor-pointer">Miss</a></li>
 											</ul>
 										</div>
 									</div>
-									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black">Email Address</label>
-										<div
-											class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-											<img class="form-icon"
-												src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-												data-icon-name="outline/education" alt="date">
-											<input class="form-control border-0 px-0 cursor-pointer" type="text"
-												id="email" name="email[]" placeholder="Enter Value" required="">
-										</div>
-										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-									</div>
-								</div>
-								<div class="form-group row gx-4 gy-3">
-									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black">Phone Number</label>
-										<div class="dropdown">
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/phone.svg"
-													data-icon-name="outline/phone" alt="phone">
-												<div class="d-flex align-items-center gap-2 cursor-pointer bg-white input-order-info"
-													data-bs-toggle="dropdown" data-bs-auto-close="outside">
-													<span
-														class="medium text-black text-opacity-7 nationality">+84</span>
-													<img class="cursor-pointer"
-														src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/direction-up.svg"
-														data-icon-name="icon/direction-up" alt="direction-up"
-														style="max-width: none">
-													<input class="form-control" type="hidden" id="nationality"
-														name="nationality[]" value="" required="">
-												</div>
-												<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-													<div class="d-flex align-items-center border rounded-3-5 px-2">
-														<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
-															alt="search">
-														<input class="form-control border-0 py-2 me-1" type="text"
-															name="search" placeholder="Enter Input" autocomplete="off"
-															required="">
-													</div>
-													<div class="list-nationality mt-4 text-title text-black">
-														<div class="list-popular mb-4">
-															<div class="label-title mb-3 fw-bold">Most Popular</div>
-															<div class="country-01 mb-2">
-																<a href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom">
-																	<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																		alt="United Kingdom" width="20px" height="20px">
-																	<span class="ms-2">United Kingdom</span>
-																</a>
-															</div>
-															<div class="country-02 mb-2">
-																<a href="https://caotrang1009.github.io/global-evisa/visa/country/france">
-																	<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																		alt="France" width="20px" height="20px">
-																	<span class="ms-2">French</span>
-																</a>
-															</div>
-															<div class="country-03 mb-2">
-																<a href="https://caotrang1009.github.io/global-evisa/visa/country/singapore">
-																	<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																		alt="Singapore" width="20px" height="20px">
-																	<span class="ms-2">Singapore</span>
-																</a>
-															</div>
-														</div>
-														<div class="list-alphabetically">
-															<div class="label-title mb-3 fw-bold">Alphabetically </div>
-															<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
-																style="height: 142px">
-																<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
-																	data-parent=".slide-input-country" data-items="5"
-																	data-space-between="1" data-direction="vertical"
-																	data-prev=".swiper-custom-prev"
-																	data-next=".swiper-custom-next" style="width: 88%">
-																	<div class="swiper-wrapper align-items-center"
-																		id="swiper-wrapper-2c431f30a62471a5"
-																		aria-live="polite"
-																		style="transition-duration: 0ms; transition-delay: 0ms;">
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
-																			data-swiper-slide-index="0" role="group"
-																			aria-label="1 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/belarus.svg"
-																				alt="belarus"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Belarus
-																				- +375</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/brunei"
-																			data-swiper-slide-index="1" role="group"
-																			aria-label="2 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/brunei.svg"
-																				alt="brunei"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Brunei
-																				- +673</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/cambodia"
-																			data-swiper-slide-index="2" role="group"
-																			aria-label="3 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/cambodia.svg"
-																				alt="cambodia"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Cambodia
-																				- +855</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/chile"
-																			data-swiper-slide-index="3" role="group"
-																			aria-label="4 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/chile.svg"
-																				alt="chile"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Chile
-																				- +56</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/denmark"
-																			data-swiper-slide-index="4" role="group"
-																			aria-label="5 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/denmark.svg"
-																				alt="denmark"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Denmark
-																				- +45</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/finland"
-																			data-swiper-slide-index="5" role="group"
-																			aria-label="6 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/finland.svg"
-																				alt="finland"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Finland
-																				- +358</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/france"
-																			data-swiper-slide-index="6" role="group"
-																			aria-label="7 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																				alt="france"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">France
-																				- +33</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/germany"
-																			data-swiper-slide-index="7" role="group"
-																			aria-label="8 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/germany.svg"
-																				alt="germany"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Germany
-																				- +49</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/indonesia"
-																			data-swiper-slide-index="8" role="group"
-																			aria-label="9 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/indonesia.svg"
-																				alt="indonesia"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Indonesia
-																				- +62</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/italy"
-																			data-swiper-slide-index="9" role="group"
-																			aria-label="10 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/italy.svg"
-																				alt="italy"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Italy
-																				- +39</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/japan"
-																			data-swiper-slide-index="10" role="group"
-																			aria-label="11 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/japan.svg"
-																				alt="japan"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Japan
-																				- +81</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/laos"
-																			data-swiper-slide-index="11" role="group"
-																			aria-label="12 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/laos.svg"
-																				alt="laos"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Laos
-																				- +856</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/malaysia"
-																			data-swiper-slide-index="12" role="group"
-																			aria-label="13 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/malaysia.svg"
-																				alt="malaysia"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Malaysia
-																				- +60</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/myanmar"
-																			data-swiper-slide-index="13" role="group"
-																			aria-label="14 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/myanmar.svg"
-																				alt="myanmar"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Myanmar
-																				- +95</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/norway"
-																			data-swiper-slide-index="14" role="group"
-																			aria-label="15 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/norway.svg"
-																				alt="norway"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Norway
-																				- +47</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/panama"
-																			data-swiper-slide-index="15" role="group"
-																			aria-label="16 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/panama.svg"
-																				alt="panama"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Panama
-																				- +507</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/philippines"
-																			data-swiper-slide-index="16" role="group"
-																			aria-label="17 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/philippines.svg"
-																				alt="philippines"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Philippines
-																				- +63</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/russia"
-																			data-swiper-slide-index="17" role="group"
-																			aria-label="18 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/russia.svg"
-																				alt="russia"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Russia
-																				- +07</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/singapore"
-																			data-swiper-slide-index="18" role="group"
-																			aria-label="19 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																				alt="singapore"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Singapore
-																				- +65</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/spain"
-																			data-swiper-slide-index="19" role="group"
-																			aria-label="20 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/spain.svg"
-																				alt="spain"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Spain
-																				- +34</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/korea"
-																			data-swiper-slide-index="20" role="group"
-																			aria-label="21 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/korea.svg"
-																				alt="korea"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">South
-																				Korea - +82</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/sweden"
-																			data-swiper-slide-index="21" role="group"
-																			aria-label="22 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/sweden.svg"
-																				alt="sweden"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Sweden
-																				- +46</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/thailand"
-																			data-swiper-slide-index="22" role="group"
-																			aria-label="23 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/thailand.svg"
-																				alt="thailand"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Thailand
-																				- +66</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom"
-																			data-swiper-slide-index="23" role="group"
-																			aria-label="24 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																				alt="united-kingdom"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">United
-																				Kingdom - +44</span>
-																		</a>
-																		<a class="swiper-slide d-block text-start"
-																			href="https://caotrang1009.github.io/global-evisa/visa/country/vietnam"
-																			data-swiper-slide-index="24" role="group"
-																			aria-label="25 / 25">
-																			<img class="d-inline"
-																				src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/vietnam.svg"
-																				alt="vietnam"
-																				style="width: 20px; height: 20px;">
-																			<span
-																				class="ms-2 text-capitalize medium">Vietnam
-																				- +84</span>
-																		</a>
-																	</div>
-																	<span class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive"
-																		aria-atomic="true"></span><span
-																		class="swiper-notification"
-																		aria-live="assertive" aria-atomic="true"></span>
-																</div>
-																<div class="position-relative swiper-control">
-																	<div class="position-absolute top-0 end-0 swiper-custom-prev"
-																		tabindex="0" role="button"
-																		aria-label="Previous slide"
-																		aria-controls="swiper-wrapper-82f213ba36fa67c4">
-																		<i
-																			class="fal fa-chevron-circle-up fs-4 icon-color"></i>
-																	</div>
-																	<div class="position-absolute bottom-0 end-0 swiper-custom-next"
-																		tabindex="0" role="button"
-																		aria-label="Next slide"
-																		aria-controls="swiper-wrapper-82f213ba36fa67c4">
-																		<i
-																			class="fal fa-chevron-circle-down fs-4 icon-color"></i>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="phone_number" name="phone_number[]" placeholder="Enter Value"
-													required="">
-											</div>
-											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<label class="h6 fw-semibold text-title text-black">Country of Residency</label>
-										<div class="dropdown">
-											<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info"
-												data-bs-toggle="dropdown" data-bs-auto-close="outside">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map.svg"
-													data-icon-name="outline/map" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="country_of_residency" name="country_of_residency[]"
-													placeholder="Please Select" required="">
-												<img class="cursor-pointer"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-bottom.svg"
-													data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-											</div>
-											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-											<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-												<div class="d-flex align-items-center border rounded-3-5 px-2">
-													<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
-														alt="search">
-													<input class="form-control border-0 py-2 me-1" type="text"
-														name="search" placeholder="Enter Input" autocomplete="off"
-														required="">
-												</div>
-												<div class="list-nationality mt-4 text-title text-black">
-													<div class="list-popular mb-4">
-														<div class="label-title mb-3 fw-bold">Most Popular</div>
-														<div class="country-01 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom">
-																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																	alt="United Kingdom" width="20px" height="20px">
-																<span class="ms-2">United Kingdom</span>
-															</a>
-														</div>
-														<div class="country-02 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/france">
-																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																	alt="France" width="20px" height="20px">
-																<span class="ms-2">French</span>
-															</a>
-														</div>
-														<div class="country-03 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/singapore">
-																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																	alt="Singapore" width="20px" height="20px">
-																<span class="ms-2">Singapore</span>
-															</a>
-														</div>
-													</div>
-													<div class="list-alphabetically">
-														<div class="label-title mb-3 fw-bold">Alphabetically </div>
-														<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
-															style="height: 142px">
-															<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
-																data-parent=".slide-input-country" data-items="5"
-																data-space-between="1" data-direction="vertical"
-																data-prev=".swiper-custom-prev"
-																data-next=".swiper-custom-next" style="width: 85%">
-																<div class="swiper-wrapper align-items-center"
-																	id="swiper-wrapper-21b89234da330615"
-																	aria-live="polite"
-																	style="transition-duration: 0ms; transition-delay: 0ms;">
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
-																		data-swiper-slide-index="0" role="group"
-																		aria-label="1 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/belarus.svg"
-																			alt="belarus"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">belarus</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/brunei"
-																		data-swiper-slide-index="1" role="group"
-																		aria-label="2 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/brunei.svg"
-																			alt="brunei"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">brunei</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/cambodia"
-																		data-swiper-slide-index="2" role="group"
-																		aria-label="3 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/cambodia.svg"
-																			alt="cambodia"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">cambodia</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/chile"
-																		data-swiper-slide-index="3" role="group"
-																		aria-label="4 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/chile.svg"
-																			alt="chile"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">chile</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/denmark"
-																		data-swiper-slide-index="4" role="group"
-																		aria-label="5 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/denmark.svg"
-																			alt="denmark"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">denmark</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/finland"
-																		data-swiper-slide-index="5" role="group"
-																		aria-label="6 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/finland.svg"
-																			alt="finland"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">finland</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/france"
-																		data-swiper-slide-index="6" role="group"
-																		aria-label="7 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																			alt="france"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">france</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/germany"
-																		data-swiper-slide-index="7" role="group"
-																		aria-label="8 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/germany.svg"
-																			alt="germany"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">germany</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/indonesia"
-																		data-swiper-slide-index="8" role="group"
-																		aria-label="9 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/indonesia.svg"
-																			alt="indonesia"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">indonesia</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/italy"
-																		data-swiper-slide-index="9" role="group"
-																		aria-label="10 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/italy.svg"
-																			alt="italy"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">italy</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/japan"
-																		data-swiper-slide-index="10" role="group"
-																		aria-label="11 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/japan.svg"
-																			alt="japan"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">japan</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/laos"
-																		data-swiper-slide-index="11" role="group"
-																		aria-label="12 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/laos.svg"
-																			alt="laos"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">laos</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/malaysia"
-																		data-swiper-slide-index="12" role="group"
-																		aria-label="13 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/malaysia.svg"
-																			alt="malaysia"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">malaysia</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/myanmar"
-																		data-swiper-slide-index="13" role="group"
-																		aria-label="14 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/myanmar.svg"
-																			alt="myanmar"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">myanmar</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/norway"
-																		data-swiper-slide-index="14" role="group"
-																		aria-label="15 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/norway.svg"
-																			alt="norway"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">norway</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/panama"
-																		data-swiper-slide-index="15" role="group"
-																		aria-label="16 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/panama.svg"
-																			alt="panama"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">panama</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/philippines"
-																		data-swiper-slide-index="16" role="group"
-																		aria-label="17 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/philippines.svg"
-																			alt="philippines"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">philippines</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/russia"
-																		data-swiper-slide-index="17" role="group"
-																		aria-label="18 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/russia.svg"
-																			alt="russia"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">russia</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/singapore"
-																		data-swiper-slide-index="18" role="group"
-																		aria-label="19 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																			alt="singapore"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">singapore</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/spain"
-																		data-swiper-slide-index="19" role="group"
-																		aria-label="20 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/spain.svg"
-																			alt="spain"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">spain</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/korea"
-																		data-swiper-slide-index="20" role="group"
-																		aria-label="21 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/korea.svg"
-																			alt="korea"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">korea</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/sweden"
-																		data-swiper-slide-index="21" role="group"
-																		aria-label="22 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/sweden.svg"
-																			alt="sweden"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">sweden</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/thailand"
-																		data-swiper-slide-index="22" role="group"
-																		aria-label="23 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/thailand.svg"
-																			alt="thailand"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">thailand</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom"
-																		data-swiper-slide-index="23" role="group"
-																		aria-label="24 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																			alt="united-kingdom"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">united-kingdom</span>
-																	</a>
-																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/vietnam"
-																		data-swiper-slide-index="24" role="group"
-																		aria-label="25 / 25">
-																		<img class="d-inline"
-																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/vietnam.svg"
-																			alt="vietnam"
-																			style="width: 20px; height: 20px;">
-																		<span
-																			class="ms-2 text-capitalize medium">vietnam</span>
-																	</a>
-																</div>
-																<span class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span>
-															</div>
-															<div class="position-relative swiper-control">
-																<div class="position-absolute top-0 end-0 swiper-custom-prev"
-																	tabindex="0" role="button"
-																	aria-label="Previous slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
-																	<i
-																		class="fal fa-chevron-circle-up fs-4 icon-color"></i>
-																</div>
-																<div class="position-absolute bottom-0 end-0 swiper-custom-next"
-																	tabindex="0" role="button" aria-label="Next slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
-																	<i
-																		class="fal fa-chevron-circle-down fs-4 icon-color"></i>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="form-group row gx-4 gy-3">
 									<div class="col-sm-6">
 										<label class="h6 fw-semibold text-title text-black">Country of Birth</label>
 										<div class="dropdown">
@@ -1578,21 +766,21 @@
 													<div class="list-popular mb-4">
 														<div class="label-title mb-3 fw-bold">Most Popular</div>
 														<div class="country-01 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom">
+															<a href="/visa/country/united-kingdom">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
 																	alt="United Kingdom" width="20px" height="20px">
 																<span class="ms-2">United Kingdom</span>
 															</a>
 														</div>
 														<div class="country-02 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/france">
+															<a href="/visa/country/france">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
 																	alt="France" width="20px" height="20px">
 																<span class="ms-2">French</span>
 															</a>
 														</div>
 														<div class="country-03 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/singapore">
+															<a href="/visa/country/singapore">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
 																	alt="Singapore" width="20px" height="20px">
 																<span class="ms-2">Singapore</span>
@@ -1609,11 +797,11 @@
 																data-prev=".swiper-custom-prev"
 																data-next=".swiper-custom-next" style="width: 85%">
 																<div class="swiper-wrapper align-items-center"
-																	id="swiper-wrapper-6e980113b54f28aa"
+																	id="swiper-wrapper-3cbfd5777d3684f8"
 																	aria-live="polite"
 																	style="transition-duration: 0ms; transition-delay: 0ms;">
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
+																		href="/visa/country/belarus"
 																		data-swiper-slide-index="0" role="group"
 																		aria-label="1 / 25">
 																		<img class="d-inline"
@@ -1624,7 +812,7 @@
 																			class="ms-2 text-capitalize medium">belarus</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/brunei"
+																		href="/visa/country/brunei"
 																		data-swiper-slide-index="1" role="group"
 																		aria-label="2 / 25">
 																		<img class="d-inline"
@@ -1635,7 +823,7 @@
 																			class="ms-2 text-capitalize medium">brunei</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/cambodia"
+																		href="/visa/country/cambodia"
 																		data-swiper-slide-index="2" role="group"
 																		aria-label="3 / 25">
 																		<img class="d-inline"
@@ -1646,7 +834,7 @@
 																			class="ms-2 text-capitalize medium">cambodia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/chile"
+																		href="/visa/country/chile"
 																		data-swiper-slide-index="3" role="group"
 																		aria-label="4 / 25">
 																		<img class="d-inline"
@@ -1657,7 +845,7 @@
 																			class="ms-2 text-capitalize medium">chile</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/denmark"
+																		href="/visa/country/denmark"
 																		data-swiper-slide-index="4" role="group"
 																		aria-label="5 / 25">
 																		<img class="d-inline"
@@ -1668,7 +856,7 @@
 																			class="ms-2 text-capitalize medium">denmark</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/finland"
+																		href="/visa/country/finland"
 																		data-swiper-slide-index="5" role="group"
 																		aria-label="6 / 25">
 																		<img class="d-inline"
@@ -1679,7 +867,7 @@
 																			class="ms-2 text-capitalize medium">finland</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/france"
+																		href="/visa/country/france"
 																		data-swiper-slide-index="6" role="group"
 																		aria-label="7 / 25">
 																		<img class="d-inline"
@@ -1690,7 +878,7 @@
 																			class="ms-2 text-capitalize medium">france</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/germany"
+																		href="/visa/country/germany"
 																		data-swiper-slide-index="7" role="group"
 																		aria-label="8 / 25">
 																		<img class="d-inline"
@@ -1701,7 +889,7 @@
 																			class="ms-2 text-capitalize medium">germany</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/indonesia"
+																		href="/visa/country/indonesia"
 																		data-swiper-slide-index="8" role="group"
 																		aria-label="9 / 25">
 																		<img class="d-inline"
@@ -1712,7 +900,7 @@
 																			class="ms-2 text-capitalize medium">indonesia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/italy"
+																		href="/visa/country/italy"
 																		data-swiper-slide-index="9" role="group"
 																		aria-label="10 / 25">
 																		<img class="d-inline"
@@ -1723,7 +911,7 @@
 																			class="ms-2 text-capitalize medium">italy</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/japan"
+																		href="/visa/country/japan"
 																		data-swiper-slide-index="10" role="group"
 																		aria-label="11 / 25">
 																		<img class="d-inline"
@@ -1734,7 +922,7 @@
 																			class="ms-2 text-capitalize medium">japan</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/laos"
+																		href="/visa/country/laos"
 																		data-swiper-slide-index="11" role="group"
 																		aria-label="12 / 25">
 																		<img class="d-inline"
@@ -1745,7 +933,7 @@
 																			class="ms-2 text-capitalize medium">laos</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/malaysia"
+																		href="/visa/country/malaysia"
 																		data-swiper-slide-index="12" role="group"
 																		aria-label="13 / 25">
 																		<img class="d-inline"
@@ -1756,7 +944,7 @@
 																			class="ms-2 text-capitalize medium">malaysia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/myanmar"
+																		href="/visa/country/myanmar"
 																		data-swiper-slide-index="13" role="group"
 																		aria-label="14 / 25">
 																		<img class="d-inline"
@@ -1767,7 +955,7 @@
 																			class="ms-2 text-capitalize medium">myanmar</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/norway"
+																		href="/visa/country/norway"
 																		data-swiper-slide-index="14" role="group"
 																		aria-label="15 / 25">
 																		<img class="d-inline"
@@ -1778,7 +966,7 @@
 																			class="ms-2 text-capitalize medium">norway</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/panama"
+																		href="/visa/country/panama"
 																		data-swiper-slide-index="15" role="group"
 																		aria-label="16 / 25">
 																		<img class="d-inline"
@@ -1789,7 +977,7 @@
 																			class="ms-2 text-capitalize medium">panama</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/philippines"
+																		href="/visa/country/philippines"
 																		data-swiper-slide-index="16" role="group"
 																		aria-label="17 / 25">
 																		<img class="d-inline"
@@ -1800,7 +988,7 @@
 																			class="ms-2 text-capitalize medium">philippines</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/russia"
+																		href="/visa/country/russia"
 																		data-swiper-slide-index="17" role="group"
 																		aria-label="18 / 25">
 																		<img class="d-inline"
@@ -1811,7 +999,7 @@
 																			class="ms-2 text-capitalize medium">russia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/singapore"
+																		href="/visa/country/singapore"
 																		data-swiper-slide-index="18" role="group"
 																		aria-label="19 / 25">
 																		<img class="d-inline"
@@ -1822,7 +1010,7 @@
 																			class="ms-2 text-capitalize medium">singapore</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/spain"
+																		href="/visa/country/spain"
 																		data-swiper-slide-index="19" role="group"
 																		aria-label="20 / 25">
 																		<img class="d-inline"
@@ -1833,7 +1021,7 @@
 																			class="ms-2 text-capitalize medium">spain</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/korea"
+																		href="/visa/country/korea"
 																		data-swiper-slide-index="20" role="group"
 																		aria-label="21 / 25">
 																		<img class="d-inline"
@@ -1844,7 +1032,7 @@
 																			class="ms-2 text-capitalize medium">korea</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/sweden"
+																		href="/visa/country/sweden"
 																		data-swiper-slide-index="21" role="group"
 																		aria-label="22 / 25">
 																		<img class="d-inline"
@@ -1855,7 +1043,7 @@
 																			class="ms-2 text-capitalize medium">sweden</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/thailand"
+																		href="/visa/country/thailand"
 																		data-swiper-slide-index="22" role="group"
 																		aria-label="23 / 25">
 																		<img class="d-inline"
@@ -1866,7 +1054,7 @@
 																			class="ms-2 text-capitalize medium">thailand</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom"
+																		href="/visa/country/united-kingdom"
 																		data-swiper-slide-index="23" role="group"
 																		aria-label="24 / 25">
 																		<img class="d-inline"
@@ -1877,7 +1065,7 @@
 																			class="ms-2 text-capitalize medium">united-kingdom</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/vietnam"
+																		href="/visa/country/vietnam"
 																		data-swiper-slide-index="24" role="group"
 																		aria-label="25 / 25">
 																		<img class="d-inline"
@@ -1907,6 +1095,384 @@
 																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span><span
 																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span>
+															</div>
+															<div class="position-relative swiper-control">
+																<div class="position-absolute top-0 end-0 swiper-custom-prev"
+																	tabindex="0" role="button"
+																	aria-label="Previous slide"
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
+																	<i
+																		class="fal fa-chevron-circle-up fs-4 icon-color"></i>
+																</div>
+																<div class="position-absolute bottom-0 end-0 swiper-custom-next"
+																	tabindex="0" role="button" aria-label="Next slide"
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
+																	<i
+																		class="fal fa-chevron-circle-down fs-4 icon-color"></i>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form-group row gx-4 gy-3">
+									<div class="col-sm-6">
+										<label class="h6 fw-semibold text-title text-black">Country of Residency</label>
+										<div class="dropdown">
+											<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info"
+												data-bs-toggle="dropdown" data-bs-auto-close="outside">
+												<img class="form-icon"
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map.svg"
+													data-icon-name="outline/map" alt="date">
+												<input class="form-control border-0 px-0 cursor-pointer" type="text"
+													id="country_of_residency" name="country_of_residency[]"
+													placeholder="Please Select" required="">
+												<img class="cursor-pointer"
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-bottom.svg"
+													data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
+											</div>
+											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
+												<div class="d-flex align-items-center border rounded-3-5 px-2">
+													<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
+														alt="search">
+													<input class="form-control border-0 py-2 me-1" type="text"
+														name="search" placeholder="Enter Input" autocomplete="off"
+														required="">
+												</div>
+												<div class="list-nationality mt-4 text-title text-black">
+													<div class="list-popular mb-4">
+														<div class="label-title mb-3 fw-bold">Most Popular</div>
+														<div class="country-01 mb-2">
+															<a href="/visa/country/united-kingdom">
+																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
+																	alt="United Kingdom" width="20px" height="20px">
+																<span class="ms-2">United Kingdom</span>
+															</a>
+														</div>
+														<div class="country-02 mb-2">
+															<a href="/visa/country/france">
+																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
+																	alt="France" width="20px" height="20px">
+																<span class="ms-2">French</span>
+															</a>
+														</div>
+														<div class="country-03 mb-2">
+															<a href="/visa/country/singapore">
+																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
+																	alt="Singapore" width="20px" height="20px">
+																<span class="ms-2">Singapore</span>
+															</a>
+														</div>
+													</div>
+													<div class="list-alphabetically">
+														<div class="label-title mb-3 fw-bold">Alphabetically </div>
+														<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
+															style="height: 142px">
+															<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
+																data-parent=".slide-input-country" data-items="5"
+																data-space-between="1" data-direction="vertical"
+																data-prev=".swiper-custom-prev"
+																data-next=".swiper-custom-next" style="width: 85%">
+																<div class="swiper-wrapper align-items-center"
+																	id="swiper-wrapper-b3a617ad3326657d"
+																	aria-live="polite"
+																	style="transition-duration: 0ms; transition-delay: 0ms;">
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/belarus"
+																		data-swiper-slide-index="0" role="group"
+																		aria-label="1 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/belarus.svg"
+																			alt="belarus"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">belarus</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/brunei"
+																		data-swiper-slide-index="1" role="group"
+																		aria-label="2 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/brunei.svg"
+																			alt="brunei"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">brunei</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/cambodia"
+																		data-swiper-slide-index="2" role="group"
+																		aria-label="3 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/cambodia.svg"
+																			alt="cambodia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">cambodia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/chile"
+																		data-swiper-slide-index="3" role="group"
+																		aria-label="4 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/chile.svg"
+																			alt="chile"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">chile</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/denmark"
+																		data-swiper-slide-index="4" role="group"
+																		aria-label="5 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/denmark.svg"
+																			alt="denmark"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">denmark</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/finland"
+																		data-swiper-slide-index="5" role="group"
+																		aria-label="6 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/finland.svg"
+																			alt="finland"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">finland</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/france"
+																		data-swiper-slide-index="6" role="group"
+																		aria-label="7 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
+																			alt="france"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">france</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/germany"
+																		data-swiper-slide-index="7" role="group"
+																		aria-label="8 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/germany.svg"
+																			alt="germany"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">germany</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/indonesia"
+																		data-swiper-slide-index="8" role="group"
+																		aria-label="9 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/indonesia.svg"
+																			alt="indonesia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">indonesia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/italy"
+																		data-swiper-slide-index="9" role="group"
+																		aria-label="10 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/italy.svg"
+																			alt="italy"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">italy</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/japan"
+																		data-swiper-slide-index="10" role="group"
+																		aria-label="11 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/japan.svg"
+																			alt="japan"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">japan</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/laos"
+																		data-swiper-slide-index="11" role="group"
+																		aria-label="12 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/laos.svg"
+																			alt="laos"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">laos</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/malaysia"
+																		data-swiper-slide-index="12" role="group"
+																		aria-label="13 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/malaysia.svg"
+																			alt="malaysia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">malaysia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/myanmar"
+																		data-swiper-slide-index="13" role="group"
+																		aria-label="14 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/myanmar.svg"
+																			alt="myanmar"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">myanmar</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/norway"
+																		data-swiper-slide-index="14" role="group"
+																		aria-label="15 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/norway.svg"
+																			alt="norway"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">norway</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/panama"
+																		data-swiper-slide-index="15" role="group"
+																		aria-label="16 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/panama.svg"
+																			alt="panama"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">panama</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/philippines"
+																		data-swiper-slide-index="16" role="group"
+																		aria-label="17 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/philippines.svg"
+																			alt="philippines"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">philippines</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/russia"
+																		data-swiper-slide-index="17" role="group"
+																		aria-label="18 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/russia.svg"
+																			alt="russia"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">russia</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/singapore"
+																		data-swiper-slide-index="18" role="group"
+																		aria-label="19 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
+																			alt="singapore"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">singapore</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/spain"
+																		data-swiper-slide-index="19" role="group"
+																		aria-label="20 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/spain.svg"
+																			alt="spain"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">spain</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/korea"
+																		data-swiper-slide-index="20" role="group"
+																		aria-label="21 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/korea.svg"
+																			alt="korea"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">korea</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/sweden"
+																		data-swiper-slide-index="21" role="group"
+																		aria-label="22 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/sweden.svg"
+																			alt="sweden"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">sweden</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/thailand"
+																		data-swiper-slide-index="22" role="group"
+																		aria-label="23 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/thailand.svg"
+																			alt="thailand"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">thailand</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/united-kingdom"
+																		data-swiper-slide-index="23" role="group"
+																		aria-label="24 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
+																			alt="united-kingdom"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">united-kingdom</span>
+																	</a>
+																	<a class="swiper-slide d-block text-start"
+																		href="/visa/country/vietnam"
+																		data-swiper-slide-index="24" role="group"
+																		aria-label="25 / 25">
+																		<img class="d-inline"
+																			src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/vietnam.svg"
+																			alt="vietnam"
+																			style="width: 20px; height: 20px;">
+																		<span
+																			class="ms-2 text-capitalize medium">vietnam</span>
+																	</a>
+																</div>
+																<span class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
+																	aria-atomic="true"></span><span
+																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span><span
 																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span><span
@@ -1917,13 +1483,13 @@
 																<div class="position-absolute top-0 end-0 swiper-custom-prev"
 																	tabindex="0" role="button"
 																	aria-label="Previous slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
 																	<i
 																		class="fal fa-chevron-circle-up fs-4 icon-color"></i>
 																</div>
 																<div class="position-absolute bottom-0 end-0 swiper-custom-next"
 																	tabindex="0" role="button" aria-label="Next slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
 																	<i
 																		class="fal fa-chevron-circle-down fs-4 icon-color"></i>
 																</div>
@@ -1962,21 +1528,21 @@
 													<div class="list-popular mb-4">
 														<div class="label-title mb-3 fw-bold">Most Popular</div>
 														<div class="country-01 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom">
+															<a href="/visa/country/united-kingdom">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
 																	alt="United Kingdom" width="20px" height="20px">
 																<span class="ms-2">United Kingdom</span>
 															</a>
 														</div>
 														<div class="country-02 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/france">
+															<a href="/visa/country/france">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
 																	alt="France" width="20px" height="20px">
 																<span class="ms-2">French</span>
 															</a>
 														</div>
 														<div class="country-03 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/singapore">
+															<a href="/visa/country/singapore">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
 																	alt="Singapore" width="20px" height="20px">
 																<span class="ms-2">Singapore</span>
@@ -1993,11 +1559,11 @@
 																data-prev=".swiper-custom-prev"
 																data-next=".swiper-custom-next" style="width: 85%">
 																<div class="swiper-wrapper align-items-center"
-																	id="swiper-wrapper-3c8b48b761ea3925"
+																	id="swiper-wrapper-abf788fb5772fe5b"
 																	aria-live="polite"
 																	style="transition-duration: 0ms; transition-delay: 0ms;">
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
+																		href="/visa/country/belarus"
 																		data-swiper-slide-index="0" role="group"
 																		aria-label="1 / 25">
 																		<img class="d-inline"
@@ -2008,7 +1574,7 @@
 																			class="ms-2 text-capitalize medium">belarus</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/brunei"
+																		href="/visa/country/brunei"
 																		data-swiper-slide-index="1" role="group"
 																		aria-label="2 / 25">
 																		<img class="d-inline"
@@ -2019,7 +1585,7 @@
 																			class="ms-2 text-capitalize medium">brunei</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/cambodia"
+																		href="/visa/country/cambodia"
 																		data-swiper-slide-index="2" role="group"
 																		aria-label="3 / 25">
 																		<img class="d-inline"
@@ -2030,7 +1596,7 @@
 																			class="ms-2 text-capitalize medium">cambodia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/chile"
+																		href="/visa/country/chile"
 																		data-swiper-slide-index="3" role="group"
 																		aria-label="4 / 25">
 																		<img class="d-inline"
@@ -2041,7 +1607,7 @@
 																			class="ms-2 text-capitalize medium">chile</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/denmark"
+																		href="/visa/country/denmark"
 																		data-swiper-slide-index="4" role="group"
 																		aria-label="5 / 25">
 																		<img class="d-inline"
@@ -2052,7 +1618,7 @@
 																			class="ms-2 text-capitalize medium">denmark</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/finland"
+																		href="/visa/country/finland"
 																		data-swiper-slide-index="5" role="group"
 																		aria-label="6 / 25">
 																		<img class="d-inline"
@@ -2063,7 +1629,7 @@
 																			class="ms-2 text-capitalize medium">finland</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/france"
+																		href="/visa/country/france"
 																		data-swiper-slide-index="6" role="group"
 																		aria-label="7 / 25">
 																		<img class="d-inline"
@@ -2074,7 +1640,7 @@
 																			class="ms-2 text-capitalize medium">france</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/germany"
+																		href="/visa/country/germany"
 																		data-swiper-slide-index="7" role="group"
 																		aria-label="8 / 25">
 																		<img class="d-inline"
@@ -2085,7 +1651,7 @@
 																			class="ms-2 text-capitalize medium">germany</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/indonesia"
+																		href="/visa/country/indonesia"
 																		data-swiper-slide-index="8" role="group"
 																		aria-label="9 / 25">
 																		<img class="d-inline"
@@ -2096,7 +1662,7 @@
 																			class="ms-2 text-capitalize medium">indonesia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/italy"
+																		href="/visa/country/italy"
 																		data-swiper-slide-index="9" role="group"
 																		aria-label="10 / 25">
 																		<img class="d-inline"
@@ -2107,7 +1673,7 @@
 																			class="ms-2 text-capitalize medium">italy</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/japan"
+																		href="/visa/country/japan"
 																		data-swiper-slide-index="10" role="group"
 																		aria-label="11 / 25">
 																		<img class="d-inline"
@@ -2118,7 +1684,7 @@
 																			class="ms-2 text-capitalize medium">japan</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/laos"
+																		href="/visa/country/laos"
 																		data-swiper-slide-index="11" role="group"
 																		aria-label="12 / 25">
 																		<img class="d-inline"
@@ -2129,7 +1695,7 @@
 																			class="ms-2 text-capitalize medium">laos</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/malaysia"
+																		href="/visa/country/malaysia"
 																		data-swiper-slide-index="12" role="group"
 																		aria-label="13 / 25">
 																		<img class="d-inline"
@@ -2140,7 +1706,7 @@
 																			class="ms-2 text-capitalize medium">malaysia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/myanmar"
+																		href="/visa/country/myanmar"
 																		data-swiper-slide-index="13" role="group"
 																		aria-label="14 / 25">
 																		<img class="d-inline"
@@ -2151,7 +1717,7 @@
 																			class="ms-2 text-capitalize medium">myanmar</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/norway"
+																		href="/visa/country/norway"
 																		data-swiper-slide-index="14" role="group"
 																		aria-label="15 / 25">
 																		<img class="d-inline"
@@ -2162,7 +1728,7 @@
 																			class="ms-2 text-capitalize medium">norway</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/panama"
+																		href="/visa/country/panama"
 																		data-swiper-slide-index="15" role="group"
 																		aria-label="16 / 25">
 																		<img class="d-inline"
@@ -2173,7 +1739,7 @@
 																			class="ms-2 text-capitalize medium">panama</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/philippines"
+																		href="/visa/country/philippines"
 																		data-swiper-slide-index="16" role="group"
 																		aria-label="17 / 25">
 																		<img class="d-inline"
@@ -2184,7 +1750,7 @@
 																			class="ms-2 text-capitalize medium">philippines</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/russia"
+																		href="/visa/country/russia"
 																		data-swiper-slide-index="17" role="group"
 																		aria-label="18 / 25">
 																		<img class="d-inline"
@@ -2195,7 +1761,7 @@
 																			class="ms-2 text-capitalize medium">russia</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/singapore"
+																		href="/visa/country/singapore"
 																		data-swiper-slide-index="18" role="group"
 																		aria-label="19 / 25">
 																		<img class="d-inline"
@@ -2206,7 +1772,7 @@
 																			class="ms-2 text-capitalize medium">singapore</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/spain"
+																		href="/visa/country/spain"
 																		data-swiper-slide-index="19" role="group"
 																		aria-label="20 / 25">
 																		<img class="d-inline"
@@ -2217,7 +1783,7 @@
 																			class="ms-2 text-capitalize medium">spain</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/korea"
+																		href="/visa/country/korea"
 																		data-swiper-slide-index="20" role="group"
 																		aria-label="21 / 25">
 																		<img class="d-inline"
@@ -2228,7 +1794,7 @@
 																			class="ms-2 text-capitalize medium">korea</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/sweden"
+																		href="/visa/country/sweden"
 																		data-swiper-slide-index="21" role="group"
 																		aria-label="22 / 25">
 																		<img class="d-inline"
@@ -2239,7 +1805,7 @@
 																			class="ms-2 text-capitalize medium">sweden</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/thailand"
+																		href="/visa/country/thailand"
 																		data-swiper-slide-index="22" role="group"
 																		aria-label="23 / 25">
 																		<img class="d-inline"
@@ -2250,7 +1816,7 @@
 																			class="ms-2 text-capitalize medium">thailand</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom"
+																		href="/visa/country/united-kingdom"
 																		data-swiper-slide-index="23" role="group"
 																		aria-label="24 / 25">
 																		<img class="d-inline"
@@ -2261,7 +1827,7 @@
 																			class="ms-2 text-capitalize medium">united-kingdom</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/vietnam"
+																		href="/visa/country/vietnam"
 																		data-swiper-slide-index="24" role="group"
 																		aria-label="25 / 25">
 																		<img class="d-inline"
@@ -2291,23 +1857,19 @@
 																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span><span
 																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span>
 															</div>
 															<div class="position-relative swiper-control">
 																<div class="position-absolute top-0 end-0 swiper-custom-prev"
 																	tabindex="0" role="button"
 																	aria-label="Previous slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
 																	<i
 																		class="fal fa-chevron-circle-up fs-4 icon-color"></i>
 																</div>
 																<div class="position-absolute bottom-0 end-0 swiper-custom-next"
 																	tabindex="0" role="button" aria-label="Next slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
 																	<i
 																		class="fal fa-chevron-circle-down fs-4 icon-color"></i>
 																</div>
@@ -2400,7 +1962,7 @@
 							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-10">
-										<h2 class="fw-800 custom-h1 text-black mb-0">ADD-ON SERVICES</h2>
+										<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-0">ADD-ON SERVICES</h2>
 									</div>
 									<div class="col-2 text-end">
 										<div class="add-on-services cursor-pointer d-inline-block"
@@ -2412,7 +1974,7 @@
 										</div>
 									</div>
 								</div>
-								<div id="add-on-services" class="mt-4 collapse">
+								<div id="add-on-services" class="mt-3 collapse">
 									<div class="form-check align-items-stretch">
 										<input class="form-check-input me-2" type="checkbox" value=""
 											id="travel_insurance" name="travel_insurance" required="">
@@ -2425,7 +1987,7 @@
 							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4 add-another-person">
 								<div class="row align-items-center justify-content-center">
 									<div class="col-10">
-										<h2 class="fw-800 custom-h1 text-black mb-0">ADD ANOTHER PERSON</h2>
+										<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-0">ADD ANOTHER PERSON</h2>
 									</div>
 									<div class="col-2 text-end">
 										<div class="add-person cursor-pointer d-inline-block">
@@ -2437,9 +1999,9 @@
 									</div>
 								</div>
 							</div>
-							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
-								<h2 class="fw-800 custom-h3 text-black mb-4">CONTACT INFORMATION</h2>
-								<div class="form-group mb-3">
+							<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 mb-4">
+								<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-4">CONTACT INFORMATION</h2>
+								<div class="form-group">
 									<label class="h6 fw-semibold text-title text-black">Your Full Name</label>
 									<div
 										class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
@@ -2451,7 +2013,7 @@
 									</div>
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 								</div>
-								<div class="form-group mb-3">
+								<div class="form-group">
 									<label class="h6 fw-semibold text-title text-black">Your Email</label>
 									<div
 										class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
@@ -2463,7 +2025,7 @@
 									</div>
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 								</div>
-								<div class="form-group">
+								<div class="form-group mb-0">
 									<label class="h6 fw-semibold text-title text-black">Your Phone Number</label>
 									<div class="dropdown">
 										<div
@@ -2493,21 +2055,21 @@
 													<div class="list-popular mb-4">
 														<div class="label-title mb-3 fw-bold">Most Popular</div>
 														<div class="country-01 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom">
+															<a href="/visa/country/united-kingdom">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
 																	alt="United Kingdom" width="20px" height="20px">
 																<span class="ms-2">United Kingdom</span>
 															</a>
 														</div>
 														<div class="country-02 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/france">
+															<a href="/visa/country/france">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
 																	alt="France" width="20px" height="20px">
 																<span class="ms-2">French</span>
 															</a>
 														</div>
 														<div class="country-03 mb-2">
-															<a href="https://caotrang1009.github.io/global-evisa/visa/country/singapore">
+															<a href="/visa/country/singapore">
 																<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
 																	alt="Singapore" width="20px" height="20px">
 																<span class="ms-2">Singapore</span>
@@ -2524,11 +2086,11 @@
 																data-prev=".swiper-custom-prev"
 																data-next=".swiper-custom-next" style="width: 88%">
 																<div class="swiper-wrapper align-items-center"
-																	id="swiper-wrapper-82f213ba36fa67c4"
+																	id="swiper-wrapper-4b94414fa91fd610a"
 																	aria-live="polite"
 																	style="transition-duration: 0ms; transition-delay: 0ms;">
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
+																		href="/visa/country/belarus"
 																		data-swiper-slide-index="0" role="group"
 																		aria-label="1 / 25">
 																		<img class="d-inline"
@@ -2540,7 +2102,7 @@
 																			- +375</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/brunei"
+																		href="/visa/country/brunei"
 																		data-swiper-slide-index="1" role="group"
 																		aria-label="2 / 25">
 																		<img class="d-inline"
@@ -2551,7 +2113,7 @@
 																			- +673</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/cambodia"
+																		href="/visa/country/cambodia"
 																		data-swiper-slide-index="2" role="group"
 																		aria-label="3 / 25">
 																		<img class="d-inline"
@@ -2563,7 +2125,7 @@
 																			- +855</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/chile"
+																		href="/visa/country/chile"
 																		data-swiper-slide-index="3" role="group"
 																		aria-label="4 / 25">
 																		<img class="d-inline"
@@ -2574,7 +2136,7 @@
 																			- +56</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/denmark"
+																		href="/visa/country/denmark"
 																		data-swiper-slide-index="4" role="group"
 																		aria-label="5 / 25">
 																		<img class="d-inline"
@@ -2586,7 +2148,7 @@
 																			- +45</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/finland"
+																		href="/visa/country/finland"
 																		data-swiper-slide-index="5" role="group"
 																		aria-label="6 / 25">
 																		<img class="d-inline"
@@ -2598,7 +2160,7 @@
 																			- +358</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/france"
+																		href="/visa/country/france"
 																		data-swiper-slide-index="6" role="group"
 																		aria-label="7 / 25">
 																		<img class="d-inline"
@@ -2609,7 +2171,7 @@
 																			- +33</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/germany"
+																		href="/visa/country/germany"
 																		data-swiper-slide-index="7" role="group"
 																		aria-label="8 / 25">
 																		<img class="d-inline"
@@ -2621,7 +2183,7 @@
 																			- +49</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/indonesia"
+																		href="/visa/country/indonesia"
 																		data-swiper-slide-index="8" role="group"
 																		aria-label="9 / 25">
 																		<img class="d-inline"
@@ -2633,7 +2195,7 @@
 																			- +62</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/italy"
+																		href="/visa/country/italy"
 																		data-swiper-slide-index="9" role="group"
 																		aria-label="10 / 25">
 																		<img class="d-inline"
@@ -2644,7 +2206,7 @@
 																			- +39</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/japan"
+																		href="/visa/country/japan"
 																		data-swiper-slide-index="10" role="group"
 																		aria-label="11 / 25">
 																		<img class="d-inline"
@@ -2655,7 +2217,7 @@
 																			- +81</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/laos"
+																		href="/visa/country/laos"
 																		data-swiper-slide-index="11" role="group"
 																		aria-label="12 / 25">
 																		<img class="d-inline"
@@ -2666,7 +2228,7 @@
 																			+856</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/malaysia"
+																		href="/visa/country/malaysia"
 																		data-swiper-slide-index="12" role="group"
 																		aria-label="13 / 25">
 																		<img class="d-inline"
@@ -2678,7 +2240,7 @@
 																			- +60</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/myanmar"
+																		href="/visa/country/myanmar"
 																		data-swiper-slide-index="13" role="group"
 																		aria-label="14 / 25">
 																		<img class="d-inline"
@@ -2690,7 +2252,7 @@
 																			- +95</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/norway"
+																		href="/visa/country/norway"
 																		data-swiper-slide-index="14" role="group"
 																		aria-label="15 / 25">
 																		<img class="d-inline"
@@ -2701,7 +2263,7 @@
 																			- +47</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/panama"
+																		href="/visa/country/panama"
 																		data-swiper-slide-index="15" role="group"
 																		aria-label="16 / 25">
 																		<img class="d-inline"
@@ -2712,7 +2274,7 @@
 																			- +507</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/philippines"
+																		href="/visa/country/philippines"
 																		data-swiper-slide-index="16" role="group"
 																		aria-label="17 / 25">
 																		<img class="d-inline"
@@ -2724,7 +2286,7 @@
 																			- +63</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/russia"
+																		href="/visa/country/russia"
 																		data-swiper-slide-index="17" role="group"
 																		aria-label="18 / 25">
 																		<img class="d-inline"
@@ -2735,7 +2297,7 @@
 																			- +07</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/singapore"
+																		href="/visa/country/singapore"
 																		data-swiper-slide-index="18" role="group"
 																		aria-label="19 / 25">
 																		<img class="d-inline"
@@ -2747,7 +2309,7 @@
 																			- +65</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/spain"
+																		href="/visa/country/spain"
 																		data-swiper-slide-index="19" role="group"
 																		aria-label="20 / 25">
 																		<img class="d-inline"
@@ -2758,7 +2320,7 @@
 																			- +34</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/korea"
+																		href="/visa/country/korea"
 																		data-swiper-slide-index="20" role="group"
 																		aria-label="21 / 25">
 																		<img class="d-inline"
@@ -2769,7 +2331,7 @@
 																			Korea - +82</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/sweden"
+																		href="/visa/country/sweden"
 																		data-swiper-slide-index="21" role="group"
 																		aria-label="22 / 25">
 																		<img class="d-inline"
@@ -2780,7 +2342,7 @@
 																			- +46</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/thailand"
+																		href="/visa/country/thailand"
 																		data-swiper-slide-index="22" role="group"
 																		aria-label="23 / 25">
 																		<img class="d-inline"
@@ -2792,7 +2354,7 @@
 																			- +66</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/united-kingdom"
+																		href="/visa/country/united-kingdom"
 																		data-swiper-slide-index="23" role="group"
 																		aria-label="24 / 25">
 																		<img class="d-inline"
@@ -2803,7 +2365,7 @@
 																			Kingdom - +44</span>
 																	</a>
 																	<a class="swiper-slide d-block text-start"
-																		href="https://caotrang1009.github.io/global-evisa/visa/country/vietnam"
+																		href="/visa/country/vietnam"
 																		data-swiper-slide-index="24" role="group"
 																		aria-label="25 / 25">
 																		<img class="d-inline"
@@ -2834,23 +2396,19 @@
 																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span><span
 																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
-																	aria-atomic="true"></span><span
-																	class="swiper-notification" aria-live="assertive"
 																	aria-atomic="true"></span>
 															</div>
 															<div class="position-relative swiper-control">
 																<div class="position-absolute top-0 end-0 swiper-custom-prev"
 																	tabindex="0" role="button"
 																	aria-label="Previous slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
 																	<i
 																		class="fal fa-chevron-circle-up fs-4 icon-color"></i>
 																</div>
 																<div class="position-absolute bottom-0 end-0 swiper-custom-next"
 																	tabindex="0" role="button" aria-label="Next slide"
-																	aria-controls="swiper-wrapper-82f213ba36fa67c4">
+																	aria-controls="swiper-wrapper-4b94414fa91fd610a">
 																	<i
 																		class="fal fa-chevron-circle-down fs-4 icon-color"></i>
 																</div>
@@ -2887,76 +2445,68 @@
 							</div>
 						</div>
 						<div class="col-lg-5 col-12">
-							<div class="border-dashed bg-beige rounded-3-5 text-title py-sm-5 p-4 mb-4">
-								<h2 class="custom-h3 fw-800 text-black text-center mb-0">ORDER SUMMARY</h2>
-								<div class="row g-3 my-4">
+							<div class="border-dashed bg-beige rounded-3-5 text-title py-4-5 px-4 mb-4">
+								<h3 class="custom-h3 fw-800 text-black text-center mb-0 spacing-n1">ORDER SUMMARY</h3>
+								<div class="row g-3 mt-4 mb-4-5">
 									<div class="col-12">
-										<div class="d-flex gap-3 align-items-center">
+										<div class="d-flex gap-3 justify-content-between">
 											<div class="me-auto fw-semibold">Order Number:</div>
-											<div class="medium w-50">ABC123</div>
+											<div class="w-50 medium text-end">ABC123</div>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="d-flex gap-3 align-items-center">
+										<div class="d-flex gap-3 justify-content-between">
 											<div class="me-auto fw-semibold">Number of Applicants:</div>
-											<div class="medium w-50">02</div>
+											<div class="w-50 medium text-end">02</div>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="d-flex gap-3 align-items-center">
+										<div class="d-flex gap-3 justify-content-between">
 											<div class="me-auto fw-semibold">Type of Visa:</div>
-											<div class="medium w-50">Lorem Ipsum Dolor Sit Amet</div>
+											<div class="w-50 medium text-end">Lorem Ipsum Dolor Sit Amet</div>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="d-flex gap-3 align-items-center">
+										<div class="d-flex gap-3 justify-content-between">
 											<div class="me-auto fw-semibold">Destination:</div>
-											<div class="medium w-50">Lorem Ipsum Dolor Sit Amet</div>
+											<div class="w-50 medium text-end">Lorem Ipsum Dolor Sit Amet</div>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="d-flex gap-3 align-items-center">
+										<div class="d-flex gap-3 justify-content-between">
 											<div class="me-auto fw-semibold">Day of Arrival:</div>
-											<div class="medium w-50">DD/MM/YY</div>
+											<div class="w-50 medium text-end">DD/MM/YY</div>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="d-flex gap-3 align-items-center">
+										<div class="d-flex gap-3 justify-content-between">
 											<div class="me-auto fw-semibold">Day of Return:</div>
-											<div class="medium w-50">DD/MM/YY</div>
+											<div class="w-50 medium text-end">DD/MM/YY</div>
 										</div>
 									</div>
 									<div class="col-12">
-										<div class="fw-semibold">Additional Info:</div>
-										<div class="ms-4 mt-2">
-											<div class="row g-2 medium">
-												<div class="col-12">
-													<div class="d-flex gap-3">
-														<div class="me-auto fw-semibold">Service Fees:</div>
-														<div class="w-40">40 USD per person</div>
-													</div>
-												</div>
-												<div class="col-12">
-													<div class="d-flex gap-3">
-														<div class="me-auto fw-semibold">Admin &amp; Government Fees:
-														</div>
-														<div class="w-40">50 USD per person</div>
-													</div>
-												</div>
-												<div class="col-12">
-													<div class="d-flex gap-3">
-														<div class="me-auto fw-semibold">Processing Time Fees:</div>
-														<div class="w-40">Super Urgent - Within 1 day - 50 USD per
-															person</div>
-													</div>
-												</div>
-												<div class="col-12">
-													<div class="d-flex gap-3">
-														<div class="me-auto fw-semibold">Travel Insurance:</div>
-														<div class="w-40">50 USD per person</div>
-													</div>
-												</div>
-											</div>
+										<div class="d-flex gap-3 justify-content-between">
+											<div class="me-auto fw-semibold">Service Fees:</div>
+											<div class="w-50 medium text-end">40 USD per person</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 justify-content-between">
+											<div class="me-auto fw-semibold">Admin &amp; Government Fees:</div>
+											<div class="w-50 medium text-end">50 USD per person</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 justify-content-between">
+											<div class="me-auto fw-semibold">Processing Time Fees:</div>
+											<div class="w-50 medium text-end">Super Urgent - Within 1 day - 50 USD per
+												person</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex gap-3 justify-content-between">
+											<div class="me-auto fw-semibold">Travel Insurance:</div>
+											<div class="w-50 medium text-end">50 USD per person</div>
 										</div>
 									</div>
 								</div>
@@ -2968,25 +2518,40 @@
 									<button class="btn btn-primary rounded-end-3 px-4"><span
 											class="text-nowrap fw-semibold">Apply Now</span></button>
 								</div>
-								<table class="table table-borderless" style="--bs-table-bg: #FFFCF7">
-									<tbody>
-										<tr>
-											<td class="fw-semibold">Subtotal:</td>
-											<td class="text-end medium">$USD</td>
-										</tr>
-										<tr>
-											<td class="fw-semibold">Discount:</td>
-											<td class="text-end medium">$USD</td>
-										</tr>
-										<tr class="fw-semibold">
-											<td class="text-primary" style="font-size: 18px">Total Amount:</td>
-											<td class="text-primary text-end">$USD</td>
-										</tr>
-									</tbody>
-								</table>
-								<a href="https://caotrang1009.github.io/global-evisa/visa/apply/step-2"
-									class="btn btn-orange btn-lg rounded-4 py-3 fw-bold text-title fs-6 w-100 btn-order-info">Go
-									to Payment Page</a>
+								<div class="row g-3 fw-semibold">
+									<div class="col-12">
+										<div class="d-flex fs-6">
+											<div class="me-auto">
+												<span>Subtotal:</span>
+											</div>
+											<div class="align-items-end">
+												<div class="medium fw-normal">$USD</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex fs-6">
+											<div class="me-auto">
+												<span>Discount:</span>
+											</div>
+											<div class="align-items-end">
+												<div class="medium fw-normal">$USD</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="d-flex text-primary fs-6">
+											<div class="me-auto">
+												<span class="headline fw-semibold">Total Amount:</span>
+											</div>
+											<div class="align-items-end">
+												<div class="fw-bold">$USD</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://caotrang1009.github.io/global-evisa/visa/payment"
+									class="btn btn-orange btn-lg rounded-3 py-2 lh-md fw-bold text-title fs-6 w-100 mt-4 btn-order-info">Next</a>
 							</div>
 						</div>
 					</div>
@@ -2994,6 +2559,7 @@
 			</div>
 		</div>
 	</section>
+
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1701332336"></script>
 	<script>
 		$(document).ready(function () {
@@ -3076,8 +2642,8 @@
 		<div class="container">
 			<div class="row gy-4">
 				<div class="col-lg-1 col-md-2">
-					<a href="https://caotrang1009.github.io/global-evisa/" class="d-flex align-items-center navbar-brand">
-						<img width="60" height="60" src="https://caotrang1009.github.io/global-evisa/assets/images/new_logo.svg" alt="logo">
+					<a href="https://caotrang1009.github.io/global-evisa" class="d-flex align-items-center navbar-brand">
+						<img width="60" height="60" src="https://caotrang1009.github.io/global-evisa/assets\images\new_logo.svg" alt="logo">
 					</a>
 				</div>
 				<div class="col-lg-6 col-md-10">
@@ -3161,8 +2727,8 @@
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/intlTelInput.min.js"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1701332336"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/search.js?id=1699685344"></script>
-<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
-<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>
+	<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
+	<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>
 	<div class="daterangepicker ltr auto-apply single opensright">
 		<div class="ranges"></div>
 		<div class="drp-calendar left single" style="display: block;">
@@ -3173,7 +2739,7 @@
 			<div class="calendar-table"></div>
 			<div class="calendar-time" style="display: none;"></div>
 		</div>
-		<div class="drp-buttons"><span class="drp-selected">06/12/2023 - 06/12/2023</span><button
+		<div class="drp-buttons"><span class="drp-selected">07/12/2023 - 07/12/2023</span><button
 				class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button
 				class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
 	</div>
@@ -3187,7 +2753,7 @@
 			<div class="calendar-table"></div>
 			<div class="calendar-time" style="display: none;"></div>
 		</div>
-		<div class="drp-buttons"><span class="drp-selected">06/12/2023 - 06/12/2023</span><button
+		<div class="drp-buttons"><span class="drp-selected">07/12/2023 - 07/12/2023</span><button
 				class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button
 				class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
 	</div>
@@ -3201,7 +2767,7 @@
 			<div class="calendar-table"></div>
 			<div class="calendar-time" style="display: none;"></div>
 		</div>
-		<div class="drp-buttons"><span class="drp-selected">06/12/2023 - 06/12/2023</span><button
+		<div class="drp-buttons"><span class="drp-selected">07/12/2023 - 07/12/2023</span><button
 				class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button
 				class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
 	</div>
@@ -3215,7 +2781,7 @@
 			<div class="calendar-table"></div>
 			<div class="calendar-time" style="display: none;"></div>
 		</div>
-		<div class="drp-buttons"><span class="drp-selected">06/12/2023 - 06/12/2023</span><button
+		<div class="drp-buttons"><span class="drp-selected">07/12/2023 - 07/12/2023</span><button
 				class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button
 				class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
 	</div>
@@ -3229,7 +2795,7 @@
 			<div class="calendar-table"></div>
 			<div class="calendar-time" style="display: none;"></div>
 		</div>
-		<div class="drp-buttons"><span class="drp-selected">06/12/2023 - 06/12/2023</span><button
+		<div class="drp-buttons"><span class="drp-selected">07/12/2023 - 07/12/2023</span><button
 				class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button
 				class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
 	</div>

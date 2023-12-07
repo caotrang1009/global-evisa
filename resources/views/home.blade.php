@@ -48,7 +48,7 @@
 							</div>
 						</div>
 						<div class="col-12">
-							<a href="/visa" class="btn btn-primary btn-lg button1 rounded-4 w-100 btn-visa-search">
+							<a href="{{ url("/visa") }}" class="btn btn-primary btn-lg button1 rounded-4 w-100 btn-visa-search">
 								<span class="btn-text">Get Started</span><i class="fal fa-long-arrow-up ms-4 my-2" style="transform: rotate(45deg);"></i>
 							</a>
 						</div>
@@ -167,7 +167,7 @@
 		</div>
 		<div class="row justify-content-center mt-4">
 			<div class="col-12 text-center">
-				<a href="/visa" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
+				<a href="{{ url("/visa") }}" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
 					<span class="btn-text">Get Started</span><i class="fal fa-long-arrow-up ms-4" style="transform: rotate(45deg);"></i>
 				</a>
 			</div>
@@ -221,7 +221,7 @@
 		</div>
 		<div class="row justify-content-center mt-4">
 			<div class="col-12 text-center">
-				<a href="/visa" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
+				<a href="{{ url("/visa") }}" class="btn btn-primary btn-lg button1 rounded-4 py-3 px-6 spacing-05 w-sm-auto w-100">
 					<span class="btn-text">Get Started</span><i class="fal fa-long-arrow-up ms-4" style="transform: rotate(45deg);"></i>
 				</a>
 			</div>
@@ -231,78 +231,80 @@
 
 <section>
 	<div class="container">
-		<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 spacing-n1 mb-2">TESTIMONIALS</h2>
-		<div class="slide-blog position-relative py-4">
-			<div class="swiper" data-parent=".slide-blog" data-items="3" data-items-md="2" data-items-sm="1" data-space-between="40" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next">
-				<div class="swiper-wrapper align-items-center">
-					<div class="swiper-slide" id="rewind-item-1">
-						<div class="card border rounded-3 bg-white slide-testimonials">
-							<div class="card-body text-start">
-								<div class="ratio ratio-1x1">
-									<img class="rounded-3" src="{{ asset('assets/images/blog/testimonials-01.png') }}" alt="blog">
+		<div class="row">
+			<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 spacing-n1 mb-2">TESTIMONIALS</h2>
+			<div class="slide-blog position-relative py-4">
+				<div class="swiper" data-parent=".slide-blog" data-items="3" data-items-md="2" data-items-sm="1" data-space-between="40" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next">
+					<div class="swiper-wrapper align-items-center">
+						<div class="swiper-slide" id="rewind-item-1">
+							<div class="card border rounded-3 bg-white slide-testimonials">
+								<div class="card-body text-start">
+									<div class="ratio ratio-1x1">
+										<img class="rounded-3" src="{{ asset('assets/images/blog/testimonials-01.png') }}" alt="blog">
+									</div>
+									<h5 class="headline fw-bold text-black text-opacity-9 my-3">Lorem Ipsum</h5>
+									<div class="text-black text-opacity-9 mb-3">Job Title</div>
+									<div class="d-flex mb-3">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+									</div>
+									<div class="description fst-italic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</div>
+									<div class="text-end small-caption fw-normal">dd/mm/yy</div>
 								</div>
-								<h5 class="headline fw-bold text-black text-opacity-9 my-3">Lorem Ipsum</h5>
-								<div class="text-black text-opacity-9 mb-3">Job Title</div>
-								<div class="d-flex mb-3">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-								</div>
-								<div class="description fst-italic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</div>
-								<div class="text-end small-caption fw-normal">dd/mm/yy</div>
 							</div>
 						</div>
-					</div>
-					<div class="swiper-slide" id="rewind-item-2">
-						<div class="card border rounded-3 bg-white slide-testimonials">
-							<div class="card-body text-start">
-								<div class="ratio ratio-1x1">
-									<img class="rounded-3" src="{{ asset('assets/images/blog/testimonials-02.png') }}" alt="blog">
+						<div class="swiper-slide" id="rewind-item-2">
+							<div class="card border rounded-3 bg-white slide-testimonials">
+								<div class="card-body text-start">
+									<div class="ratio ratio-1x1">
+										<img class="rounded-3" src="{{ asset('assets/images/blog/testimonials-02.png') }}" alt="blog">
+									</div>
+									<h5 class="headline fw-bold text-black text-opacity-9 my-3">Lorem Ipsum</h5>
+									<div class="text-black text-opacity-9 mb-3">Job Title</div>
+									<div class="d-flex mb-3">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+									</div>
+									<div class="description fst-italic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</div>
+									<div class="text-end small-caption fw-normal">dd/mm/yy</div>
 								</div>
-								<h5 class="headline fw-bold text-black text-opacity-9 my-3">Lorem Ipsum</h5>
-								<div class="text-black text-opacity-9 mb-3">Job Title</div>
-								<div class="d-flex mb-3">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-								</div>
-								<div class="description fst-italic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</div>
-								<div class="text-end small-caption fw-normal">dd/mm/yy</div>
 							</div>
 						</div>
-					</div>
-					<div class="swiper-slide" id="rewind-item-3">
-						<div class="card border rounded-3 bg-white slide-testimonials">
-							<div class="card-body text-start">
-								<div class="ratio ratio-1x1">
-									<img class="rounded-3" src="{{ asset('assets/images/blog/testimonials-03.png') }}" alt="blog">
+						<div class="swiper-slide" id="rewind-item-3">
+							<div class="card border rounded-3 bg-white slide-testimonials">
+								<div class="card-body text-start">
+									<div class="ratio ratio-1x1">
+										<img class="rounded-3" src="{{ asset('assets/images/blog/testimonials-03.png') }}" alt="blog">
+									</div>
+									<h5 class="headline fw-bold text-black text-opacity-9 my-3">Lorem Ipsum</h5>
+									<div class="text-black text-opacity-9 mb-3">Job Title</div>
+									<div class="d-flex mb-3">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+										<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
+									</div>
+									<div class="description fst-italic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</div>
+									<div class="text-end small-caption fw-normal">dd/mm/yy</div>
 								</div>
-								<h5 class="headline fw-bold text-black text-opacity-9 my-3">Lorem Ipsum</h5>
-								<div class="text-black text-opacity-9 mb-3">Job Title</div>
-								<div class="d-flex mb-3">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-									<img class="w-auto" src="{{ asset('assets/svg/icon/star.svg') }}" alt="star" width="24px" height="24px">
-								</div>
-								<div class="description fst-italic">“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.”</div>
-								<div class="text-end small-caption fw-normal">dd/mm/yy</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="swiper-control d-lg-block d-none">
-				<div class="rounded-circle bg-primary text-white top-50 d-block fs-2 position-absolute d-flex justify-content-center align-items-center mt-n3 swiper-custom-prev">
-					<i class="fal fa-angle-left"></i>
-				</div>
-				<div class="rounded-circle bg-primary text-white top-50 d-block fs-2 position-absolute d-flex justify-content-center align-items-center mt-n3 swiper-custom-next">
-					<i class="fal fa-angle-right"></i>
+				<div class="swiper-control d-lg-block d-none">
+					<div class="rounded-circle bg-primary text-white top-50 d-block fs-2 position-absolute d-flex justify-content-center align-items-center mt-n3 swiper-custom-prev">
+						<i class="fal fa-angle-left"></i>
+					</div>
+					<div class="rounded-circle bg-primary text-white top-50 d-block fs-2 position-absolute d-flex justify-content-center align-items-center mt-n3 swiper-custom-next">
+						<i class="fal fa-angle-right"></i>
+					</div>
 				</div>
 			</div>
 		</div>

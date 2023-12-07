@@ -10,15 +10,15 @@
 		<div class="row">
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
-					<a href="/flights/information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Information Details</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
 					</a>
-					<a href="/flights/review-information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
 					</a>
-					<a href="/flights/payment" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
 					</a>
@@ -268,11 +268,11 @@
 						</div>
 					</div>
 					<div class="text-center mt-4">
-						<a href="/flights/review-information" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
+						<a href="{{ url("/flights/review-information") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
 					</div>
 				</div>
 				<div class="col-lg-5 col-12">
-					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-3 your-flight medium">
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 your-flight medium">
 						@include('flights.section.order_summary')
 					</div>
 				</div>

@@ -7,7 +7,7 @@
 			<h3 class="text-uppercase text-decoration-underline web-header2 spacing-n1 fw-800 py-4">WELCOME TO BELARUS</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 			<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-			<a href="/visa" class="btn btn-beige btn-lg rounded-4 text-uppercase text-title fs-5 fw-bold w-100 btn-visa-search p-4">
+			<a href="{{ url("/visa") }}" class="btn btn-beige btn-lg rounded-4 text-uppercase text-title fs-5 fw-bold w-100 btn-visa-search p-4">
 				<span class="btn-text">Check Brunei's  Required Documents</span><i class="fal fa-long-arrow-up ms-3" style="transform: rotate(45deg);"></i>
 			</a>
 		</div>

@@ -197,7 +197,7 @@
 					<li class="breadcrumb-item active" aria-current="page">
 						<a class="btn btn-outline-primary px-5 d-flex align-items-center gap-2" href="/visa/country/{{$alias}}">Country <img class="rounded-circle border border-white fit-cover" src="{{ asset('assets/svg/emojione-flag/'.$alias.'.svg') }}" alt="Belarusian" width="20px" height="20px"></a>
 					</li>
-					<li class="breadcrumb-item"><a class="btn btn-outline-primary px-5" href="/visa">Get your global evisa now!</a></li>
+					<li class="breadcrumb-item"><a class="btn btn-outline-primary px-5" href="{{ url("/visa") }}">Get your global evisa now!</a></li>
 				</ol>
 			</nav>
 			<div class="slide-country position-relative mb-4">

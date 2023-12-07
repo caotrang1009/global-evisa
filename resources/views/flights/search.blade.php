@@ -19,7 +19,9 @@
 	</section>
 	<section>
 		<div class="container">
-			@include('flights.section.slide_price')
+			<div class="row">
+				@include('flights.section.slide_price')
+			</div>
 		</div>
 	</section>
 	<section>

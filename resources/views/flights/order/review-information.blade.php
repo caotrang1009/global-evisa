@@ -10,15 +10,15 @@
 		<div class="row">
 			<div class="step-part mt-5">
 				<div class="d-flex justify-content-between text-title stepper-wrapper">
-					<a href="/flights/information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Information Details</div>
+						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
 					</a>
-					<a href="/flights/review-information" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
 					</a>
-					<a href="/flights/payment" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
 					</a>
@@ -35,13 +35,13 @@
 				<div class="col-lg-7 col-12">
 					<div id="review_infor" class="mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-3">REVIEW INFO</h2>
-						<div class="contact-information border border-primary px-sm-4-5 p-3 rounded-3-5 mb-3">
+						<div class="contact-information border border-primary px-sm-5 p-3 rounded-3-5 mb-3">
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#contact-information">
 								<div class="row align-items-center">
 									<div class="col-9">
 										<div class="d-flex align-items-center">
 											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
-											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">YOUR CONTACT INFORMATION</h5>
+											<h4 class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">YOUR CONTACT INFORMATION</h4>
 										</div>
 									</div>
 									<div class="col-3 text-end">
@@ -102,13 +102,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="applicant-information border border-primary px-sm-4-5 p-3 rounded-3-5 mb-3">
+						<div class="applicant-information border border-primary px-sm-5 p-3 rounded-3-5 mb-3">
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown collapsed" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#applicant-information">
 								<div class="row align-items-center">
 									<div class="col-9">
 										<div class="d-flex align-items-center">
 											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
-											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">APPLICANT(s)’s INFORMATION</h5>
+											<h4 class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">APPLICANT(s)’s INFORMATION</h4>
 										</div>
 									</div>
 									<div class="col-3 text-end">
@@ -216,13 +216,13 @@
 					</div>
 					<div id="trip_convniences" class="mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-3">TRIP CONVENIENCES</h2>
-						<div class="travel-insurance border border-primary px-sm-4-5 p-3 rounded-3-5 mb-3" >
+						<div class="travel-insurance border border-primary px-sm-5 p-3 rounded-3-5 mb-3" >
 							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#travel-insurance" aria-expanded="false" aria-controls="travel-insurance">
 								<div class="row align-items-center">
 									<div class="col-9">
 										<div class="d-flex align-items-center">
 											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
-											<h5 class="fw-800 text-uppercase text-decoration-underline text-black text-title mb-0">TRAVEL INSURANCE</h5>
+											<h4 class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">TRAVEL INSURANCE</h4>
 										</div>
 									</div>
 									<div class="col-3 text-end">
@@ -253,12 +253,12 @@
 						</div>
 					</div>
 					<div class="d-flex justify-content-center gap-4 mt-4-5">
-						<a href="/flights/information" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Previous</a>
-						<a href="/flights/payment" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
+						<a href="{{ url("/flights/information") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Previous</a>
+						<a href="{{ url("/flights/payment") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
 					</div>
 				</div>
 				<div class="col-lg-5 col-12">
-					<div class="border-dashed bg-beige rounded-3 px-md-5 p-4-3 your-flight medium">						
+					<div class="border-dashed bg-beige rounded-3 px-md-5 p-4-4 your-flight medium">						
 						@include('flights.section.order_summary')
 						<div class="d-flex justify-content-between align-items-center fw-bold mt-4">
 							<span class="text-black text-opacity-9">Already had an account?</span>

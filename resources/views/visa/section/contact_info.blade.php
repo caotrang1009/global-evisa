@@ -1,4 +1,4 @@
-<div class="form-group mb-3">
+<div class="form-group">
 	<label class="h6 fw-semibold text-title text-black">Your Full Name</label>
 	<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 		<img class="form-icon" src="{{ asset('assets/svg/outline/menu-user.svg') }}" data-icon-name="outline/menu-user" alt="menu-user">
@@ -6,7 +6,7 @@
 	</div>
 	<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 </div>
-<div class="form-group mb-3">
+<div class="form-group">
 	<label class="h6 fw-semibold text-title text-black">Your Email</label>
 	<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
 		<img class="form-icon" src="{{ asset('assets/svg/outline/email.svg') }}" data-icon-name="outline/email" alt="email">
@@ -14,7 +14,7 @@
 	</div>
 	<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 </div>
-<div class="form-group">
+<div class="form-group mb-0">
 	<label class="h6 fw-semibold text-title text-black">Your Phone Number</label>
 	<div class="dropdown">
 		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">

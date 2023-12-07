@@ -164,7 +164,7 @@
 					<span class="text-primary fw-bold h4">2,399,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="/flights/multi-city" class="btn btn-orange btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="{{ url("/flights/multi-city") }}" class="btn btn-orange btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -395,7 +395,7 @@
 					<span class="text-orange fw-bold h4">2,599,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="/flights/multi-city" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="{{ url("/flights/multi-city") }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -626,7 +626,7 @@
 					<span class="text-orange fw-bold h4">2,679,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="/flights/multi-city" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="{{ url("/flights/multi-city") }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">
@@ -888,7 +888,7 @@
 					<span class="text-orange fw-bold h4">2,799,000 VND</span>
 				</div>
 				<div class="col-sm-5">
-					<a href="/flights/multi-city" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
+					<a href="{{ url("/flights/multi-city") }}" class="btn btn-primary btn-lg text-uppercase rounded-3-5 w-100 fw-bold">select</a>
 					<div class="text-end">
 						<div class="accordion view-details">
 							<div class="card">

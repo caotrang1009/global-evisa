@@ -84,6 +84,16 @@
 	}
 }
 
+.btn-outline-orange {
+	background: transparent;
+	border-color: $orange;
+	color: $orange;
+	&.active, &:active, &:focus, &:hover {
+		color: $white;
+		background: $orange;
+	}
+}
+
 .btn-outline-white {
 	background: transparent;
 	border-color: $white;

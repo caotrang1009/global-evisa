@@ -30,20 +30,30 @@ Route::get('/flights/multi-city', function () {
 });
 
 Route::get('/flights/information', function () {
-    return view('flights.information');
+    return view('flights.order.information');
 });
 
 Route::get('/flights/review-information', function () {
-    return view('flights.review-information');
+    return view('flights.order.review-information');
 });
 
 Route::get('/flights/payment', function () {
-    return view('flights.payment');
+    return view('flights.order.payment');
 });
 
-Route::get('/flights/confirm-payment', function () {
-    return view('flights.confirm_payment');
+Route::get('/flights/payment-success/online', function() {
+    return view('flights.order.success_onl');
 });
+
+Route::get('/flights/payment-success/bank-transfer', function() {
+    return view('flights.order.success_transfer');
+});
+
+Route::get('/flights/payment-failure', function() {
+    return view('flights.order.failure');
+});
+
+//visa
 
 Route::get('/visa', function() {
     return view('visa.index');
@@ -53,6 +63,22 @@ Route::get('/visa/country/{alias}', function($alias) {
     return view('visa.detail', ['alias' => $alias]);
 });
 
-Route::get('/visa/apply/{step?}', function($step = null) {
-    return view('visa.apply', ['step' => $step]);
+Route::get('/visa/information', function () {
+    return view('visa.apply.information');
+});
+
+Route::get('/visa/payment', function () {
+    return view('visa.apply.payment');
+});
+
+Route::get('/visa/payment-success/online', function() {
+    return view('visa.apply.success_onl');
+});
+
+Route::get('/visa/payment-success/bank-transfer', function() {
+    return view('visa.apply.success_transfer');
+});
+
+Route::get('/visa/payment-failure', function() {
+    return view('visa.apply.failure');
 });

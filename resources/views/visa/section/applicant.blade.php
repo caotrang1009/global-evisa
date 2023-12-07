@@ -28,47 +28,19 @@
 			</div>
 			<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 			<ul class="dropdown-menu dropdown-select border-secondary rounded-3-5 shadow w-100" style="--bs-border-opacity: 0.5;">
-				<li><a class="dropdown-item cursor-pointer direction-item selected">Mr</a></li>
-				<li><a class="dropdown-item cursor-pointer direction-item">Ms</a></li>
-				<li><a class="dropdown-item cursor-pointer direction-item">Master</a></li>
-				<li><a class="dropdown-item cursor-pointer direction-item">Miss</a></li>
+				<li><a class="dropdown-item cursor-pointer selected">Mr</a></li>
+				<li><a class="dropdown-item cursor-pointer">Ms</a></li>
+				<li><a class="dropdown-item cursor-pointer">Master</a></li>
+				<li><a class="dropdown-item cursor-pointer">Miss</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black">Email Address</label>
-		<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-			<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
-			<input class="form-control border-0 px-0 cursor-pointer" type="text" id="email" name="email[]" placeholder="Enter Value" required>
-		</div>
-		<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-	</div>
-</div>
-<div class="form-group row gx-4 gy-3">
-	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black">Phone Number</label>
-		<div class="dropdown">
-			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-				<img class="form-icon" src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone">
-				<div class="d-flex align-items-center gap-2 cursor-pointer bg-white input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-					<span class="medium text-black text-opacity-7 nationality">+84</span>
-					<img class="cursor-pointer" src="{{ asset('assets/svg/icon/direction-up.svg') }}" data-icon-name="icon/direction-up" alt="direction-up" style="max-width: none">
-					<input class="form-control" type="hidden" id="nationality" name="nationality[]" value="" required>
-				</div>
-				<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-					@include('visa.section.countries_telephone')
-				</div>
-				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="phone_number" name="phone_number[]" placeholder="Enter Value" required>
-			</div>
-			<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-		</div>
-	</div>
-	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black">Country of Residency</label>
+		<label class="h6 fw-semibold text-title text-black">Country of Birth</label>
 		<div class="dropdown">
 			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 				<img class="form-icon" src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
-				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_residency" name="country_of_residency[]" placeholder="Please Select" required>
+				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_birth" name="country_of_birth[]" placeholder="Please Select" required>
 				<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 			</div>
 			<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
@@ -80,11 +52,11 @@
 </div>
 <div class="form-group row gx-4 gy-3">
 	<div class="col-sm-6">
-		<label class="h6 fw-semibold text-title text-black">Country of Birth</label>
+		<label class="h6 fw-semibold text-title text-black">Country of Residency</label>
 		<div class="dropdown">
 			<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 				<img class="form-icon" src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
-				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_birth" name="country_of_birth[]" placeholder="Please Select" required>
+				<input class="form-control border-0 px-0 cursor-pointer" type="text" id="country_of_residency" name="country_of_residency[]" placeholder="Please Select" required>
 				<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 			</div>
 			<span class="hide text-danger fw-semibold medium" id="error-msg"></span>

@@ -119,7 +119,7 @@
 					<h4 class="text-orange px-0 fw-800">
 						1,999,000 VND <small class="text-black fw-normal">/ per customer</small>
 					</h4>
-					<a href="/flights/information">
+					<a href="{{ url("/flights/information") }}">
 						<button type="button" class="btn bg-orange text-white border-2 border-white rounded-3-5 fw-bold w-100 fs-6">
 							GO TO NEXT PAGE <i class="fal fa-long-arrow-up rotate-45 ms-4"></i>
 						</button>

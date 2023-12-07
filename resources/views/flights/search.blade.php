@@ -27,10 +27,10 @@
 	<section>
 		<div class="container">
 			<div class="row g-4-3">
-				<div class="col-lg-3-5">
+				<div class="col-lg-3-5 d-sm-block d-none">
 					@include('flights.section.filter')
 				</div>
-				<div class="col-lg-8-5">					
+				<div class="col-lg-8-5 col-12">					
 					@include('flights.section.offers')
 				</div>
 			</div>

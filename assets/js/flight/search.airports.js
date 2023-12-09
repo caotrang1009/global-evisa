@@ -84,6 +84,8 @@ $(document).ready(function() {
 		$("#travelClass").val(travelClass);
 		$(".travel-class-value").text($("."+travelClass).text());
 		$("#multiCityQty").val(1);
+        console.log(flights)
+        console.log(direction)
 		$('.multi-city-control input').prop('disabled', true);
 		$('.round-trip-part').removeClass('col-sm-4');
 		
@@ -103,6 +105,7 @@ $(document).ready(function() {
 		} else if (direction == "multi-city") {
 			$(".multi-city-control").show();
 			$(".add-more-flight").show();
+            console.log(flights)
 			$("#multiCityQty").val(flights);
 			$('.multi-city-control input').prop('disabled', false);
 			$(".round-trip-control").hide();
@@ -216,7 +219,7 @@ $(document).ready(function() {
 		$(".multi-city-control").append(multiFlightItem);
 		$('.multi-city-control input').prop('disabled', false);
 		updateMultiCityItem();
-
+        
 		setDate($("#departureDateMultiCity_"+flights), addOneDay(new Date($("#departureDateMultiCity_"+(flights-1)).val())));
 		$("#originLocationCodeMultiCity_"+flights).val($("#destinationLocationCodeMultiCity_"+(flights-1)).val());
 		$("#destinationLocationCodeMultiCity_"+flights).val("");

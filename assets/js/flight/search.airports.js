@@ -216,7 +216,8 @@ $(document).ready(function() {
 		$(".multi-city-control").append(multiFlightItem);
 		$('.multi-city-control input').prop('disabled', false);
 		updateMultiCityItem();
-
+        console.log($("#departureDateMultiCity_"+flights))
+        console.log($("#departureDateMultiCity_"+(flights-1)).val())
 		setDate($("#departureDateMultiCity_"+flights), addOneDay(new Date($("#departureDateMultiCity_"+(flights-1)).val())));
 		$("#originLocationCodeMultiCity_"+flights).val($("#destinationLocationCodeMultiCity_"+(flights-1)).val());
 		$("#destinationLocationCodeMultiCity_"+flights).val("");

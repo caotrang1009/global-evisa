@@ -214,6 +214,7 @@ $(document).ready(function() {
 	$(".btn-add-flight").click(function() {
 		flights++;
 		$(".multi-city-control").append(multiFlightItem);
+		$('.multi-city-control input').prop('disabled', false);
 		updateMultiCityItem();
 
 		setDate($("#departureDateMultiCity_"+flights), addOneDay(new Date($("#departureDateMultiCity_"+(flights-1)).val())));

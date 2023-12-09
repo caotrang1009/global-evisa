@@ -9,7 +9,7 @@ $(document).ready(function() {
 	var endDate			= "";
 	var multiFlightItem	= $(".multi-city-item").first().prop('outerHTML');
 	var flights			= $("#multiCityQty").val();
-	console.log(flights)
+	
 	function addPax(type) {
 		if (type == 'adult') {
 			adults++;
@@ -85,6 +85,7 @@ $(document).ready(function() {
 		$(".travel-class-value").text($("."+travelClass).text());
 		$("#multiCityQty").val(1);
         console.log(flights)
+        console.log(direction)
 		$('.multi-city-control input').prop('disabled', true);
 		$('.round-trip-part').removeClass('col-sm-4');
 		

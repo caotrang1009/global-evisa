@@ -28,8 +28,6 @@
 				handleRangeFirst($(inputRange).first());
 				handleRangeLast($(inputRange).last());
 			});
-			
-			updateSvgColor($('#navbar-myaccount li.active img'), 'black');
 		});
 
 		$(".price-range, .duration-range").on("input", function() {
@@ -121,15 +119,6 @@
 				hideSort();
 			}
 		});
-
-		$(document).on('blur', 'input', function () {
-			if ($(this).valid()) {
-				console.log($(this))
-				$(this).removeClass('error');
-				$(this).siblings("span").hide();
-				updateSvgColor($(this).siblings('img'), '');
-			}
-		})
 	});
 	
 })(jQuery);
@@ -205,24 +194,4 @@ function initLoadElement() {
 			});
 		});
 	}
-}
-
-var baseUrl = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
-function updateSvgColor(pathElement, fillColor) {
-	if (fillColor!='') {
-		fillColor = '-'+fillColor;
-	}
-
-	pathElement.each(function(index, item) {
-		var iconName = $(item).data('icon-name');
-		var src = `${baseUrl}/assets/svg/${iconName + fillColor}.svg`;
-		
-		if ($(item).attr('alt') == 'plus') {
-			iconPlus = src;
-		} else if($(item).attr('alt') == 'minus') {
-			var src = `${baseUrl}/assets/svg/outline/minus${fillColor}.svg`;
-			iconMinus = src;
-		}
-		$(item).attr('src', src);
-	});
 }

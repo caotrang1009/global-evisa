@@ -68,7 +68,7 @@ $(document).ready(function() {
 
 		$(".add-more-flight").hide();
 		$(".multi-city-control").hide();
-		$(".remove-flight").hide();
+		$(".remove-flight").first().hide();
 		
 		if (totalPax <= 9) {
 			$(".pax-text").text(totalPax);

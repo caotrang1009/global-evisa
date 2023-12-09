@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="csrf-token" content="pizB3QKff8HK5KPPaqnmq0iRNzJ0zNLYgS3koyIn">
+	<meta name="csrf-token" content="qwSufihJI3g22LDm1ksgWDZuTlyuGTwB5lxjQy6H">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Laravel">
 	<title>Flights</title>
@@ -22,7 +22,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1144.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<body cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1145.0" data-gr-ext-installed="">
 	<header class="bg-primary text-white text-title">
 		<div class="main-nav">
 			<nav class="navbar navbar-expand-lg navbar-mega navbar-light">
@@ -100,36 +100,39 @@
 			</nav>
 		</div>
 	</header>
-	<section>
+	<section class=" pb-0">
 		<div class="container">
-			<div class="d-flex align-items-center">
-				<span class="position-absolute me-3 bg-orange d-lg-block d-none"
-					style="width: 80px; height:20px;"></span>
-				<h1 class="web-title text-black text-center text-uppercase w-100">PAYMENT</h1>
-			</div>
 			<div class="row">
-				<div class="step-part mt-5">
-					<div class="d-flex justify-content-between text-title stepper-wrapper">
+				<h1 class="web-title text-black text-center text-uppercase w-100">PAYMENT</h1>
+				<div class="step-part mt-4">
+					<div class="d-flex justify-content-center text-title stepper-wrapper">
 						<a href="https://caotrang1009.github.io/global-evisa/flights/information"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								1</div>
-							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+							<div class="mt-3 step-name text-center fs-6">Order Information</div>
 						</a>
 						<a href="https://caotrang1009.github.io/global-evisa/flights/review-information"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								2</div>
-							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
+							<div class="mt-3 step-name text-center fs-6">Review Info</div>
 						</a>
 						<a href="https://caotrang1009.github.io/global-evisa/flights/payment"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								3</div>
-							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+							<div class="mt-3 step-name text-center fs-6">Payment</div>
+						</a>
+						<a href="https://caotrang1009.github.io/global-evisa/flights/payment-success/online"
+							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+							<div
+								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
+								4</div>
+							<div class="mt-3 step-name text-center fs-6">Confirmation</div>
 						</a>
 					</div>
 				</div>
@@ -140,28 +143,43 @@
 		<div class="container">
 			<div class="row gy-5">
 				<div class="col-lg-7 col-12">
-					<div class="border-dashed bg-beige rounded-4 p-4-5 mb-4-5 payment-method">
+					<div class="border-dashed bg-beige rounded-4 p-4-4 mb-4-5 payment-method">
 						<div class="row gx-3 gy-4">
 							<div class="col-12">
 								<h3 class="custom-h3 fw-800 text-black spacing-n1 mb-0">payment methods</h3>
 							</div>
 							<div class="col-sm-4 col-12">
-								<label class="payment-method-item w-100" for="payment_method_1"
-									data-bs-target="#bank-transfer">
+								<label class="payment-method-item w-100" for="payment_method_1">
 									<div class="row">
 										<div class="col-2">
 											<input class="form-check-input fs-5 me-2 mt-0" type="radio"
-												name="payment_method" id="payment_method_1" value="option1">
+												name="payment_method" id="payment_method_1" value="option1" checked="">
 										</div>
 										<div class="col-10 ps-0">
-											<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
+											<div
+												class="p-3 rounded-4 bg-white payment-method-card cursor-pointer shadow-blue">
 												<div
-													class="fw-semibold medium mb-2 text-black text-center method-title">
-													Bank Transfer:</div>
+													class="fw-semibold medium mb-1 text-center method-title text-primary text-decoration-underline fw-800">
+													PayPal:</div>
 												<div class="text-center method-icon">
-													<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/bank/icon-outline.png"
-														data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/bank"
-														alt="Bank Transfer" width="40px" height="40px">
+													<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/paypal/icon.png"
+														data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/paypal"
+														alt="Bank Transfer" height="36px">
+													<div
+														class="d-flex gap-2 justify-content-center mt-1 sub-method-icon">
+														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/visa/icon.png"
+															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/visa"
+															alt="Bank Transfer" width="22px" height="16px">
+														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/american-express-card/icon.png"
+															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/american-express-card"
+															alt="Bank Transfer" width="22px" height="16px">
+														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/master-card/icon.png"
+															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/master-card"
+															alt="Bank Transfer" width="22px" height="16px">
+														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/jcb-card/icon.png"
+															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/jcb-card"
+															alt="Bank Transfer" width="22px" height="16px">
+													</div>
 												</div>
 											</div>
 										</div>
@@ -206,7 +224,8 @@
 								</label>
 							</div>
 							<div class="col-sm-4 col-12">
-								<label class="payment-method-item w-100" for="payment_method_3">
+								<label class="payment-method-item w-100" for="payment_method_3"
+									data-bs-target="#bank-transfer">
 									<div class="row">
 										<div class="col-2">
 											<input class="form-check-input fs-5 me-2 mt-0" type="radio"
@@ -215,27 +234,12 @@
 										<div class="col-10 ps-0">
 											<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
 												<div
-													class="fw-semibold medium mb-1 text-black text-center method-title">
-													PayPal:</div>
+													class="fw-semibold medium mb-2 text-black text-center method-title">
+													Bank Transfer:</div>
 												<div class="text-center method-icon">
-													<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/paypal/icon-outline.png"
-														data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/paypal"
-														alt="Bank Transfer" height="36px">
-													<div
-														class="d-flex gap-2 justify-content-center mt-1 sub-method-icon">
-														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/visa/icon-outline.png"
-															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/visa"
-															alt="Bank Transfer" width="22px" height="16px">
-														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/american-express-card/icon-outline.png"
-															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/american-express-card"
-															alt="Bank Transfer" width="22px" height="16px">
-														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/master-card/icon-outline.png"
-															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/master-card"
-															alt="Bank Transfer" width="22px" height="16px">
-														<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/jcb-card/icon-outline.png"
-															data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/jcb-card"
-															alt="Bank Transfer" width="22px" height="16px">
-													</div>
+													<img src="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/bank/icon-outline.png"
+														data-link-icon="https://caotrang1009.github.io/global-evisa/assets/images/payment-method/bank"
+														alt="Bank Transfer" width="40px" height="40px">
 												</div>
 											</div>
 										</div>
@@ -251,7 +255,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="border-dashed bg-beige rounded-4 p-4-5 mb-4-5" id="bank-transfer" style="display: none">
+					<div class="border-dashed bg-beige rounded-4 p-4-4 mb-4-5" id="bank-transfer" style="display: none">
 						<h3 class="custom-h3 fw-800 text-black mb-4 spacing-n1">PAYMENT METHOD - bank transfer</h3>
 						<div class="row gx-5 gy-4 bank-info">
 							<div class="col-sm-6 col-12 border-bank">
@@ -348,7 +352,7 @@
 					</div>
 				</div>
 				<div class="col-lg-5 col-12">
-					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 your-flight medium">
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 your-flight medium">
 						<div class="d-flex align-items-start gap-3">
 							<img class="fit-contain" src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/plane-takeoff.svg"
 								alt="Air Asia" width="24px" height="24px">
@@ -529,9 +533,9 @@
 						<div class="d-flex border border-secondary rounded-3 bg-white input-promo my-4"
 							style="--bs-border-opacity: 0.25;">
 							<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text" name="promo"
-								placeholder="Enter your promo code here!" style="height: 48px" required="">
-							<button class="btn btn-primary rounded-end-3 px-4"><span
-									class="text-nowrap fw-semibold">Apply Now</span></button>
+								placeholder="Enter your promo code here!" required="">
+							<button class="btn btn-primary rounded-end-3 px-3"><span
+									class="text-nowrap fw-semibold medium">Apply Now</span></button>
 						</div>
 						<div class="row">
 							<div class="col-12 pb-3">
@@ -667,7 +671,7 @@
 				<div class="col-lg-6 col-md-10">
 					<div class="row me-lg-5 footer-nav">
 						<div class="col-sm-4">
-							<h5 class="text-white">Global eVISA</h5>
+							<h5 class="text-white text-nowrap">Global eVISA</h5>
 							<ul class="nav flex-column">
 								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About Us</a></li>
 								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Careers</a></li>
@@ -677,7 +681,7 @@
 							</ul>
 						</div>
 						<div class="col-sm-4">
-							<h5 class="text-white">Need to Know</h5>
+							<h5 class="text-white text-nowrap">Need to Know</h5>
 							<ul class="nav flex-column">
 								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">How it works</a>
 								</li>
@@ -686,31 +690,33 @@
 							</ul>
 						</div>
 						<div class="col-sm-4">
-							<h5 class="text-white">Contact Us</h5>
+							<h5 class="text-white text-nowrap">Contact Us</h5>
 							<ul class="nav flex-column">
 								<li class="nav-item mb-2">No. 40 - 42, Thien Phuoc St Ward 9, Tan Binh Dist, HCMC,
 									Vietnam</li>
-								<li class="nav-item mb-2">Hotline: <br> +84.987.309.313 <br> +84.28.6685.1315 <br>
-									+84.28.6685.1317</li>
-								<li class="nav-item mb-2">Email: <br> loremipsum@gmail.com</li>
+								<li class="nav-item mb-2">Hotline: <br><a class="text-white"
+										href="tel:+84.987.309.313">+84.987.309.313</a> <br> <a class="text-white"
+										href="tel:+84.28.6685.1315">+84.28.6685.1315</a> <br> <a class="text-white"
+										href="tel:+84.28.6685.1317">+84.28.6685.1317</a></li>
+								<li class="nav-item mb-2">Email: <br> <a class="text-white"
+										href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5">
 					<form id="frm-subscribe">
-						<h5 class="text-white web-header1 text-uppercase fw-800 title-subscribe mb-3">SUBSCRIBE TO GET
-							OUR NEWSLETTER</h5>
-						<div class="row g-3 py-3">
+						<h5 class="text-white mb-3">Subscribe To Get Our Newsletter</h5>
+						<div class="row g-2">
 							<div class="col-8">
-								<div class="d-flex align-items-center rounded-4 bg-white h-100 py-2 px-4">
+								<div class="d-flex align-items-center rounded-3 bg-white h-100 px-3">
 									<input id="newsletter1" type="text"
-										class="form-control border-0 p-0 my-2 cursor-pointer"
+										class="form-control border-0 px-0 cursor-pointer"
 										placeholder="Enter your email address">
 								</div>
 							</div>
 							<div class="col-4">
-								<button class="btn btn-orange button2 rounded-4 h-100 w-100 btn-subscribe"
+								<button class="btn bg-orange text-white border-2 border-white rounded-3 h-100 w-100"
 									type="button">
 									<span class="my-2">Subscribe</span>
 									<i class="fal fa-long-arrow-up ms-2" style="transform: rotate(45deg);"></i>
@@ -743,7 +749,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/intlTelInput.min.js"></script>
-	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1701332336"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702021097"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/search.js?id=1699685344"></script>
 	<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
 	<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>

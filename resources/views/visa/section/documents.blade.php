@@ -1,5 +1,5 @@
-<div class="documents py-5">
-	<div class="card border-0 required-documents mb-5">
+<div class="documents py-4-5">
+	<div class="card border-0 required-documents mb-4-5">
 		<div class="card-header border border-primary rounded-top-4 bg-primary text-center text-white text-title p-3">
 			<h4 class="custom-h3 text-white mb-1">REQUIRED DOCUMENTS</h4>
 			<span class="introduce">You need to submit these following paper forms in ottder to enter</span>

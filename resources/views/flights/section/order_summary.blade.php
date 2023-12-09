@@ -148,8 +148,8 @@
 	</div>
 </div>
 <div class="d-flex border border-secondary rounded-3 bg-white input-promo my-4" style="--bs-border-opacity: 0.25;">
-	<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text" name="promo" placeholder="Enter your promo code here!" style="height: 48px" required>
-	<button class="btn btn-primary rounded-end-3 px-4"><span class="text-nowrap fw-semibold">Apply Now</span></button>
+	<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text" name="promo" placeholder="Enter your promo code here!" required>
+	<button class="btn btn-primary rounded-end-3 px-3"><span class="text-nowrap fw-semibold medium">Apply Now</span></button>
 </div>
 <div class="row">
 	<div class="col-12 pb-3">

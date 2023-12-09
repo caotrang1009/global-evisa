@@ -9,7 +9,7 @@
 			<div class="col-lg-6 col-md-10">
 				<div class="row me-lg-5 footer-nav">
 					<div class="col-sm-4">
-						<h5 class="text-white">Global eVISA</h5>
+						<h5 class="text-white text-nowrap">Global eVISA</h5>
 						<ul class="nav flex-column">
 							<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About Us</a></li>
 							<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Careers</a></li>
@@ -18,7 +18,7 @@
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h5 class="text-white">Need to Know</h5>
+						<h5 class="text-white text-nowrap">Need to Know</h5>
 						<ul class="nav flex-column">
 							<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">How it works</a></li>
 							<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
@@ -26,26 +26,26 @@
 						</ul>
 					</div>
 					<div class="col-sm-4">
-						<h5 class="text-white">Contact Us</h5>
+						<h5 class="text-white text-nowrap">Contact Us</h5>
 						<ul class="nav flex-column">
 							<li class="nav-item mb-2">No. 40 - 42, Thien Phuoc St Ward 9, Tan Binh Dist, HCMC, Vietnam</li>
-							<li class="nav-item mb-2">Hotline: <br> +84.987.309.313 <br> +84.28.6685.1315 <br> +84.28.6685.1317</li>
-							<li class="nav-item mb-2">Email: <br> loremipsum@gmail.com</li>
+							<li class="nav-item mb-2">Hotline: <br><a class="text-white" href="tel:+84.987.309.313">+84.987.309.313</a> <br> <a class="text-white" href="tel:+84.28.6685.1315">+84.28.6685.1315</a> <br> <a class="text-white" href="tel:+84.28.6685.1317">+84.28.6685.1317</a></li>
+							<li class="nav-item mb-2">Email: <br> <a class="text-white" href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-5">
 				<form id="frm-subscribe">
-					<h5 class="text-white web-header1 text-uppercase fw-800 title-subscribe mb-3">SUBSCRIBE TO GET OUR NEWSLETTER</h5>
-					<div class="row g-3 py-3">
+					<h5 class="text-white mb-3">Subscribe To Get Our Newsletter</h5>
+					<div class="row g-2">
 						<div class="col-8">
-							<div class="d-flex align-items-center rounded-4 bg-white h-100 py-2 px-4">
-								<input id="newsletter1" type="text" class="form-control border-0 p-0 my-2 cursor-pointer" placeholder="Enter your email address">
+							<div class="d-flex align-items-center rounded-3 bg-white h-100 px-3">
+								<input id="newsletter1" type="text" class="form-control border-0 px-0 cursor-pointer" placeholder="Enter your email address">
 							</div>
 						</div>
 						<div class="col-4">
-							<button class="btn btn-orange button2 rounded-4 h-100 w-100 btn-subscribe" type="button">
+							<button class="btn bg-orange text-white border-2 border-white rounded-3 h-100 w-100" type="button">
 								<span class="my-2">Subscribe</span>
 								<i class="fal fa-long-arrow-up ms-2" style="transform: rotate(45deg);"></i>
 							</button>

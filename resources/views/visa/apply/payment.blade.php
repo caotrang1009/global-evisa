@@ -3,35 +3,30 @@
 @section('content')
 <section class="pb-0">
 	<div class="container">
-		<div class="row">
+		<div class="row align-items-center">
 			<div class="col-sm-9">
-				<span class="d-block mb-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
-				<h1 class="web-title text-black text-uppercase">GLOBAL EVISA <br> APPLICATION FORM</h1>
+				<h1 class="web-title text-black text-start text-uppercase w-100 mb-0">REVIEW & PAYMENT</h1>
 			</div>
 			<div class="col-sm-3 text-end">
-				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-md-5 px-4 py-3 btn-save-exit">
+				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-lg-5 lh-md btn-save-exit">
 					<span class="btn-text px-3">Save & Exit</span>
 				</a>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="pt-0">
-	<div class="container">
 		<div class="row">
-			<div class="step-part mt-5">
-				<div class="d-flex justify-content-between text-title stepper-wrapper">
+			<div class="step-part mt-4">
+				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/visa/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+						<div class="step-name">Order Information</div>
 					</a>
 					<a href="{{ url("/visa/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+						<div class="step-name">Payment</div>
 					</a>
 					<a href="{{ url("/visa/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Confirmation</div>
+						<div class="step-name">Confirmation</div>
 					</a>
 				</div>
 			</div>
@@ -112,22 +107,28 @@
 							</div>
 						</div>
 					</div>
-					<div class="border-dashed bg-beige rounded-4 p-4-5 mb-4-5 payment-method">
+					<div class="border-dashed bg-beige rounded-4 p-4-4 mb-4-5 payment-method">
 						<div class="row gx-3 gy-4">
 							<div class="col-12">
 								<h3 class="custom-h3 fw-800 text-black spacing-n1 mb-0">payment methods</h3>
 							</div>
 							<div class="col-sm-4 col-12">
-								<label class="payment-method-item w-100" for="payment_method_1" data-bs-target="#bank-transfer">
+								<label class="payment-method-item w-100" for="payment_method_1">
 									<div class="row">
 										<div class="col-2">
-											<input class="form-check-input fs-5 me-2 mt-0" type="radio" name="payment_method" id="payment_method_1" value="option1">
+											<input class="form-check-input fs-5 me-2 mt-0" type="radio" name="payment_method" id="payment_method_1" value="option1" checked>
 										</div>
 										<div class="col-10 ps-0">
-											<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
-												<div class="fw-semibold medium mb-2 text-black text-center method-title">Bank Transfer:</div>
+											<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer shadow-blue">
+												<div class="fw-semibold medium mb-1 text-center method-title text-primary text-decoration-underline fw-800">PayPal:</div>
 												<div class="text-center method-icon">
-													<img src="{{ asset('assets/images/payment-method/bank/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/bank') }}" alt="Bank Transfer" width="40px" height="40px">
+													<img src="{{ asset('assets/images/payment-method/paypal/icon.png') }}" data-link-icon="{{ asset('assets/images/payment-method/paypal') }}" alt="Bank Transfer" height="36px">
+													<div class="d-flex gap-2 justify-content-center mt-1 sub-method-icon">
+														<img src="{{ asset('assets/images/payment-method/visa/icon.png') }}" data-link-icon="{{ asset('assets/images/payment-method/visa') }}" alt="Bank Transfer" width="22px" height="16px">
+														<img src="{{ asset('assets/images/payment-method/american-express-card/icon.png') }}" data-link-icon="{{ asset('assets/images/payment-method/american-express-card') }}" alt="Bank Transfer" width="22px" height="16px">
+														<img src="{{ asset('assets/images/payment-method/master-card/icon.png') }}" data-link-icon="{{ asset('assets/images/payment-method/master-card') }}" alt="Bank Transfer" width="22px" height="16px">
+														<img src="{{ asset('assets/images/payment-method/jcb-card/icon.png') }}" data-link-icon="{{ asset('assets/images/payment-method/jcb-card') }}" alt="Bank Transfer" width="22px" height="16px">
+													</div>
 												</div>
 											</div>
 										</div>
@@ -158,22 +159,16 @@
 								</label>
 							</div>
 							<div class="col-sm-4 col-12">
-								<label class="payment-method-item w-100" for="payment_method_3">
+								<label class="payment-method-item w-100" for="payment_method_3" data-bs-target="#bank-transfer">
 									<div class="row">
 										<div class="col-2">
 											<input class="form-check-input fs-5 me-2 mt-0" type="radio" name="payment_method" id="payment_method_3" value="option1">
 										</div>
 										<div class="col-10 ps-0">
 											<div class="p-3 rounded-4 bg-white payment-method-card cursor-pointer">
-												<div class="fw-semibold medium mb-1 text-black text-center method-title">PayPal:</div>
-												<div class="text-center method-icon">									
-													<img src="{{ asset('assets/images/payment-method/paypal/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/paypal') }}" alt="Bank Transfer" height="36px">
-													<div class="d-flex gap-2 justify-content-center mt-1 sub-method-icon">
-														<img src="{{ asset('assets/images/payment-method/visa/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/visa') }}" alt="Bank Transfer" width="22px" height="16px">
-														<img src="{{ asset('assets/images/payment-method/american-express-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/american-express-card') }}" alt="Bank Transfer" width="22px" height="16px">
-														<img src="{{ asset('assets/images/payment-method/master-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/master-card') }}" alt="Bank Transfer" width="22px" height="16px">
-														<img src="{{ asset('assets/images/payment-method/jcb-card/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/jcb-card') }}" alt="Bank Transfer" width="22px" height="16px">
-													</div>
+												<div class="fw-semibold medium mb-2 text-black text-center method-title">Bank Transfer:</div>
+												<div class="text-center method-icon">
+													<img src="{{ asset('assets/images/payment-method/bank/icon-outline.png') }}" data-link-icon="{{ asset('assets/images/payment-method/bank') }}" alt="Bank Transfer" width="40px" height="40px">
 												</div>
 											</div>
 										</div>
@@ -185,7 +180,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="border-dashed bg-beige rounded-4 p-4-5 mb-4-5" id="bank-transfer" style="display: none">
+					<div class="border-dashed bg-beige rounded-4 p-4-4 mb-4-5" id="bank-transfer" style="display: none">
 						@include('layouts.sections.bank_transfer')
 					</div>
 					<div class="confirm">

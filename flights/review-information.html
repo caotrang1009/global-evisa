@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="csrf-token" content="pizB3QKff8HK5KPPaqnmq0iRNzJ0zNLYgS3koyIn">
+	<meta name="csrf-token" content="qwSufihJI3g22LDm1ksgWDZuTlyuGTwB5lxjQy6H">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Laravel">
 	<title>Flights</title>
@@ -22,7 +22,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1144.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+<body data-new-gr-c-s-check-loaded="14.1145.0" data-gr-ext-installed="" cz-shortcut-listen="true">
 	<header class="bg-primary text-white text-title">
 		<div class="main-nav">
 			<nav class="navbar navbar-expand-lg navbar-mega navbar-light">
@@ -100,37 +100,39 @@
 			</nav>
 		</div>
 	</header>
-	<section>
+	<section class=" pb-0">
 		<div class="container">
-			<div class="d-flex align-items-center">
-				<span class="position-absolute me-3 bg-orange d-lg-block d-none"
-					style="width: 80px; height:20px;"></span>
-				<h1 class="web-title text-black text-center text-uppercase w-100">REVIEW INFORMATION<br> &amp; ADD-ONS
-				</h1>
-			</div>
 			<div class="row">
-				<div class="step-part mt-5">
-					<div class="d-flex justify-content-between text-title stepper-wrapper">
+				<h1 class="web-title text-black text-center text-uppercase w-100">REVIEW INFORMATION &amp; ADD-ONS</h1>
+				<div class="step-part mt-4">
+					<div class="d-flex justify-content-center text-title stepper-wrapper">
 						<a href="https://caotrang1009.github.io/global-evisa/flights/information"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								1</div>
-							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+							<div class="mt-3 step-name text-center fs-6">Order Information</div>
 						</a>
 						<a href="https://caotrang1009.github.io/global-evisa/flights/review-information"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								2</div>
-							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
+							<div class="mt-3 step-name text-center fs-6">Review Info</div>
 						</a>
 						<a href="https://caotrang1009.github.io/global-evisa/flights/payment"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								3</div>
-							<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+							<div class="mt-3 step-name text-center fs-6">Payment</div>
+						</a>
+						<a href="https://caotrang1009.github.io/global-evisa/flights/payment-success/online"
+							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+							<div
+								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
+								4</div>
+							<div class="mt-3 step-name text-center fs-6">Confirmation</div>
 						</a>
 					</div>
 				</div>
@@ -140,7 +142,7 @@
 	<section class="py-5">
 		<div class="container">
 			<form action="" id="frm-review">
-				<input type="hidden" name="_token" value="pizB3QKff8HK5KPPaqnmq0iRNzJ0zNLYgS3koyIn" autocomplete="off">
+				<input type="hidden" name="_token" value="qwSufihJI3g22LDm1ksgWDZuTlyuGTwB5lxjQy6H" autocomplete="off">
 				<div class="row gy-5">
 					<div class="col-lg-7 col-12">
 						<div id="review_infor" class="mb-4-5">
@@ -176,448 +178,22 @@
 								<div class="collapse pt-3" id="contact-information" style="">
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black d-flex">First
-												Name</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-													data-icon-name="outline/education" alt="education">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="contact_first_name" name="contact_first_name"
-													value="Lorem Ipsum" placeholder="Enter Value" readonly="">
-											</div>
-											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											<label class="text-black fw-medium medium">First Name</label>
+											<div class="fw-semibold">Lorem Ipsum</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black d-flex">Last Name</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-													data-icon-name="outline/education" alt="education">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="contact_last_name" name="contact_last_name" value="Lorem Ipsum"
-													placeholder="Enter Value" readonly="">
-											</div>
-											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											<label class="text-black fw-medium medium">Last Name</label>
+											<div class="fw-semibold">Lorem Ipsum</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Your Phone
-												Number</label>
-											<div class="dropdown">
-												<div
-													class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-													<img class="form-icon"
-														src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/phone.svg"
-														data-icon-name="outline/phone" alt="phone">
-													<div class="d-flex align-items-center gap-2 cursor-pointer bg-white"
-														data-bs-toggle="dropdown" data-bs-auto-close="outside">
-														<span
-															class="medium text-black text-opacity-7 nationality">+84</span>
-														<img class="cursor-pointer"
-															src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/direction-up.svg"
-															data-icon-name="icon/direction-up" alt="direction-up"
-															style="max-width: none">
-														<input class="form-control" type="hidden" id="nationality"
-															name="nationality" value="" readonly="">
-													</div>
-													<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-														<div class="d-flex align-items-center border rounded-3-5 px-2">
-															<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/search.svg"
-																alt="search">
-															<input class="form-control border-0 py-2 me-1" type="text"
-																name="search" placeholder="Enter Input"
-																autocomplete="off" required="">
-														</div>
-														<div class="list-nationality mt-4 text-title text-black">
-															<div class="list-popular mb-4">
-																<div class="label-title mb-3 fw-bold">Most Popular</div>
-																<div class="country-01 mb-2">
-																	<a href="/visa/country/united-kingdom">
-																		<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																			alt="United Kingdom" width="20px"
-																			height="20px">
-																		<span class="ms-2">United Kingdom</span>
-																	</a>
-																</div>
-																<div class="country-02 mb-2">
-																	<a href="/visa/country/france">
-																		<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																			alt="France" width="20px" height="20px">
-																		<span class="ms-2">French</span>
-																	</a>
-																</div>
-																<div class="country-03 mb-2">
-																	<a href="/visa/country/singapore">
-																		<img src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																			alt="Singapore" width="20px" height="20px">
-																		<span class="ms-2">Singapore</span>
-																	</a>
-																</div>
-															</div>
-															<div class="list-alphabetically">
-																<div class="label-title mb-3 fw-bold">Alphabetically
-																</div>
-																<div class="slide-input-country position-relative d-flex justify-content-between mb-4"
-																	style="height: 142px">
-																	<div class="swiper m-0 swiper-initialized swiper-vertical swiper-free-mode"
-																		data-parent=".slide-input-country"
-																		data-items="5" data-space-between="1"
-																		data-direction="vertical"
-																		data-prev=".swiper-custom-prev"
-																		data-next=".swiper-custom-next"
-																		style="width: 88%">
-																		<div class="swiper-wrapper align-items-center"
-																			id="swiper-wrapper-876e70e0bf6f92a4"
-																			aria-live="polite"
-																			style="transition-duration: 0ms; transition-delay: 0ms;">
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/belarus"
-																				data-swiper-slide-index="0" role="group"
-																				aria-label="1 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/belarus.svg"
-																					alt="belarus"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Belarus
-																					- +375</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/brunei"
-																				data-swiper-slide-index="1" role="group"
-																				aria-label="2 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/brunei.svg"
-																					alt="brunei"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Brunei
-																					- +673</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/cambodia"
-																				data-swiper-slide-index="2" role="group"
-																				aria-label="3 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/cambodia.svg"
-																					alt="cambodia"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Cambodia
-																					- +855</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/chile"
-																				data-swiper-slide-index="3" role="group"
-																				aria-label="4 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/chile.svg"
-																					alt="chile"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Chile
-																					- +56</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/denmark"
-																				data-swiper-slide-index="4" role="group"
-																				aria-label="5 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/denmark.svg"
-																					alt="denmark"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Denmark
-																					- +45</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/finland"
-																				data-swiper-slide-index="5" role="group"
-																				aria-label="6 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/finland.svg"
-																					alt="finland"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Finland
-																					- +358</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/france"
-																				data-swiper-slide-index="6" role="group"
-																				aria-label="7 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/france.svg"
-																					alt="france"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">France
-																					- +33</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/germany"
-																				data-swiper-slide-index="7" role="group"
-																				aria-label="8 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/germany.svg"
-																					alt="germany"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Germany
-																					- +49</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/indonesia"
-																				data-swiper-slide-index="8" role="group"
-																				aria-label="9 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/indonesia.svg"
-																					alt="indonesia"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Indonesia
-																					- +62</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/italy"
-																				data-swiper-slide-index="9" role="group"
-																				aria-label="10 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/italy.svg"
-																					alt="italy"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Italy
-																					- +39</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/japan"
-																				data-swiper-slide-index="10"
-																				role="group" aria-label="11 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/japan.svg"
-																					alt="japan"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Japan
-																					- +81</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/laos"
-																				data-swiper-slide-index="11"
-																				role="group" aria-label="12 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/laos.svg"
-																					alt="laos"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Laos
-																					- +856</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/malaysia"
-																				data-swiper-slide-index="12"
-																				role="group" aria-label="13 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/malaysia.svg"
-																					alt="malaysia"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Malaysia
-																					- +60</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/myanmar"
-																				data-swiper-slide-index="13"
-																				role="group" aria-label="14 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/myanmar.svg"
-																					alt="myanmar"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Myanmar
-																					- +95</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/norway"
-																				data-swiper-slide-index="14"
-																				role="group" aria-label="15 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/norway.svg"
-																					alt="norway"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Norway
-																					- +47</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/panama"
-																				data-swiper-slide-index="15"
-																				role="group" aria-label="16 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/panama.svg"
-																					alt="panama"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Panama
-																					- +507</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/philippines"
-																				data-swiper-slide-index="16"
-																				role="group" aria-label="17 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/philippines.svg"
-																					alt="philippines"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Philippines
-																					- +63</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/russia"
-																				data-swiper-slide-index="17"
-																				role="group" aria-label="18 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/russia.svg"
-																					alt="russia"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Russia
-																					- +07</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/singapore"
-																				data-swiper-slide-index="18"
-																				role="group" aria-label="19 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/singapore.svg"
-																					alt="singapore"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Singapore
-																					- +65</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/spain"
-																				data-swiper-slide-index="19"
-																				role="group" aria-label="20 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/spain.svg"
-																					alt="spain"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Spain
-																					- +34</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/korea"
-																				data-swiper-slide-index="20"
-																				role="group" aria-label="21 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/korea.svg"
-																					alt="korea"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">South
-																					Korea - +82</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/sweden"
-																				data-swiper-slide-index="21"
-																				role="group" aria-label="22 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/sweden.svg"
-																					alt="sweden"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Sweden
-																					- +46</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/thailand"
-																				data-swiper-slide-index="22"
-																				role="group" aria-label="23 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/thailand.svg"
-																					alt="thailand"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Thailand
-																					- +66</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/united-kingdom"
-																				data-swiper-slide-index="23"
-																				role="group" aria-label="24 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/united-kingdom.svg"
-																					alt="united-kingdom"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">United
-																					Kingdom - +44</span>
-																			</a>
-																			<a class="swiper-slide d-block text-start"
-																				href="/visa/country/vietnam"
-																				data-swiper-slide-index="24"
-																				role="group" aria-label="25 / 25">
-																				<img class="d-inline"
-																					src="https://caotrang1009.github.io/global-evisa/assets/svg/emojione-flag/vietnam.svg"
-																					alt="vietnam"
-																					style="width: 20px; height: 20px;">
-																				<span
-																					class="ms-2 text-capitalize medium">Vietnam
-																					- +84</span>
-																			</a>
-																		</div>
-																		<span class="swiper-notification"
-																			aria-live="assertive"
-																			aria-atomic="true"></span>
-																	</div>
-																	<div class="position-relative swiper-control">
-																		<div class="position-absolute top-0 end-0 swiper-custom-prev"
-																			tabindex="0" role="button"
-																			aria-label="Previous slide"
-																			aria-controls="swiper-wrapper-876e70e0bf6f92a4">
-																			<i
-																				class="fal fa-chevron-circle-up fs-4 icon-color"></i>
-																		</div>
-																		<div class="position-absolute bottom-0 end-0 swiper-custom-next"
-																			tabindex="0" role="button"
-																			aria-label="Next slide"
-																			aria-controls="swiper-wrapper-876e70e0bf6f92a4">
-																			<i
-																				class="fal fa-chevron-circle-down fs-4 icon-color"></i>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<input class="form-control border-0 px-0 cursor-pointer" type="text"
-														id="contact_phone" name="contact_phone" value="+84 1312312434"
-														placeholder="Enter Value" readonly="">
-												</div>
-												<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-											</div>
+											<label class="text-black fw-medium medium">Your Phone Number</label>
+											<div class="fw-semibold">+84 1312312434</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Your Email</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/email.svg"
-													data-icon-name="outline/email" alt="email">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="contact_email" name="contact_email"
-													value="loremipisum@gmail.com" placeholder="Enter Value" readonly="">
-											</div>
-											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+											<label class="text-black fw-medium medium">Your Email</label>
+											<div class="fw-semibold">loremipisum@gmail.com</div>
 										</div>
 									</div>
 								</div>
@@ -655,148 +231,58 @@
 										APPLICANT NO.</h5>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">First Name</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-													data-icon-name="outline/education" alt="education">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="first_name" name="first_name" value="Lorem Ipsum"
-													placeholder="Enter Value" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">First Name</label>
+											<div class="fw-semibold">Lorem Ipsum</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Last Name</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-													data-icon-name="outline/education" alt="education">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="last_name" name="last_name" value="Lorem Ipsum"
-													placeholder="Enter Value" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Last Name</label>
+											<div class="fw-semibold">Lorem Ipsum</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Title</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/community.svg"
-													data-icon-name="outline/community" alt="community">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="title" name="title" value="Female" placeholder="Please Select"
-													readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Title</label>
+											<div class="fw-semibold">Female</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Day of Birth</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/date.svg"
-													data-icon-name="outline/date" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="date_of_birth" name="date_of_birth" value="15/08/1985"
-													placeholder="DD/MM/YY" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Day of Birth</label>
+											<div class="fw-semibold">15/08/1985</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Phone Number</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/phone.svg"
-													data-icon-name="outline/phone" alt="phone" width="24px"
-													height="24px">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="phone_number" name="phone_number" value="+84 1312312434"
-													placeholder="Enter Value" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Phone Number</label>
+											<div class="fw-semibold">+84 1312312434</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Email Address</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-													data-icon-name="outline/education" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="email" name="email" value="loremipisum@gmail.com"
-													placeholder="Enter Value" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Email Address</label>
+											<div class="fw-semibold">loremipisum@gmail.com</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Country of Birth</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map.svg"
-													data-icon-name="outline/map" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="country_of_birth" name="country_of_birth" value="Chile"
-													placeholder="Please Select" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Country of Birth</label>
+											<div class="fw-semibold">Chile</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Country of
-												Residency</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/map.svg"
-													data-icon-name="outline/map" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="country_of_residency" name="country_of_residency" value="Chile"
-													placeholder="Please Select" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Country of Residency</label>
+											<div class="fw-semibold">Chile</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Passport Number</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/education.svg"
-													data-icon-name="outline/education" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="passport_number" name="passport_number" value="C15C08"
-													placeholder="Enter Value" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Passport Number</label>
+											<div class="fw-semibold">C15CO8</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Expired Date</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/date.svg"
-													data-icon-name="outline/date" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="expired_date" name="expired_date" value="15/09/2027"
-													placeholder="DD/MM/YY" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Expired Date</label>
+											<div class="fw-semibold">15/08/1985</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="h6 fw-semibold text-title text-black">Issue Date</label>
-											<div
-												class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-												<img class="form-icon"
-													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/date.svg"
-													data-icon-name="outline/date" alt="date">
-												<input class="form-control border-0 px-0 cursor-pointer" type="text"
-													id="issue_date" name="issue_date" value="15/09/2017"
-													placeholder="DD/MM/YY" readonly="">
-											</div>
+											<label class="text-black fw-medium medium">Issue Date</label>
+											<div class="fw-semibold">15/08/1985</div>
 										</div>
 									</div>
 								</div>
@@ -833,8 +319,10 @@
 									</div>
 								</div>
 								<div class="collapse travel-insurance pt-3 fw-medium" id="travel-insurance">
-									<div class="mb-3">Package 1: from 9 to 173 USD</div>
-									<div>Number of days: 9 - 15 days (19 USD)</div>
+									<div class="mb-3">Package 1: <span class="fw-semibold">from 9 to 173 USD</span>
+									</div>
+									<div class="mb-3">Number of days: <span class="fw-semibold">9 - 15 days (19
+											USD)</span></div>
 								</div>
 							</div>
 						</div>
@@ -1052,10 +540,9 @@
 							<div class="d-flex border border-secondary rounded-3 bg-white input-promo my-4"
 								style="--bs-border-opacity: 0.25;">
 								<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text"
-									name="promo" placeholder="Enter your promo code here!" style="height: 48px"
-									required="">
-								<button class="btn btn-primary rounded-end-3 px-4"><span
-										class="text-nowrap fw-semibold">Apply Now</span></button>
+									name="promo" placeholder="Enter your promo code here!" required="">
+								<button class="btn btn-primary rounded-end-3 px-3"><span
+										class="text-nowrap fw-semibold medium">Apply Now</span></button>
 							</div>
 							<div class="row">
 								<div class="col-12 pb-3">
@@ -1141,7 +628,7 @@
 				<div class="col-lg-6 col-md-10">
 					<div class="row me-lg-5 footer-nav">
 						<div class="col-sm-4">
-							<h5 class="text-white">Global eVISA</h5>
+							<h5 class="text-white text-nowrap">Global eVISA</h5>
 							<ul class="nav flex-column">
 								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About Us</a></li>
 								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Careers</a></li>
@@ -1151,7 +638,7 @@
 							</ul>
 						</div>
 						<div class="col-sm-4">
-							<h5 class="text-white">Need to Know</h5>
+							<h5 class="text-white text-nowrap">Need to Know</h5>
 							<ul class="nav flex-column">
 								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">How it works</a>
 								</li>
@@ -1160,31 +647,33 @@
 							</ul>
 						</div>
 						<div class="col-sm-4">
-							<h5 class="text-white">Contact Us</h5>
+							<h5 class="text-white text-nowrap">Contact Us</h5>
 							<ul class="nav flex-column">
 								<li class="nav-item mb-2">No. 40 - 42, Thien Phuoc St Ward 9, Tan Binh Dist, HCMC,
 									Vietnam</li>
-								<li class="nav-item mb-2">Hotline: <br> +84.987.309.313 <br> +84.28.6685.1315 <br>
-									+84.28.6685.1317</li>
-								<li class="nav-item mb-2">Email: <br> loremipsum@gmail.com</li>
+								<li class="nav-item mb-2">Hotline: <br><a class="text-white"
+										href="tel:+84.987.309.313">+84.987.309.313</a> <br> <a class="text-white"
+										href="tel:+84.28.6685.1315">+84.28.6685.1315</a> <br> <a class="text-white"
+										href="tel:+84.28.6685.1317">+84.28.6685.1317</a></li>
+								<li class="nav-item mb-2">Email: <br> <a class="text-white"
+										href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-5">
 					<form id="frm-subscribe">
-						<h5 class="text-white web-header1 text-uppercase fw-800 title-subscribe mb-3">SUBSCRIBE TO GET
-							OUR NEWSLETTER</h5>
-						<div class="row g-3 py-3">
+						<h5 class="text-white mb-3">Subscribe To Get Our Newsletter</h5>
+						<div class="row g-2">
 							<div class="col-8">
-								<div class="d-flex align-items-center rounded-4 bg-white h-100 py-2 px-4">
+								<div class="d-flex align-items-center rounded-3 bg-white h-100 px-3">
 									<input id="newsletter1" type="text"
-										class="form-control border-0 p-0 my-2 cursor-pointer"
+										class="form-control border-0 px-0 cursor-pointer"
 										placeholder="Enter your email address">
 								</div>
 							</div>
 							<div class="col-4">
-								<button class="btn btn-orange button2 rounded-4 h-100 w-100 btn-subscribe"
+								<button class="btn bg-orange text-white border-2 border-white rounded-3 h-100 w-100"
 									type="button">
 									<span class="my-2">Subscribe</span>
 									<i class="fal fa-long-arrow-up ms-2" style="transform: rotate(45deg);"></i>
@@ -1217,7 +706,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/intlTelInput.min.js"></script>
-	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1701332336"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702021097"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/search.js?id=1699685344"></script>
 	<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
 	<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>

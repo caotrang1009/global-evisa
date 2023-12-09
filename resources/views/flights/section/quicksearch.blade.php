@@ -1,48 +1,162 @@
-<div class="row justify-content-center py-5">
-	<div class="col-sm-10 col-12">
-		<form id="frm_search_flights" class="needs-validation" novalidate>
-			@csrf
-			<div class="d-flex justify-content-center gap-lg-6 gap-4 direction">
-				<button type="button" class="btn btn-orange rounded-3-5 direction-item selected" data-show="oneway-roundtrip">
-					One-way/ Round Trip
+<form id="frm-search" class="mb-2" action="" method="GET" autocomplete="off">
+	<div class="row gx-sm-3 g-0">
+		<div class="col-4 col-sm-auto">
+			<div class="dropdown position-static">
+				<button type="button" class="form-select border-0 bg-transparent text-nowrap text-truncate" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+					<i class="fal fa-exchange me-3"></i><span class="direction-text"></span>
 				</button>
-				<button type="button" class="btn bg-white rounded-3-5 direction-item" data-show="multi-city">
-					Multi-city
-				</button>
-				<input type="hidden" id="direction" name="direction" value="oneway-roundtrip">
+				<ul class="dropdown-menu dropdown-select dropdown-direction border-0 rounded-3 shadow">
+					<li><a class="dropdown-item cursor-pointer direction-item round-trip" data-value="round-trip">Round-trip</a></li>
+					<li><a class="dropdown-item cursor-pointer direction-item one-way" data-value="one-way">One-way</a></li>
+					<li><a class="dropdown-item cursor-pointer direction-item multi-city" data-value="multi-city">Multi-city</a></li>
+				</ul>
+				<input type="hidden" id="direction" name="direction" value="round-trip">
 			</div>
-		
-			<div class="py-3">
-				<div class="row align-items-end g-4 mt-0">
-					<div class="col-lg-6">
-						<div class="row align-items-end gx-4">
-							<div class="col">
-								<div class="position-relative select-location-1">
-									<label class="fw-semibold headline text-white mb-2">Location 1</label>
-									<div class="dropdown">
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
-											<input class="form-control border-0 p-0 cursor-pointer" type="text" id="originLocationCode" name="originLocationCode[]" placeholder="Please Select" autocomplete="off" required >
-											<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
-										</div>
+		</div>
+		<div class="col-4 col-sm-auto">
+			<div class="dropdown position-static">
+				<button type="button" class="form-select border-0 bg-transparent text-nowrap text-truncate" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+					<i class="fal fa-user me-3"></i><span class="pax-text"></span>
+				</button>
+				<div class="dropdown-menu border-0 rounded-3 shadow p-3">
+					<div class="row align-items-center">
+						<div class="col"><span class="form-label">Adults</span><br><small class="text-muted">From 12</small></div>
+						<div class="col text-right">
+							<div class="d-flex flex-row">
+								<button type="button" class="btn btn-sm rounded btn-outline-secondary m-auto pax-remove" data-value="adult">-</button>
+								<span class="form-label text-center d-inline m-auto adults-text" style="width: 2rem;">1</span>
+								<button type="button" class="btn btn-sm rounded btn-outline-secondary m-auto pax-add" data-value="adult">+</button>
+								<input type="hidden" id="adults" name="adults" value="1">
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-3">
+						<div class="col"><span class="form-label">Children</span><br><small class="text-muted">Aged 2-11</small></div>
+						<div class="col text-right">
+							<div class="d-flex flex-row">
+								<button type="button" class="btn btn-sm rounded btn-outline-secondary m-auto pax-remove" data-value="children">-</button>
+								<span class="form-label text-center d-inline m-auto children-text" style="width: 2rem;">0</span>
+								<button type="button" class="btn btn-sm rounded btn-outline-secondary m-auto pax-add" data-value="children">+</button>
+								<input type="hidden" id="children" name="children" value="0">
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-center mt-3">
+						<div class="col"><span class="form-label">Infants</span><br><small class="text-muted">Under 2</small></div>
+						<div class="col text-right">
+							<div class="d-flex flex-row">
+								<button type="button" class="btn btn-sm rounded btn-outline-secondary m-auto pax-remove" data-value="infant">-</button>
+								<span class="form-label text-center d-inline m-auto infants-text" style="width: 2rem;">0</span>
+								<button type="button" class="btn btn-sm rounded btn-outline-secondary m-auto pax-add" data-value="infant">+</button>
+								<input type="hidden" id="infants" name="infants" value="0">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-4 col-sm-auto">
+			<div class="dropdown position-static">
+				<button type="button" class="form-select border-0 bg-transparent text-nowrap text-truncate" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+					<i class="fal fa-loveseat me-3"></i><span class="travel-class-value"></span>
+				</button>
+				<ul class="dropdown-menu dropdown-select dropdown-travel-class border-0 rounded-3 shadow">
+					<li><a class="dropdown-item cursor-pointer travel-class-item ECONOMY" data-value="ECONOMY">Economy</a></li>
+					<li><a class="dropdown-item cursor-pointer travel-class-item PREMIUM_ECONOMY" data-value="PREMIUM_ECONOMY">Premium economy</a></li>
+					<li><a class="dropdown-item cursor-pointer travel-class-item BUSINESS" data-value="BUSINESS">Business</a></li>
+					<li><a class="dropdown-item cursor-pointer travel-class-item FIRST" data-value="FIRST">First</a></li>
+				</ul>
+				<input type="hidden" id="travelClass" name="travelClass" value="ECONOMY">
+			</div>
+		</div>
+	</div>
+	<div class="row g-3 g-sm-2 mt-1 mt-sm-2">
+		<div class="col-sm-6">
+			<div class="row g-1">
+				<div class="col-6">
+					<div class="input-curve">
+						<div class="curve-control curve-right">
+							<div class="autocomplete-wrapper form-floating dropdown">
+								<input id="originLocationCode" name="originLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where from?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
+								<label for="originLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
+								<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
+									@include('visa.section.countries')
+								</div>
+							</div>
+						</div>
+						<button type="button" class="btn-exchange curve-text border-0 bg-transparent" data-value="0">
+							<i class="fal fa-exchange"></i>
+						</button>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-curve">
+						<div class="curve-control curve-left">
+							<div class="autocomplete-wrapper form-floating dropdown">
+								<input id="destinationLocationCode" name="destinationLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where to?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
+								<label for="destinationLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
+								<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
+									@include('visa.section.countries')
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col round-trip-part">
+			<div class="row g-1">
+				<div class="col">
+					<div class="input-curve round-trip-control-input">
+						<div class="curve-control curve-right">
+							<div class="form-floating">
+								<input id="departureDate" name="departureDate[]" class="form-control border-0 rounded-3 ps-4 datepicker" placeholder="Departure date" autocomplete="off" value="{{ date('d/m/Y', strtotime('now')) }}">
+								<label for="departureDate" class="ps-4"><i class="far fa-calendar-alt pe-2"></i> Departure date</label>
+							</div>
+						</div>
+						<div class="curve-text border-0 bg-transparent round-trip-control">
+							<i class="fal fa-arrow-right"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col round-trip-control">
+					<div class="input-curve round-trip-control-input">
+						<div class="curve-control curve-left">
+							<div class="form-floating">
+								<input id="returnDate" name="returnDate" class="form-control border-0 rounded-3 ps-4 datepicker" placeholder="Return date" autocomplete="off" value="{{ date('d/m/Y', strtotime('now')) }}">
+								<label for="returnDate" class="ps-4"><i class="far fa-calendar-alt pe-2"></i> Return date</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-12 mb-2 mt-0 multi-city-control" style="display: none">
+			<div class="row g-3 mt-0 multi-city-item">
+				<div class="col-sm-6">
+					<div class="row g-1">
+						<div class="col-6">
+							<div class="input-curve">
+								<div class="curve-control curve-right">
+									<div class="autocomplete-wrapper form-floating dropdown">
+										<input id="originLocationCodeMultiCity_2" name="originLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where from?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
+										<label for="originLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
 										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 											@include('visa.section.countries')
 										</div>
 									</div>
-									<div class="bg-orange btn-exchange border border-white rounded-3 cursor-pointer" data-value="0">
-										<img src="{{ asset('assets/svg/outline/exchange.svg') }}" alt="exchange" width="18px" height="18px">
-									</div>
 								</div>
+								<button type="button" class="btn-exchange curve-text border-0 bg-transparent" data-value="0">
+									<i class="fal fa-exchange"></i>
+								</button>
 							</div>
-							<div class="col">
-								<div class="select-location-2">
-									<label class="fw-semibold headline text-white mb-2">Location 2</label>
-									<div class="dropdown">
-										<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
-											<input class="form-control border-0 p-0 cursor-pointer" type="text" id="destinationLocationCode" name="destinationLocationCode[]" placeholder="Please Select" autocomplete="off" required >
-											<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
-										</div>
+						</div>
+						<div class="col-6">
+							<div class="input-curve">
+								<div class="curve-control curve-left">
+									<div class="autocomplete-wrapper form-floating dropdown">
+										<input id="destinationLocationCodeMultiCity_2" name="destinationLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where to?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
+										<label for="destinationLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
 										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 											@include('visa.section.countries')
 										</div>
@@ -51,186 +165,35 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6">
-						<div class="row align-items-end gx-4">
-							<div class="col">
-								<div class="select-departure-date">
-									<label class="fw-semibold headline fs-6 text-white mb-2">Departure Date</label>
-									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
-										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date" width="20px" height="20px">
-										<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="departureDate" name="departureDate[]" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
-										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-									</div>
-									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-								</div>
-							</div>
-							<div class="col round-trip-control">
-								<div class="select-return-date">
-									<div class="d-flex align-items-center mb-2">
-										<label class="fw-semibold headline fs-6 text-white">Round-trip</label>
-										<input class="form-check-input mt-0 ms-3" type="checkbox" id="round_trip_check" style="width:1.5rem; height:1.5rem" checked>
-									</div>
-									<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
-										<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date" width="20px" height="20px">
-										<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="returnDate" name="returnDate" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
-										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-									</div>
-									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-								</div>
-							</div>
-							<div class="col-2 add-more-flight ps-0">
-								<a type="button" class="bg-orange border rounded-3 btn-add">
-									<img src="{{ asset('assets/svg/outline/plus-white.svg') }}" alt="outline/plus-white" width="18px" height="18px">
-								</a>
-							</div>
+				</div>
+				<div class="col-sm-4 col">
+					<div class="curve-control curve-right">
+						<div class="form-floating">
+							<input id="departureDateMultiCity_2" name="departureDate[]" class="form-control border-0 rounded-3 ps-4 datepicker" placeholder="Departure date" autocomplete="off" value="{{ date('d/m/Y', strtotime('now')) }}">
+							<label for="departureDate" class="ps-4"><i class="far fa-calendar-alt pe-2"></i> Departure date</label>
 						</div>
 					</div>
-					<div class="col-12 mt-0 multi-city-control" style="display: none"> 
-						<div class="row align-items-end g-4 mt-0 multi-city-item">
-							<div class="col-lg-6">
-								<div class="row align-items-end gx-4">
-									<div class="col">
-										<div class="position-relative select-location-1">
-											<label class="fw-semibold headline text-white mb-2">Location 1</label>
-											<div class="dropdown">
-												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
-													<input class="form-control border-0 p-0 cursor-pointer" type="text" id="originLocationCodeMultiCity_2" name="originLocationCode[]" placeholder="Please Select" autocomplete="off" required >
-													<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
-												</div>
-												<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-													@include('visa.section.countries')
-												</div>
-											</div>
-											<div class="bg-orange btn-exchange border border-white rounded-3 cursor-pointer" data-value="0">
-												<img src="{{ asset('assets/svg/outline/exchange.svg') }}" alt="exchange" width="18px" height="18px">
-											</div>
-										</div>
-									</div>
-									<div class="col">
-										<div class="select-location-2">
-											<label class="fw-semibold headline text-white mb-2">Location 2</label>
-											<div class="dropdown">
-												<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-													<img src="{{ asset('assets/svg/outline/map.svg') }}" alt="map" width="20px" height="20px">
-													<input class="form-control border-0 p-0 cursor-pointer" type="text" id="destinationLocationCodeMultiCity_2" name="destinationLocationCode[]" placeholder="Please Select" autocomplete="off" required >
-													<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
-												</div>
-												<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-													@include('visa.section.countries')
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="row align-items-end gx-4">
-									<div class="col">
-										<div class="select-departure-date">
-											<label class="fw-semibold headline fs-6 text-white mb-2">Departure Date</label>
-											<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white py-1 px-4 input-search-flight">
-												<img src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date" width="20px" height="20px">
-												<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="departureDateMultiCity_2" name="departureDate[]" value="{{ date('d/m/Y', strtotime('now')) }}" placeholder="DD/MM/YY" required>
-												<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-											</div>
-											<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-										</div>
-									</div>
-									<div class="col-2 add-more-flight ps-0">
-										<a type="button" class="bg-orange border rounded-3 btn-add">
-											<img src="{{ asset('assets/svg/outline/plus-white.svg') }}" alt="outline/minus-white.svg" data-link="{{ asset('assets/svg') }}" width="18px" height="18px">
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-12 add-more-flight" style="text-align: -webkit-center;">
-						<input type="hidden" name="multiCityQty" id="multiCityQty" value="2">
-						<a type="button" class="subheading d-flex gap-3 align-items-center justify-content-center text-black text-opacity-8 border rounded-3-5 bg-white fw-800 btn-add-flight">
-							<img src="{{ asset('assets/svg/outline/plus-border.svg') }}" alt="plus-border" width="24px" height="24px">
-							<span>ADD MORE FLIGHTS</span>
+				</div>
+				<div class="col-2 remove-flight">
+					<div class=" d-flex align-items-center h-100">
+						<a type="button" class="bg-orange border rounded-3 btn-remove">
+							<img src="{{ asset('assets/svg/outline/minus-white.svg') }}" alt="outline/minus-white.svg" width="18px" height="18px">
 						</a>
 					</div>
 				</div>
-				<div class="row align-items-end g-4 mt-0">
-					<div class="col">
-						<div class="form-group mb-0 select-location-2">
-							<label class="fw-semibold headline text-white mb-2">Class of Passenger</label>
-							<div class="dropdown">
-								<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 w-100 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-									<img src="{{ asset('assets/svg/outline/user-firends.svg') }}" alt="user-firends" width="20px" height="20px">
-									<input class="form-control border-0 p-0 cursor-pointer travel-class-value" type="text" id="origin-input" name="Location1" placeholder="Please Select" autocomplete="off" required >
-									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
-								</div>
-								<ul class="dropdown-menu dropdown-select dropdown-travel-class border-0 rounded-3 p-0 shadow medium w-100">
-									<li><a class="dropdown-item cursor-pointer dashed-line travel-class-item ECONOMY" data-value="ECONOMY">Economy</a></li>
-									<li><a class="dropdown-item cursor-pointer dashed-line travel-class-item PREMIUM_ECONOMY" data-value="PREMIUM_ECONOMY">Premium Economy</a></li>
-									<li><a class="dropdown-item cursor-pointer dashed-line travel-class-item BUSINESS" data-value="BUSINESS">Buiness</a></li>
-									<li><a class="dropdown-item cursor-pointer travel-class-item FIRST" data-value="FIRST">First Class</a></li>
-								</ul>
-							</div>
-							<input type="hidden" id="travelClass" name="travelClass" value="ECONOMY">
-						</div>
-					</div>
-					<div class="col">
-						<div class="form-group mb-0 select-location-2">
-							<label class="fw-semibold headline text-white mb-2">Number of Passenger</label>
-							<div class="dropdown">
-								<div class="d-flex gap-3 align-items-center justify-content-between border rounded-3-5 bg-white px-4 w-100 input-search-flight" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-									<img src="{{ asset('assets/svg/outline/users.svg') }}" alt="users" width="20px" height="20px">
-									<input class="form-control border-0 p-0 cursor-pointer" type="text" id="origin-input" name="Location1" placeholder="Please Select" autocomplete="off" required >
-									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
-								</div>
-								<div class="dropdown-menu border-0 rounded-3 py-0 shadow medium w-100">
-									<div class="d-flex align-items-center justify-content-between py-2 px-4 dashed-line">
-										<div>Adults:</div>
-										<div>
-											<div class="d-flex align-items-center justify-content-end">
-												<span class="cursor-pointer pax-remove" data-value="adult"><img src="{{ asset('assets/svg/outline/minus-circle.svg') }}" alt="minus"></span>
-												<span class="text-center adults-text" style="width: 2rem;">1</span>
-												<span class="cursor-pointer pax-add" data-value="adult"><img src="{{ asset('assets/svg/outline/plus-circle.svg') }}" alt="plus"></span>
-												<input type="hidden" id="adults" name="adults" value="1">
-											</div>
-										</div>
-									</div>
-									<div class="d-flex align-items-center justify-content-between py-2 px-4 dashed-line">
-										<div>Children:</div>
-										<div>
-											<div class="d-flex align-items-center justify-content-end">
-												<span class="cursor-pointer pax-remove" data-value="children"><img src="{{ asset('assets/svg/outline/minus-circle.svg') }}" alt="minus"></span>
-												<span class="text-center children-text" style="width: 2rem;">0</span>
-												<span class="cursor-pointer pax-add" data-value="children"><img src="{{ asset('assets/svg/outline/plus-circle.svg') }}" alt="plus"></span>
-												<input type="hidden" id="children" name="children" value="0">
-											</div>
-										</div>
-									</div>
-									<div class="d-flex align-items-center justify-content-between py-2 px-4">
-										<div>Infants:</div>
-										<div>
-											<div class="d-flex align-items-center justify-content-end">
-												<span class="cursor-pointer pax-remove" data-value="infant"><img src="{{ asset('assets/svg/outline/minus-circle.svg') }}" alt="minus"></span>
-												<span class="text-center infants-text" style="width: 2rem;">0</span>
-												<span class="cursor-pointer pax-add" data-value="infant"><img src="{{ asset('assets/svg/outline/plus-circle.svg') }}" alt="plus"></span>
-												<input type="hidden" id="infants" name="infants" value="0">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
-			
-			<div class="text-center mt-4">
-				<a href="{{ url("/flights/search") }}">
-					<button type="button" class="btn bg-orange custom-h3 text-white border-2 border-white rounded-3-5 fw-bold w-sm-auto w-100 px-sm-6 btn-search">Seach Your Flights <i class="fal fa-long-arrow-up rotate-45 ms-4"></i></button>
-				</a>
-			</div>
-		</form>
+		</div>
+		<div class="col-lg-10 col-12 text-lg-start text-center add-more-flight" style="display: none">
+			<input type="hidden" name="multiCityQty" id="multiCityQty" value="2">
+			<button type="button" class="btn text-uppercase fs-6 px-5 border border-2 rounded-3 fw-bold bg-white h-100 btn-add-flight">
+				<i class="fas fa-plus me-3"></i>
+				<span>ADD MORE FLIGHTS</span>
+			</button>
+		</div>
+		<div class="col-lg-2">
+			<a href="{{ url('/flights/search') }}" class="btn bg-orange d-flex align-items-center justify-content-center text-white text-uppercase border-2 border-white rounded-3 fw-bold fs-5 w-100 h-100 btn-search">Search<i class="fal fa-long-arrow-up fs-6 rotate-45 ms-3"></i></a>
+		</div>
 	</div>
-</div>
+</form>
 
 <script src="{{ asset('assets/js/flight/search.airports.js') }}?id={{ filemtime('assets/js/flight/search.airports.js') }}"></script>

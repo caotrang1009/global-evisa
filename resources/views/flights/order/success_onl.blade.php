@@ -1,23 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="pb-0">
+<section class=" pb-0">
 	<div class="container">
 		<div class="row">
-			<h1 class="web-title text-black text-center text-uppercase mb-0">Payment</h1>
-			<div class="step-part mt-5">
-				<div class="d-flex justify-content-between text-title stepper-wrapper">
+			<h1 class="web-title text-black text-center text-uppercase w-100">Confirmation</h1>
+			<div class="step-part mt-4">
+				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+						<div class="mt-3 step-name text-center fs-6">Order Information</div>
 					</a>
 					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
+						<div class="mt-3 step-name text-center fs-6">Review Info</div>
 					</a>
-					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+						<div class="mt-3 step-name text-center fs-6">Payment</div>
+					</a>
+					<a href="{{ url("/flights/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">4</div>
+						<div class="mt-3 step-name text-center fs-6">Confirmation</div>
 					</a>
 				</div>
 			</div>
@@ -31,13 +35,13 @@
 				<h1 class="web-header2 fw-800 text-uppercase text-decoration-underline text-black mb-4">YOUR ORDER WAS DONE SUCCESSFULLY!</h1>
 				<div class="mb-4 fw-bold">Order Code: ABCYYZ123654</div>
 				<div class="mb-4">We have received your payment and will notify you for refund if there are unexpected issues. Please check your email to confirm the receipt information, then contact us for further assistance.</div>
-				<a href="{{ url("/flights") }}" class="btn btn-orange rounded-3-5 fw-bold text-title fs-6 py-2 lh-md w-50">Go to my order</a>
+				<a href="{{ url("/flights") }}" class="btn btn-primary rounded-3-5 fw-bold fs-6 py-2 lh-md w-50">Go to my order</a>
 			</div>
 			<div class="col-lg-6 col-12">
 				<div class="mb-4 text-center">
 					<img class="img-fluid" src="{{ asset('assets/images/bg-send-mail.png') }}" alt="arrow">
 				</div>
-				<div class="text-title text-center mt-4"><span class="fw-semibold">Image Credit:</span> Thanh Tran</div>
+				<div class="text-center mt-4"><span class="fw-semibold">Image Credit:</span> Thanh Tran</div>
 			</div>
 		</div>
 	</div>

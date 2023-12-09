@@ -3,35 +3,30 @@
 @section('content')
 <section class="pb-0">
 	<div class="container">
-		<div class="row">
+		<div class="row align-items-center">
 			<div class="col-sm-9">
-				<span class="d-block mb-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
-				<h1 class="web-title text-black text-uppercase">GLOBAL EVISA <br> APPLICATION FORM</h1>
+				<h1 class="web-title text-black text-start text-uppercase w-100 mb-0">FILL IN INFORMATION DETAILS</h1>
 			</div>
 			<div class="col-sm-3 text-end">
-				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-md-5 px-4 py-3 btn-save-exit">
+				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-lg-5 lh-md btn-save-exit">
 					<span class="btn-text px-3">Save & Exit</span>
 				</a>
 			</div>
 		</div>
-	</div>
-</section>
-<section class="pt-0">
-	<div class="container">
 		<div class="row">
-			<div class="step-part mt-5">
-				<div class="d-flex justify-content-between text-title stepper-wrapper">
+			<div class="step-part mt-4">
+				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/visa/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+						<div class="step-name">Order Information</div>
 					</a>
 					<a href="{{ url("/visa/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+						<div class="step-name">Payment</div>
 					</a>
 					<a href="{{ url("/visa/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Confirmation</div>
+						<div class="step-name">Confirmation</div>
 					</a>
 				</div>
 			</div>
@@ -44,8 +39,8 @@
 			<form action="" id="frm-order">
 				<div class="row g-sm-5 g-4">
 					<div class="col-lg-7 col-12">
-						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 mb-4-5">
-							<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-4">ORDER INFORMATION</h2>
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
+							<h2 class="custom-h3 fw-800 text-black mb-4">ORDER INFORMATION</h2>
 							@include('visa.section.order_info')
 							<div class="form-group row">
 								<div class="col-7">
@@ -81,10 +76,10 @@
 								</div>
 							</div>
 						</div>
-						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 mb-4-5 applicant">
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5 applicant">
 							<div class="row align-items-center justify-content-center mb-4">
 								<div class="col-9">
-									<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-0">APPLICANT NO.</h2>
+									<h2 class="custom-h3 fw-800 text-black mb-0">APPLICANT NO.</h2>
 								</div>
 								<div class="col-3 text-end">
 									<div class="d-inline-block">
@@ -98,10 +93,10 @@
 							</div>
 							@include('visa.section.applicant')
 						</div>
-						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4">
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5">
 							<div class="row align-items-center justify-content-center">
 								<div class="col-10">
-									<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-0">ADD-ON SERVICES</h2>
+									<h2 class="custom-h3 fw-800 text-black mb-0">ADD-ON SERVICES</h2>
 								</div>
 								<div class="col-2 text-end">
 									<div class="add-on-services cursor-pointer d-inline-block" data-bs-toggle="collapse" href="#add-on-services">
@@ -118,10 +113,10 @@
 								</div>
 							</div>				
 						</div>
-						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4 add-another-person">
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5 add-another-person">
 							<div class="row align-items-center justify-content-center">
 								<div class="col-10">
-									<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-0">ADD ANOTHER PERSON</h2>
+									<h2 class="custom-h3 fw-800 text-black mb-0">ADD ANOTHER PERSON</h2>
 								</div>
 								<div class="col-2 text-end">
 									<div class="add-person cursor-pointer d-inline-block">
@@ -132,8 +127,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-5 mb-4">
-							<h2 class="custom-h3 fw-800 text-black spacing-n1 mb-4">CONTACT INFORMATION</h2>
+						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
+							<h2 class="custom-h3 fw-800 text-black mb-4">CONTACT INFORMATION</h2>
 							@include('visa.section.contact_info')
 						</div>
 						<div class="confirm">
@@ -148,11 +143,13 @@
 								</label>
 							</div>
 						</div>
+						<div class="text-center mt-4">
+							<a href="{{ url("/visa/payment") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
+						</div>
 					</div>
 					<div class="col-lg-5 col-12">
-						<div class="border-dashed bg-beige rounded-3-5 text-title py-4-5 px-4 mb-4">
+						<div class="border-dashed bg-beige rounded-3-5 text-title p-4-4 px-4 mb-4">
 							@include('visa.section.order_summary')
-							<a href="{{ url("/visa/payment") }}" class="btn btn-orange btn-lg rounded-3 py-2 lh-md fw-bold text-title fs-6 w-100 mt-4 btn-order-info">Next</a>
 						</div>
 					</div>
 				</div>
@@ -167,24 +164,6 @@
 		var iconPlus = "{{ asset('assets/svg/outline/plus.svg') }}";
 		var iconMinus = "{{ asset('assets/svg/outline/minus.svg') }}";
 		var applicant = $(".applicant").first().prop('outerHTML');
-		
-		var validator = $("#frm-order").validate({
-			highlight: function(input){
-				var parent = $(input).parent(".input-order-info");
-				parent.addClass('error');
-				updateSvgColor(parent.find('img'), 'red');
-			},
-			errorPlacement: function(error, input){
-				if (error.text() != '') {
-					$(input).parent(".input-order-info").next("span").show();
-					$(input).parent(".input-order-info").next("span").html(error.text())
-				}
-			},
-			invalidHandler: function(event, validator) {
-				$(".spinner").addClass("d-none");
-				$('.spinner .center-div').loader('spinner').hide();
-			}
-		});
 
 		$(".add-on-services").click(function(){
 			$(this).find("img").attr('src', (_, attr) => attr == iconPlus ? iconMinus : iconPlus);
@@ -204,20 +183,38 @@
 			$(".applicant").last().remove();
 		})
 
-		$(document).on('blur', 'input', function () {
-			if ($(this).valid()) {
-				var parent = $(this).parent(".input-order-info");
-				parent.removeClass('error');
-				parent.next("span").hide();
-				updateSvgColor(parent.find('img'), '');
-			}
-		})
-
 		$(document).on('mouseenter', '.icon-hover', function () {
 			updateSvgColor($(this).find('img'), 'white');
 		}).on('mouseleave', '.icon-hover', function () {
 			updateSvgColor($(this).find('img'), '');
 		});
+
+		var validator = $("#frm-order").validate({
+			highlight: function(input){
+				$(input).addClass('error');
+				console.log($(input).siblings('img'))
+				updateSvgColor($(input).siblings('img'), 'red');
+			},
+			errorPlacement: function(error, input){
+				console.log(error.text())
+				if (error.text() != '') {
+					$(input).siblings("span").show();
+					$(input).siblings("span").html(error.text())
+				}
+			},
+			invalidHandler: function(event, validator) {
+				$(".spinner").addClass("d-none");
+				$('.spinner .center-div').loader('spinner').hide();
+			}
+		});
+
+		$(document).on('blur', 'input', function () {
+			if ($(this).valid()) {
+				$(this).removeClass('error');
+				$(this).siblings("span").hide();
+				updateSvgColor($(this).siblings('img'), '');
+			}
+		})
 
 		function updateSvgColor(pathElement, fillColor) {
 			if (fillColor!='') {

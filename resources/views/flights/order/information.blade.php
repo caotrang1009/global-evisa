@@ -1,26 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-<section>
+<section class="pb-0">
 	<div class="container">
-		<div class="d-flex align-items-center">
-			<span class="position-absolute me-3 bg-orange d-lg-block d-none" style="width: 80px; height:20px;"></span>
-			<h1 class="web-title text-black text-center text-uppercase w-100">FILL IN <br> INFORMATION DETAILS</h1>
-		</div>
 		<div class="row">
-			<div class="step-part mt-5">
-				<div class="d-flex justify-content-between text-title stepper-wrapper">
+			<h1 class="web-title text-black text-center text-uppercase w-100">FILL IN INFORMATION DETAILS</h1>
+			<div class="step-part mt-4">
+				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+						<div class="step-name">Order Information</div>
 					</a>
 					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Review Info</div>
+						<div class="step-name">Review Info</div>
 					</a>
 					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+						<div class="step-name">Payment</div>
+					</a>
+					<a href="{{ url("/flights/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">4</div>
+						<div class="step-name">Confirmation</div>
 					</a>
 				</div>
 			</div>
@@ -33,43 +34,34 @@
 			@csrf
 			<div class="row g-sm-5 g-4">
 				<div class="col-lg-7 col-12">
-					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5">
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-4">PASSENGER INFORMATION</h2>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black d-flex">
 									<span>Surname</span>
-									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="24px" height="24px">
+									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
 								</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-									<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
-									<input class="form-control border-0 px-0 cursor-pointer" type="text" id="surname" name="surname" placeholder="Enter Value" required>
-								</div>
+								<input class="form-control border rounded-3 px-3 input-info" type="text" id="surname" name="surname" placeholder="Enter Value" required>
 								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black d-flex">
 									<span>Given names</span>
-									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="24px" height="24px">
+									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
 								</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-									<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
-									<input class="form-control border-0 px-0 cursor-pointer" type="text" id="given_names" name="given_names" placeholder="Enter Value" required>
-								</div>
+								<input class="form-control border rounded-3 px-3 input-info" type="text" id="given_names" name="given_names" placeholder="Enter Value" required>
 								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 						</div>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Title</label>
-								<div class="dropdown">
-									<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-										<img class="form-icon" src="{{ asset('assets/svg/outline/community.svg') }}" data-icon-name="outline/community" alt="community">
-										<input class="form-control border-0 px-0 cursor-pointer" type="text" id="title" name="title" placeholder="Please Select" required>
-										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-									</div>
+								<div class="dropdown input-end-icon">
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="title" name="title" placeholder="Please Select" data-icon-name="outline/arrow-bottom" data-bs-toggle="dropdown" data-bs-auto-close="outside" required>
+									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-									<ul class="dropdown-menu dropdown-select border-secondary rounded-3-5 shadow w-100" style="--bs-border-opacity: 0.5;">
+									<ul class="dropdown-menu dropdown-select border-secondary rounded-3 shadow w-100" style="--bs-border-opacity: 0.5;">
 										<li><a class="dropdown-item cursor-pointer selected">Mr</a></li>
 										<li><a class="dropdown-item cursor-pointer">Ms</a></li>
 										<li><a class="dropdown-item cursor-pointer">Master</a></li>
@@ -79,23 +71,19 @@
 							</div>
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Day of Birth</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+								<div class="input-start-icon">
 									<img class="form-icon" src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
-									<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="date_of_birth" name="date_of_birth" placeholder="DD/MM/YY" required>
-									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
+									<input class="form-control border rounded-3 px-3 datepicker input-info" type="text" id="date_of_birth" name="date_of_birth" placeholder="DD/MM/YY" required>
+									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 								</div>
-								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 						</div>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Nationality</label>
-								<div class="dropdown">
-									<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-										<img class="form-icon" src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
-										<input class="form-control border-0 px-0 cursor-pointer" type="text" id="nationality" name="nationality" placeholder="Please Select" required>
-										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-									</div>
+								<div class="dropdown input-end-icon">
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="nationality" name="nationality" placeholder="Please Select" data-icon-name="outline/arrow-bottom" data-bs-toggle="dropdown" data-bs-auto-close="outside" required>
+									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 										@include('visa.section.countries')
@@ -104,22 +92,16 @@
 							</div>
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Passport Number</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-									<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="date">
-									<input class="form-control border-0 px-0 cursor-pointer" type="text" id="passport_number" name="passport_number" placeholder="Enter Value" required>
-								</div>
+								<input class="form-control border rounded-3 px-3 input-info" type="text" id="passport_number" name="passport_number" placeholder="Enter Value" required>
 								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 						</div>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Country of issue</label>
-								<div class="dropdown">
-									<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-										<img class="form-icon" src="{{ asset('assets/svg/outline/map.svg') }}" data-icon-name="outline/map" alt="date">
-										<input class="form-control border-0 px-0 cursor-pointer" type="text" id="passport_issue_country" name="passport_issue_country" placeholder="Please Select" required>
-										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
-									</div>
+								<div class="dropdown input-end-icon">
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="passport_issue_country" name="passport_issue_country" placeholder="Please Select" data-icon-name="outline/arrow-bottom" data-bs-toggle="dropdown" data-bs-auto-close="outside" required>
+									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 										@include('visa.section.countries')
@@ -128,17 +110,16 @@
 							</div>
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Expired Date</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
+								<div class="input-start-icon">
 									<img class="form-icon" src="{{ asset('assets/svg/outline/date.svg') }}" data-icon-name="outline/date" alt="date">
-									<input class="form-control border-0 px-0 cursor-pointer datepicker" type="text" id="expired_date" name="expired_date" placeholder="DD/MM/YY" required>
-									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
+									<input class="form-control border rounded-3 px-3 datepicker input-info" type="text" id="expired_date" name="expired_date" placeholder="DD/MM/YY" required>
+									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 								</div>
-								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 						</div>
 						<div class="small"><b>Note<span class="text-danger">*</span>:</b> If there are any other passengers,  all information collected will be the same.</div>
 					</div>
-					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5">
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-3">Travel Insurance</h2>
 						<div class="d-flex gap-4 mb-3">
 							<div class="form-check select-insurance add" role="button">
@@ -153,7 +134,7 @@
 						<div class="mb-3 medium">
 							<label class="fw-semibold">Choose the best insurance package for you
 								<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The difference between the packages is the Limit of Liability">
-									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="24px" height="24px">
+									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
 								</span>
 							</label>
 							<div class="my-2">
@@ -169,7 +150,7 @@
 							<div>You can see details of the Limit of Liability <a class="link text-semantic-blue fst-italic fw-medium" href="#" target="_blank">here</a></div>
 						</div>
 						<div class="row gx-4 gy-3">
-							<div class="col-sm-6">
+							<div class="col-sm-5">
 								<label class="h6 fw-semibold text-title text-black spacing-n1">Number of days<span class="text-danger">*</span></label>
 								<div class="dropdown">
 									<select name="number_of_days[]" class="form-select form-control number_of_days border rounded-3 bg-white px-3 medium">
@@ -182,75 +163,55 @@
 									</select>
 								</div>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-sm-7 upload-photo">
 								<label class="h6 fw-semibold text-title text-black spacing-n1">Upload a photo of Passport (optional)</label>
-								<div class="d-flex gap-2 align-items-center justify-content-center border rounded-3 bg-white px-3 input-order-info">
+								<div class="d-flex gap-2 align-items-center justify-content-center border rounded-3 bg-white px-3 input-info">
 									<span>Upload a photo</span>
 									<img class="my-2" src="{{ asset('assets/svg/outline/exchange-black.svg') }}" alt="exchange" width="20px" height="20px">
 								</div>
+								<div class="small mt-2"><em>Upload JPG, GIF or PNG image.</em></div>
+								<span class="fw-medium mt-2" style="display: none"></span>
 								<input type="file" name="passport[0]" class="invisible passport" style="height: 0px;">
 							</div>
 						</div>
 						<div class="text-black fw-semibold mt-n2">Total: <span class="text-semantic-blue"><span id="usd_fee">9.00</span> USD </span> I <span id="vnd_fee">180,000</span> VND</div>
 					</div>
-					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4 mb-4-5">
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-4">CONTACT INFORMATION</h2>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black d-flex">
 									<span>First Name</span>
-									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="24px" height="24px">
+									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
 								</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-									<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
-									<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_first_name" name="contact_first_name" placeholder="Enter Value" required>
-								</div>
+								<input class="form-control border rounded-3 px-3 input-info" type="text" id="contact_first_name" name="contact_first_name" placeholder="Enter Value" required>
 								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black d-flex">
 									<span>Last Name</span>
-									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="24px" height="24px">
+									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
 								</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-									<img class="form-icon" src="{{ asset('assets/svg/outline/education.svg') }}" data-icon-name="outline/education" alt="education">
-									<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_last_name" name="contact_last_name" placeholder="Enter Value" required>
-								</div>
+								<input class="form-control border rounded-3 px-3 input-info" type="text" id="contact_last_name" name="contact_last_name" placeholder="Enter Value" required>
 								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 						</div>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Your Phone Number</label>
-								<div class="dropdown">
-									<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-										<img class="form-icon" src="{{ asset('assets/svg/outline/phone.svg') }}" data-icon-name="outline/phone" alt="phone">
-										<div class="d-flex align-items-center gap-2 cursor-pointer bg-white" data-bs-toggle="dropdown" data-bs-auto-close="outside">
-											<span class="medium text-black text-opacity-7 nationality">+84</span>
-											<img class="cursor-pointer" src="{{ asset('assets/svg/icon/direction-up.svg') }}" data-icon-name="icon/direction-up" alt="direction-up" style="max-width: none">
-											<input class="form-control" type="hidden" id="nationality" name="nationality" value="" required>
-										</div>
-										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-											@include('visa.section.countries_telephone')
-										</div>
-										<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_phone" name="contact_phone" placeholder="Enter Value" required>
-									</div>
-									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
-								</div>
+								<input class="form-control border rounded-3 telinput input-info" type="text" id="contact_phone" name="contact_phone" placeholder="Enter Value" required>
+								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 							<div class="col-sm-6">
 								<label class="h6 fw-semibold text-title text-black">Your Email</label>
-								<div class="d-flex gap-2 align-items-center justify-content-between border rounded-3 bg-white px-3 input-order-info">
-									<img class="form-icon" src="{{ asset('assets/svg/outline/email.svg') }}" data-icon-name="outline/email" alt="email">
-									<input class="form-control border-0 px-0 cursor-pointer" type="text" id="contact_email" name="contact_email" placeholder="Enter Value" required>
-								</div>
+								<input class="form-control border rounded-3 px-3 input-info" type="text" id="contact_email" name="contact_email" placeholder="Enter Value" required>
 								<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 							</div>
 						</div>
 						<div class="form-group row gx-4 gy-3">
 							<div class="col-12">
 								<label class="h6 fw-semibold text-title text-black">Special request <small class="fst-italic fw-medium"> (For example: Meals; Wheelchair services; Services for the blind and deaf; Additional  chair purchases)</small></label>
-								<textarea class="form-control cursor-pointer border rounded-3 bg-white input-order-info" name="special_request" id="special_request" placeholder="Type of special request or comment (optional)" cols="30" rows="5"></textarea>
+								<textarea class="form-control border rounded-3 bg-white input-info" name="special_request" id="special_request" placeholder="Type of special request or comment (optional)" cols="30" rows="5"></textarea>
 							</div>
 						</div>
 						<div class="small"><b>Note<span class="text-danger">*</span>:</b> Please be careful - Passenger information must match your passport or photo ID</div>
@@ -285,14 +246,15 @@
 	$(document).ready(function () {	
 		var validator = $("#frm-order").validate({
 			highlight: function(input){
-				var parent = $(input).parent(".input-order-info");
-				parent.addClass('error');
-				updateSvgColor(parent.find('img'), 'red');
+				$(input).addClass('error');
+				console.log($(input).siblings('img'))
+				updateSvgColor($(input).siblings('img'), 'red');
 			},
 			errorPlacement: function(error, input){
+				console.log(error.text())
 				if (error.text() != '') {
-					$(input).parent(".input-order-info").next("span").show();
-					$(input).parent(".input-order-info").next("span").html(error.text())
+					$(input).siblings("span").show();
+					$(input).siblings("span").html(error.text())
 				}
 			},
 			invalidHandler: function(event, validator) {
@@ -303,10 +265,9 @@
 
 		$(document).on('blur', 'input', function () {
 			if ($(this).valid()) {
-				var parent = $(this).parent(".input-order-info");
-				parent.removeClass('error');
-				parent.next("span").hide();
-				updateSvgColor(parent.find('img'), '');
+				$(this).removeClass('error');
+				$(this).siblings("span").hide();
+				updateSvgColor($(this).siblings('img'), '');
 			}
 		})
 

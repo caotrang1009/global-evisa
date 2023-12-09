@@ -1,5 +1,5 @@
-<div class="blog mt-5">
-	<h2 class="h1 text-uppercase text-title text-black text-opacity-9 fw-800 mb-3">RECENT BLOGS</h2>
+<div class="blog mt-4-5">
+	<h3 class="text-uppercase text-black text-opacity-9 web-header1 fw-800">RECENT BLOGS</h3>
 	<div class="slide-blog position-relative py-4">
 		<div class="swiper" data-parent=".slide-blog" data-items="3" data-items-md="2" data-items-sm="1" data-space-between="40" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next">
 			<div class="swiper-wrapper align-items-center">							

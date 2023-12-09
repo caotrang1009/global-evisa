@@ -189,18 +189,17 @@
 
 <section>
 	<div class="container position-relative">
-		<span class="d-block me-3 bg-orange position-absolute d-lg-block d-none" style="width: 80px; height:20px; left: -123px;"></span>
 		<div class="row">
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb visa-breadcrumb text-title mb-2">
-					<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="#">Home</a></li>
+					<li class="breadcrumb-item"><a class="btn btn-outline-primary" href="{{ url('/') }}">Home</a></li>
 					<li class="breadcrumb-item active" aria-current="page">
-						<a class="btn btn-outline-primary px-5 d-flex align-items-center gap-2" href="/visa/country/{{$alias}}">Country <img class="rounded-circle border border-white fit-cover" src="{{ asset('assets/svg/emojione-flag/'.$alias.'.svg') }}" alt="Belarusian" width="20px" height="20px"></a>
+						<a class="btn btn-outline-primary px-5 d-flex align-items-center gap-2" href="{{ url('/visa/country/'.$alias) }}">Country <img class="rounded-circle border border-white fit-cover" src="{{ asset('assets/svg/emojione-flag/'.$alias.'.svg') }}" alt="Belarusian" width="20px" height="20px"></a>
 					</li>
 					<li class="breadcrumb-item"><a class="btn btn-outline-primary px-5" href="{{ url("/visa") }}">Get your global evisa now!</a></li>
 				</ol>
 			</nav>
-			<div class="slide-country position-relative mb-4">
+			<div class="slide-country position-relative mb-2">
 				<div class="swiper" data-parent=".slide-country" data-items="1" data-space-between="1" data-prev=".swiper-custom-prev" data-next=".swiper-custom-next">
 					<div class="swiper-wrapper align-items-center">
 						@foreach ($country->images as $k => $image)								
@@ -208,7 +207,7 @@
 							<div class="card border-0 slide p-4" style="width: 100%; height: 780px; background: url({{ $image }}) no-repeat; background-position: center left;">
 								<div class="card-body p-4">
 									<div class="d-flex gap-3 justify-content-between my-1 mx-2">
-										<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline spacing-n1 text-white text-start">Travel to {{ $country->name }}</h2>
+										<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline text-white text-start">Travel to {{ $country->name }}</h2>
 										<div class="flag">
 											<img src="{{ $country->flag }}" alt="{{ $country->name }}">
 										</div>
@@ -217,7 +216,7 @@
 								<div class="card-body p-3">
 									<div class="position-absolute text-start bottom-0 mb-6 me-6">
 										<h1 class="web-title text-uppercase text-white spacing-n064 pb-2">{{ $country->name }} <br> TRAVEL TIPS</h1>
-										<div class="mt-4 text-white lg-body spacing-1 fw-light">Welcome to {{ $country->name }}, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat! </div>
+										<div class="mt-4 text-white fs-5 fw-light">Welcome to {{ $country->name }}, lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat! </div>
 									</div>
 								</div>
 							</div>

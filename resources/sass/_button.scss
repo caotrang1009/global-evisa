@@ -4,15 +4,15 @@
 		position: relative;
 		&:after {
 			content: "";
-			background: $orange;
-			border: 1px solid $orange;
-			border-radius: 20%;
+			background: $white;
+			border: 1px solid $gray-400;
+			border-radius: 50%;
 			box-sizing: border-box;
 			position: absolute;
-			top: 1.35rem;
-			width: 1.65rem;
+			top: .75rem;
+			width: 2.25rem;
 			height: 2.25rem;
-			line-height: 2rem;
+			line-height: 2.25rem;
 			text-align: center;
 		}
 		&.curve-right {
@@ -28,8 +28,8 @@
 	}
 	.curve-text {
 		position: absolute;
-		top: 1.35rem;
-		right: -1.875rem;
+		top: .725rem;
+		right: -1.25rem;
 		width: 2.25rem;
 		height: 2.25rem;
 		line-height: 2.25rem;
@@ -314,9 +314,4 @@
 	line-height: 2.25rem;
 	text-align: center;
 	z-index: 1;
-}
-
-.btn-add-flight {
-	width: 300px;
-	height: 40px;
 }

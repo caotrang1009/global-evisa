@@ -13,6 +13,23 @@
 	height: 16px;
 }
 
+#frm-search {
+	.form-select {
+		--bs-form-select-bg-img: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>") !important;
+		color: white !important;
+		&:focus {
+			border: 1px solid white !important;
+			border-radius: .5rem;
+		}
+	}
+}
+
+.form-floating {
+	label {
+		width: 100%;
+	}
+}
+
 .form-line {
 	.form-control {
 		border-top: none;
@@ -75,8 +92,33 @@ input {
 	}
 }
 
+.input-start-icon {
+	> img {
+		position: absolute;
+		margin: .65rem .5rem .75rem 1rem;
+		z-index: 3;
+	}
+	> .form-control {
+		padding-left: 2.5rem !important;
+	}
+}
+
+.input-end-icon {
+	position: relative;
+	> img {
+		position: absolute;
+		margin: 0.8rem 1rem 0.85rem 0.5rem;
+		z-index: 3;
+		right: 0;
+		top: 0;
+	}
+	> .form-control {
+		padding-right: 2.5rem !important;
+	}
+}
+
 .daterangepicker {
-	border-radius: 1rem;
+	border-radius: .5rem;
 	&.opensright:before {
 		left: 19px;
 	}

@@ -5,19 +5,19 @@
 	<div class="container">
 		<div class="row">
 			<h1 class="web-title text-black text-center text-uppercase mb-0">Confirmation</h1>
-			<div class="step-part mt-5">
-				<div class="d-flex justify-content-between text-title stepper-wrapper">
+			<div class="step-part mt-4">
+				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/visa/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Order Information</div>
+						<div class="step-name">Order Information</div>
 					</a>
 					<a href="{{ url("/visa/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Payment</div>
+						<div class="step-name">Payment</div>
 					</a>
 					<a href="{{ url("/visa/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
-						<div class="mt-4 mx-2 step-name text-center fs-sm-4 fs-6">Confirmation</div>
+						<div class="step-name">Confirmation</div>
 					</a>
 				</div>
 			</div>
@@ -34,8 +34,8 @@
 					<li>If you initiated this cancellation, please be assured that your payment has been voided, and you will not be charged for this transaction.</li>
 					<li>If you still wish to proceed with the payment, please follow the link below to make an online payment:
 						<div class="d-flex justify-content-center gap-4 my-4">
-							<a href="{{ url("/visa/payment-success/online") }}" class="btn btn-orange rounded-3-5 fw-bold text-title fs-6 py-2 px-5 lh-md">Pay with Paypal </a>
-							<a href="{{ url("/visa/payment-success/online") }}" class="btn btn-outline-orange rounded-3-5 fw-bold text-title fs-6 py-2 px-5 lh-md">Pay with OnePay</a>
+							<a href="{{ url("/visa/payment-success/online") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-6 py-2 px-5 lh-md">Pay with Paypal </a>
+							<a href="{{ url("/visa/payment-success/online") }}" class="btn btn-outline-primary rounded-3-5 fw-bold text-title fs-6 py-2 px-5 lh-md">Pay with OnePay</a>
 						</div>
 					</li>
 					<li>If you prefer to complete the payment via bank transfer, please use the following bank details.</li>

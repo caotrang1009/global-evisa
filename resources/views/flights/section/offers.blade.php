@@ -1,101 +1,67 @@
 <div class="row">
 	<div class="col-lg-6">
-		<h1 class="web-header2 fw-800 text-uppercase text-decoration-underline text-black spacing-n1">Select results</h1>
+		<h2 class="web-header1 fw-800 text-uppercase text-decoration-underline text-black">Select results</h2>
 	</div>
 	<div class="col-lg-6">
-		<div class="d-flex gap-3 align-items-center justify-content-end">
+		<div class="d-sm-flex d-none gap-3 align-items-center justify-content-end" id="sort">
 			<div class="d-flex gap-2 align-items-center">
-				<img src="{{ asset('assets/svg/outline/sort-arrow-down.svg') }}" alt="sort-arrow-down" width="24px" height="24px">
-				<span class="subheading fw-bold text-black text-opacity-9 mb-0">Sort by:</span>
+				<img src="{{ asset('assets/svg/outline/sort-arrow-down.svg') }}" alt="sort-arrow-down" width="20px" height="20px">
+				<span class="fw-bold text-black text-opacity-9 text-uppercase mb-0">Sort by:</span>
 			</div>
 			<div class="dropdown dropstart">
-				<button type="button" class="btn btn-primary text-nowrap d-flex align-items-center text-white rounded-4 px-4 py-2" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+				<button type="button" class="btn btn-primary text-nowrap d-flex align-items-center text-white rounded-4 px-4" data-bs-toggle="dropdown" data-bs-auto-close="outside">
 					<span class="sort-text me-3">Lowest Price</span>
 					<img src="{{ asset('assets/svg/outline/arrow-bottom-white.svg') }}" alt="arrow-bottom" width="24px" height="24px">
 				</button>
-				<ul class="dropdown-menu border-0 shadow">
-					<li>
-						<a class="dropdown-item cursor-pointer selected">
-							<div class="form-check">
-								<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-								<label class="form-check-label" for="flexRadioDefault1">
-									Lowest price per person
-								</label>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+				<div class="dropdown-menu border-0 shadow p-3">
+					<div class="sort-options">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+							<label class="form-check-label" for="flexRadioDefault1">
+								Lowest price per person
+							</label>
+						</div>
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
 							<label class="form-check-label" for="flexRadioDefault2">
 								Highest price per person
 							</label>
 						</div>
-						</a>
-					</li>						
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
 							<label class="form-check-label" for="flexRadioDefault3">Direct Flight</label>
 						</div>
-						</a>
-					</li>						
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
 							<label class="form-check-label" for="flexRadioDefault4">Earliest Departure</label>
 						</div>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault5">
 							<label class="form-check-label" for="flexRadioDefault5">Latest Departure</label>
 						</div>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault6">
 							<label class="form-check-label" for="flexRadioDefault6">Earliest Arrival</label>
 						</div>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault7">
 							<label class="form-check-label" for="flexRadioDefault7">Latest Arrival</label>
 						</div>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault8">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault8">
 							<label class="form-check-label" for="flexRadioDefault8">Short flight time duration</label>
 						</div>
-						</a>
-					</li>
-					<li>
-						<a class="dropdown-item cursor-pointer">
-						<div class="form-check">
-							<input class="form-check-input mt-0 me-2" type="radio" name="flexRadioDefault" id="flexRadioDefault9">
+						<div class="form-check text-nowrap mb-2">
+							<input class="form-check-input mt-0 me-3" type="radio" name="flexRadioDefault" id="flexRadioDefault9">
 							<label class="form-check-label" for="flexRadioDefault9">Best overall</label>
 						</div>
-						</a>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<div class="text-black text-opacity-8 mt-3 mb-5">Results after having applied filter, prices include taxes and fees.</div>
+<div class="text-black text-opacity-8 mt-2 mb-3">Results after having applied filter, prices include taxes and fees.</div>
 <div class="flight">
 	<div class="card rounded-3-5 bg-primary border-2 border-primary mb-4">
 		<div class="card-header bg-transparent text-center border-0">
@@ -158,7 +124,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-between mt-4">
+			<div class="row justify-content-between g-3 mt-2">
 				<div class="col-sm-7">
 					<span class="text-black text-opacity-7 text-decoration-line-through fw-semibold me-4">2,599,000 VND</span>
 					<span class="text-primary fw-bold h4">2,399,000 VND</span>
@@ -389,7 +355,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-between mt-4">
+			<div class="row justify-content-between g-3 mt-2">
 				<div class="col-sm-7">
 					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,479,000 VND</span>
 					<span class="text-orange fw-bold h4">2,599,000 VND</span>
@@ -620,7 +586,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-between mt-4">
+			<div class="row justify-content-between g-3 mt-2">
 				<div class="col-sm-7">
 					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,479,000 VND</span>
 					<span class="text-orange fw-bold h4">2,679,000 VND</span>
@@ -882,7 +848,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row justify-content-between mt-4">
+			<div class="row justify-content-between g-3 mt-2">
 				<div class="col-sm-7">
 					<span class="text-black text-opacity-9 text-decoration-line-through fw-semibold me-4">2,689,000 VND</span>
 					<span class="text-orange fw-bold h4">2,799,000 VND</span>

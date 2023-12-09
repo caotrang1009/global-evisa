@@ -13,3 +13,15 @@ $vals: (10,25,35,40,44,50,60,75,80,85,100);
 		}
 	}
 }
+
+
+$position: (0,10,25,50,75,100);
+
+@each $pos in $position {
+	.bottom-#{$pos} {
+		bottom: #{($pos)+'% '} !important;
+	}
+	.start-#{$pos} {
+		left: #{($pos)+'% '} !important;
+	}
+}

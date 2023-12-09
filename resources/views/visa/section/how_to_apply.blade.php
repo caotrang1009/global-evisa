@@ -1,5 +1,5 @@
 <div class="how-to-apply mb-4">
-	<h1 class="text-uppercase web-header1 text-decoration-underline text-black text-opacity-9" style="letter-spacing: -1px;">HOW TO APPLY</h1>
+	<h1 class="text-uppercase web-header1 text-decoration-underline text-black text-opacity-9 fw-800" style="letter-spacing: -1px;">HOW TO APPLY</h1>
 	<div class="row g-lg-5-6 g-4 mt-0">
 		<div class="col-lg-4 col-md-6 col-12">
 			<div class="card h-100 border border-orange bg-beige rounded-4">
@@ -36,8 +36,8 @@
 		</div>
 	</div>
 	<div class="text-center mt-4">
-		<a href="#" class="btn btn-orange btn-lg button1 rounded-4 spacing-05 px-6 py-3 mt-3">
-			<span class="btn-text">Apply now</span><i class="fal fa-long-arrow-up icon-sm ms-3" style="transform: rotate(45deg);"></i>
+		<a href="#" class="btn btn-orange btn-lg button1 rounded-3 spacing-05 px-6 py-3 mt-3 w-sm-auto w-100">
+			<span class="btn-text">Apply now</span><i class="fal fa-long-arrow-up ms-3" style="transform: rotate(45deg);"></i>
 		</a>
 	</div>
 </div>

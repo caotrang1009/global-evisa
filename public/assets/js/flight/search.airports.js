@@ -1,11 +1,13 @@
 $(document).ready(function() {
-	var direction		= "oneway-roundtrip";
+	var direction		= "round-trip";
 	var travelClass		= "ECONOMY";
 	var adults			= 1;
 	var children		= 0;
 	var infants			= 0;
 	var totalPax		= adults + children + infants;
-	var multiFlightItem	= $(".multi-city-item").last().prop('outerHTML');
+	var startDate		= "";
+	var endDate			= "";
+	var multiFlightItem	= $(".multi-city-item").first().prop('outerHTML');
 	var flights			= $("#multiCityQty").val();
 	
 	function addPax(type) {
@@ -45,14 +47,15 @@ $(document).ready(function() {
 	}
 	
 	function showSelectElements(e) {
-		$(".direction .direction-item").each(function() {
-			if (direction == $(this).attr("data-show")) {
-				$(this).addClass("btn-orange selected");
+		$(".dropdown-direction .direction-item").each(function() {
+			if (direction == $(this).attr("data-value")) {
+				$(this).addClass("selected");
 			} else {
-				$(this).removeClass("btn-orange selected").addClass("bg-white");
+				$(this).removeClass("selected");
 			}
 		});
 		$("#direction").val(direction);
+		$(".direction-text").text($("."+direction).text());
 		
 		$("#adults").val(adults);
 		$(".adults-text").text(adults);
@@ -62,6 +65,14 @@ $(document).ready(function() {
 		
 		$("#infants").val(infants);
 		$(".infants-text").text(infants);
+
+		$(".add-more-flight").hide();
+		$(".multi-city-control").hide();
+		$(".remove-flight").hide();
+		
+		if (totalPax <= 9) {
+			$(".pax-text").text(totalPax);
+		}
 		
 		$(".dropdown-travel-class .travel-class-item").each(function() {
 			if (travelClass == $(this).attr("data-value")) {
@@ -71,12 +82,10 @@ $(document).ready(function() {
 			}
 		});
 		$("#travelClass").val(travelClass);
-		$(".travel-class-value").val($("."+travelClass).text());
-
-		$(".add-more-flight").hide();
-		$(".multi-city-control").hide();
+		$(".travel-class-value").text($("."+travelClass).text());
 		$("#multiCityQty").val(1);
 		$('.multi-city-control input').prop('disabled', true);
+		$('.round-trip-part').removeClass('col-sm-4');
 		
 		setDate($("#departureDate"), new Date());
 		setDate($("#returnDate"), $("#departureDate").val());
@@ -88,21 +97,20 @@ $(document).ready(function() {
 			});
 		}
 
-		if (direction == "oneway-roundtrip") {
-			if ($("#round_trip_check").is(':checked')) {
-				$("#returnDate").prop('disabled', false);
-				$(".round-trip-control").show();
-			} else {
-				$("#returnDate").prop('disabled', true);
-				$(".round-trip-control").hide();
-			}
+		if (direction == "round-trip") {
+			$(".round-trip-control").show();
+			$(".round-trip-control-input").addClass("input-curve");
 		} else if (direction == "multi-city") {
-			$("#returnDate").prop('disabled', true);
-			$(".round-trip-control").hide();
 			$(".multi-city-control").show();
 			$(".add-more-flight").show();
 			$("#multiCityQty").val(flights);
 			$('.multi-city-control input').prop('disabled', false);
+			$(".round-trip-control").hide();
+			$(".round-trip-control-input").removeClass("input-curve");
+			$('.round-trip-part').addClass('col-sm-4');
+		} else {
+			$(".round-trip-control").hide();
+			$(".round-trip-control-input").removeClass("input-curve");
 		}
 	}
 	
@@ -129,7 +137,6 @@ $(document).ready(function() {
 	function checkDate(dateMultiCity = null) {
 		var departureDate = $("#departureDate").val();
 		var returnDate = $("#returnDate").val();
-		console.log(departureDate, returnDate)
 		if (Date.parse(returnDate) < Date.parse(departureDate)) {
 			$("#returnDate").data("daterangepicker").setStartDate(departureDate);
 			$("#returnDate").data("daterangepicker").setEndDate(departureDate);
@@ -165,35 +172,21 @@ $(document).ready(function() {
 			$(this).find("[id*='departureDateMultiCity']").attr("id", "departureDateMultiCity_" + (index+2));
 			$(this).find(".btn-exchange").attr("data-value", (index+1));
 			if (index != 0) {
-				var findAdd = $(this).find(".add-more-flight");
-				var img = $(findAdd).find("img");
-				$(findAdd).removeClass("add-more-flight").addClass("remove-flight");
-				$(findAdd).find("a").removeClass("btn-add").addClass("btn-remove");
-				$(img).attr("src", $(img).data("link")+'/'+$(img).attr("alt"));
+				$(this).find(".remove-flight").show();
 			}
 		});
 		$("#multiCityQty").val(flights);
-
-		if (flights >= 5) {
-			$(".add-more-flight a").addClass("d-none");
+		
+		if (flights >= 6) {
+			$(".btn-add-flight").hide();
 		} else {
-			$(".add-more-flight a").removeClass("d-none");
+			$(".btn-add-flight").show();
 		}
 	}
 	
 	$(".direction-item").click(function() {
-		direction = $(this).attr("data-show");
+		direction = $(this).attr("data-value");
 		showSelectElements();
-	});
-
-	$("#round_trip_check").change(function() {
-		if ($(this).is(':checked')){
-			$("#returnDate").prop('disabled', false);
-			$(this).closest('.round-trip-control').find('.input-search-flight').removeClass("input-disabled").addClass("bg-white");
-		} else {
-			$("#returnDate").prop('disabled', true);
-			$(this).closest('.round-trip-control').find('.input-search-flight').removeClass("bg-white").addClass("input-disabled");
-		}
 	});
 
 	$(".pax-add").click(function() {
@@ -218,12 +211,14 @@ $(document).ready(function() {
 		$("[id*='destinationLocationCode']").eq(dataValue).val(originLocationCode);
 	});
 
-	$(".btn-add-flight, .btn-add").click(function() {
+	$(".btn-add-flight").click(function() {
 		flights++;
-		$(".multi-city-control").append(multiFlightItem);		
-		$('.multi-city-control input').prop('disabled', false);
+		$(".multi-city-control").append(multiFlightItem);
 		updateMultiCityItem();
-		initLoadElement();
+
+		setDate($("#departureDateMultiCity_"+flights), addOneDay(new Date($("#departureDateMultiCity_"+(flights-1)).val())));
+		$("#originLocationCodeMultiCity_"+flights).val($("#destinationLocationCodeMultiCity_"+(flights-1)).val());
+		$("#destinationLocationCodeMultiCity_"+flights).val("");
 	});
 
 	$(".multi-city-control").on("click", ".btn-remove", function() {
@@ -232,18 +227,34 @@ $(document).ready(function() {
 		updateMultiCityItem();
 	});
 	
-	$(document).on("change", ".date-picker", function(){
+	$(document).on("change", ".datepicker", function(){
 		checkDate($(this));
 		showSelectElements();
 	});
-
-	$('#round_trip_check').on('change', function(){
-		if ($(this).is(':checked')){
-			$('.show-return-date').removeClass('d-none');
-		} else {
-			$('.show-return-date').addClass('d-none');
-		}
-	});
 	
 	initFlightForm();
+	
+	$("#frm-search").validate({
+		rules: {
+			"originLocationCode": {
+				required: true
+			},
+			"destinationLocationCode": {
+				required: true
+			},
+			"date": {
+				required: true
+			}
+		},
+		highlight: function(input){
+			$(input).addClass('error');
+		},
+		errorPlacement: function(error, element){}
+	});
+	
+	$(".btn-search").click(function(){
+		$(".spinner").removeClass("d-none");
+		$('.spinner .center-div').loader('spinner').show();
+		$("#frm-search").submit();
+	});
 });

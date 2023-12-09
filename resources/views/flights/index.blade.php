@@ -4,28 +4,25 @@
 
 <section>
 	<div class="container">
-		<h1 class="web-title text-black text-uppercase spacing-n1">BOOK YOUR FLIGHT!</h1>
+		<h1 class="web-title text-black text-uppercase">BOOK YOUR FLIGHT!</h1>
 		<div class="d-flex align-items-center">
 			<span class="d-block me-3 sub-line-title"></span>
-			<h4 class="page-sub-title">Where do you wanna go?</h4>
+			<h4 class="text-black text-opacity-9">Where do you wanna go?</h4>
+		</div>
+		<div class="mt-4">
+			<div class="bg-primary px-4 py-4-5">
+				@include('flights.section.quicksearch')
+			</div>
 		</div>
 	</div>
 </section>
-
-
-<section>
-	<div class="container bg-primary">
-		@include('flights.section.quicksearch')
-	</div>
-</section>
-
 <section>
 	<div class="container">
 		<div class="row align-items-end pb-3">
 			<div class="col-sm-6">
-				<span class="d-block me-3 sub-line-title"></span>
-				<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline spacing-n1 text-black text-opacity-9 my-3">TOP DESTINATIONS</h2>
-				<ul class="ms-3">
+				<span class="d-block sub-line-title"></span>
+				<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline text-black text-opacity-9 my-3">TOP DESTINATIONS</h2>
+				<ul>
 					<li class="custom-h3 h4 fw-bold">Best Location</li>
 				</ul>
 			</div>
@@ -33,7 +30,7 @@
 				<p class="text-end text-black text-opacity-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
 		</div>
-		<div class="row gx-lg-5 g-4 mt-0">
+		<div class="row gx-lg-5 g-4">
 			<div class="col-lg-5 col-md-6">
 				<div class="card text-bg-secondary flex-row justify-content-lg-start justify-content-center border-0 mb-lg-5 mb-4">
 					<div class="ratio ratio-4x3">
@@ -80,14 +77,14 @@
 			<div class="col-md-6">
 				<div class="d-flex justify-content-end flex-wrap">
 					<span class="d-block position-absolute sub-line-title"></span>
-					<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline spacing-n1 text-black text-opacity-9 mt-5">HOW IT WORKS</h2>					
-					<ul class="pt-4">
+					<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline text-black text-opacity-9 text-end mt-4-5 mb-3 w-100">HOW IT WORKS</h2>					
+					<ul>
 						<li class="custom-h3 h4 fw-bold">Best Location</li>
 					</ul>
 				</div>
-				<div class="row g-4 mt-3">
+				<div class="row g-4 mt-0">
 					<div class="col-12">
-						<div class="d-flex rounded-3-5 group-post-content px-4-2 py-1">
+						<div class="d-flex align-items-center rounded-3-5 group-post-content px-4-2 py-1">
 							<div class="flex-shrink-0 rounded-3-5 me-4-5 icon">
 								<img class="m-3" src="{{ asset('assets/svg/outline/folder-search.svg') }}" data-icon-name="outline/folder-search" alt="folder-search" width="32px" height="32px">
 							</div>
@@ -98,7 +95,7 @@
 						</div>
 					</div>
 					<div class="col-12">
-						<div class="d-flex rounded-3-5 group-post-content px-4-2 py-1">
+						<div class="d-flex align-items-center rounded-3-5 group-post-content px-4-2 py-1">
 							<div class="flex-shrink-0 rounded-3-5 me-4-5 icon">
 								<img class="m-3" src="{{ asset('assets/svg/outline/notes-edit-search.svg') }}" data-icon-name="outline/notes-edit-search" alt="notes-edit-search" width="32px" height="32px">
 							</div>
@@ -109,7 +106,7 @@
 						</div>
 					</div>
 					<div class="col-12">
-						<div class="d-flex rounded-3-5 group-post-content px-4-2 py-1">
+						<div class="d-flex align-items-center rounded-3-5 group-post-content px-4-2 py-1">
 							<div class="flex-shrink-0 rounded-3-5 me-4-5 icon">
 								<img class="m-3" src="{{ asset('assets/svg/outline/mobile-payment.svg') }}" data-icon-name="outline/mobile-payment" alt="mobile-payment" width="32px" height="32px">
 							</div>
@@ -120,7 +117,7 @@
 						</div>
 					</div>
 					<div class="col-12">
-						<div class="d-flex rounded-3-5 group-post-content px-4-2 py-1">
+						<div class="d-flex align-items-center rounded-3-5 group-post-content px-4-2 py-1">
 							<div class="flex-shrink-0 rounded-3-5 me-4-5 icon">
 								<img class="m-3" src="{{ asset('assets/svg/outline/map-people.svg') }}" data-icon-name="outline/map-people" alt="map-people" width="32px" height="32px">
 							</div>

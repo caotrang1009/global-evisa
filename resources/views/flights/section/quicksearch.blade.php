@@ -78,7 +78,7 @@
 						<div class="curve-control curve-right">
 							<div class="autocomplete-wrapper form-floating dropdown">
 								<input id="originLocationCode" name="originLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where from?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
-								<label for="originLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
+								<label for="originLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
 								<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 									@include('visa.section.countries')
 								</div>
@@ -94,7 +94,7 @@
 						<div class="curve-control curve-left">
 							<div class="autocomplete-wrapper form-floating dropdown">
 								<input id="destinationLocationCode" name="destinationLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where to?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
-								<label for="destinationLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
+								<label for="destinationLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
 								<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 									@include('visa.section.countries')
 								</div>
@@ -111,7 +111,7 @@
 						<div class="curve-control curve-right">
 							<div class="form-floating">
 								<input id="departureDate" name="departureDate[]" class="form-control border-0 rounded-3 ps-4 datepicker" placeholder="Departure date" autocomplete="off" value="{{ date('d/m/Y', strtotime('now')) }}">
-								<label for="departureDate" class="ps-4"><i class="far fa-calendar-alt pe-2"></i> Departure date</label>
+								<label for="departureDate" class="ms-2 ps-3"><i class="far fa-calendar-alt pe-2"></i> Departure date</label>
 							</div>
 						</div>
 						<div class="curve-text border-0 bg-transparent round-trip-control">
@@ -124,7 +124,7 @@
 						<div class="curve-control curve-left">
 							<div class="form-floating">
 								<input id="returnDate" name="returnDate" class="form-control border-0 rounded-3 ps-4 datepicker" placeholder="Return date" autocomplete="off" value="{{ date('d/m/Y', strtotime('now')) }}">
-								<label for="returnDate" class="ps-4"><i class="far fa-calendar-alt pe-2"></i> Return date</label>
+								<label for="returnDate" class="ms-2 ps-3"><i class="far fa-calendar-alt pe-2"></i> Return date</label>
 							</div>
 						</div>
 					</div>
@@ -140,7 +140,7 @@
 								<div class="curve-control curve-right">
 									<div class="autocomplete-wrapper form-floating dropdown">
 										<input id="originLocationCodeMultiCity_2" name="originLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where from?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
-										<label for="originLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
+										<label for="originLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
 										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 											@include('visa.section.countries')
 										</div>
@@ -156,7 +156,7 @@
 								<div class="curve-control curve-left">
 									<div class="autocomplete-wrapper form-floating dropdown">
 										<input id="destinationLocationCodeMultiCity_2" name="destinationLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where to?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
-										<label for="destinationLocationCode" class="ps-4"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
+										<label for="destinationLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
 										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
 											@include('visa.section.countries')
 										</div>
@@ -170,7 +170,7 @@
 					<div class="curve-control curve-right">
 						<div class="form-floating">
 							<input id="departureDateMultiCity_2" name="departureDate[]" class="form-control border-0 rounded-3 ps-4 datepicker" placeholder="Departure date" autocomplete="off" value="{{ date('d/m/Y', strtotime('now')) }}">
-							<label for="departureDate" class="ps-4"><i class="far fa-calendar-alt pe-2"></i> Departure date</label>
+							<label for="departureDate" class="ms-2 ps-3"><i class="far fa-calendar-alt pe-2"></i> Departure date</label>
 						</div>
 					</div>
 				</div>

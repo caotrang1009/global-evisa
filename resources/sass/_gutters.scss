@@ -153,13 +153,13 @@
 		flex: 0 0 auto;
 		width: 70%;
 	}
-	.col-lg-5-5 {
+	.col-lg-4-8 {
 		flex: 0 0 auto;
-		width: 45%;
+		width: 40%;
 	}
-	.col-lg-6-5 {
+	.col-lg-7-2 {
 		flex: 0 0 auto;
-		width: 55%;
+		width: 60%;
 	}
 }
 
@@ -181,17 +181,6 @@
 	}
 	.fs-sm-4 {
 		font-size: 24px !important;
-	}
-}
-
-@media (min-width: 768px) {
-	.col-md-3-5 {
-		flex: 0 0 auto;
-		width: 30%;
-	}
-	.col-md-8-5 {
-		flex: 0 0 auto;
-		width: 70%;
 	}
 }
 

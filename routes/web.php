@@ -82,3 +82,21 @@ Route::get('/visa/payment-success/bank-transfer', function() {
 Route::get('/visa/payment-failure', function() {
     return view('visa.apply.failure');
 });
+
+//account
+
+Route::get('/account', function() {
+    return view('account.index');
+});
+
+Route::get('/account/bookings', function() {
+    return view('account.bookings.index');
+})->name('account.bookings');
+
+Route::get('/account/invoices', function() {
+    return view('account.invoice.detail');
+})->name('account.invoice');
+
+Route::get('/account/profile', function() {
+    return view('account.profile.edit');
+})->name('account.profile');

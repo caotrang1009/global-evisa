@@ -247,11 +247,9 @@
 		var validator = $("#frm-order").validate({
 			highlight: function(input){
 				$(input).addClass('error');
-				console.log($(input).siblings('img'))
 				updateSvgColor($(input).siblings('img'), 'red');
 			},
 			errorPlacement: function(error, input){
-				console.log(error.text())
 				if (error.text() != '') {
 					$(input).siblings("span").show();
 					$(input).siblings("span").html(error.text())

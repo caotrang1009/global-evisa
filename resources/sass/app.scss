@@ -1124,3 +1124,20 @@ footer {
 		background-repeat: no-repeat;
 	}
 }
+
+.my-account {
+	--bs-border-color: #D3D3D3 !important;
+	.change-avatar {
+		background: #E5E5E5;
+	}
+	#navbar-myaccount {
+		li {
+			&.active {
+				background: #EDEDED;
+				color: #000;
+				text-decoration-line: underline;
+				font-weight: 600;
+			}
+		}
+	}
+}

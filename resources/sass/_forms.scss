@@ -86,7 +86,7 @@ input {
 	}
 }
 
-.input-promo, .input-visa-search, .input-order-info {
+.input-promo, .input-visa-search, .input-info {
 	&:focus-within {
 		border-color: $primary !important;
 	}

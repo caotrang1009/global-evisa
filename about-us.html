@@ -1,0 +1,569 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="csrf-token" content="QqtC7Y5e9L1nk7ZAL9d3RSOX4wErJl8KomcblD0k">
+	<meta name="robots" content="index,follow">
+	<meta name="author" content="Laravel">
+	<title>Flights</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+	<link rel="stylesheet"
+		href="https://caotrang1009.github.io/global-evisa/assets/js/telinput/css/intlTelInput.min.css">
+	<link rel="preload" as="style" href="https://caotrang1009.github.io/global-evisa/assets/app-5a4068a4.css">
+	<link rel="stylesheet" href="https://caotrang1009.github.io/global-evisa/assets/app-5a4068a4.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1145.0" data-gr-ext-installed="" cz-shortcut-listen="true">
+	<header class="bg-primary text-white text-title">
+		<div class="main-nav">
+			<nav class="navbar navbar-expand-lg navbar-mega navbar-light">
+				<div class="container position-relative">
+					<a href="https://caotrang1009.github.io/global-evisa"
+						class="d-flex align-items-center navbar-brand me-5">
+						<img width="60" height="60"
+							src="https://caotrang1009.github.io/global-evisa/assets\images\new_logo.svg" alt="logo">
+						<span class="fs-6 fw-semibold text-white text-center text-title mx-3">Global <br> eVISA</span>
+					</a>
+					<button class="navbar-toggler px-0 collapsed" type="button" data-bs-toggle="collapse"
+						data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"
+						aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="collapse navbar-collapse my-lg-0 my-3" id="navbar-content">
+						<ul class="navbar-nav navbar-nav-scroll mx-auto">
+							<li class="nav-item">
+								<a class="nav-link" title=""
+									href="https://caotrang1009.github.io/global-evisa/visa">Visa Application</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title=""
+									href="https://caotrang1009.github.io/global-evisa/flights">Flights</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Travel Insurance </a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Airport Services</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Hotel</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" title="" href="#">Contact</a>
+							</li>
+							<li class="nav-item d-lg-none d-block">
+								<div class="d-flex align-items-center gap-3">
+									<a class="nav-link me-0">
+										<img class="avatar-img rounded-circle"
+											src="https://caotrang1009.github.io/global-evisa/assets/images/united-states.png"
+											alt="flag" width="40px" height="40px">
+									</a>
+									<div><span class="border-start border-white h-50"></span></div>
+									<a class="nav-link ms-0" title="" href="#"><img class="cursor-pointer"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/coin-dollar.svg"
+											alt="user" width="40px" height="40px"></a>
+									<a class="nav-link me-0" title="" href="#" data-bs-toggle="modal"
+										data-bs-target="#accountModal"><img class="cursor-pointer"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/user-circle.svg"
+											alt="user" width="40px" height="40px"></a>
+								</div>
+							</li>
+						</ul>
+						<ul class="navbar-nav d-lg-flex d-none">
+							<li class="nav-item">
+								<div class="d-flex align-items-center">
+									<a class="nav-link me-0">
+										<img class="avatar-img rounded-circle"
+											src="https://caotrang1009.github.io/global-evisa/assets/images/united-states.png"
+											alt="flag" width="40px" height="40px">
+									</a>
+									<div><span class="border-start border-white h-50"></span></div>
+									<a class="nav-link ms-0" title="" href="#"><img class="cursor-pointer"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/coin-dollar.svg"
+											alt="user" width="40px" height="40px"></a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link me-0" title="" href="#" data-bs-toggle="modal"
+									data-bs-target="#accountModal"><img class="cursor-pointer"
+										src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/user-circle.svg"
+										alt="user" width="40px" height="40px"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
+			<div class="modal-content">
+				<div class="modal-header px-5">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body p-5">
+					<form id="frm-singin" action="" method="POST" autocomplete="off" novalidate="novalidate">
+						<div class="row g-sm-5 gx-4 gy-5">
+							<div class="col-sm-6">
+								<h2 class="web-title text-uppercase text-center mb-3">SIGN IN</h2>
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black">Your Email <span
+											class="text-danger">*</span></label>
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="email"
+										name="email" placeholder="Enter Value" required="">
+									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+								</div>
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black">Your Password <span
+											class="text-danger">*</span></label>
+									<div class="dropdown input-end-icon">
+										<input class="form-control border rounded-3 px-3 input-info" type="password"
+											id="password" name="password" placeholder="Enter Value" required="">
+										<img class="cursor-pointer"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/eye.svg"
+											data-icon-name="outline/eye" alt="eye" width="16px" height="16px">
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+									</div>
+								</div>
+								<a href="https://caotrang1009.github.io/global-evisa/account"
+									class="btn btn-primary rounded-3 text-uppercase fw-bold fs-6 py-2 mt-2 lh-md w-100">Sign
+									in</a>
+								<a href="#" class="d-block text-center fs-6 mt-4">Forgot your password?</a>
+							</div>
+							<div class="col-sm-6">
+								<h2 class="web-title text-uppercase text-center mb-3">SIGN UP</h2>
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black">Your Full Name <span
+											class="text-danger">*</span></label>
+									<input class="form-control border rounded-3 px-3 input-info" type="text"
+										id="reg_fullname" name="reg_fullname" placeholder="Enter Value" required="">
+									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+								</div>
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black">Your Email <span
+											class="text-danger">*</span></label>
+									<input class="form-control border rounded-3 px-3 input-info" type="text"
+										id="reg_email" name="reg_email" placeholder="Enter Value" required="">
+									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+								</div>
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black">Your Password <span
+											class="text-danger">*</span></label>
+									<div class="dropdown input-end-icon">
+										<input class="form-control border rounded-3 px-3 input-info" type="password"
+											id="reg_password" name="reg_password" placeholder="Enter Value" required="">
+										<img class="cursor-pointer"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/eye.svg"
+											data-icon-name="outline/eye" alt="eye" width="16px" height="16px">
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black">Confirm Your Password <span
+											class="text-danger">*</span></label>
+									<div class="dropdown input-end-icon">
+										<input class="form-control border rounded-3 px-3 input-info" type="password"
+											id="reg_password_confirmation" name="reg_password_confirmation"
+											placeholder="Enter Value" required="">
+										<img class="cursor-pointer"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/eye.svg"
+											data-icon-name="outline/eye" alt="eye" width="16px" height="16px">
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+									</div>
+								</div>
+								<div class="form-check mt-2 mb-0">
+									<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term"
+										style="width:1.5rem; height:1.5rem" checked="" required="">
+									<label class="form-check-label ms-3 cursor-pointer fw-medium" for="term">
+										By creating an account, it means that you will agree to our <a href="#"
+											class="fw-bold text-title text-primary text-decoration-underline">Terms and
+											Conditions</a> and <a href="#"
+											class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
+									</label>
+								</div>
+								<a href="#"
+									class="btn btn-primary rounded-3 text-uppercase fw-bold fs-6 py-2 mt-4 lh-md w-100">CREATE
+									AN ACCOUNT</a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			var validator = $("#frm-singin").validate({
+				highlight: function (input) {
+					$(input).addClass('error');
+					updateSvgColor($(input).siblings('img'), 'red');
+				},
+				errorPlacement: function (error, input) {
+					if (error.text() != '') {
+						$(input).siblings("span").show();
+						$(input).siblings("span").html(error.text())
+					}
+				},
+				invalidHandler: function (event, validator) {
+					$(".spinner").addClass("d-none");
+					$('.spinner .center-div').loader('spinner').hide();
+				}
+			});
+
+			function updateSvgColor(pathElement, fillColor) {
+				if (fillColor != '') {
+					fillColor = '-' + fillColor;
+				}
+
+				pathElement.each(function (index, item) {
+					var iconName = $(item).data('icon-name');
+					var src = `https://caotrang1009.github.io/global-evisa/assets/svg/${iconName + fillColor}.svg`;
+
+					if ($(item).attr('alt') == 'plus') {
+						iconPlus = src;
+					} else if ($(item).attr('alt') == 'minus') {
+						var src = `https://caotrang1009.github.io/global-evisa/assets/svg/outline/minus${fillColor}.svg`;
+						iconMinus = src;
+					}
+					$(item).attr('src', src);
+				});
+			}
+		});
+	</script>
+	<section class="pb-0">
+		<div class="container">
+			<h1 class="web-title text-black text-uppercase">ABOUT US</h1>
+			<div class="row align-items-center mt-4">
+				<div class="col-lg-6 col-12">
+					<h2 class="web-header1 text-uppercase fw-800 text-decoration-underline">ELEVATING TRAVEL WITH
+						EXPERTISE.</h2>
+					<div class="mt-3 fs-5">"We are dedicated to offer deliver truly unique and customized experiences
+						that elevate the travel experience."</div>
+				</div>
+				<div class="col-lg-6">
+					<img class="fit-contain"
+						src="https://caotrang1009.github.io/global-evisa/assets/images/banner/about.png" alt="banner"
+						width="490px" height="530px">
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pb-0">
+		<div class="container">
+			<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 mb-2">OUR
+				DESIRABLE WORK</h2>
+			<div class="row justify-content-center g-4-3 mt-0">
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="px-4 py-3">
+								<h5 class="subheading fw-bold text-center">eVisa Services</h5>
+							</div>
+							<div
+								class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
+								<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/evisa.svg"
+									alt="evisa" width="88px" height="88px">
+							</div>
+							<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="px-4 py-3">
+								<h5 class="subheading fw-bold text-center">Flight Booking Services</h5>
+							</div>
+							<div
+								class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
+								<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/air-plane.svg"
+									alt="evisa" width="66px" height="74px">
+							</div>
+							<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="px-4 py-3">
+								<h5 class="subheading fw-bold text-center">Hotel Booking Services</h5>
+							</div>
+							<div
+								class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
+								<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/home-location.svg"
+									alt="evisa" width="66px" height="74px">
+							</div>
+							<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="px-4 py-3">
+								<h5 class="subheading fw-bold text-center">Airport Services</h5>
+							</div>
+							<div
+								class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
+								<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/airport-service.svg"
+									alt="evisa" width="80px" height="80px">
+							</div>
+							<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat.</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="px-4 py-3">
+								<h5 class="subheading fw-bold text-center">Insurance Services</h5>
+							</div>
+							<div
+								class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
+								<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/security.svg"
+									alt="evisa" width="88px" height="88px">
+							</div>
+							<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur
+								adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+								commodo consequat.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pb-0">
+		<div class="container">
+			<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 mb-2">WHY
+				CHOOSE US? </h2>
+			<div class="row gx-5 gy-4 mt-0">
+				<div class="col-lg-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col-3">
+									<div
+										class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+										<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/user-blue.svg"
+											alt="evisa" width="42px" height="50px">
+									</div>
+								</div>
+								<div class="col-9">
+									<h5 class="fw-bold text-uppercase">Professional</h5>
+									<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+										ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										commodo consequat.</div>
+									<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col-3">
+									<div
+										class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+										<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/diverse-blue.svg"
+											alt="evisa" width="42px" height="50px">
+									</div>
+								</div>
+								<div class="col-9">
+									<h5 class="fw-bold text-uppercase">Diverse</h5>
+									<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+										ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										commodo consequat.</div>
+									<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col-3">
+									<div
+										class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+										<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/security-blue.svg"
+											alt="evisa" width="48px" height="50px">
+									</div>
+								</div>
+								<div class="col-9">
+									<h5 class="fw-bold text-uppercase">Reliable</h5>
+									<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+										ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										commodo consequat.</div>
+									<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 col-12">
+					<div class="card h-100 border-0 rounded-3">
+						<div class="card-body">
+							<div class="row align-items-center">
+								<div class="col-3">
+									<div
+										class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+										<img src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/lock-blue.svg"
+											alt="evisa" width="42px" height="50px">
+									</div>
+								</div>
+								<div class="col-9">
+									<h5 class="fw-bold text-uppercase">Safe</h5>
+									<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+										ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										commodo consequat.</div>
+									<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="text-center mt-4">
+				<a href="#" class="btn btn-orange btn-lg button1 rounded-3 spacing-05 px-6 py-3 mt-3 w-sm-auto w-100">
+					<span class="btn-text">GET STARTED</span><i class="fal fa-long-arrow-up ms-3"
+						style="transform: rotate(45deg);"></i>
+				</a>
+			</div>
+		</div>
+	</section>
+	<footer class="py-5 bg-primary text-white text-title medium mt-5">
+		<div class="container">
+			<div class="row gy-4">
+				<div class="col-lg-1 col-md-2">
+					<a href="https://caotrang1009.github.io/global-evisa"
+						class="d-flex align-items-center navbar-brand">
+						<img width="60" height="60"
+							src="https://caotrang1009.github.io/global-evisa/assets\images\new_logo.svg" alt="logo">
+					</a>
+				</div>
+				<div class="col-lg-6 col-md-10">
+					<div class="row me-lg-5 footer-nav">
+						<div class="col-sm-4">
+							<h5 class="text-white text-nowrap">Global eVISA</h5>
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2"><a href="https://caotrang1009.github.io/global-evisa/about-us"
+										class="nav-link p-0 text-white">About Us</a></li>
+								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Careers</a></li>
+								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Policies</a></li>
+								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Terms &amp;
+										Conditions</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<h5 class="text-white text-nowrap">Need to Know</h5>
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">How it works</a>
+								</li>
+								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+								<li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Blogs</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-4">
+							<h5 class="text-white text-nowrap">Contact Us</h5>
+							<ul class="nav flex-column">
+								<li class="nav-item mb-2">No. 40 - 42, Thien Phuoc St Ward 9, Tan Binh Dist, HCMC,
+									Vietnam</li>
+								<li class="nav-item mb-2">Hotline: <br><a class="text-white"
+										href="tel:+84.987.309.313">+84.987.309.313</a> <br> <a class="text-white"
+										href="tel:+84.28.6685.1315">+84.28.6685.1315</a> <br> <a class="text-white"
+										href="tel:+84.28.6685.1317">+84.28.6685.1317</a></li>
+								<li class="nav-item mb-2">Email: <br> <a class="text-white"
+										href="mailto:loremipsum@gmail.com">loremipsum@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<form id="frm-subscribe">
+						<h5 class="text-white mb-3">Subscribe To Get Our Newsletter</h5>
+						<div class="row g-2">
+							<div class="col-8">
+								<div class="d-flex align-items-center rounded-3 bg-white h-100 px-3">
+									<input id="newsletter1" type="text"
+										class="form-control border-0 px-0 cursor-pointer"
+										placeholder="Enter your email address">
+								</div>
+							</div>
+							<div class="col-4">
+								<button class="btn bg-orange text-white border-2 border-white rounded-3 h-100 w-100"
+									type="button">
+									<span class="my-2">Subscribe</span>
+									<i class="fal fa-long-arrow-up ms-2" style="transform: rotate(45deg);"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<div class="d-flex justify-content-center gap-5 mt-4">
+						<span class="border border-white rounded-circle">
+							<img class="m-2"
+								src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/linkedin-fill.svg"
+								alt="logo" width="24px" height="24px">
+						</span>
+						<span class="border border-white rounded-circle">
+							<img class="m-2" src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/fb.svg"
+								alt="logo" width="24px" height="24px">
+						</span>
+						<span class="border border-white rounded-circle">
+							<img class="m-2"
+								src="https://caotrang1009.github.io/global-evisa/assets/svg/icon/twitter.svg" alt="logo"
+								width="24px" height="24px">
+						</span>
+					</div>
+				</div>
+			</div>
+			<div class="mt-1">@Global eVISA 2023 All rights reserved</div>
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/intlTelInput.min.js"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702269611"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/search.js?id=1699685344"></script>
+	<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
+	<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>

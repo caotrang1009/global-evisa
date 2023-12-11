@@ -96,3 +96,9 @@ Route::get('/account/invoices', function() {
 Route::get('/account/profile', function() {
     return view('account.profile.edit');
 })->name('account.profile');
+
+//content
+
+Route::get('/about-us', function() {
+    return view('content.about');
+});

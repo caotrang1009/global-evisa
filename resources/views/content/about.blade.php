@@ -20,7 +20,7 @@
 		<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 mb-2">OUR DESIRABLE WORK</h2>
 		<div class="row justify-content-center g-4-3 mt-0">
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 how-it-works-card">
 					<div class="card-body">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold text-center">eVisa Services</h5>
@@ -28,12 +28,12 @@
 						<div class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
 							<img src="{{ asset('assets/svg/icon/evisa.svg') }}" alt="evisa" width="88px" height="88px">
 						</div>
-						<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+						<div class="medium px-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 how-it-works-card">
 					<div class="card-body">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold text-center">Flight Booking Services</h5>
@@ -41,12 +41,12 @@
 						<div class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
 							<img src="{{ asset('assets/svg/icon/air-plane.svg') }}" alt="evisa" width="66px" height="74px">
 						</div>
-						<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+						<div class="medium px-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 how-it-works-card">
 					<div class="card-body">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold text-center">Hotel Booking Services</h5>
@@ -54,12 +54,12 @@
 						<div class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
 							<img src="{{ asset('assets/svg/icon/home-location.svg') }}" alt="evisa" width="66px" height="74px">
 						</div>
-						<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+						<div class="medium px-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 how-it-works-card">
 					<div class="card-body">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold text-center">Airport Services</h5>
@@ -67,12 +67,12 @@
 						<div class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
 							<img src="{{ asset('assets/svg/icon/airport-service.svg') }}" alt="evisa" width="80px" height="80px">
 						</div>
-						<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+						<div class="medium px-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 how-it-works-card">
 					<div class="card-body">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold text-center">Insurance Services</h5>
@@ -80,7 +80,7 @@
 						<div class="d-flex align-items-center justify-content-center rounded-circle bg-orange mx-auto mt-2 mb-4-5 how-it-works-icon">
 							<img src="{{ asset('assets/svg/icon/security.svg') }}" alt="evisa" width="88px" height="88px">
 						</div>
-						<div class="medium px-1 pb-4 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+						<div class="medium px-1 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 					</div>
 				</div>
 			</div>
@@ -92,7 +92,7 @@
 		<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 mb-2">WHY CHOOSE US? </h2>
 		<div class="row gx-5 gy-4 mt-0">
 			<div class="col-lg-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-3">
@@ -110,7 +110,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-3">
@@ -128,7 +128,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-3">
@@ -146,7 +146,7 @@
 				</div>
 			</div>
 			<div class="col-lg-6 col-12">
-				<div class="card h-100 border-0 rounded-3">
+				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-3">

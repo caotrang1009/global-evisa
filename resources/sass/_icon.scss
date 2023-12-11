@@ -131,12 +131,24 @@
 	}
 }
 
-.how-it-works-icon {
-	width: 160px;
-	height: 160px;
+.how-it-works-card {
+	.how-it-works-icon {
+		width: 160px;
+		height: 160px;
+	}
+	&:hover {
+		border: 1px solid $primary !important;
+		background-color: $beige !important;
+	}
 }
 
-.why-choose-us-icon {
-	width: 120px;
-	height: 120px;
+.why-choose-us-card {
+	.why-choose-us-icon {
+		width: 120px;
+		height: 120px;
+	}
+	&:hover {
+		border: 1px solid $primary !important;
+		background-color: $white !important;
+	}
 }

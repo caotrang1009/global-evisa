@@ -10,12 +10,14 @@
 			<div class="form-group">
 				<label class="form-label fw-semibold" for="booking_id">Booking ID <span class="text-danger">*</span></label>
 				<input class="form-control border rounded-3" type="text" id="booking_id" name="booking_id" required placeholder="eg: F687227237" value="">
+				<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 			</div>
 		</div>
 		<div class="col-sm-6">
 			<div class="form-group">
 				<label class="form-label fw-semibold" for="email">Email Address <span class="text-danger">*</span></label>
 				<input class="form-control border rounded-3" type="email" value="" id="email" name="email" required placeholder="eg: example@gmail.com">
+				<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 			</div>
 		</div>
 	</div>
@@ -24,6 +26,7 @@
 			<div class="form-group">
 				<label class="form-label fw-semibold" for="company_name">Company Name <span class="text-danger">*</span></label>
 				<input class="form-control border rounded-3" type="text" value="" id="company_name" name="company_name" required placeholder="eg: ABC Company">
+				<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 			</div>
 		</div>
 	</div>
@@ -32,6 +35,7 @@
 			<div class="form-group">
 				<label class="form-label fw-semibold" for="company_address">Company Address <span class="text-danger">*</span></label>
 				<input class="form-control border rounded-3" type="text" value="" id="company_address" name="company_address" required placeholder="eg: 40, Thien Phuoc street, Ward 9, Tan Binh District, Ho Chi Minh City">
+				<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 			</div>
 		</div>
 	</div>
@@ -40,6 +44,7 @@
 			<div class="form-group">
 				<label class="form-label fw-semibold" for="tax_code">Tax Code <span class="text-danger">*</span></label>
 				<input class="form-control border rounded-3" type="text" value="" id="tax_code" name="tax_code" required placeholder="eg: xxxxxxxxxx-xxx">
+				<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 			</div>
 		</div>
 	</div>

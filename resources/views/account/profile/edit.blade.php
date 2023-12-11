@@ -22,7 +22,8 @@
 			<div class="col-sm-6">
 				<div class="form-group">
 					<label class="h6 fw-semibold text-black">Full Name</label>
-					<input class="form-control border rounded-3 px-3 input-info" type="text" id="prf_fullname" name="prf_fullname" value="Lorem Ipsum">
+					<input class="form-control border rounded-3 px-3 input-info" type="text" id="prf_fullname" name="prf_fullname" value="Lorem Ipsum" required>
+					<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 				</div>
 			</div>
 			<div class="col-sm-6">
@@ -48,6 +49,7 @@
 				<div class="form-group">
 					<label class="h6 fw-semibold text-black">Phone Number</label>
 					<input class="form-control border rounded-3 telinput input-info" type="text" id="prf_phone" name="prf_phone" value="0766 876 971" required>
+					<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 				</div>
 			</div>
 		</div>
@@ -58,13 +60,15 @@
 			<div class="col-sm-6">
 				<div class="form-group">
 					<label class="h6 fw-semibold text-black" for="new_password">New Pasword</label>
-					<input class="form-control border rounded-3 px-3 input-info" type="password" id="new_password" name="new_password" value="abcdefssss">
+					<input class="form-control border rounded-3 px-3 input-info" type="password" id="new_password" name="new_password" value="abcdefssss" required>
+					<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 				</div>
 			</div>
 			<div class="col-sm-6">
 				<div class="form-group">
 					<label class="h6 fw-semibold text-black" for="new_password_confirmation">Confirm Password</label>
-					<input class="form-control border rounded-3 px-3 input-info" type="password" id="new_password_confirmation" name="new_password_confirmation" value="abcdefssss">
+					<input class="form-control border rounded-3 px-3 input-info" type="password" id="new_password_confirmation" name="new_password_confirmation" value="abcdefssss" required>
+					<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 				</div>
 			</div>
 		</div>
@@ -73,26 +77,4 @@
 		<button class="btn btn-primary rounded-3 fw-bold text-white text-uppercase fs-6 py-2 px-4 lh-md" type="button" id="btn-update">update profile</button>
 	</div>
 </form>
-
-<script>
-	$(document).ready(function() {	
-		$('#btn-change-avatar').click(function(){
-			$('#userfile').click();
-		});
-
-		function readURL(input) {
-			if (input.files && input.files[0]) {
-				var reader = new FileReader();
-				reader.onload = function(e) {
-					$('#user-avatar').attr('src', e.target.result);
-				};
-				reader.readAsDataURL(input.files[0]);
-			}
-		}
-
-		$("#userfile").change(function() {
-			readURL(this);
-		});
-	});
-</script>
 @endsection

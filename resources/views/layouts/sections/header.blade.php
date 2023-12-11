@@ -151,5 +151,24 @@
 				$('.spinner .center-div').loader('spinner').hide();
 			}
 		});
+
+		function updateSvgColor(pathElement, fillColor) {
+			if (fillColor!='') {
+				fillColor = '-'+fillColor;
+			}
+
+			pathElement.each(function(index, item) {
+				var iconName = $(item).data('icon-name');
+				var src = `{{ asset('assets/svg/${iconName + fillColor}.svg') }}`;
+				
+				if ($(item).attr('alt') == 'plus') {
+					iconPlus = src;
+				} else if($(item).attr('alt') == 'minus') {
+					var src = `{{ asset('assets/svg/outline/minus${fillColor}.svg') }}`;
+					iconMinus = src;
+				}
+				$(item).attr('src', src);
+			});
+		}
 	});
 </script>

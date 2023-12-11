@@ -22,6 +22,41 @@
 			$(window).bind('load', function() {
 				updateSvgColor($('#navbar-myaccount li.active img'), 'black');
 			});
+
+			var validator = $("#frm-profile").validate({
+				highlight: function(input){
+					$(input).addClass('error');
+					updateSvgColor($(input).siblings('img'), 'red');
+				},
+				errorPlacement: function(error, input){
+					if (error.text() != '') {
+						$(input).siblings("span").show();
+						$(input).siblings("span").html(error.text())
+					}
+				},
+				invalidHandler: function(event, validator) {
+					$(".spinner").addClass("d-none");
+					$('.spinner .center-div').loader('spinner').hide();
+				}
+			});
+
+			$('#btn-change-avatar').click(function(){
+				$('#userfile').click();
+			});
+
+			function readURL(input) {
+				if (input.files && input.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function(e) {
+						$('#user-avatar').attr('src', e.target.result);
+					};
+					reader.readAsDataURL(input.files[0]);
+				}
+			}
+
+			$("#userfile").change(function() {
+				readURL(this);
+			});
 			
 			$(document).on('blur', 'input', function () {
 				if ($(this).valid()) {

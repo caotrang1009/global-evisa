@@ -3,24 +3,15 @@
 @section('content')
 <section class="pb-0">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-sm-9">
-				<h1 class="web-title text-black text-start text-uppercase w-100 mb-0">REVIEW & PAYMENT</h1>
-			</div>
-			<div class="col-sm-3 text-end">
-				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-lg-5 lh-md btn-save-exit">
-					<span class="btn-text px-3">Save & Exit</span>
-				</a>
-			</div>
-		</div>
 		<div class="row">
+			<h1 class="web-title text-black text-center text-uppercase w-100 mb-0">REVIEW & PAYMENT</h1>
 			<div class="step-part mt-4">
 				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/visa/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
 						<div class="step-name">Order Information</div>
 					</a>
-					<a href="{{ url("/visa/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
+					<a href="{{ url("/visa/review-and-payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="step-name">Payment</div>
 					</a>
@@ -182,18 +173,6 @@
 					</div>
 					<div class="border-dashed bg-beige rounded-4 p-4-4 mb-4-5" id="bank-transfer" style="display: none">
 						@include('layouts.sections.bank_transfer')
-					</div>
-					<div class="confirm">
-						<div class="form-check mb-3">
-							<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info" name="correct_info" style="width:1.5rem; height:1.5rem" checked required>
-							<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like to confirm that the above information is correct.</label>
-						</div>
-						<div class="form-check">
-							<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term" style="width:1.5rem; height:1.5rem" checked required>
-							<label class="form-check-label ms-3 cursor-pointer" for="term">
-								I have read and agree to the <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Terms and Conditions</a> as well as the company's <a href="#" class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
-							</label>
-						</div>
 					</div>
 					<div class="text-center mt-4-5">
 						<a href="{{ url("/visa/payment-success/online") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 px-6">Proceed To Payment</a>

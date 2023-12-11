@@ -33,12 +33,8 @@ Route::get('/flights/information', function () {
     return view('flights.order.information');
 });
 
-Route::get('/flights/review-information', function () {
-    return view('flights.order.review-information');
-});
-
-Route::get('/flights/payment', function () {
-    return view('flights.order.payment');
+Route::get('/flights/review-and-payment', function () {
+    return view('flights.order.review_and_payment');
 });
 
 Route::get('/flights/payment-success/online', function() {
@@ -67,8 +63,8 @@ Route::get('/visa/information', function () {
     return view('visa.apply.information');
 });
 
-Route::get('/visa/payment', function () {
-    return view('visa.apply.payment');
+Route::get('/visa/review-and-payment', function () {
+    return view('visa.apply.review_and_payment');
 });
 
 Route::get('/visa/payment-success/online', function() {

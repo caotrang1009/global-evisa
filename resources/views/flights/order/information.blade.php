@@ -4,23 +4,19 @@
 <section class="pb-0">
 	<div class="container">
 		<div class="row">
-			<h1 class="web-title text-black text-center text-uppercase w-100">FILL IN INFORMATION DETAILS</h1>
+			<h1 class="web-title text-black text-center text-uppercase w-100 mb-0">FILL IN INFORMATION DETAILS</h1>
 			<div class="step-part mt-4">
 				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
 						<div class="step-name">Order Information</div>
 					</a>
-					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="{{ url("/flights/review-and-payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="step-name">Review Info</div>
-					</a>
-					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
-						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="step-name">Payment</div>
 					</a>
 					<a href="{{ url("/flights/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
-						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">4</div>
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="step-name">Confirmation</div>
 					</a>
 				</div>
@@ -229,7 +225,7 @@
 						</div>
 					</div>
 					<div class="text-center mt-4">
-						<a href="{{ url("/flights/review-information") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
+						<a href="{{ url("/flights/review-and-payment") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
 					</div>
 				</div>
 				<div class="col-lg-5 col-12">

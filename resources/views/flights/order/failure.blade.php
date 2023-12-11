@@ -11,16 +11,12 @@
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
 						<div class="mt-3 step-name text-center fs-6">Order Information</div>
 					</a>
-					<a href="{{ url("/flights/review-information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
+					<a href="{{ url("/flights/review-and-payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-3 step-name text-center fs-6">Review Info</div>
-					</a>
-					<a href="{{ url("/flights/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
-						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-3 step-name text-center fs-6">Payment</div>
 					</a>
 					<a href="{{ url("/flights/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
-						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">4</div>
+						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
 						<div class="mt-3 step-name text-center fs-6">Confirmation</div>
 					</a>
 				</div>

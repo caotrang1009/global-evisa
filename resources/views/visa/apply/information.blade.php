@@ -3,24 +3,15 @@
 @section('content')
 <section class="pb-0">
 	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-sm-9">
-				<h1 class="web-title text-black text-start text-uppercase w-100 mb-0">FILL IN INFORMATION DETAILS</h1>
-			</div>
-			<div class="col-sm-3 text-end">
-				<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-lg-5 lh-md btn-save-exit">
-					<span class="btn-text px-3">Save & Exit</span>
-				</a>
-			</div>
-		</div>
 		<div class="row">
+			<h1 class="web-title text-black text-center text-uppercase w-100 mb-0">FILL IN INFORMATION DETAILS</h1>
 			<div class="step-part mt-4">
 				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/visa/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
 						<div class="step-name">Order Information</div>
 					</a>
-					<a href="{{ url("/visa/payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
+					<a href="{{ url("/visa/review-and-payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
 						<div class="step-name">Payment</div>
 					</a>
@@ -144,7 +135,7 @@
 							</div>
 						</div>
 						<div class="text-center mt-4">
-							<a href="{{ url("/visa/payment") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
+							<a href="{{ url("/visa/review-and-payment") }}" class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
 						</div>
 					</div>
 					<div class="col-lg-5 col-12">

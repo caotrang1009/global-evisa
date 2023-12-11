@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="csrf-token" content="qwSufihJI3g22LDm1ksgWDZuTlyuGTwB5lxjQy6H">
+	<meta name="csrf-token" content="Crt5e0zSV1eYBG4OJGxwj8gU8XPaIlxYwygPM8dX">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Laravel">
 	<title>Flights</title>
@@ -199,59 +199,72 @@
 			</div>
 		</div>
 	</div>
-	<section class="pb-0">
+
+	<script>
+		$(document).ready(function () {
+			var validator = $("#frm-singin").validate({
+				highlight: function (input) {
+					$(input).addClass('error');
+					updateSvgColor($(input).siblings('img'), 'red');
+				},
+				errorPlacement: function (error, input) {
+					if (error.text() != '') {
+						$(input).siblings("span").show();
+						$(input).siblings("span").html(error.text())
+					}
+				},
+				invalidHandler: function (event, validator) {
+					$(".spinner").addClass("d-none");
+					$('.spinner .center-div').loader('spinner').hide();
+				}
+			});
+		});
+	</script>
+	<section class=" pb-0">
 		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-sm-9">
-					<h1 class="web-title text-black text-start text-uppercase w-100 mb-0">REVIEW &amp; PAYMENT</h1>
-				</div>
-				<div class="col-sm-3 text-end">
-					<a href="#" class="btn btn-primary btn-lg rounded-4 fs-6 fw-semibold px-lg-5 lh-md btn-save-exit">
-						<span class="btn-text px-3">Save &amp; Exit</span>
-					</a>
-				</div>
-			</div>
 			<div class="row">
+				<h1 class="web-title text-black text-center text-uppercase w-100 mb-0">REVIEW &amp; PAYMENT</h1>
 				<div class="step-part mt-4">
 					<div class="d-flex justify-content-center text-title stepper-wrapper">
-						<a href="https://caotrang1009.github.io/global-evisa/visa/information"
+						<a href="https://caotrang1009.github.io/global-evisa/flights/information"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								1</div>
-							<div class="step-name">Order Information</div>
+							<div class="mt-3 step-name text-center fs-6">Order Information</div>
 						</a>
-						<a href="https://caotrang1009.github.io/global-evisa/visa/payment"
+						<a href="https://caotrang1009.github.io/global-evisa/flights/review-and-payment"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								2</div>
-							<div class="step-name">Payment</div>
+							<div class="mt-3 step-name text-center fs-6">Payment</div>
 						</a>
-						<a href="https://caotrang1009.github.io/global-evisa/visa/payment-success/online"
+						<a href="https://caotrang1009.github.io/global-evisa/flights/payment-success/online"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								3</div>
-							<div class="step-name">Confirmation</div>
+							<div class="mt-3 step-name text-center fs-6">Confirmation</div>
 						</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section>
+	<section class="py-5">
 		<div class="container">
 			<form action="" id="frm-review">
+				<input type="hidden" name="_token" value="Crt5e0zSV1eYBG4OJGxwj8gU8XPaIlxYwygPM8dX" autocomplete="off">
 				<div class="row gy-5">
 					<div class="col-lg-7 col-12">
-						<div id="review-info" class="mb-4-5">
-							<h2 class="fw-800 custom-h3 text-black mb-3">Customer’s order review</h2>
-							<div class="order-information border border-primary px-sm-5 p-3 rounded-3-5 mb-3">
+						<div id="review_infor" class="mb-4-5">
+							<h2 class="fw-800 custom-h3 text-black mb-3">REVIEW INFO</h2>
+							<div class="contact-information border border-primary px-sm-5 p-3 rounded-3-5 mb-3">
 								<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary"
 									class="toggle-data-dropdown collapsed"
 									data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse"
-									data-bs-target="#order-information">
+									data-bs-target="#contact-information">
 									<div class="row align-items-center">
 										<div class="col-9">
 											<div class="d-flex align-items-center">
@@ -259,7 +272,7 @@
 													style="width: 40px; height: 12px;"></span>
 												<h4
 													class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">
-													YOUR ORDER INFORMATION</h4>
+													YOUR CONTACT INFORMATION</h4>
 											</div>
 										</div>
 										<div class="col-3 text-end">
@@ -275,25 +288,25 @@
 										</div>
 									</div>
 								</div>
-								<div class="collapse pt-3" id="order-information" style="">
-									<div class="form-group row">
+								<div class="collapse pt-3" id="contact-information" style="">
+									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Destination</label>
+											<label class="text-black fw-medium medium">First Name</label>
 											<div class="fw-semibold">Lorem Ipsum</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Type of Visa</label>
+											<label class="text-black fw-medium medium">Last Name</label>
 											<div class="fw-semibold">Lorem Ipsum</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Day of Arrival</label>
-											<div class="fw-semibold">20/09/2029</div>
+											<label class="text-black fw-medium medium">Your Phone Number</label>
+											<div class="fw-semibold">+84 1312312434</div>
 										</div>
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Day of Return</label>
-											<div class="fw-semibold">20/11/2029</div>
+											<label class="text-black fw-medium medium">Your Email</label>
+											<div class="fw-semibold">loremipisum@gmail.com</div>
 										</div>
 									</div>
 								</div>
@@ -326,13 +339,23 @@
 										</div>
 									</div>
 								</div>
-								<div class="collapse py-3" id="applicant-information" style="">
+								<div class="collapse pt-3" id="applicant-information" style="">
 									<h5 class="text-black text-opacity-9 text-center fw-bold text-uppercase mb-4">
 										APPLICANT NO.</h5>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Full Name</label>
+											<label class="text-black fw-medium medium">First Name</label>
 											<div class="fw-semibold">Lorem Ipsum</div>
+										</div>
+										<div class="col-sm-6">
+											<label class="text-black fw-medium medium">Last Name</label>
+											<div class="fw-semibold">Lorem Ipsum</div>
+										</div>
+									</div>
+									<div class="form-group row gx-4 gy-3">
+										<div class="col-sm-6">
+											<label class="text-black fw-medium medium">Title</label>
+											<div class="fw-semibold">Female</div>
 										</div>
 										<div class="col-sm-6">
 											<label class="text-black fw-medium medium">Day of Birth</label>
@@ -341,8 +364,8 @@
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Gender</label>
-											<div class="fw-semibold">Female</div>
+											<label class="text-black fw-medium medium">Phone Number</label>
+											<div class="fw-semibold">+84 1312312434</div>
 										</div>
 										<div class="col-sm-6">
 											<label class="text-black fw-medium medium">Email Address</label>
@@ -351,8 +374,8 @@
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Phone Number</label>
-											<div class="fw-semibold">+84 1312312434</div>
+											<label class="text-black fw-medium medium">Country of Birth</label>
+											<div class="fw-semibold">Chile</div>
 										</div>
 										<div class="col-sm-6">
 											<label class="text-black fw-medium medium">Country of Residency</label>
@@ -361,57 +384,30 @@
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Country of Birth</label>
-											<div class="fw-semibold">Chile</div>
-										</div>
-										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Appointment Location</label>
-											<div class="fw-semibold">Los Angeles</div>
-										</div>
-									</div>
-									<div class="form-group row gx-4 gy-3">
-										<div class="col-sm-6">
 											<label class="text-black fw-medium medium">Passport Number</label>
-											<div class="fw-semibold">C15C08</div>
+											<div class="fw-semibold">C15CO8</div>
 										</div>
 										<div class="col-sm-6">
 											<label class="text-black fw-medium medium">Expired Date</label>
-											<div class="fw-semibold">15/09/2027</div>
+											<div class="fw-semibold">15/08/1985</div>
 										</div>
 									</div>
 									<div class="form-group row gx-4 gy-3">
 										<div class="col-sm-6">
 											<label class="text-black fw-medium medium">Issue Date</label>
-											<div class="fw-semibold">15/09/2027</div>
-										</div>
-									</div>
-									<div class="form-group row g-4 mb-0">
-										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Photo of Passport Page</label>
-											<div
-												class="border rounded-3-5 bg-secondary bg-opacity-75 text-center align-middle cursor-pointer">
-												<img class="fit-cover rounded-3-5"
-													src="https://caotrang1009.github.io/global-evisa/assets/images/passport.png" alt=""
-													height="160px" width="100%">
-											</div>
-										</div>
-										<div class="col-sm-6">
-											<label class="text-black fw-medium medium">Portrait Photo</label>
-											<div
-												class="border rounded-3-5 bg-secondary bg-opacity-75 text-center align-middle cursor-pointer">
-												<img class="fit-cover rounded-3-5"
-													src="https://caotrang1009.github.io/global-evisa/assets/images/portrait.png" alt=""
-													height="160px" width="100%">
-											</div>
+											<div class="fw-semibold">15/08/1985</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="contact-information border border-primary px-sm-5 p-3 rounded-3-5 mb-3">
+						</div>
+						<div id="trip_convniences" class="mb-4-5">
+							<h2 class="fw-800 custom-h3 text-black mb-3">TRIP CONVENIENCES</h2>
+							<div class="travel-insurance border border-primary px-sm-5 p-3 rounded-3-5">
 								<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary"
-									class="toggle-data-dropdown collapsed"
-									data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse"
-									data-bs-target="#contact-information">
+									class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary"
+									data-bs-toggle="collapse" data-bs-target="#travel-insurance" aria-expanded="false"
+									aria-controls="travel-insurance">
 									<div class="row align-items-center">
 										<div class="col-9">
 											<div class="d-flex align-items-center">
@@ -419,7 +415,7 @@
 													style="width: 40px; height: 12px;"></span>
 												<h4
 													class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">
-													YOUR CONTACT INFORMATION</h4>
+													TRAVEL INSURANCE</h4>
 											</div>
 										</div>
 										<div class="col-3 text-end">
@@ -435,19 +431,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="collapse pt-3" id="contact-information" style="">
-									<div class="form-group">
-										<label class="text-black fw-medium medium">Your Full Name</label>
-										<div class="fw-semibold">Lorem Ipsum</div>
+								<div class="collapse travel-insurance pt-3 fw-medium" id="travel-insurance">
+									<div class="mb-3">Package 1: <span class="fw-semibold">from 9 to 173 USD</span>
 									</div>
-									<div class="form-group">
-										<label class="text-black fw-medium medium">Your Email</label>
-										<div class="fw-semibold">loremipisum@gmail.com</div>
-									</div>
-									<div class="form-group">
-										<label class="text-black fw-medium medium">Your Phone Number</label>
-										<div class="fw-semibold">+84 1312312434</div>
-									</div>
+									<div class="mb-3">Number of days: <span class="fw-semibold">9 - 15 days (19
+											USD)</span></div>
 								</div>
 							</div>
 						</div>
@@ -639,134 +627,261 @@
 								</div>
 							</div>
 						</div>
-						<div class="confirm">
-							<div class="form-check mb-3">
-								<input class="form-check-input mt-0" type="checkbox" value="" id="correct_info"
-									name="correct_info" style="width:1.5rem; height:1.5rem" checked="" required="">
-								<label class="form-check-label ms-3 cursor-pointer" for="correct-info">I would like to
-									confirm that the above information is correct.</label>
-							</div>
-							<div class="form-check">
-								<input class="form-check-input mt-0" type="checkbox" value="" id="term" name="term"
-									style="width:1.5rem; height:1.5rem" checked="" required="">
-								<label class="form-check-label ms-3 cursor-pointer" for="term">
-									I have read and agree to the <a href="#"
-										class="fw-bold text-title text-primary text-decoration-underline">Terms and
-										Conditions</a> as well as the company's <a href="#"
-										class="fw-bold text-title text-primary text-decoration-underline">Policies</a>.
-								</label>
-							</div>
-						</div>
 						<div class="text-center mt-4-5">
-							<a href="https://caotrang1009.github.io/global-evisa/visa/payment-success/online"
-								class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 px-6">Proceed To
+							<a href="https://caotrang1009.github.io/global-evisa/flights/payment-success/online"
+								class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Proceed To
 								Payment</a>
 						</div>
 					</div>
 					<div class="col-lg-5 col-12">
-						<div class="border-dashed bg-beige rounded-3-5 text-title py-4-5 px-4 mb-4">
-							<h3 class="custom-h3 fw-800 text-black text-center mb-0 spacing-n1">ORDER SUMMARY</h3>
-							<div class="row g-3 my-4">
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Order Number:</div>
-										<div class="w-50 medium text-end">ABC123</div>
+						<div class="border-dashed bg-beige rounded-3 px-md-5 p-4-4 your-flight medium">
+							<div class="d-flex align-items-start gap-3">
+								<img class="fit-contain"
+									src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/plane-takeoff.svg" alt="Air Asia"
+									width="24px" height="24px">
+								<h3 class="custom-h3 fw-800 text-black spacing-n1 mb-0">Your flight</h3>
+							</div>
+							<div class="py-4 flight">
+								<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight"
+									data-bs-toggle="collapse" data-bs-target="#flightOne">
+									<div>
+										<div
+											class="d-flex align-items-center gap-1 text-black fw-bold flex-wrap cursor-pointer">
+											<span>Tokyo</span>
+											<span><img
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-right-black.svg"
+													alt="arrow-right" width="24px" height="24px"></span>
+											<span>Singapore</span>
+											<ul class="text-primary ms-1">
+												<li>Mon, 18 Sep 2023</li>
+											</ul>
+										</div>
+									</div>
+									<div class="cursor-pointer text-end">
+										<img class="icon-direct"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-up-blue.svg"
+											alt="arrow-bottom" data-icon-name="solid/arrow-down-blue"
+											data-icon-hover="solid/arrow-up-blue" width="12px" height="12px">
 									</div>
 								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Number of Applicants:</div>
-										<div class="w-50 medium text-end">02</div>
+								<div id="flightOne" class="collapse show">
+									<div class="d-flex align-items-center gap-3 mb-3">
+										<img class="img-airline"
+											src="https://caotrang1009.github.io/global-evisa/assets/images/airline/bamboo_airways.png"
+											alt="Air Asia">
+										<div class="text-black text-opacity-9 fw-bold airline-name">Bamboo Airlines
+										</div>
 									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Type of Visa:</div>
-										<div class="w-50 medium text-end">Lorem Ipsum Dolor Sit Amet</div>
+									<div class="d-flex align-items-center justify-content-between mb-3">
+										<div class="departure">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">17:20</div>
+												<div class="code"><span>TYO</span></div>
+											</div>
+										</div>
+										<div>
+											<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/airplane-mode.svg"
+												alt="airplane-mode" width="24px" height="24px">
+										</div>
+										<div class="arrival">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">17:20</div>
+												<div class="code"><span>SIN</span></div>
+											</div>
+										</div>
+										<div class="duration">+1day</div>
+										<div class="time">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">5h 40m</div>
+												<div class="medium">Direct flight</div>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Destination:</div>
-										<div class="w-50 medium text-end">Lorem Ipsum Dolor Sit Amet</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Day of Arrival:</div>
-										<div class="w-50 medium text-end">DD/MM/YY</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Day of Return:</div>
-										<div class="w-50 medium text-end">DD/MM/YY</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Service Fees:</div>
-										<div class="w-50 medium text-end">40 USD per person</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Admin &amp; Government Fees:</div>
-										<div class="w-50 medium text-end">50 USD per person</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Processing Time Fees:</div>
-										<div class="w-50 medium text-end">Super Urgent - Within 1 day - 50 USD per
-											person</div>
-									</div>
-								</div>
-								<div class="col-12">
-									<div class="d-flex gap-3 justify-content-between">
-										<div class="me-auto fw-semibold">Travel Insurance:</div>
-										<div class="w-50 medium text-end">50 USD per person</div>
+									<div class="d-flex align-items-center gap-2">
+										<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/infomation.svg"
+											alt="infomation" width="20px" height="20px">
+										<div class="medium fw-medium">Stop to change flight at Seoul (2h 30m)</div>
 									</div>
 								</div>
 							</div>
-							<div class="d-flex border border-secondary rounded-3 bg-white input-promo mb-4"
+							<div class="py-4 flight">
+								<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight"
+									data-bs-toggle="collapse" data-bs-target="#flightTwo">
+									<div>
+										<div
+											class="d-flex align-items-center gap-1 text-black fw-bold flex-wrap cursor-pointer">
+											<span>Singapore</span>
+											<span><img
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-right-black.svg"
+													alt="arrow-right" width="24px" height="24px"></span>
+											<span>Tokyo</span>
+											<ul class="text-primary ms-1">
+												<li>Mon, 20 Sep 2023</li>
+											</ul>
+										</div>
+									</div>
+									<div class="cursor-pointer text-end">
+										<img class="icon-direct"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-down-blue.svg"
+											alt="arrow-bottom" data-icon-name="solid/arrow-down-blue"
+											data-icon-hover="solid/arrow-up-blue" width="12px" height="12px">
+									</div>
+								</div>
+								<div id="flightTwo" class="collapse">
+									<div class="d-flex align-items-center gap-3 mb-3">
+										<img class="img-airline"
+											src="https://caotrang1009.github.io/global-evisa/assets/images/airline/bamboo_airways.png"
+											alt="Air Asia">
+										<div class="text-black text-opacity-9 fw-bold airline-name">Bamboo Airlines
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between">
+										<div class="departure">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">17:20</div>
+												<div class="code"><span>TYO</span></div>
+											</div>
+										</div>
+										<div>
+											<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/airplane-mode.svg"
+												alt="airplane-mode" width="24px" height="24px">
+										</div>
+										<div class="arrival">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">17:20</div>
+												<div class="code"><span>SIN</span></div>
+											</div>
+										</div>
+										<div class="duration">+1day</div>
+										<div class="time">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">5h 40m</div>
+												<div class="medium">Direct flight</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="py-4 flight">
+								<div class="d-flex align-items-center justify-content-between gap-3 cursor-pointer toggle-data-flight"
+									data-bs-toggle="collapse" data-bs-target="#flightThree">
+									<div>
+										<div class="d-flex align-items-center gap-1 text-black fw-bold flex-wrap">
+											<span>Tokyo</span>
+											<span><img
+													src="https://caotrang1009.github.io/global-evisa/assets/svg/outline/arrow-right-black.svg"
+													alt="arrow-right" width="24px" height="24px"></span>
+											<span>Ho Chi Minh</span>
+											<ul class="text-primary ms-1">
+												<li>Mon, 20 Sep 2023</li>
+											</ul>
+										</div>
+									</div>
+									<div class="cursor-pointer text-end">
+										<img class="icon-direct"
+											src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-down-blue.svg"
+											alt="arrow-bottom" data-icon-name="solid/arrow-down-blue"
+											data-icon-hover="solid/arrow-up-blue" width="12px" height="12px">
+									</div>
+								</div>
+								<div id="flightThree" class="collapse">
+									<div class="d-flex align-items-center gap-3 mb-3">
+										<img class="img-airline"
+											src="https://caotrang1009.github.io/global-evisa/assets/images/airline/bamboo_airways.png"
+											alt="Air Asia">
+										<div class="text-black text-opacity-9 fw-bold airline-name">Bamboo Airlines
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-between">
+										<div class="departure">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">17:20</div>
+												<div class="code"><span>TYO</span></div>
+											</div>
+										</div>
+										<div>
+											<img src="https://caotrang1009.github.io/global-evisa/assets/svg/solid/airplane-mode.svg"
+												alt="airplane-mode" width="24px" height="24px">
+										</div>
+										<div class="arrival">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">17:20</div>
+												<div class="code"><span>SIN</span></div>
+											</div>
+										</div>
+										<div class="duration">+1day</div>
+										<div class="time">
+											<div class="flex-grow-1">
+												<div class="text-black fw-bold mb-1">5h 40m</div>
+												<div class="medium">Direct flight</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="d-flex border border-secondary rounded-3 bg-white input-promo my-4"
 								style="--bs-border-opacity: 0.25;">
 								<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text"
-									name="promo" placeholder="Enter your promo code here!" required="">
+									name="promo" placeholder="Enter your promo code here!">
 								<button class="btn btn-primary rounded-end-3 px-3"><span
 										class="text-nowrap fw-semibold medium">Apply Now</span></button>
 							</div>
-							<div class="row g-3 fw-semibold">
-								<div class="col-12">
-									<div class="d-flex fs-6">
+							<div class="row">
+								<div class="col-12 pb-3">
+									<div class="d-flex fw-bold text-primary fs-6">
 										<div class="me-auto">
-											<span>Subtotal:</span>
+											<span class="fw-bold">Total Amount:</span>
 										</div>
 										<div class="align-items-end">
-											<div class="medium fw-normal">$USD</div>
+											<div class="">4.761.840 VND</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 pb-3">
+									<div class="d-flex align-items-center">
+										<div class="me-auto">
+											<span class="fw-semibold">VietJet Air (Adult) x1</span>
+										</div>
+										<div class="align-items-end">
+											<div class="medium">2.952.000 VND</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 pb-3">
+									<div class="d-flex align-items-center">
+										<div class="me-auto">
+											<span class="fw-semibold">Vietravel Airlines (Adult) x1</span>
+										</div>
+										<div class="align-items-end">
+											<div class="medium">812.440 VND</div>
 										</div>
 									</div>
 								</div>
 								<div class="col-12">
-									<div class="d-flex fs-6">
+									<div class="d-flex align-items-center">
 										<div class="me-auto">
-											<span>Discount:</span>
+											<span class="fw-semibold">VietJet Air (Adult) x1 </span>
 										</div>
 										<div class="align-items-end">
-											<div class="medium fw-normal">$USD</div>
+											<div class="medium">997.400 VND</div>
 										</div>
 									</div>
 								</div>
-								<div class="col-12">
-									<div class="d-flex text-primary fs-6">
-										<div class="me-auto">
-											<span class="headline fw-semibold">Total Amount:</span>
-										</div>
-										<div class="align-items-end">
-											<div class="fw-bold">$USD</div>
-										</div>
-									</div>
-								</div>
+							</div>
+
+							<script>
+								$(document).ready(function () {
+									var iconDown = "https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-down-blue.svg";
+									var iconUp = "https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-up-blue.svg";
+
+									$(".toggle-data-flight").click(function () {
+										$(this).find("img.icon-direct").attr('src', (_, attr) => attr == iconDown ? iconUp : iconDown);
+									});
+								});
+							</script>
+							<div class="d-flex justify-content-between align-items-center fw-bold mt-4">
+								<span class="text-black text-opacity-9">Already had an account?</span>
+								<a class="text-primary" href="#">Sign In Now!</a>
 							</div>
 						</div>
 					</div>
@@ -774,29 +889,10 @@
 			</form>
 		</div>
 	</section>
-
 	<script>
 		$(document).ready(function () {
 			var iconDown = "https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-down-blue.svg";
 			var iconUp = "https://caotrang1009.github.io/global-evisa/assets/svg/solid/arrow-up-blue.svg";
-
-			var validator = $("#frm-order").validate({
-				highlight: function (input) {
-					var parent = $(input).parent(".input-visa-search");
-					parent.addClass('error');
-					updateSvgColor(parent.find('img'), 'red');
-				},
-				errorPlacement: function (error, input) {
-					if (error.text() != '') {
-						$(input).parent(".input-visa-search").next("span").show();
-						$(input).parent(".input-visa-search").next("span").html(error.text())
-					}
-				},
-				invalidHandler: function (event, validator) {
-					$(".spinner").addClass("d-none");
-					$('.spinner .center-div').loader('spinner').hide();
-				}
-			});
 
 			$(".toggle-data-dropdown").click(function () {
 				$(this).find("img").attr('src', (_, attr) => attr == iconDown ? iconUp : iconDown);
@@ -953,7 +1049,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/intlTelInput.min.js"></script>
-	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702021097"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702116567"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/search.js?id=1699685344"></script>
 	<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
 	<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>

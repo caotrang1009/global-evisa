@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="csrf-token" content="qwSufihJI3g22LDm1ksgWDZuTlyuGTwB5lxjQy6H">
+	<meta name="csrf-token" content="Crt5e0zSV1eYBG4OJGxwj8gU8XPaIlxYwygPM8dX">
 	<meta name="robots" content="index,follow">
 	<meta name="author" content="Laravel">
 	<title>Flights</title>
@@ -199,10 +199,31 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+		$(document).ready(function () {
+			var validator = $("#frm-singin").validate({
+				highlight: function (input) {
+					$(input).addClass('error');
+					updateSvgColor($(input).siblings('img'), 'red');
+				},
+				errorPlacement: function (error, input) {
+					if (error.text() != '') {
+						$(input).siblings("span").show();
+						$(input).siblings("span").html(error.text())
+					}
+				},
+				invalidHandler: function (event, validator) {
+					$(".spinner").addClass("d-none");
+					$('.spinner .center-div').loader('spinner').hide();
+				}
+			});
+		});
+	</script>
 	<section class="pb-0">
 		<div class="container">
 			<div class="row">
-				<h1 class="web-title text-black text-center text-uppercase w-100">FILL IN INFORMATION DETAILS</h1>
+				<h1 class="web-title text-black text-center text-uppercase w-100 mb-0">FILL IN INFORMATION DETAILS</h1>
 				<div class="step-part mt-4">
 					<div class="d-flex justify-content-center text-title stepper-wrapper">
 						<a href="https://caotrang1009.github.io/global-evisa/flights/information"
@@ -212,25 +233,18 @@
 								1</div>
 							<div class="step-name">Order Information</div>
 						</a>
-						<a href="https://caotrang1009.github.io/global-evisa/flights/review-information"
+						<a href="https://caotrang1009.github.io/global-evisa/flights/review-and-payment"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
 								2</div>
-							<div class="step-name">Review Info</div>
-						</a>
-						<a href="https://caotrang1009.github.io/global-evisa/flights/payment"
-							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
-							<div
-								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
-								3</div>
 							<div class="step-name">Payment</div>
 						</a>
 						<a href="https://caotrang1009.github.io/global-evisa/flights/payment-success/online"
 							class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 							<div
 								class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">
-								4</div>
+								3</div>
 							<div class="step-name">Confirmation</div>
 						</a>
 					</div>
@@ -241,7 +255,7 @@
 	<section>
 		<div class="container">
 			<form action="" id="frm-order" novalidate="novalidate">
-				<input type="hidden" name="_token" value="qwSufihJI3g22LDm1ksgWDZuTlyuGTwB5lxjQy6H" autocomplete="off">
+				<input type="hidden" name="_token" value="Crt5e0zSV1eYBG4OJGxwj8gU8XPaIlxYwygPM8dX" autocomplete="off">
 				<div class="row g-sm-5 g-4">
 					<div class="col-lg-7 col-12">
 						<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
@@ -355,7 +369,7 @@
 															data-prev=".swiper-custom-prev"
 															data-next=".swiper-custom-next" style="width: 85%">
 															<div class="swiper-wrapper align-items-center"
-																id="swiper-wrapper-0331010b03120b6f36"
+																id="swiper-wrapper-c3c4ff94c10cd10ef7"
 																aria-live="polite"
 																style="transition-duration: 0ms; transition-delay: 0ms;">
 																<a class="swiper-slide d-block text-start"
@@ -630,12 +644,12 @@
 														<div class="position-relative swiper-control">
 															<div class="position-absolute top-0 end-0 swiper-custom-prev"
 																tabindex="0" role="button" aria-label="Previous slide"
-																aria-controls="swiper-wrapper-7b5d9db63a7997e5">
+																aria-controls="swiper-wrapper-56cb858f4e6521053">
 																<i class="fal fa-chevron-circle-up fs-4 icon-color"></i>
 															</div>
 															<div class="position-absolute bottom-0 end-0 swiper-custom-next"
 																tabindex="0" role="button" aria-label="Next slide"
-																aria-controls="swiper-wrapper-7b5d9db63a7997e5">
+																aria-controls="swiper-wrapper-56cb858f4e6521053">
 																<i
 																	class="fal fa-chevron-circle-down fs-4 icon-color"></i>
 															</div>
@@ -708,7 +722,7 @@
 															data-prev=".swiper-custom-prev"
 															data-next=".swiper-custom-next" style="width: 85%">
 															<div class="swiper-wrapper align-items-center"
-																id="swiper-wrapper-7b5d9db63a7997e5" aria-live="polite"
+																id="swiper-wrapper-56cb858f4e6521053" aria-live="polite"
 																style="transition-duration: 0ms; transition-delay: 0ms;">
 																<a class="swiper-slide d-block text-start"
 																	href="https://caotrang1009.github.io/global-evisa/visa/country/belarus"
@@ -982,12 +996,12 @@
 														<div class="position-relative swiper-control">
 															<div class="position-absolute top-0 end-0 swiper-custom-prev"
 																tabindex="0" role="button" aria-label="Previous slide"
-																aria-controls="swiper-wrapper-7b5d9db63a7997e5">
+																aria-controls="swiper-wrapper-56cb858f4e6521053">
 																<i class="fal fa-chevron-circle-up fs-4 icon-color"></i>
 															</div>
 															<div class="position-absolute bottom-0 end-0 swiper-custom-next"
 																tabindex="0" role="button" aria-label="Next slide"
-																aria-controls="swiper-wrapper-7b5d9db63a7997e5">
+																aria-controls="swiper-wrapper-56cb858f4e6521053">
 																<i
 																	class="fal fa-chevron-circle-down fs-4 icon-color"></i>
 															</div>
@@ -3166,7 +3180,7 @@
 							</div>
 						</div>
 						<div class="text-center mt-4">
-							<a href="https://caotrang1009.github.io/global-evisa/flights/review-information"
+							<a href="https://caotrang1009.github.io/global-evisa/flights/review-and-payment"
 								class="btn btn-primary rounded-3-5 fw-bold text-title fs-5 py-2 w-50">Next</a>
 						</div>
 					</div>
@@ -3359,7 +3373,7 @@
 							<div class="d-flex border border-secondary rounded-3 bg-white input-promo my-4"
 								style="--bs-border-opacity: 0.25;">
 								<input class="form-control border-0 rounded-3 px-3 cursor-pointer" type="text"
-									name="promo" placeholder="Enter your promo code here!" required="">
+									name="promo" placeholder="Enter your promo code here!">
 								<button class="btn btn-primary rounded-end-3 px-3"><span
 										class="text-nowrap fw-semibold medium">Apply Now</span></button>
 							</div>
@@ -3428,11 +3442,9 @@
 			var validator = $("#frm-order").validate({
 				highlight: function (input) {
 					$(input).addClass('error');
-					console.log($(input).siblings('img'))
 					updateSvgColor($(input).siblings('img'), 'red');
 				},
 				errorPlacement: function (error, input) {
-					console.log(error.text())
 					if (error.text() != '') {
 						$(input).siblings("span").show();
 						$(input).siblings("span").html(error.text())
@@ -3561,7 +3573,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/intlTelInput.min.js"></script>
-	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702021097"></script>
+	<script src="https://caotrang1009.github.io/global-evisa/assets/js/flight.js?id=1702116567"></script>
 	<script src="https://caotrang1009.github.io/global-evisa/assets/js/search.js?id=1699685344"></script>
 	<link rel="modulepreload" href="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js">
 	<script type="module" src="https://caotrang1009.github.io/global-evisa/assets/app-39dcccdc.js"></script>
@@ -3593,7 +3605,7 @@
 				type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled"
 				type="button">Apply</button> </div>
 	</div>
-	<script class="iti-load-utils" async="" src="https://caotrang1009.github.io/global-evisa/assets/js/telinput/js/utils.js"></script>
+	<script class="iti-load-utils" async="" src="/assets/js/telinput/js/utils.js"></script>
 </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>

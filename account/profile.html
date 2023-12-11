@@ -337,7 +337,7 @@
 									<div class="form-group">
 										<label class="h6 fw-semibold text-black">Full Name</label>
 										<input class="form-control border rounded-3 px-3 input-info" type="text"
-											id="prf_fullname" name="prf_fullname" value="Lorem Ipsum">
+											id="prf_fullname" name="prf_fullname" value="Lorem Ipsum" required>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -687,6 +687,7 @@
 											class="form-control border-0 text-secondary fw-light bg-secondary bg-opacity-10"
 											type="text" id="prf_email" name="prf_email" value="loremipsum@gmail.com"
 											disabled="">
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -2703,7 +2704,8 @@
 									<div class="form-group">
 										<label class="h6 fw-semibold text-black" for="new_password">New Pasword</label>
 										<input class="form-control border rounded-3 px-3 input-info" type="password"
-											id="new_password" name="new_password" value="abcdefssss">
+											id="new_password" name="new_password" value="abcdefssss" required>
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -2712,7 +2714,8 @@
 											Password</label>
 										<input class="form-control border rounded-3 px-3 input-info" type="password"
 											id="new_password_confirmation" name="new_password_confirmation"
-											value="abcdefssss">
+											value="abcdefssss" required>
+										<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									</div>
 								</div>
 							</div>

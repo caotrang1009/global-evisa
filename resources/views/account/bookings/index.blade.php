@@ -9,7 +9,7 @@
 			<th class="text-primary-600 text-decoration-underline py-3">Booking date<img class="ms-1" src="{{ asset('assets/svg/outline/slide-updown-arrow.svg') }}" alt="slide-updown-arrow" width="15px" height="18px"></th>
 			<th class="text-primary-600 text-decoration-underline py-3">Total<img class="ms-1" src="{{ asset('assets/svg/outline/slide-updown-arrow.svg') }}" alt="slide-updown-arrow" width="15px" height="18px"></th>
 			<th class="text-primary-600 text-decoration-underline py-3">Status</th>
-			<th class="text-primary-600 text-decoration-underline py-3">Payment</th>
+			<th class="text-primary-600 text-decoration-underline py-3">Review & Payment</th>
 			<th class="text-primary-600 text-decoration-underline py-3">Action</th>
 		</tr>
 		<tr class="text-center align-middle">

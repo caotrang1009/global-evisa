@@ -9,15 +9,15 @@
 				<div class="d-flex justify-content-center text-title stepper-wrapper">
 					<a href="{{ url("/flights/information") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item completed">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">1</div>
-						<div class="mt-3 step-name text-center fs-6">Order Information</div>
+						<div class="step-name">Order Information</div>
 					</a>
 					<a href="{{ url("/flights/review-and-payment") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item current">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">2</div>
-						<div class="mt-3 step-name text-center fs-6">Payment</div>
+						<div class="step-name">Review & Payment</div>
 					</a>
 					<a href="{{ url("/flights/payment-success/online") }}" class="position-relative d-flex flex-column align-items-center cursor-pointer stepper-item">
 						<div class="position-relative d-flex justify-content-center align-items-center rounded-circle bg-beige step-counter">3</div>
-						<div class="mt-3 step-name text-center fs-6">Confirmation</div>
+						<div class="step-name">Confirmation</div>
 					</a>
 				</div>
 			</div>

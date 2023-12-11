@@ -160,7 +160,7 @@ function initLoadElement() {
 			var slideDirection = slider.data("direction") ? slider.data("direction") : 'horizontal';
 			var arrowLeft = slider.data("prev") ? slider.data("prev") : '.swiper-button-prev';
 			var arrowRight = slider.data("next") ? slider.data("next") : '.swiper-button-next';
-			console.log(slideMouseWheelControl)
+			
 			var swiper = new Swiper(slideParent+" .swiper", {
 				direction: slideDirection,
 				initialSlide: Math.floor(sliderItems/2),

@@ -40,6 +40,23 @@
 				}
 			});
 
+			var validator = $("#frm-invoice").validate({
+				highlight: function(input){
+					$(input).addClass('error');
+					updateSvgColor($(input).siblings('img'), 'red');
+				},
+				errorPlacement: function(error, input){
+					if (error.text() != '') {
+						$(input).siblings("span").show();
+						$(input).siblings("span").html(error.text())
+					}
+				},
+				invalidHandler: function(event, validator) {
+					$(".spinner").addClass("d-none");
+					$('.spinner .center-div').loader('spinner').hide();
+				}
+			});
+
 			$('#btn-change-avatar').click(function(){
 				$('#userfile').click();
 			});

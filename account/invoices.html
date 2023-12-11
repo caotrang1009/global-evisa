@@ -370,27 +370,6 @@
 									width="24px" height="24px"></button>
 						</div>
 					</form>
-
-					<script>
-						$(document).ready(function () {
-							var validator = $("#frm-invoice").validate({
-								highlight: function (input) {
-									$(input).addClass('error');
-									updateSvgColor($(input).siblings('img'), 'red');
-								},
-								errorPlacement: function (error, input) {
-									if (error.text() != '') {
-										$(input).siblings("span").show();
-										$(input).siblings("span").html(error.text())
-									}
-								},
-								invalidHandler: function (event, validator) {
-									$(".spinner").addClass("d-none");
-									$('.spinner .center-div').loader('spinner').hide();
-								}
-							});
-						});
-					</script>
 				</div>
 			</div>
 		</div>
@@ -485,6 +464,23 @@
 			});
 			
 			var validator = $("#frm-profile").validate({
+				highlight: function(input){
+					$(input).addClass('error');
+					updateSvgColor($(input).siblings('img'), 'red');
+				},
+				errorPlacement: function(error, input){
+					if (error.text() != '') {
+						$(input).siblings("span").show();
+						$(input).siblings("span").html(error.text())
+					}
+				},
+				invalidHandler: function(event, validator) {
+					$(".spinner").addClass("d-none");
+					$('.spinner .center-div').loader('spinner').hide();
+				}
+			});
+
+			var validator = $("#frm-invoice").validate({
 				highlight: function(input){
 					$(input).addClass('error');
 					updateSvgColor($(input).siblings('img'), 'red');

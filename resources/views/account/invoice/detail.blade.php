@@ -47,25 +47,4 @@
 		<button class="btn bg-orange rounded-3 fw-bold text-white fs-6 py-2 px-4 lh-md btn-invoice" type="button" id="btn-invoice">SEND REQUEST<img class="ms-3" src="{{ asset('assets/svg/outline/sent-fast.svg') }}" alt="sent-fast" width="24px" height="24px"></button>
 	</div>
 </form>
-
-<script>
-	$(document).ready(function () {	
-		var validator = $("#frm-invoice").validate({
-			highlight: function(input){
-				$(input).addClass('error');
-				updateSvgColor($(input).siblings('img'), 'red');
-			},
-			errorPlacement: function(error, input){
-				if (error.text() != '') {
-					$(input).siblings("span").show();
-					$(input).siblings("span").html(error.text())
-				}
-			},
-			invalidHandler: function(event, validator) {
-				$(".spinner").addClass("d-none");
-				$('.spinner .center-div').loader('spinner').hide();
-			}
-		});
-	});
-</script>
 @endsection

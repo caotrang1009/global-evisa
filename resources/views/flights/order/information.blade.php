@@ -82,7 +82,7 @@
 									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-										@include('visa.section.countries')
+										@include('layouts.sections.countries')
 									</div>
 								</div>
 							</div>
@@ -100,7 +100,7 @@
 									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
 									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
 									<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-										@include('visa.section.countries')
+										@include('layouts.sections.countries')
 									</div>
 								</div>
 							</div>

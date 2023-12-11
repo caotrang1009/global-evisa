@@ -155,11 +155,12 @@ function initLoadElement() {
 			var sliderItemsXs = slider.data("items-xs") ? slider.data("items-xs") : Number(sliderItemsSm); //option: number (items in start to 575 )
 			var sliderSpace = slider.data("space-between") ? slider.data("space-between") : 50;
 			var slideParent = slider.data("parent");
-			var slideRewind = slider.attr("data-rewind") ? false : true;
+			var slideRewind = slider.data("rewind") ? false : true;
+			var slideMouseWheelControl = slider.data("mouse-wheel-control") ? true : false;
 			var slideDirection = slider.data("direction") ? slider.data("direction") : 'horizontal';
 			var arrowLeft = slider.data("prev") ? slider.data("prev") : '.swiper-button-prev';
 			var arrowRight = slider.data("next") ? slider.data("next") : '.swiper-button-next';
-			
+			console.log(slideMouseWheelControl)
 			var swiper = new Swiper(slideParent+" .swiper", {
 				direction: slideDirection,
 				initialSlide: Math.floor(sliderItems/2),
@@ -184,6 +185,7 @@ function initLoadElement() {
 				freeMode: true, 
 				centeredSlides: sliderCentered,
 				loop: slideRewind,
+				mousewheel: slideMouseWheelControl,
 				navigation: {
 					nextEl: slideParent + " " +arrowRight,
 					prevEl: slideParent + " " +arrowLeft,

@@ -80,7 +80,7 @@
 								<input id="originLocationCode" name="originLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where from?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
 								<label for="originLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
 								<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-									@include('visa.section.countries')
+									@include('layouts.sections.countries')
 								</div>
 							</div>
 						</div>
@@ -96,7 +96,7 @@
 								<input id="destinationLocationCode" name="destinationLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where to?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
 								<label for="destinationLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
 								<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-									@include('visa.section.countries')
+									@include('layouts.sections.countries')
 								</div>
 							</div>
 						</div>
@@ -142,7 +142,7 @@
 										<input id="originLocationCodeMultiCity_2" name="originLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where from?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
 										<label for="originLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where from?</label>
 										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-											@include('visa.section.countries')
+											@include('layouts.sections.countries')
 										</div>
 									</div>
 								</div>
@@ -158,7 +158,7 @@
 										<input id="destinationLocationCodeMultiCity_2" name="destinationLocationCode[]" class="form-control border-0 rounded-3 ps-4 text-truncate" placeholder="Where to?"  data-bs-toggle="dropdown" data-bs-auto-close="outside" value="">
 										<label for="destinationLocationCode" class="ms-2 ps-3"><i class="far fa-map-marker-alt pe-2"></i>Where to?</label>
 										<div class="dropdown-menu rounded-3-5 p-3 w-100 medium">
-											@include('visa.section.countries')
+											@include('layouts.sections.countries')
 										</div>
 									</div>
 								</div>

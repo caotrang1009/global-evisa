@@ -19,7 +19,7 @@
 										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="arrow-bottom">
 									</div>
 									<div class="dropdown-menu rounded-3 p-3 w-100 medium">
-										@include('visa.section.countries')
+										@include('layouts.sections.countries')
 									</div>
 								</div>
 							</div>
@@ -34,7 +34,7 @@
 										<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" alt="people">
 									</div>
 									<div class="dropdown-menu rounded-3 p-3 w-100 medium">
-										@include('visa.section.countries')
+										@include('layouts.sections.countries')
 									</div>
 								</div>
 							</div>

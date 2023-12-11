@@ -94,13 +94,13 @@
 			<div class="col-lg-6 col-12">
 				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
-						<div class="row align-items-center">
-							<div class="col-3">
-								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+						<div class="row align-items-center gy-4">
+							<div class="col-sm-3">
+								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange mx-auto why-choose-us-icon">
 									<img src="{{ asset('assets/svg/icon/user-blue.svg') }}" alt="evisa" width="42px" height="50px">
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-sm-9">
 								<h5 class="fw-bold text-uppercase">Professional</h5>
 								<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 								<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
@@ -112,13 +112,13 @@
 			<div class="col-lg-6 col-12">
 				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
-						<div class="row align-items-center">
-							<div class="col-3">
-								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+						<div class="row align-items-center gy-4">
+							<div class="col-sm-3">
+								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange mx-auto why-choose-us-icon">
 									<img src="{{ asset('assets/svg/icon/diverse-blue.svg') }}" alt="evisa" width="42px" height="50px">
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-sm-9">
 								<h5 class="fw-bold text-uppercase">Diverse</h5>
 								<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 								<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
@@ -130,13 +130,13 @@
 			<div class="col-lg-6 col-12">
 				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
-						<div class="row align-items-center">
-							<div class="col-3">
-								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+						<div class="row align-items-center gy-4">
+							<div class="col-sm-3">
+								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange mx-auto why-choose-us-icon">
 									<img src="{{ asset('assets/svg/icon/security-blue.svg') }}" alt="evisa" width="48px" height="50px">
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-sm-9">
 								<h5 class="fw-bold text-uppercase">Reliable</h5>
 								<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 								<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>
@@ -148,13 +148,13 @@
 			<div class="col-lg-6 col-12">
 				<div class="card h-100 border-0 rounded-4 why-choose-us-card">
 					<div class="card-body">
-						<div class="row align-items-center">
-							<div class="col-3">
-								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange why-choose-us-icon">
+						<div class="row align-items-center gy-4">
+							<div class="col-sm-3">
+								<div class="d-flex align-items-center justify-content-center rounded-circle border border-2 border-orange mx-auto why-choose-us-icon">
 									<img src="{{ asset('assets/svg/icon/lock-blue.svg') }}" alt="evisa" width="42px" height="50px">
 								</div>
 							</div>
-							<div class="col-9">
+							<div class="col-sm-9">
 								<h5 class="fw-bold text-uppercase">Safe</h5>
 								<div class="mb-3 text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 								<span class="d-block bg-orange" style="width: 64px; height:8px;"></span>

@@ -1,7 +1,7 @@
 <section class="my-account">
 	<div class="container">
 		<h1 class="web-header1 text-black text-uppercase fw-800 mb-4">My Account</h1>
-		<div class="row g-4">
+		<div class="row gx-4 gy-5">
 			<div class="col-lg-4-8 col-12">
 				<nav class="navbar rounded shadow">
 					<div class="navbar-brand p-4 pt-5 w-100">

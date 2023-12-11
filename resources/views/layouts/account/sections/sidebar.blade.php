@@ -1,21 +1,9 @@
-<div class="container d-lg-flex justify-content-between py-2 py-lg-3">
-	<div class="order-lg-2 mb-3 mb-lg-0 pt-lg-4">
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb bg-transparent flex-lg-nowrap justify-content-center justify-content-lg-start">
-				<li class="breadcrumb-item"><a class="text-nowrap" href="{{ url('/') }}"><i class="czi-home"></i>Home</a></li>
-				<li class="breadcrumb-item text-nowrap"><a href="{{ url('/account') }}">My Account</a></li>
-			</ol>
-		</nav>
-	</div>
-	<div class="order-lg-1 pe-lg-4 mb-3 mb-lg-0 pt-lg-4 text-center text-lg-start">
-		<h1 class="web-header1 text-black text-uppercase fw-800">My Account</h1>
-	</div>
-</div>
-<section class="pt-0 pt-sm-3 my-account">
+<section class="my-account">
 	<div class="container">
+		<h1 class="web-header1 text-black text-uppercase fw-800 mb-4">My Account</h1>
 		<div class="row g-4">
 			<div class="col-lg-4-8 col-12">
-				<nav class="navbar border rounded shadow">
+				<nav class="navbar rounded shadow">
 					<div class="navbar-brand p-4 pt-5 w-100">
 						<div class="d-flex align-items-center gap-4">
 							<div class="flex-shrink-0 avatar avatar-xl rounded-circle position-relative">

@@ -5,8 +5,8 @@
 <div class="table-responsive">
 	<table class="table table-bordered">
 		<tr class="text-center">
-			<th class="text-primary-600 text-decoration-underline py-3">Order ID</th>
-			<th class="text-primary-600 text-decoration-underline py-3">Order date<img class="ms-1" src="{{ asset('assets/svg/outline/slide-updown-arrow.svg') }}" alt="slide-updown-arrow" width="15px" height="18px"></th>
+			<th class="text-primary-600 text-decoration-underline py-3">Booking ID</th>
+			<th class="text-primary-600 text-decoration-underline py-3">Booking date<img class="ms-1" src="{{ asset('assets/svg/outline/slide-updown-arrow.svg') }}" alt="slide-updown-arrow" width="15px" height="18px"></th>
 			<th class="text-primary-600 text-decoration-underline py-3">Total<img class="ms-1" src="{{ asset('assets/svg/outline/slide-updown-arrow.svg') }}" alt="slide-updown-arrow" width="15px" height="18px"></th>
 			<th class="text-primary-600 text-decoration-underline py-3">Status</th>
 			<th class="text-primary-600 text-decoration-underline py-3">Payment</th>

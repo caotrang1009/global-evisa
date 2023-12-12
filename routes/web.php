@@ -89,6 +89,10 @@ Route::get('/account/bookings', function() {
     return view('account.bookings.index');
 })->name('account.bookings');
 
+Route::get('/account/bookings/{id}', function($id) {
+    return view('account.bookings.detail', ['id' => $id]);
+});
+
 Route::get('/account/invoices', function() {
     return view('account.invoice.detail');
 })->name('account.invoice');

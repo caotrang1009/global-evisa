@@ -1,347 +1,286 @@
-@extends('layouts.account')
-@php
-	$originLocation = $airports->get($booking->origin_location_code);
-	$destinationLocation = $airports->get($booking->destination_location_code);
-	$check_vietjet = false;
-	$booking->extra_services = \App\Models\FlightExtra::where('booking_id', $booking->id)->get();
-	if ($originLocation->country == 'Vietnam' && $originLocation->country == $destinationLocation->country) { 
-		foreach ($booking->flights as $i => $flight) {
-			$segments = \App\Models\FlightSegment::where('flight_id', $flight->id)->get();
-			$firstSegment = $segments->first();
-			if ($firstSegment->operating_carrier_code == 'VJ') {
-				$check_vietjet = true;
-			}
-		}
-	}
-	$count_column = 5;
-@endphp
+@extends('layouts.app')
+
 @section('content')
-<h2 class="h4 mb-4">{{ __('page.my-bookings.booking-id') }}: {{ $booking->order_ref }}</h2>
-<div class="table-responsive">
-	<table class="table table-bordered">
-		<tr class="bg-secondary bg-opacity-10">
-			<th>ID</th>
-			<th>{{ __('page.my-bookings.pnr-code') }}</th>
-			<th class="text-end">{{ __('page.my-bookings.date') }}</th>
-			<th class="text-end">{{ __('page.my-bookings.total') }}</th>
-			<th class="text-end">{{ __('page.my-bookings.status') }}</th>
-			<th class="text-end">{{ __('page.my-bookings.payment') }}</th>
-		</tr>
-		<tr>
-			<td>{{ $booking->order_ref }}</td>
-			<td>{{ $check_vietjet == false && $booking->direction != 'multi-city' && !$booking->payment_status ? $booking->associated_records_reference : '' }}</td>
-			<td class="text-end text-nowrap">{{ date('M d, Y', strtotime($booking->booking_date)) }}</td>
-			<td class="text-end text-nowrap">{{ number_format($booking->grand_total + (!empty($booking->insurance_fee) ? $booking->insurance_fee : 0), 2) }} {{ $booking->currency }}</td>
-			<td class="text-end">
-				@if (!$booking->pnr_status)
-				<span class="text-danger">{{ __('page.my-bookings.canceled') }}</span>
-				@else
-				<span class="text-success">{{ __('page.my-bookings.ok') }}</span>
-				@endif
-			</td>
-			<td class="text-end">
-				@if (!$booking->payment_status)
-				<span class="text-danger">{{ __('page.my-bookings.unpaid') }}</span>
-				@else
-				<span class="text-success">{{ __('page.my-bookings.paid') }}</span>
-				@endif
-			</td>
-		</tr>
-	</table>
-</div>
-<div class="mt-3 table-responsive">
-	<table class="table table-bordered">
-		@php
-			foreach ($booking->flights as $i => $flight) {
-				$segments = \App\Models\FlightSegment::where('flight_id', $flight->id)->get();
-				$firstSegment = $segments->first();
-				$lastSegment = $segments->last();
-		@endphp
-		<tr class="bg-secondary bg-opacity-10">
-			<th>{{ $airports->get($firstSegment->departure_iata_code)->name }} ({{ $firstSegment->departure_iata_code }}) <i class="fal fa-long-arrow-right mx-1"></i> {{ $airports->get($lastSegment->arrival_iata_code)->name }} ({{ $lastSegment->arrival_iata_code }})</th>
-		</tr>
-		<tr class="bg-light">
-			<td>{{ date('D d, M y', strtotime($firstSegment->departure_at)) }}</td>
-		</tr>
-		<tr>
-			<td class="p-0">
-				<table class="table table-borderless mb-2">
-					<tr class="bg-light border-bottom">
-						<td width="36px">
-							<img width="36px" alt="" src="https://www.gstatic.com/flights/airline_logos/70px/dark/{{ $firstSegment->carrier_code }}.png">
-						</td>
-						<td>
-							<h6>{{ $airlines->get($firstSegment->carrier_code)->business_name }}</h6>
-							<small>{{ (($firstSegment->operating_carrier_code != $firstSegment->carrier_code) ? $firstSegment->operating_carrier_code.':'.$firstSegment->carrier_code : $firstSegment->carrier_code) }} {{ $firstSegment->carrier_number }}, {{ $firstSegment->carrier_aircraft }}</small>
-						</td>
-						<td width="20%">
-							<h6>{{ date('H:i A', strtotime($firstSegment->departure_at)) }}</h6>
-							<small>{{ $firstSegment->departure_iata_code }}, {{ __('flight.search-flights.terminal') }} {{ $firstSegment->departure_terminal }}</small>
-						</td>
-						<td width="15%" class="text-center">
-							<div class="stop">
-								<h6>{{ (new \DateInterval($flight->duration))->format('%h hr %i min') }}</h6>
-								<div class="path"></div>
-								<small>{{ $flight->stops ? $flight->stops." ".__('flight.search-flights.flight-details.stop').(($flight->stops > 1 && App::getLocale() == 'en') ? "s" : "") : __('flight.search-flights.flight-details.nonstop') }}</small>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="d-flex align-items-center justify-content-between mb-4-5">
+				<h1 class="web-title fw-800 text-black text-uppercase mb-0">booking detail</h1>
+				<div class="d-flex gap-4">
+					<a class="btn btn-primary rounded-3 fw-bold text-white text-uppercase fs-6 py-2 px-4 lh-md" id="btn-refund">Request refund</a>
+				</div>
+			</div>
+			<div class="d-flex align-items-center justify-content-between mb-4-5 d-none">
+				<h1 class="web-title fw-800 text-black text-uppercase mb-0">booking detail</h1>
+				<div class="d-flex gap-4">
+					<a class="btn btn-primary rounded-3 fw-bold text-white text-uppercase fs-6 py-2 px-4 lh-md" id="btn-pay-now">pay now</a>
+					<a class="btn btn-primary rounded-3 fw-bold text-white text-uppercase fs-6 py-2 px-4 lh-md" id="btn-change-method">change payment method</a>
+					<a class="btn btn-primary rounded-3 fw-bold text-white text-uppercase fs-6 py-2 px-4 lh-md" id="btn-cancel">cancel</a>
+				</div>
+			</div> 
+			<div class="d-flex align-items-center justify-content-between mb-4-5 d-none">
+				<h1 class="web-title fw-800 text-black text-uppercase mb-0">booking detail</h1>
+			</div>
+			<div class="mb-4-5">
+				<div class="border rounded-3 px-lg-5 p-4">
+					<div class="fw-bold mb-3">Booking ID: ABC1234<span class="mx-3">|</span>PNR: 12ABC3<span class="mx-3">|</span>Total: 450 USD</div>
+					<div class="row g-2">
+						<div class="col-lg-3 col-6">
+							<div class="fw-bold">Booking date:</div>
+							<div class="fw-medium">10:20 - 04/11/2023</div>
+						</div>
+						<div class="col-lg-3 col-6">
+							<div class="fw-bold">Booking status:</div>
+							<div class="fw-medium">Inprogress</div>
+						</div>
+						<div class="col-lg-3 col-6">
+							<div class="fw-bold">Payment Method:</div>
+							<div class="fw-medium">Paypal</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mb-4-5">
+				<h2 class="web-header2 fw-800 text-primary text-uppercase mb-3">passenger information</h2>
+				<div class="table-responsive">
+					<table class="table table-bordered table-primary-subtle mb-0">
+						<thead class="align-middle">
+							<tr>
+								<th rowspan="2">Name</th>
+								<th rowspan="2">Gender</th>
+								<th rowspan="2">Birth Date</th>
+								<th rowspan="2">Passport Number</th>
+								<th rowspan="2">Fare</th>
+								<th rowspan="2">Taxes</th>
+								<th rowspan="2">Travel Insurance Fee</th>
+								<th class="text-center" colspan="2">Airport Priority Check-in</th>
+								<th class="text-end" rowspan="2" width="200px">Total</th>
+							</tr>
+							<tr class="text-center">
+								<th>SGN</th>
+								<th>SYD</th>
+							</tr>
+						</thead>
+						<tbody class="align-middle fw-medium medium">
+							<tr>
+								<td class="text-uppercase">Thanh Huyen</td>
+								<td class="text-uppercase">FEMALE</td>
+								<td class="text-nowrap">March 03, 2000</td>
+								<td>C1235346</td>
+								<td>185.00 USD</td>
+								<td>299.40 USD</td>
+								<td class="text-nowrap">0.00 USD <br> 0.00 USD</td>
+								<td class="text-nowrap">60.00 USD</td>
+								<td class="text-nowrap">20.00 USD</td>
+								<td class="text-end text-nowrap">594.40 USD</td>
+							</tr>
+							<tr>
+								<td class="text-primary text-end fw-bold fs-6" colspan="9">Grand total</td>
+								<td class="text-end text-nowrap">616.40 USD<br>15,293,000 VND</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="mb-4-5">
+				<h2 class="web-header2 fw-800 text-primary text-uppercase mb-3">CONTACT INFORMATION</h2>
+				<div class="table-responsive">
+					<table class="table table-bordered table-primary-subtle mb-0">
+						<thead class="align-middle">
+							<tr>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Phone</th>
+								<th>Special request</th>
+							</tr>
+						</thead>
+						<tbody class="align-middle fw-medium medium">
+							<tr>
+								<td>Thanh Huyền</td>
+								<td>emailmailmail@gmail.com</td>
+								<td>090909090</td>
+								<td>Urgent</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="mb-4-5">
+				<h2 class="web-header2 fw-800 text-primary text-uppercase mb-3">e-invoice</h2>
+				<div class="table-responsive">
+					<table class="table table-bordered table-primary-subtle mb-0">
+						<thead class="align-middle">
+							<tr>
+								<th>Company name</th>
+								<th>Company address</th>
+								<th>Tax code</th>
+							</tr>
+						</thead>
+						<tbody class="align-middle fw-medium medium">
+							<tr>
+								<td>Thanh Huyền</td>
+								<td>emailmailmail@gmail.com</td>
+								<td>090909090</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div>
+				<h2 class="web-header2 fw-800 text-primary text-uppercase mb-3">TRIP</h2>
+				<div class="mb-4">
+					<table class="table table-bordered table-primary-subtle">
+						<thead class="align-middle">
+							<tr>
+								<th class="p-3" colspan="5">Tan Son Nhat  Intl (SGN) -> Sydney Intl (SYD)<span class="mx-3">|</span>Friday, 04, November, 2023</th>
+							</tr>
+						</thead>
+						<tbody class="align-middle medium">
+							<tr>
+								<td class="p-3">
+									<div class="row align-items-center fw-bold">
+										<div class="col-lg-1 col-sm-2 col-3">
+											<img class="fit-contain img-fluid" src="{{ asset('assets/images/airline/vietjet_air.png') }}" alt="vietjet_air">
+										</div>
+										<div class="col-sm-10 col-9">
+											<div class="row g-3 justify-content-between">
+												<div class="col-sm-3 col-6">Vietjet Air<br>TR 305, AIRBUS A320</div>
+												<div class="col-sm-3 col-6">09:30<br>SGN, Terminal 2</div>
+												<div class="col-sm-3 col-6">23 hr 30 min<br>1 stop</div>
+												<div class="col-sm-3 col-6">13:00<br>SYD, Terminal 1</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="border p-3 medium fw-medium">
+						<div class="d-flex flex-wrap gap-3">
+							<div class="border rounded-4 logo-airline mx-lg-0 mx-auto">
+								<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
 							</div>
-						</td>
-						<td width="20%" class="text-end">
-							<h6>{{ date('H:i A', strtotime($lastSegment->arrival_at)) }}</h6>
-							<small>{{ $lastSegment->arrival_iata_code }}, {{ __('flight.search-flights.terminal') }} {{ $lastSegment->arrival_terminal }}</small>
-						</td>
-					</tr>
-				</table>
-				@php
-					foreach ($segments as $s => $segment) {
-						$fare = \App\Models\FlightFare::where('segment_id', $segment->segment_id)->first();
-				@endphp
-				<table class="table table-borderless">
-					<tr>
-						<td width="36px">
-							<img width="36px" alt="" src="https://www.gstatic.com/flights/airline_logos/70px/dark/{{ $segment->operating_carrier_code }}.png">
-						</td>
-						<td width="60%">
-							<h6>{{ date('H:i A', strtotime($segment->departure_at)) }} . {{ date('D d, M y', strtotime($segment->departure_at)) }} . {{ $airports->get($segment->departure_iata_code)->name }} ({{ $segment->departure_iata_code }})</h6>
-							<p><small>{{ __('flight.search-flights.flight-details.travel-time') }}: {{ (new \DateInterval($segment->duration))->format('%h hr %i min') }}</small></p>
-							<h6>{{ date('H:i A', strtotime($segment->arrival_at)) }} . {{ date('D d, M y', strtotime($segment->arrival_at)) }} . {{ $airports->get($segment->arrival_iata_code)->name }} ({{ $segment->arrival_iata_code }})</h6>
-							<p><small>{{ __('flight.search-flights.flight-details.operated-by') }} {{ $airlines->get($segment->operating_carrier_code)->business_name }} . {{ (($segment->operating_carrier_code != $segment->carrier_code) ? $segment->operating_carrier_code.':'.$segment->carrier_code : $segment->carrier_code) }} {{ $segment->carrier_number }} . {{ $segment->carrier_aircraft }}</small></p>
-						</td>
-						<td>
-							<ul class="list-unstyled text-secondary small">
-								<li><i class="fal fa-suitcase-rolling fa-fw me-2"></i>{{ __('flight.search-flights.flight-details.checked-baggage') }}: {{ (!empty($fare->bag_quantity) ? $fare->bag_quantity. ' ' .__('flight.search-flights.fare-rules.piece-per-person') : '') }} {{ (!empty($fare->bag_weight) ? $fare->bag_weight.' '.$fare->bag_weight_unit : '') }}</li>
-								<li><i class="fal fa-loveseat fa-fw me-2"></i>{{ __('flight.search-flights.flight-details.cabin') }}: {{ $fare->cabin ?? '' }}</li>
-							</ul>
-						</td>
-					</tr>
-					@php
-						if (!empty($segments[($s+1)])) {
-							$nextSegment = $segments[($s+1)];
-					@endphp
-					<tr>
-						<td></td>
-						<td>
-							<div class="alert alert-info p-2">
-								<i class="fad fa-info-circle me-3"></i>{{ __('flight.search-flights.flight-details.stop-to-change-planes-in') }} {{ $airports->get($nextSegment->departure_iata_code)->name }} ({{ $nextSegment->departure_iata_code }})
-							</div>
-						</td>
-						<td></td>
-					</tr>
-					@php
-						}
-					@endphp
-				</table>
-				@php
-					}
-				@endphp
-			</td>
-		</tr>
-		@php
-			}
-		@endphp
-	</table>
-</div>
-@if (count($booking->extra_services) != 0)
-<div class="mt-3 table-responsive">
-	<table class="table table-borderless border">
-		<tr class="bg-secondary text-light">
-			<th colspan="15" align="left">{{ __('mail.flight.order.extra-services') }}</th>
-		</tr>
-		@foreach ($booking->extra_services as $service)
-			@php
-						$service_type = \App\Models\BookingType::find($service->service_type_id);
-			@endphp
-			<tr class="border-top">
-				<td colspan="2">
-					<b>{{ __('flight.extra-services.service') }}</b>
-					<div class="border-start border-2 bg-light p-2 my-2 text-nowrap">{{ $service_type->name }}</div>
-				</td>
-			</tr>
-			<tr>
-				@if (!empty($service->remark))
-				<td colspan="2">
-					<b>{{ __('flight.extra-services.requirements') }}</b>
-					<div class="border-start border-2 bg-light p-2 my-2 text-nowrap">{{ $service->remark }}</div>
-				</td>
-				@endif
-			</tr>
-		@endforeach
-	</table>
-</div>
-@endif
-<div class="mt-3 table-responsive">
-	<table class="table table-bordered">
-		<tr class="bg-secondary bg-opacity-10 align-middle">
-			<th rowspan="2">{{ __('page.my-bookings.passengers') }}</th>
-			<th rowspan="2">{{ __('page.my-bookings.gender') }}</th>
-			<th rowspan="2" class="text-end">{{ __('page.my-bookings.birth-date') }}</th>
-			<th rowspan="2" class="text-end">{{ __('page.my-bookings.fare') }}</th>
-			<th rowspan="2" class="text-end">{{ __('page.my-bookings.taxes') }}</th>
-			@if (!empty($booking->excess_baggage_fee))
-				@php $count_column++; @endphp
-				<th rowspan="2" class="text-end">{{ __('page.my-bookings.excess-baggage') }}</th>
-			@endif
-			@if (!empty($booking->insurance_fee))
-				@php $count_column++; @endphp
-				<th rowspan="2" class="text-end">{{ __('flight.pricing-flights.other-services.travel-insurance-fee') }}</th>
-			@endif
-			@php
-				$collectTravelerSerivce = collect();
-					foreach ($booking->travelers as $traveler) {
-					$traveler_airport_services = $traveler->airportServices()->get();
-					$collectTravelerSerivce = $collectTravelerSerivce->merge($traveler_airport_services);
-					foreach ($traveler_airport_services->groupBy('service_id') as $key => $airport_services) {
-						$airport_services_fee[$key] = 0;
-						foreach ($airport_services as $airport_service) {
-							$airport_services_fee[$key] += $airport_service->fee;
-						}
-					}
-				}
-				foreach ($collectTravelerSerivce->groupBy('service_id') as $s => $services ) {
-					if (count($services)) {
-						$airport_service_info = \App\Models\AirportService::find($s);
-					@endphp
-						<th colspan="{{ ($booking->direction !== 'one-way') ? 2 : 1 }}" class="text-center">{{ $airport_service_info->name }}</th>
-					@php
-					}
-				}
-			@endphp
-			<th rowspan="2" class="text-end" width="100px">{{ __('page.my-bookings.total') }}</th>
-		</tr>
-		<tr>
-			@php
-				foreach ($collectTravelerSerivce->groupBy('service_id') as $s => $services ) {
-					if (count($services)) {
-						$count_column += ($booking->direction !== 'one-way') ? 2 : 1;
-			@endphp
-					<th class="text-center bg-secondary bg-opacity-10">{{ $booking->origin_location_code }}</th>
-					@if ($booking->direction !== 'one-way')
-						<th class="text-center bg-secondary bg-opacity-10">{{ $booking->destination_location_code }}</th>
-					@endif
-			@php
-					}
-				}
-			@endphp
-		</tr>
-		@foreach ($booking->travelers as $traveler)
-		@php $item_insurance = $traveler->travelInsurance; @endphp
-		<tr class="align-middle">
-			<td class="text-nowrap">{{ strtoupper($traveler->given_name) }}/<br>{{ strtoupper($traveler->family_name) }}</td>
-			<td>{{ strtoupper($traveler->gender) }}</td>
-			<td class="text-end text-nowrap">{{ date('M d, Y', strtotime($traveler->birth_date)) }}</td>
-			<td class="text-end text-nowrap">{{ number_format($traveler->base, 2) }} {{ $traveler->currency }}</td>
-			<td class="text-end text-nowrap">{{ number_format($traveler->taxes + $traveler->ticketing_fee, 2) }} {{ $traveler->currency }}</td>
-			@if (!empty($booking->excess_baggage_fee))
-				<td>
-					@php
-						$traveler_baggages = $traveler->excessBaggage()->get()->groupBy('flight_id');
-						$counter = 0;
-						foreach ($traveler_baggages as $key => $baggages) {
-							$counter ++;
-							$flightInfo = \App\Models\FlightSegment::where('flight_id', $key)->get();
-							$firstSegment = $flightInfo->first();
-							$lastSegment = $flightInfo->last();
-							$totalBag = 0;
-					@endphp
 							<div>
-								<p class="small fw-semibold mb-0 text-end">{{ $firstSegment->departure_iata_code }} to {{ $lastSegment->arrival_iata_code }}</p>
-								@foreach ($baggages as $k => $baggage) 
-									<p class="mb-0 text-end text-nowrap"> {{ $baggage->name }} : {{ number_format($baggage->total) }} {{ $booking->currency }}</p>
-								@endforeach
-								@if ($counter !== count($traveler_baggages))
-									<hr class="my-1">
-								@endif
+								<div class="row g-3">
+									<div class="col-sm-7">
+										<div class="departure mb-1"><b>Departure time:</b> 09:00 AM - Fri 08, Dec 23 - Tan Son Nhat Intl</div>
+										<div class="arrival mb-1"><b>Travel time:</b> 2 hr 30 min</div>
+										<div class="landing-time mb-1"><b>Landing time:</b> 11:30 AM - Fri 08, Dec 23 - Changi Intl</div>
+										<div class="fw-semibold mt-2">Operated by Vietjet Air - VJ 382 - Airbus A321</div>
+									</div>
+									<div class="col-sm-5">
+										<ul class="list-unstyled lh-lg">
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/bag-check.svg') }}" alt="bag-check" width="20px" height="20px"><b>Checked baggage:</b> 2 piece(s) per person</li>
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/cabin.svg') }}" alt="bag-check" width="20px" height="20px"><b>Cabin:</b> ECONOMY</li>
+										</ul>
+									</div>
+								</div>
+								<div class="my-3">
+									<div class="bg-primary text-white p-2 rounded-3"><img class="me-3" src="{{ asset('assets/svg/solid/information-circle-white.svg') }}" alt="information" width="24px" height="24px"> Stop to change planes in Taoyuan Intl</div>
+								</div>
 							</div>
-					@php } @endphp
-				</td>
-			@endif
-			@if (!empty($booking->insurance_fee))
-				<td class="text-end text-nowrap">
-					<span>{{ number_format($item_insurance->usd_fee ?? 0, 2) }} {{ $booking->currency }}</span>
-					<br>
-					@if ($booking->currency !== 'VND')
-						<span> {{ number_format($item_insurance->vnd_fee ?? 0, 2) }} VND</span>
-					@endif
-				</td>
-			@endif
-			@php
-				foreach ($collectTravelerSerivce->groupBy('service_id') as $s => $services ) {
-					if (count($services)) {
-						$origin_location_service = \App\Models\FlightTravelerService::where('traveler_id', $traveler->id)->where('airport_id', $airports->get($booking->origin_location_code)->id)->where('service_id', $s)->first();
-						if ($booking->direction !== 'one-way') {
-							$destination_airport = $airports->get($booking->destination_location_code);
-							$destination_location_service = \App\Models\FlightTravelerService::where('traveler_id', $traveler->id)->where('airport_id', $destination_airport->id)->where('service_id', $s)->first();
-						}
-			@endphp
-					<td class="text-center text-nowrap">{{ !empty($origin_location_service) ? number_format($origin_location_service->fee, 2).' '. $traveler->currency : '' }}</td>
-					@if ($booking->direction !== 'one-way') 
-						<td class="text-center text-nowrap">{{ !empty($destination_location_service) ? number_format($destination_location_service->fee, 2) .' '. $traveler->currency : '' }} </td>
-					@endif
-			@php
-					}
-				}
-			@endphp
-			<td class="text-end text-nowrap">{{ number_format($traveler->total + (!empty($booking->insurance_fee) ? $item_insurance->usd_fee ?? 0 : 0), 2) }} {{ $traveler->currency }}</td>
-		</tr>
-		@endforeach
-		<tr>
-			<td colspan="{{ $count_column }}" class="text-end"><b>Grand total</b></td>
-			<td class="text-end text-nowrap"><b>{{ number_format($booking->grand_total + (!empty($booking->insurance_fee) ? $booking->insurance_fee : 0), 2) }} {{ $booking->currency }}</b>
-				<br>
-				@if ($booking->currency !== 'VND')
-				@php $insurance_vnd_fee = \App\Models\FlightInsurance::where('booking_id', $booking->id)->sum('vnd_fee'); @endphp
-					<b> {{ number_format($booking->grand_total * $booking->vnd_ex_rate + (!empty($booking->insurance_fee) ? $insurance_vnd_fee : 0),2) }} VND</b>
-				@endif
-			</td>
-		</tr>
-	</table>
-</div>
-@if (!empty($booking->insurance_fee))
-<div class="mt-3 table-responsive">
-	<table class="table table-bordered">
-		<tr class="bg-secondary bg-opacity-10 align-middle">
-			<th>{{ __('page.my-bookings.passengers') }}</th>
-			<th class="text-end">{{ __('flight.extra-services.package') }}</th>
-			<th class="text-end">{{ __('flight.extra-services.number-of-days') }}</th>
-			<th class="text-end">{{ __('menu.passport') }}</th>
-		</tr>
-		@foreach ($booking->travelers as $traveler)
-		@php
-			$item_insurance = $traveler->travelInsurance;
-			if (empty($item_insurance)) {
-				continue;
-			}
-		@endphp
-		<tr class="align-middle">
-			<td class="text-nowrap">{{ strtoupper($traveler->given_name) }}/<br>{{ strtoupper($traveler->family_name) }}</td>
-			<td class="text-end">{{ $item_insurance->package }}</td>
-			<td class="text-end">{{ $item_insurance->days }}</td>
-			<td class="text-end"><a class="link fancybox" data-caption="Passport Photo" data-fancybox="gallery-child" href="{{ asset('storage/travel_insurance/'.strtolower($booking->order_ref).'/images/'.$item_insurance->passport_img) }}">{{ $item_insurance->passport_img }}</a></td>
-		</tr>
-		@endforeach
-	</table>
-</div>
-@endif
-<div class="mt-3">
-	<table class="table table-bordered">
-		<tr class="bg-secondary bg-opacity-10">
-			<th colspan="2">{{ __('page.my-bookings.contact') }}</th>
-		</tr>
-		<tr>
-			<td width="120px">{{ __('page.my-bookings.fullname') }}</td>
-			<td>{{ $booking->contact_fullname }}</td>
-		</tr>
-		<tr>
-			<td>Email</td>
-			<td>{{ $booking->contact_email }}</td>
-		</tr>
-		<tr>
-			<td>{{ __('page.my-bookings.phone') }}</td>
-			<td>{{ $booking->contact_phone }}</td>
-		</tr>
-		<tr>
-			<td>{{ __('page.my-bookings.remark') }}</td>
-			<td>{{ $booking->contact_message }}</td>
-		</tr>
-	</table>
-</div>
+						</div>
+						<div class="d-flex flex-wrap gap-3">
+							<div class="border rounded-4 logo-airline mx-lg-0 mx-auto">
+								<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
+							</div>
+							<div>
+								<div class="row g-3">
+									<div class="col-sm-7">
+										<div class="departure mb-1"><b>Departure time:</b> 09:00 AM - Fri 08, Dec 23 - Tan Son Nhat Intl</div>
+										<div class="arrival mb-1"><b>Travel time:</b> 2 hr 30 min</div>
+										<div class="landing-time mb-1"><b>Landing time:</b> 11:30 AM - Fri 08, Dec 23 - Changi Intl</div>
+										<div class="fw-semibold mt-2">Operated by Vietjet Air - VJ 382 - Airbus A321</div>
+									</div>
+									<div class="col-sm-5">
+										<ul class="list-unstyled lh-lg">
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/bag-check.svg') }}" alt="bag-check" width="20px" height="20px"><b>Checked baggage:</b> 2 piece(s) per person</li>
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/cabin.svg') }}" alt="bag-check" width="20px" height="20px"><b>Cabin:</b> ECONOMY</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<table class="table table-bordered table-primary-subtle">
+						<thead class="align-middle">
+							<tr>
+								<th class="p-3" colspan="5">Sydney Intl (SYD) -> Tan Son Nhat  Intl (SGN)<span class="mx-3">|</span>Monday, 20, November, 2023</th>
+							</tr>
+						</thead>
+						<tbody class="align-middle medium">
+							<tr>
+								<td class="p-3">
+									<div class="row align-items-center fw-bold">
+										<div class="col-lg-1 col-sm-2 col-3">
+											<img class="fit-contain img-fluid" src="{{ asset('assets/images/airline/vietjet_air.png') }}" alt="vietjet_air">
+										</div>
+										<div class="col-sm-10 col-9">
+											<div class="row g-3 justify-content-between">
+												<div class="col-sm-3 col-6">Vietjet Air<br>TR 305, AIRBUS A320</div>
+												<div class="col-sm-3 col-6">09:30<br>SGN, Terminal 2</div>
+												<div class="col-sm-3 col-6">23 hr 30 min<br>1 stop</div>
+												<div class="col-sm-3 col-6">13:00<br>SYD, Terminal 1</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="border p-3 medium fw-medium">
+						<div class="d-flex flex-wrap gap-3">
+							<div class="border rounded-4 logo-airline mx-lg-0 mx-auto">
+								<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
+							</div>
+							<div>
+								<div class="row g-3">
+									<div class="col-sm-7">
+										<div class="departure mb-1"><b>Departure time:</b> 09:00 AM - Fri 08, Dec 23 - Tan Son Nhat Intl</div>
+										<div class="arrival mb-1"><b>Travel time:</b> 2 hr 30 min</div>
+										<div class="landing-time mb-1"><b>Landing time:</b> 11:30 AM - Fri 08, Dec 23 - Changi Intl</div>
+										<div class="fw-semibold mt-2">Operated by Vietjet Air - VJ 382 - Airbus A321</div>
+									</div>
+									<div class="col-sm-5">
+										<ul class="list-unstyled lh-lg">
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/bag-check.svg') }}" alt="bag-check" width="20px" height="20px"><b>Checked baggage:</b> 2 piece(s) per person</li>
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/cabin.svg') }}" alt="bag-check" width="20px" height="20px"><b>Cabin:</b> ECONOMY</li>
+										</ul>
+									</div>
+								</div>
+								<div class="my-3">
+									<div class="bg-primary text-white p-2 rounded-3"><img class="me-3" src="{{ asset('assets/svg/solid/information-circle-white.svg') }}" alt="information" width="24px" height="24px"> Stop to change planes in Taoyuan Intl</div>
+								</div>
+							</div>
+						</div>
+						<div class="d-flex flex-wrap gap-3">
+							<div class="border rounded-4 logo-airline mx-lg-0 mx-auto">
+								<img class="fit-contain" alt="bamboo" src="{{ asset('assets/images/airline/vietjet_air.png') }}" width="70px" height="52px">
+							</div>
+							<div>
+								<div class="row g-3">
+									<div class="col-sm-7">
+										<div class="departure mb-1"><b>Departure time:</b> 09:00 AM - Fri 08, Dec 23 - Tan Son Nhat Intl</div>
+										<div class="arrival mb-1"><b>Travel time:</b> 2 hr 30 min</div>
+										<div class="landing-time mb-1"><b>Landing time:</b> 11:30 AM - Fri 08, Dec 23 - Changi Intl</div>
+										<div class="fw-semibold mt-2">Operated by Vietjet Air - VJ 382 - Airbus A321</div>
+									</div>
+									<div class="col-sm-5">
+										<ul class="list-unstyled lh-lg">
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/bag-check.svg') }}" alt="bag-check" width="20px" height="20px"><b>Checked baggage:</b> 2 piece(s) per person</li>
+											<li><img class="fit-contain me-2" src="{{ asset('assets/svg/outline/cabin.svg') }}" alt="bag-check" width="20px" height="20px"><b>Cabin:</b> ECONOMY</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 @endsection

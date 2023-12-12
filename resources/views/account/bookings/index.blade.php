@@ -13,7 +13,7 @@
 			<th class="text-primary-600 text-decoration-underline py-3">Action</th>
 		</tr>
 		<tr class="text-center align-middle">
-			<td><a href="{{ url('/account/bookings') }}">ABC_123</a></td>
+			<td><a href="{{ url('/account/bookings/65') }}">ABC_123</a></td>
 			<td class="text-black text-opacity-9">09:34<br>11/07/2023</td>
 			<td class="text-black text-opacity-9">money</td>
 			<td class="text-success fw-bold">Completed</td>

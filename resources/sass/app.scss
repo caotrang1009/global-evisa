@@ -43,6 +43,10 @@ body {
 	color: #545454;
 }
 
+thead, tbody, tfoot, tr, td, th {
+    border-color: #B9B9B9;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
@@ -231,7 +235,7 @@ footer {
 }
 
 .fit-contain {
-	object-fit: contain;
+	object-fit: contain !important;
 }
 
 .fit-cover {
@@ -1133,6 +1137,16 @@ footer {
 				text-decoration-line: underline;
 				font-weight: 600;
 			}
+		}
+	}
+}
+
+.table-primary-subtle {
+	thead {
+		background-color: #6295D6 !important;
+		> *, > * > * {
+			color: white !important;
+			border-color: #B9B9B9 !important;
 		}
 	}
 }

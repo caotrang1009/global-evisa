@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailFlight;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,4 +107,17 @@ Route::get('/account/profile', function() {
 
 Route::get('/about-us', function() {
     return view('content.about');
+});
+
+
+Route::get('/emails', function() {
+    // $data = array(
+    //     'sender' => 'caotrang2303@gmail.com',
+    //     'receivers' => 'caotrang.230701@gmail.com',
+    //     'subject' => 'Flight Ticket Booking'
+    // );
+
+    // $object = new MailFlight((object)$data);    
+    // Mail::send($object);
+    return view('emails.account.password');
 });

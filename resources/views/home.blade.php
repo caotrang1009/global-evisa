@@ -175,7 +175,7 @@
 		<h2 class="web-header1 text-uppercase text-decoration-underline text-black text-opacity-9 fw-800 mb-2">HOW IT WORKS? </h2>
 		<div class="row g-4 mt-0">
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0">
+				<div class="card h-100 border-0 how-it-works-card">
 					<div class="card-body text-center">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold">Fill Out Online Application</h5>
@@ -188,7 +188,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0">
+				<div class="card h-100 border-0 how-it-works-card">
 					<div class="card-body text-center">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold">Get Visa Approved Via Email</h5>
@@ -201,7 +201,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<div class="card h-100 border-0">
+				<div class="card h-100 border-0 how-it-works-card">
 					<div class="card-body text-center">
 						<div class="px-4 py-3">
 							<h5 class="subheading fw-bold">Confident Enter Destination</h5>

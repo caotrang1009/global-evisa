@@ -154,13 +154,13 @@
 					</div>
 					<div id="trip_convniences" class="mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-3">TRIP CONVENIENCES</h2>
-						<div class="travel-insurance border border-primary px-sm-5 p-3 rounded-3-5">
-							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#travel-insurance" aria-expanded="false" aria-controls="travel-insurance">
+						<div class="flight-amenities border border-primary px-sm-5 p-3 rounded-3-5 mb-3">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#flight-amenities" aria-expanded="false" aria-controls="flight-amenities">
 								<div class="row align-items-center">
 									<div class="col-9">
 										<div class="d-flex align-items-center">
 											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
-											<h4 class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">TRAVEL INSURANCE</h4>
+											<h4 class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">FLIGHT AMENITIES</h4>
 										</div>
 									</div>
 									<div class="col-3 text-end">
@@ -172,9 +172,53 @@
 									</div>
 								</div>
 							</div>
-							<div class="collapse travel-insurance pt-3 fw-medium" id="travel-insurance">
-								<div class="mb-3">Package 1: <span class="fw-semibold">from  9 to 173 USD</span></div>
-								<div class="mb-3">Number of days: <span class="fw-semibold">9 - 15 days (19 USD)</span></div>
+							<div class="collapse flight-amenities pt-3 fw-medium" id="flight-amenities">
+								<ul>
+									<li class="mb-3">
+										<h6 class="fw-bold">Airport Services</span></h6>
+										<div>Normal: <span class="fw-semibold">25 USD</div>
+									</li>
+									<li class="mb-3">
+										<h6 class="fw-bold">Travel Insurance</h6>
+										<div class="mb-2">Package 1: <span class="fw-semibold">from  9 to 173 USD</span></div>
+										<div class="mb-2">Number of days: <span class="fw-semibold">9 - 15 days (19 USD)</span></div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="rev-e-invoice border border-primary px-sm-5 p-3 rounded-3-5">
+							<div role="button" data-icon-change="fas fa-caret-up fs-4 text-primary" class="toggle-data-dropdown" data-icon-current="fas fa-caret-down fs-4 text-primary" data-bs-toggle="collapse" data-bs-target="#rev-e-invoice" aria-expanded="false" aria-controls="rev-e-invoice">
+								<div class="row align-items-center">
+									<div class="col-9">
+										<div class="d-flex align-items-center">
+											<span class="bg-primary d-block me-sm-4-5 me-3" style="width: 40px; height: 12px;"></span>
+											<h4 class="headline fw-bold text-uppercase text-decoration-underline text-black mb-0">E - INVOICE</h4>
+										</div>
+									</div>
+									<div class="col-3 text-end">
+										<div class="cursor-pointer d-inline-block" style="display: none" role="button">
+											<div class="rounded-circle border border-primary" style="width: fit-content">
+												<img class="m-2-5" src="{{ asset('assets/svg/solid/arrow-down-blue.svg') }}" alt="arrow" width="14px" height="14px">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="collapse rev-e-invoice pt-3 fw-medium" id="rev-e-invoice">
+								<ul>
+									<li class="mb-3">
+										<h6 class="fw-bold">Company Name</span></h6>
+										<div>ABC Company</div>
+									</li>
+									<li class="mb-3">
+										<h6 class="fw-bold">Company Address</h6>
+										<div>40, Thien Phuoc Street, Ward 9, Tan Binh District, Ho Chi Minh City</div>
+									</li>
+									<li class="mb-3">
+										<h6 class="fw-bold">Taxing Code</h6>
+										<div>0314795123</div>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>

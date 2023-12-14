@@ -116,61 +116,107 @@
 						<div class="small"><b>Note<span class="text-danger">*</span>:</b> If there are any other passengers,  all information collected will be the same.</div>
 					</div>
 					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
-						<h2 class="fw-800 custom-h3 text-black mb-3">Travel Insurance</h2>
-						<div class="d-flex gap-4 mb-3">
-							<div class="form-check select-insurance add" role="button">
-								<input class="form-check-input mt-0" type="checkbox" value="" id="add_insurance" name="add_insurance" style="width:1.5rem; height:1.5rem" checked>
-								<label class="form-check-label text-black text-opacity-9 fw-semibold ms-3 cursor-pointer" for="add_insurance">Add insurance</label>
-							</div>
-							<div class="form-check select-insurance close" role="button">
-								<input class="form-check-input mt-0" type="checkbox" value="" id="no_insurance" name="no_insurance" style="width:1.5rem; height:1.5rem">
-								<label class="form-check-label text-black text-opacity-9 fw-semibold ms-3 cursor-pointer" for="no_insurance">No insurance</label>
+						<div class="mb-4-5 airport-services">
+							<h2 class="fw-800 custom-h3 text-black mb-3">AIRPORT SERVICES</h2>
+							<p class="fst-italic medium">Recommended services at the airport</p>
+							<div class="border rounded-3 bg-white p-3">
+								<label class="h6 fw-semibold text-title text-black">Tan Son Nhat Intl (SGN)</label>
+								<div class="dropdown input-end-icon w-sm-50 w-100">
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="title" name="title" placeholder="Please Select" data-icon-name="outline/arrow-bottom" data-bs-toggle="dropdown" data-bs-auto-close="outside" required>
+									<img class="cursor-pointer" src="{{ asset('assets/svg/outline/arrow-bottom.svg') }}" data-icon-name="outline/arrow-bottom" alt="arrow-bottom">
+									<span class="hide text-danger fw-semibold medium" id="error-msg"></span>
+									<ul class="dropdown-menu dropdown-select border-secondary rounded-3 shadow w-100 medium" style="--bs-border-opacity: 0.5;">
+										<li><a class="dropdown-item cursor-pointer selected">Normal (+25 USD)</a></li>
+										<li><a class="dropdown-item cursor-pointer">VIP (+39 USD)</a></li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="mb-3 medium">
-							<label class="fw-semibold">Choose the best insurance package for you
-								<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The difference between the packages is the Limit of Liability">
-									<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
-								</span>
-							</label>
-							<div class="my-2">
-								<div class="form-check mb-2">
-									<input type="radio" class="form-check-input mt-0 input-package" name="package[]" id="package_id_0_0" value="Package 1" style="width:1.25rem; height:1.25rem" checked>
-									<label class="form-check-label ms-2 cursor-pointer" for="package_id_0_0">Package 1 (from 9 to 173 USD)</label>
+						<div class="insurance-service">
+							<h2 class="fw-800 custom-h3 text-black mb-3">Travel Insurance</h2>
+							<div class="d-flex gap-4">
+								<div class="form-check select-insurance add" role="button">
+									<input class="form-check-input mt-0" type="radio" value="" id="add_insurance" name="travel_insurance" style="width:1.5rem; height:1.5rem" checked>
+									<label class="form-check-label text-black text-opacity-9 fw-semibold ms-3 cursor-pointer" for="add_insurance">Add insurance</label>
 								</div>
+								<div class="form-check select-insurance close" role="button">
+									<input class="form-check-input mt-0" type="radio" value="" id="no_insurance" name="travel_insurance" style="width:1.5rem; height:1.5rem">
+									<label class="form-check-label text-black text-opacity-9 fw-semibold ms-3 cursor-pointer" for="no_insurance">No insurance</label>
+								</div>
+							</div>
+							<div class="border rounded-3 bg-white p-3 mt-3 content-insurance">
+								<div class="mb-3 medium">
+									<label class="fw-semibold">Choose the best insurance package for you
+										<span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="The difference between the packages is the Limit of Liability">
+											<img class="ms-2" src="{{ asset('assets/svg/icon/info.svg') }}" alt="info" width="20px" height="20px">
+										</span>
+									</label>
+									<div class="my-2">
+										<div class="form-check mb-2">
+											<input type="radio" class="form-check-input mt-0 input-package" name="package[]" id="package_id_0_0" value="Package 1" style="width:1.25rem; height:1.25rem" checked>
+											<label class="form-check-label ms-2 cursor-pointer" for="package_id_0_0">Package 1 (from 9 to 173 USD)</label>
+										</div>
+										<div class="form-check">
+											<input type="radio" class="form-check-input mt-0 input-package" name="package[]" id="package_id_1_0" value="Package 2" style="width:1.25rem; height:1.25rem">
+											<label class="form-check-label ms-2 cursor-pointer" for="package_id_1_0">Package 2 (from 15 to 295 USD)</label>
+										</div>
+									</div>
+									<div>You can see details of the Limit of Liability <a class="link text-semantic-blue fst-italic fw-medium" href="#" target="_blank">here</a></div>
+								</div>
+								<div class="row gx-4 gy-3">
+									<div class="col-sm-5">
+										<label class="h6 fw-semibold text-title text-black spacing-n1">Number of days<span class="text-danger">*</span></label>
+										<div class="dropdown">
+											<select name="number_of_days[]" class="form-select form-control number_of_days border rounded-3 bg-white px-3 medium">
+												<option class="1" value="1 - 5 days" usd_fee="9" vnd_fee="180000" selected>1 - 5 days (9 USD)</option>
+												<option class="1" value="6 - 8 days" usd_fee="12" vnd_fee="240000">6 - 8 days (12 USD)</option>
+												<option class="1" value="9 - 15 days" usd_fee="19" vnd_fee="380000">9 - 15 days (19 USD)</option>
+												<option class="1" value="16 - 20 days" usd_fee="22" vnd_fee="433000">16 - 20 days (22 USD)</option>
+												<option class="1" value="21 - 24 days" usd_fee="26" vnd_fee="520000">21 - 24 days (26 USD)</option>
+												<option class="1" value="25 - 31 days" usd_fee="31" vnd_fee="620000">25 - 31 days (31 USD)</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-sm-7 upload-photo">
+										<label class="h6 fw-semibold text-title text-black spacing-n1">Upload a photo of Passport (optional)</label>
+										<div class="d-flex gap-2 align-items-center justify-content-center border rounded-3 bg-white px-3 input-info">
+											<span>Upload a photo</span>
+											<img class="my-2" src="{{ asset('assets/svg/outline/exchange-black.svg') }}" alt="exchange" width="20px" height="20px">
+										</div>
+										<div class="small mt-2"><em>Upload JPG, GIF or PNG image.</em></div>
+										<span class="fw-medium mt-2" style="display: none"></span>
+										<input type="file" name="passport[0]" class="invisible passport" style="height: 0px;">
+									</div>
+								</div>
+								<div class="text-black fw-semibold mt-n2">Total: <span class="text-semantic-blue"><span id="usd_fee">9.00</span> USD </span> I <span id="vnd_fee">180,000</span> VND</div>
+							</div>
+						</div>
+					</div>
+					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
+						<h2 class="fw-800 custom-h3 text-black mb-4">E-INVOICE</h2>
+						<div class="border rounded-3 bg-white p-3">
+							<p>If you want to issue an e-invoice, please select the section below</p>
+							<label for="invoice">
 								<div class="form-check">
-									<input type="radio" class="form-check-input mt-0 input-package" name="package[]" id="package_id_1_0" value="Package 2" style="width:1.25rem; height:1.25rem">
-									<label class="form-check-label ms-2 cursor-pointer" for="package_id_1_0">Package 2 (from 15 to 295 USD)</label>
+									<input class="form-check-input mt-0" type="checkbox" id="e_invoice" style="width:1.5rem; height:1.5rem">
+									<label class="form-check-label text-black text-opacity-9 fw-semibold ms-3 cursor-pointer" for="e_invoice">Issue E-invoice</label>
 								</div>
-							</div>
-							<div>You can see details of the Limit of Liability <a class="link text-semantic-blue fst-italic fw-medium" href="#" target="_blank">here</a></div>
-						</div>
-						<div class="row gx-4 gy-3">
-							<div class="col-sm-5">
-								<label class="h6 fw-semibold text-title text-black spacing-n1">Number of days<span class="text-danger">*</span></label>
-								<div class="dropdown">
-									<select name="number_of_days[]" class="form-select form-control number_of_days border rounded-3 bg-white px-3 medium">
-										<option class="1" value="1 - 5 days" usd_fee="9" vnd_fee="180000" selected>1 - 5 days (9 USD)</option>
-										<option class="1" value="6 - 8 days" usd_fee="12" vnd_fee="240000">6 - 8 days (12 USD)</option>
-										<option class="1" value="9 - 15 days" usd_fee="19" vnd_fee="380000">9 - 15 days (19 USD)</option>
-										<option class="1" value="16 - 20 days" usd_fee="22" vnd_fee="433000">16 - 20 days (22 USD)</option>
-										<option class="1" value="21 - 24 days" usd_fee="26" vnd_fee="520000">21 - 24 days (26 USD)</option>
-										<option class="1" value="25 - 31 days" usd_fee="31" vnd_fee="620000">25 - 31 days (31 USD)</option>
-									</select>
+							</label>
+							<div id="collapse_invoice" class="mt-3" style="display: none">
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black" for="company_name">Company Name<span class="text-danger">*</span></label>
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="company_name" name="company_name" placeholder="eg: ABC Company" required="">
 								</div>
-							</div>
-							<div class="col-sm-7 upload-photo">
-								<label class="h6 fw-semibold text-title text-black spacing-n1">Upload a photo of Passport (optional)</label>
-								<div class="d-flex gap-2 align-items-center justify-content-center border rounded-3 bg-white px-3 input-info">
-									<span>Upload a photo</span>
-									<img class="my-2" src="{{ asset('assets/svg/outline/exchange-black.svg') }}" alt="exchange" width="20px" height="20px">
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black" for="company_address">Company Address<span class="text-danger">*</span></label>
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="company_address" name="company_address" placeholder="eg: 40, Thien Phuoc street, Ward 9, Tan Binh District, Ho Chi Minh City" required="">
 								</div>
-								<div class="small mt-2"><em>Upload JPG, GIF or PNG image.</em></div>
-								<span class="fw-medium mt-2" style="display: none"></span>
-								<input type="file" name="passport[0]" class="invisible passport" style="height: 0px;">
+								<div class="form-group">
+									<label class="h6 fw-semibold text-title text-black" for="tax_code">Tax Code<span class="text-danger">*</span></label>
+									<input class="form-control border rounded-3 px-3 input-info" type="text" id="tax_code" name="tax_code" placeholder="eg: 0314795123" required=""> 
+								</div>
 							</div>
 						</div>
-						<div class="text-black fw-semibold mt-n2">Total: <span class="text-semantic-blue"><span id="usd_fee">9.00</span> USD </span> I <span id="vnd_fee">180,000</span> VND</div>
 					</div>
 					<div class="border-dashed bg-beige rounded-3-5 px-md-5 p-4-4 mb-4-5">
 						<h2 class="fw-800 custom-h3 text-black mb-4">CONTACT INFORMATION</h2>
@@ -254,6 +300,25 @@
 			invalidHandler: function(event, validator) {
 				$(".spinner").addClass("d-none");
 				$('.spinner .center-div').loader('spinner').hide();
+			}
+		});
+
+		$(".select-insurance").click(function() {
+			if ($(this).hasClass("add")) {
+				$(this).parents(".insurance-service").find('.content-insurance input, select').prop('disabled', false);
+				$(this).parents(".insurance-service").find(".content-insurance").show();
+			} else if ($(this).hasClass("close")) {
+				$(this).parents(".insurance-service").find('.content-insurance input, select').prop('disabled', true);
+				$(this).parents(".insurance-service").find(".content-insurance").hide();
+			}
+			updatePrice();
+		});
+
+		$("#e_invoice").click(function() {
+			if ($(this).prop('checked')) {
+				$("#collapse_invoice").show();
+			} else {
+				$("#collapse_invoice").hide();
 			}
 		});
 

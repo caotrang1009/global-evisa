@@ -579,33 +579,6 @@ footer {
 	min-width: 300px;
 }
 
-//Step
-.step-container {
-	display: flex;
-	align-items: center;
-
-	.step-button {
-		&.active {
-			background-color: $primary;
-			.step-number {
-				color: white !important;
-			}
-		}
-		margin-right: 5px;
-	}
-	
-	.step-line {
-		border-top: 1px solid #ccc;
-		flex: 1;
-		height: 0;
-		margin: 0 5px;
-	}
-	.step-name {
-		position: absolute;
-		margin-top: 8rem;
-	}
-}
-
 .top-destination {
 	.image-small {
 		width: 525px;

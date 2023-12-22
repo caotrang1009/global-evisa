@@ -108,22 +108,22 @@
 				object-fit: contain;
 			}
 			.stop {
-				position: relative;
+				position: relative !important;
 			}
 			.stop .path {
 				height: 100%;
-				position: absolute;
+				position: absolute !important;
 				top: 0;
 				width: 1px;
 				border-radius: 4px;
 				background: #7F7F7F;
 			}
 			.stop .path::before, .stop .path::after {
-				content: "";
+				content: "" !important;
 				width: 10px;
 				height: 10px;
 				border-radius: 50%;
-				position: absolute;
+				position: absolute !important;
 			}
 			.stop .path::before {
 				top: 0;

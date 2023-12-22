@@ -141,7 +141,7 @@
 											</table>
 										</td>
 										<td align="center" class="stop">
-											<span class="path"></span>
+											<img src="{{ asset('assets/svg/icon/bar.svg') }}" alt="bar" width="100%">
 										</td>
 										<td>
 											<table class="fw-md">
@@ -214,7 +214,7 @@
 											</table>
 										</td>
 										<td align="center" class="stop">
-											<span class="path"></span>
+											<img src="{{ asset('assets/svg/icon/bar.svg') }}" alt="bar" width="100%">
 										</td>
 										<td>
 											<table class="fw-md">
@@ -293,7 +293,7 @@
 											</table>
 										</td>
 										<td align="center" class="stop">
-											<span class="path"></span>
+											<img src="{{ asset('assets/svg/icon/bar.svg') }}" alt="bar" width="100%">
 										</td>
 										<td>
 											<table class="fw-md">
@@ -366,7 +366,7 @@
 											</table>
 										</td>
 										<td align="center" class="stop">
-											<span class="path"></span>
+											<img src="{{ asset('assets/svg/icon/bar.svg') }}" alt="bar" width="100%">
 										</td>
 										<td>
 											<table class="fw-md">

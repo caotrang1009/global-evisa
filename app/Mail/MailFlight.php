@@ -50,7 +50,7 @@ class MailFlight extends Mailable
 	public function content()
 	{
 		return new Content(
-			view: 'emails.flights.order',
+			view: 'mails.create-order',
 			with: ['data' => $this->data]
 		);
 	}

@@ -111,13 +111,14 @@ Route::get('/about-us', function() {
 
 
 Route::get('/emails', function() {
-    // $data = array(
-    //     'sender' => 'caotrang2303@gmail.com',
-    //     'receivers' => 'caotrang.230701@gmail.com',
-    //     'subject' => 'Flight Ticket Booking'
-    // );
+    $data = array(
+        'sender' => 'caotrang2303@gmail.com',
+        'receivers' => 'caotrang.230701@gmail.com',
+        'subject' => 'Flight Ticket Booking'
+    );
 
-    // $object = new MailFlight((object)$data);    
-    // Mail::send($object);
-    return view('mails.reset-password');
+    $object = new MailFlight((object)$data);    
+    Mail::send($object);
+    echo 'success';
+    // return view('mails.reset-password');
 });

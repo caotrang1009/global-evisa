@@ -8,17 +8,6 @@
 
 		initLoadElement();
 
-		$(".dropdown-menu a.dropdown-toggle").on("click", function(e) {
-			if (!$(this).next().hasClass("show")) {
-				$(this).parents(".dropdown-menu").first().find(".show").removeClass("show");
-			}
-			var subMenu = $(this).next(".dropdown-menu");
-			subMenu.toggleClass("show");
-			$(this).parents("li.nav-item.dropdown.show").on("hidden.bs.dropdown", function(e) {
-				$(".dropdown-submenu .show").removeClass("show");
-			});
-			return false;
-		});
 		$(".selectpicker").selectpicker();
 
 		$(window).bind('load', function() {
@@ -121,27 +110,48 @@
 		});
 	});
 	
+	// Date Picker
+
+	$('.datepicker').each(function(index, item) {
+		const value = $(item).val() || moment();
+		$(item).daterangepicker({
+			singleDatePicker: true,
+			minDate: moment(),
+			startDate: value,
+			autoApply: true,
+			locale: {
+				format: 'YYYY/MM/DD'
+			}
+		})
+	});
+
+	// Upload file
+	$('.btn-upload-file').on('click', function(){
+		$(this).parent().find('.uploaded-files').trigger('click');
+	})
+	$('.uploaded-files').on('change', function(){
+		var files = $(this).prop('files');
+		console.log(files);
+		let render = $('.render-names');
+		render.html('');
+		for (const file of files) {
+			render.append(`<p class="text-primary mb-0">${file.name}</p>`);
+		}
+		$(this).parent().find('.render-file-names').removeClass('d-none');
+	})
+	
+
 })(jQuery);
 
 var telinput = document.querySelector(".telinput");
 if (telinput !== null) {
 	var iti = intlTelInput(telinput, {
 		placeholderNumberType: "MOBILE",
-		utilsScript: "/assets/js/telinput/js/utils.js"
+		utilsScript: "/js/telinput/js/utils.js"
 	});
 }
 
 function initLoadElement() {
-	$('.datepicker').each(function() {
-		$(this).daterangepicker({
-			singleDatePicker: true,
-			locale: {
-				format: 'DD/MM/YYYY'
-			},
-			autoApply: true
-		});
-	});
-
 	var swiper = $(".swiper");
 	if (swiper.length) {
 		swiper.each(function() {
@@ -155,8 +165,7 @@ function initLoadElement() {
 			var sliderItemsXs = slider.data("items-xs") ? slider.data("items-xs") : Number(sliderItemsSm); //option: number (items in start to 575 )
 			var sliderSpace = slider.data("space-between") ? slider.data("space-between") : 50;
 			var slideParent = slider.data("parent");
-			var slideRewind = slider.data("rewind") ? false : true;
-			var slideMouseWheelControl = slider.data("mouse-wheel-control") ? true : false;
+			var slideRewind = slider.attr("data-rewind") ? false : true;
 			var slideDirection = slider.data("direction") ? slider.data("direction") : 'horizontal';
 			var arrowLeft = slider.data("prev") ? slider.data("prev") : '.swiper-button-prev';
 			var arrowRight = slider.data("next") ? slider.data("next") : '.swiper-button-next';
@@ -185,7 +194,6 @@ function initLoadElement() {
 				freeMode: true, 
 				centeredSlides: sliderCentered,
 				loop: slideRewind,
-				mousewheel: slideMouseWheelControl,
 				navigation: {
 					nextEl: slideParent + " " +arrowRight,
 					prevEl: slideParent + " " +arrowLeft,
@@ -197,3 +205,8 @@ function initLoadElement() {
 		});
 	}
 }
+
+
+$(document).ready(function() {
+	$('.tooltip-btn').tooltip();
+});

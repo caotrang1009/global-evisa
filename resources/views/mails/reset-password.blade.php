@@ -1,4 +1,4 @@
-@extends('emails.template')
+@extends('mails.template')
 
 @section('content')
 	<p class="text-primary fs-h5 fw-extrabold">PASWORD RESET!</p>

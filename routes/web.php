@@ -119,5 +119,5 @@ Route::get('/emails', function() {
 
     // $object = new MailFlight((object)$data);    
     // Mail::send($object);
-    return view('emails.account.password');
+    return view('mails.reset-password');
 });

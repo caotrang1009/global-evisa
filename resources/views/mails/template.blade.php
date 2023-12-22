@@ -6,22 +6,19 @@
 			@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 			body {
-				font-family: 'Montserrat';
 				font-size: 14px;
 				color: #000;
+				font-family: Montserrat;
 				font-weight: 400;
 				line-height: 1.65;
 			}
 			small, .fs-sm {
 				font-size: 10px;
 			}
-			medium, .fs-md {
+			.fs-md {
 				font-size: 12px;
 			}
-			.fs-base {
-				font-size: 13px;
-			}
-			h1, h2, h3, h4, h5, h6 {
+			h6 {
 				margin-top: 0;
 				margin-bottom: 0.5rem;
 			}
@@ -37,23 +34,11 @@
 			.bordered {
 				border: 1px solid #D3D3D3;
 			}
-			.border-top {
-				border-top: 1px solid #D3D3D3;
-			}
-			.border-bottom {
-				border-bottom: 1px solid #D3D3D3;
-			}
-			.text-start {
-				text-align: left;
-			}
-			.text-center {
-				text-align: center;
-			}
-			.text-end {
-				text-align: right;
-			}
 			.text-primary {
 				color: #3B7ACC;
+			}
+			.text-secondary {
+				color: #F98F25;
 			}
 			.text-white {
 				color: #ffffff;
@@ -76,6 +61,9 @@
 			.fw-semibold {
 				font-weight: 600;
 			}
+			.fw-md {
+				font-weight: 500;
+			}
 			.w-100 {
 				width: 100%;
 			}
@@ -95,6 +83,15 @@
 			a {
 				text-decoration: none;
 			}
+			.d-flex {
+				display: flex;
+			}
+			.flex-wrap {
+				flex-direction: wrap !important;
+			}
+			.gap-2 {
+				gap: 0.5rem !important;
+			}
 			.pb-4 {
 				padding-bottom:24px;
 			}
@@ -109,6 +106,36 @@
 			}
 			.fit-contain {
 				object-fit: contain;
+			}
+			.stop {
+				position: relative;
+			}
+			.stop .path {
+				height: 100%;
+				position: absolute;
+				top: 0;
+				width: 1px;
+				border-radius: 4px;
+				background: #7F7F7F;
+			}
+			.stop .path::before, .stop .path::after {
+				content: "";
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				position: absolute;
+			}
+			.stop .path::before {
+				top: 0;
+				border: 1px solid #7F7F7F;
+				background: #fff;
+				transform: translateX(-50%);
+			}
+			.stop .path::after {
+				bottom: 0;
+				transform: translateX(-50%);
+				background-color: #3B7ACC;
+				border: 1px solid #3B7ACC;
 			}
 		</style>
 	</head>
